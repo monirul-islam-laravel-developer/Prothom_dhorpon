@@ -2,48 +2,6 @@
 @section('title')
     SubCategory Edit
 @endsection
-<style>
-    .tag {
-        display: inline-block;
-        background-color: #e2e6ea;
-        border-radius: 4px;
-        padding: 4px 8px;
-        margin: 2px;
-        font-size: 14px;
-        position: relative;
-    }
-
-    .remove {
-        margin-left: 8px;
-        color: red;
-        cursor: pointer;
-    }
-
-    .tag-input {
-        border: none;
-        outline: none;
-        min-width: 120px;
-    }
-
-    #tag-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        border: 1px solid #ccc;
-        padding: 5px;
-        border-radius: 4px;
-    }
-</style>
-<style>
-    #preview {
-        max-width: 100%;
-        max-height: 300px;
-        margin-top: 10px;
-        display: none;
-        border: 1px solid #ccc;
-        padding: 5px;
-    }
-</style>
 @section('body')
     <div class="col-md-12 col-sm-12">
         <div class="card box-shadow-0">

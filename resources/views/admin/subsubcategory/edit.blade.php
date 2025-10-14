@@ -1,47 +1,55 @@
 @extends('master.admin.master')
-@section('title')
-    Category Edit
-@endsection
 
+@section('title')
+    Dristrict Edit
+@endsection
 @section('body')
     <div class="col-md-12 col-sm-12">
         <div class="card box-shadow-0">
             <div class="card-header border-bottom">
-                <h4 class="card-title">Category Edit form</h4>
+                <h4 class="card-title">Dristrict  Edit Form</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('category.update',$category->id) }}" method="POST" enctype="multipart/form-data">
-                    @csrf
+                <form action="{{ route('subsubcategory.update',$subsubcategory->id) }}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
+                    @csrf
                     <div class="form-group">
-                        <label for="categoryName">Category Name</label>
-                        <input type="text" name="name" class="form-control" value="{{$category->name}}" placeholder="Enter Category Name">
+                        <label for="categoryName">Division</label>
+                        <select id="categoryName" name="subcategory_id" class="form-control">
+                            <option value="" disabled selected>---Select Division---</option>
+                            @foreach($subcategories9 as $subcategory9)
+                                <option value="{{ $subcategory9->id }}"
+                                    {{ $subcategory9->id == $subsubcategory->subcategory_id ? 'selected' : '' }}>
+                                    {{ $subcategory9->name }}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="categoryDescription">Category Description</label>
-                        <textarea class="form-control" name="description" placeholder="Enter Category Description" rows="4">{{$category->description}}</textarea>
+                        <label for="SubcategoryName">Dristrict Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control @error('name') is-invalid @enderror"
+                            placeholder="Enter Dristrict Name"
+                            value="{{$subsubcategory->name}}"
+                        >
+
+                        @error('name')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
-{{--                    <div class="form-group">--}}
-{{--                        <div class="form-group">--}}
-{{--                            <label for="imageInput">Upload Image</label>--}}
-{{--                            <input type="file" id="imageInput" name="image" class="form-control" accept="image/*">--}}
-{{--                        </div>--}}
-
-{{--                        <!-- Image preview, initially showing the $category image -->--}}
-{{--                        <img--}}
-{{--                            id="preview"--}}
-{{--                            src="{{ asset($category->image) }}"--}}
-{{--                            alt="Image Preview"--}}
-{{--                            style="display: {{ $category->image ? 'block' : 'none' }}; max-width: 300px; margin-top: 10px;"--}}
-{{--                        >--}}
-
+                    <div class="form-group">
+                        <label for="categoryDescription">Dristrict Description</label>
+                        <textarea class="form-control" name="description"  placeholder="Enter Dristrict Description" rows="4">{{$subsubcategory->description}}</textarea>
+                    </div>
                     <div class="form-group">
                         <label for="imageInput">Seo Tag</label>
                         <div id="tag-container">
                             <input type="text" id="tag-input" class="tag-input" placeholder="Press And Enter Seo Input" />
                         </div>
                         <!-- Hidden input to store the tags as comma-separated string -->
-                        <input type="hidden" name="seo_tag" id="seo-tags-hidden" value="{{$category->seo_tag}}">
+                        <input type="hidden" name="seo_tag" id="seo-tags-hidden" value="{{$subsubcategory->seo_tag}}">
                     </div>
 
                     <div class="col-md-12 mb-2">
@@ -51,25 +59,6 @@
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('imageInput').addEventListener('change', function (event) {
-            const file = event.target.files[0];
-            const preview = document.getElementById('preview');
-
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                }
-                reader.readAsDataURL(file);
-            } else {
-                // Reset to original image if no valid file is selected
-                preview.src = "{{ asset($category->image) }}";
-                preview.style.display = "{{ $category->image ? 'block' : 'none' }}";
-            }
-        });
-    </script>
 
     <script>
         const input = document.getElementById('tag-input');
@@ -131,9 +120,9 @@
         });
     </script>
 
-
-
-
 @endsection
+
+
+
 
 

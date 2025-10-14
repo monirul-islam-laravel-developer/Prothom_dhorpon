@@ -34,7 +34,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::storeCategory($request);
-        Alert::success('Category Add', 'Category Add Successfully');
+        Alert::success('Category Add Successfully');
         return redirect()->back();
     }
 
@@ -47,12 +47,12 @@ class CategoryController extends Controller
         if ($this->category->status==1)
         {
             $this->category->status=2;
-            Alert::warning('This Category Inactive');
+            Alert::warning('Category Inactive');
         }
         else
         {
             $this->category->status=1;
-            Alert::Success('This Category Active');
+            Alert::Success('Category Active');
         }
         $this->category->save();
 
@@ -74,7 +74,7 @@ class CategoryController extends Controller
     public function update(Request $request,string $id)
     {
         Category::updateCategory($request,$id);
-        Alert::Success('Category Info Update Successfully');
+        Alert::Success('Category Update Successfully');
         return redirect('/category');
     }
 
@@ -89,7 +89,7 @@ class CategoryController extends Controller
             unlink($this->category->image);
         }
         $this->category->delete();
-        Alert::info('This Category Delete', 'Category Delete Successfully');
+        Alert::Success('Category Delete Successfully');
         return redirect('/category');
     }
 }

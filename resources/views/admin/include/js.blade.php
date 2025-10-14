@@ -83,4 +83,53 @@
     });
 </script>
 
+<!-- seo tag input add blade JS -->
+<script>
+    const input = document.getElementById('tag-input');
+    const container = document.getElementById('tag-container');
+    const hiddenInput = document.getElementById('seo-tags-hidden');
+
+    const tags = [];
+
+    function updateHiddenInput() {
+        hiddenInput.value = tags.join(',');
+    }
+
+    function createTagElement(text) {
+        const tag = document.createElement('div');
+        tag.className = 'tag';
+        tag.textContent = text;
+
+        const remove = document.createElement('span');
+        remove.className = 'remove';
+        remove.textContent = '×';
+        remove.onclick = () => {
+            const index = tags.indexOf(text);
+            if (index > -1) {
+                tags.splice(index, 1);
+                updateHiddenInput();
+            }
+            tag.remove();
+        };
+
+        tag.appendChild(remove);
+        return tag;
+    }
+
+    input.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ',') {
+            event.preventDefault();
+            const text = input.value.trim();
+            if (text && !tags.includes(text)) {
+                tags.push(text);
+                const tag = createTagElement(text);
+                container.insertBefore(tag, input);
+                input.value = '';
+                updateHiddenInput();
+            }
+        }
+    });
+</script>
+<!-- end seo tag input JS -->
+
 

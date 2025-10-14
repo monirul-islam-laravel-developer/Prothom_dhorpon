@@ -1,15 +1,17 @@
-@extends('master.admin.master');
+@extends('master.admin.master')
 @section('title')
-    All Category
+    All SubSubCategory
 @endsection
+
 @section('body')
+    <!-- Row -->
     <div class="row">
         <div class="row row-sm">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header border-bottom d-flex justify-content-between align-items-center">
-                        <h3 class="card-title mb-0">All Category List</h3>
-                        <a href="{{route('category.create')}}" class="btn btn-primary">Add New Category</a>
+                        <h3 class="card-title mb-0">All Dristrict List</h3>
+                        <a href="{{route('subsubcategory.create')}}" class="btn btn-primary">Add New Dristrict</a>
                     </div>
                     <!-- Rest of your card body here -->
                 </div>
@@ -19,43 +21,38 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Description</th>
-                                {{--                                <th>Image</th>--}}
+                                <th>Division Name</th>
+                                <th>Dristrict Name</th>
                                 <th>Status</th>
                                 <th>Edit</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($categories as $category)
+                            @foreach($subsubcategories as $subsubcategory)
                                 <tr data-id="1">
                                     <td data-field="id">{{$loop->iteration}}</td>
-                                    <td data-field="age">{{$category->name}}</td>
-                                    <td data-field="gender">{{$category->description}}</td>
-{{--                                                                    <td data-field="image">--}}
-{{--                                                                        <img src="{{$category->image}}" height="60" width="100">--}}
-{{--                                                                    </td>--}}
+                                    <td data-field="age">{{$subsubcategory->subcategory->name}}</td>
+                                    <td data-field="age">{{$subsubcategory->name}}</td>
 
                                     <td style="width: 100px">
-                                        @if($category->status==1)
-                                            <a href="{{route('category.show',$category->id)}}" class="btn btn-primary">Active</a>
+                                        @if($subsubcategory->status==1)
+                                            <a href="{{route('subsubcategory.show',$subsubcategory->id)}}" class="btn btn-primary">Active</a>
                                         @else
-                                            <a href="{{route('category.show',$category->id)}}" class="btn btn-danger">Inactive</a>
+                                            <a href="{{route('subsubcategory.show',$subsubcategory->id)}}" class="btn btn-danger">Inactive</a>
                                         @endif
 
                                     </td>
                                     <td style="width: 100px">
-                                        <a href="{{route('category.edit',$category->id)}}" class="btn btn-primary" title="Edit">
+                                        <a href="{{route('subsubcategory.edit',$subsubcategory->id)}}" class="btn btn-primary" title="Edit">
                                             <i class="fe fe-edit"></i>
                                         </a>
-                                        <form action="{{ route('category.destroy', $category->id) }}" method="POST" style="display:inline;">
+                                        <form action="{{ route('subsubcategory.destroy', $subsubcategory->id) }}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger" title="Delete" onclick="return confirm('Are you sure you want to delete this category?')">
+                                            <button type="submit" class="btn btn-danger" title="Delete" onclick="return confirm('Are you sure you want to delete this SubSubCategory?')">
                                                 <i class="fe fe-delete"></i>
                                             </button>
                                         </form>
-
                                 </tr>
                             @endforeach
                             </tbody>
@@ -66,4 +63,5 @@
         </div>
     </div>
 @endsection
+
 
