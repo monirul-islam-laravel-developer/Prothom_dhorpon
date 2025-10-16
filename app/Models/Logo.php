@@ -26,7 +26,7 @@ class Logo extends Model
         self::$imageUrl           =self::$directory.self::$imageName;
         return self::$imageUrl;
     }
-    public static function getLazyloadImage($request)
+    public static function getfavIconImage($request)
     {
         self::$image              = $request->file('fav_icon_logo');
         self::$imageName          = time() .'.'. self::$image->getClientOriginalName();
@@ -35,7 +35,7 @@ class Logo extends Model
         self::$imageUrl           =self::$directory.self::$imageName;
         return self::$imageUrl;
     }
-    public static function getfavIconImage($request)
+    public static function getLazyloadImage($request)
     {
         self::$image              = $request->file('lazyload_logo');
         self::$imageName          = time() .'.'. self::$image->getClientOriginalName();
@@ -103,7 +103,7 @@ class Logo extends Model
             {
                 unlink(self::$logo->fav_icon_logo);
             }
-            self::$faviconUrl=self::getfavIconImage($request);
+            self::$faviconUrl=self::getFavIconImage($request);
         }
         else
         {
