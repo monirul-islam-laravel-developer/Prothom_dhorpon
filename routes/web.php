@@ -14,6 +14,8 @@ use App\Http\Controllers\SubsubCategoryController;
 use App\Http\Controllers\UpazilaController;
 use App\Http\Controllers\WebExtraController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\AdsController;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -37,4 +39,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/get-districts/{division_id}', [UpazilaController::class, 'getDistricts'])->name('get.districts');
     Route::resource('webextra', WebExtraController::class);
     Route::resource('video', VideoController::class);
+    Route::resource('ads', AdsController::class);
+    Route::resource('post', PostController::class);
 });
