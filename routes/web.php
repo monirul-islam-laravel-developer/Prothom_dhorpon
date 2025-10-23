@@ -16,6 +16,7 @@ use App\Http\Controllers\WebExtraController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\AdsController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FrontReporterController;
 use App\Http\Controllers\FrontAboutUsController;
@@ -43,6 +44,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('webextra', WebExtraController::class);
     Route::resource('video', VideoController::class);
     Route::resource('ads', AdsController::class);
+    Route::resource('notice', NoticeController::class);
     Route::resource('post', PostController::class);
     Route::get('posts/get-subcategories/{category_id}', [PostController::class, 'getSubcategories']);
     Route::get('posts/get-subsubcategories/{subcategory_id}', [PostController::class, 'getSubSubCategories']);

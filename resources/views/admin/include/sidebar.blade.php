@@ -41,6 +41,7 @@
                         <li><a href="{{route('webextra.index')}}" class="slide-item">Web Extra</a></li>
                         <li><a href="{{route('video.index')}}" class="slide-item">All Video</a></li>
                         <li><a href="{{route('ads.index')}}" class="slide-item">Ads Management</a></li>
+                        <li><a href="{{route('notice.index')}}" class="slide-item">Notice</a></li>
                         <li><a href="{{route('post.index')}}" class="slide-item">Post</a></li>
 
                     </ul>
