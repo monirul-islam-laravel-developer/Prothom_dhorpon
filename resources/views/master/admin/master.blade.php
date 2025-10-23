@@ -16,7 +16,7 @@
     <title>@yield('title')</title>
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/')}}admin/assets/images/brand/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset($webLogo->fav_icon_logo ?? 'default-favicon.png') }}">
 
    @include('admin.include.css')
 

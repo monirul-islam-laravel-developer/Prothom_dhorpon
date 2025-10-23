@@ -36,11 +36,17 @@ class EditoralController extends Controller
         ]);
         $this->editoral=new Editoral();
         $this->editoral->publisher_and_editor=$request->publisher_and_editor;
+        $this->editoral->editor=$request->editor;
         $this->editoral->executive_editor=$request->executive_editor;
         $this->editoral->message_editor=$request->message_editor;
+        $this->editoral->multimedia_incharge=$request->multimedia_incharge;
         $this->editoral->legal_advisor=$request->legal_advisor;
         $this->editoral->advisor=$request->advisor;
         $this->editoral->office=$request->office;
+        $this->editoral->office2=$request->office2;
+        $this->editoral->mobile1=$request->mobile1;
+        $this->editoral->mobile2=$request->mobile2;
+        $this->editoral->email=$request->email;
         $this->editoral->save();
         Alert::success('তথ্য আপডেট হয়েছে');
         return redirect()->back();
@@ -70,11 +76,17 @@ class EditoralController extends Controller
     {
         $this->editoral=Editoral::find($id);
         $this->editoral->publisher_and_editor=$request->publisher_and_editor;
+        $this->editoral->editor=$request->editor;
         $this->editoral->executive_editor=$request->executive_editor;
         $this->editoral->message_editor=$request->message_editor;
+        $this->editoral->multimedia_incharge=$request->multimedia_incharge;
         $this->editoral->legal_advisor=$request->legal_advisor;
         $this->editoral->advisor=$request->advisor;
         $this->editoral->office=$request->office;
+        $this->editoral->office2=$request->office2;
+        $this->editoral->mobile1=$request->mobile1;
+        $this->editoral->mobile2=$request->mobile2;
+        $this->editoral->email=$request->email;
         $this->editoral->save();
         Alert::success('তথ্য আপডেট হয়েছে');
         return redirect()->back();

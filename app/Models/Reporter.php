@@ -66,4 +66,8 @@ class Reporter extends Model
         self::$reporter->joining_date=$request->joining_date;
         self::$reporter->save();
     }
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

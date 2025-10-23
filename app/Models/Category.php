@@ -65,6 +65,10 @@ class Category extends Model
         self::$category->save();
 
     }
+    public function subcategories()
+    {
+        return $this->hasMany(SubCategory::class);
+    }
 
 
 }

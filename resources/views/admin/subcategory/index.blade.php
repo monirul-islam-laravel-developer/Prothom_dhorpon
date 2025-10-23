@@ -1,6 +1,6 @@
-@extends('master.admin.master');
+@extends('master.admin.master')
 @section('title')
-    SubCategory Index
+    All SubCategory
 @endsection
 @section('body')
     <!-- Row -->
@@ -23,7 +23,7 @@
                                 <th>Name</th>
                                 <th>Category Name</th>
                                 <th>Description</th>
-{{--                                <th>Image</th>--}}
+                                {{--                                <th>Image</th>--}}
                                 <th>Status</th>
                                 <th>Edit</th>
                             </tr>
@@ -35,9 +35,9 @@
                                     <td data-field="age">{{$subcategory->name}}</td>
                                     <td data-field="age">{{$subcategory->category->name}}</td>
                                     <td data-field="gender">{{$subcategory->description}}</td>
-{{--                                    <td data-field="image">--}}
-{{--                                        <img src="{{$subcategory->image}}" height="60" width="100">--}}
-{{--                                    </td>--}}
+                                    {{--                                    <td data-field="image">--}}
+                                    {{--                                        <img src="{{$subcategory->image}}" height="60" width="100">--}}
+                                    {{--                                    </td>--}}
 
                                     <td style="width: 100px">
                                         @if($subcategory->status==1)

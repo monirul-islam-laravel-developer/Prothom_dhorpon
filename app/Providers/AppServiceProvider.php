@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
+use App\Models\Editoral;
+use App\Models\Logo;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,22 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Fetch the latest logo
+        $logo = Logo::latest()->first();
+
+        // Fetch latest 8 categories
+        $categories8 = Category::orderBy('id','asc')->take(9)->get();
+        $categories_all = Category::orderBy('id', 'asc')->skip(9)->take(15)->get();
+        $editoral=Editoral::latest()->first();
+
+
+        // Share with all views
+        view()->share([
+            'webLogo' => $logo,
+            'categories8' => $categories8,
+            'categories_all'=>$categories_all,
+            'editoral'=>$editoral
+        ]);
     }
+
 }

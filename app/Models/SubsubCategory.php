@@ -10,4 +10,9 @@ class SubsubCategory extends Model
     {
         return $this->belongsTo(SubCategory::class);
     }
+
+    public function upzelas()
+    {
+        return $this->hasMany(Upzela::class);
+    }
 }

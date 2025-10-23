@@ -94,4 +94,5 @@ class ReporterController extends Controller
         Alert::success('Reporter Delete Successfully');
         return redirect('/reporter');
     }
+
 }

@@ -14,11 +14,17 @@ return new class extends Migration
         Schema::create('editorals', function (Blueprint $table) {
             $table->id();
             $table->string('publisher_and_editor');
+            $table->string('editor')->nullable();
             $table->string('executive_editor')->nullable();
             $table->string('message_editor')->nullable();
+            $table->string('multimedia_incharge')->nullable();
             $table->string('legal_advisor')->nullable();
             $table->string('advisor')->nullable();
             $table->text('office')->nullable();
+            $table->text('office2')->nullable();
+            $table->string('mobile1', 20)->nullable();
+            $table->string('mobile2', 20)->nullable();
+            $table->string('email', 50)->nullable();
             $table->timestamps();
         });
     }

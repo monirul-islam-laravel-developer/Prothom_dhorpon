@@ -16,15 +16,18 @@ use App\Http\Controllers\WebExtraController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\AdsController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\FrontReporterController;
+use App\Http\Controllers\FrontAboutUsController;
+use App\Http\Controllers\FrontPrivacyController;
+use App\Http\Controllers\Terms_and_ConditionController;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/', [FrontController::class, 'index'])->name('home');
+Route::get('/amader-poribar', [FrontReporterController::class, 'index'])->name('amaderporibar');
+Route::get('/about-us', [FrontAboutUsController::class, 'index'])->name('about-us');
+Route::get('/privacy-policy', [FrontPrivacyController::class, 'index'])->name('privacy-policy');
+Route::get('/terms-and-condition', [Terms_and_ConditionController::class, 'index'])->name('terms-and-condition');
+
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -41,4 +44,13 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('video', VideoController::class);
     Route::resource('ads', AdsController::class);
     Route::resource('post', PostController::class);
+    Route::get('posts/get-subcategories/{category_id}', [PostController::class, 'getSubcategories']);
+    Route::get('posts/get-subsubcategories/{subcategory_id}', [PostController::class, 'getSubSubCategories']);
+    Route::get('posts/get-upzelas/{subsub_category_id}', [PostController::class, 'getUpzelas']);
+    Route::get('/posts/search-reporters', [PostController::class, 'searchReporters'])->name('post.searchReporters');
+
+
+
+
+
 });

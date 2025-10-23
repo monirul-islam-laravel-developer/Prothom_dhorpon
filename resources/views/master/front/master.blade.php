@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="AnchorBarta">
+    <meta name="csrf-token" content="npv0BOp6m8gjl8YmLleA8kPNIXTsqhE6TJsDtfst">
+
+
+    <title>@yield('title')</title>
+    <meta name="keyword" content="জাহাজ, বন্দর, নৌযান, লাইটার জাহাজ, সিমেন্ট, ইস্পাত, শীপ, শিপিং, মাদার ভেসেল, ড্রেজার, ফিশিং ভেসেল, ডিজেল, নদী, সাগর, newspaper, online news, paper">
+    <meta name="description" content="বাংলাদেশসহ বিশ্বের সর্বশেষ সংবাদ শিরোনাম, প্রতিবেদন, বিশ্লেষণ, খেলা, বিনোদন, চাকরি, রাজনীতি ও বাণিজ্যের বাংলা নিউজ পড়তে ভিজিট করুন।">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="This Is Facebook Share Title" />
+    <meta property="og:description" content="Popular Online Newspaper of Bangladesh"/>
+    <meta property="og:image" content="{{asset('/')}}front/templateimage/63c291e9cb5c8.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="This Is Twitter Share Title" />
+    <meta name="twitter:description" content="Popular Online Newspaper of Bangladesh" />
+    <meta name="twitter:image" content="{{asset('/')}}front/templateimage/63c291efebdb0.jpg" />
+    <meta name="brand_name" content="This Is Twitter Share Title" />
+    <meta name="twitter:creator" content="@themesbazar">
+    <meta name="twitter:site" content="@themesbazar">
+
+
+    <link rel="icon" href="{{ asset($webLogo->fav_icon_logo) }}" sizes="50x50" type="image/png">
+
+
+   @include('front.include.css')
+
+
+</head>
+
+
+
+<script>
+    setInterval(displayTime, 1000);
+
+    function displayTime() {
+
+        const timeNow = new Date();
+
+        let hoursOfDay = timeNow.getHours();
+        let minutes = timeNow.getMinutes();
+        let seconds = timeNow.getSeconds();
+        let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        let today = weekDay[timeNow.getDay()];
+        let months = timeNow.toLocaleString("default", {
+            month: "long"
+        });
+        let year = timeNow.getFullYear();
+        let period = "AM";
+
+        if (hoursOfDay > 12) {
+            hoursOfDay-= 12;
+            period = "PM";
+        }
+
+        if (hoursOfDay === 0) {
+            hoursOfDay = 12;
+            period = "AM";
+        }
+
+        hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        let time = hoursOfDay + ":" + minutes + ":" + seconds + " " + period;
+
+        document.getElementById('Clock').innerHTML = time ;
+
+        var chars = {'1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯','0':'০','A':'এ','P':'পি','M':'এম'};
+        let str = document.getElementById("Clock").innerHTML;
+        let res = str.replace(/[1234567890AMP]/g, m => chars[m]);
+        document.getElementById("Clock").innerHTML = res;
+
+    }
+    displayTime();
+
+</script>
+
+<script>
+    setInterval(displayTimeen, 1000);
+
+    function displayTimeen() {
+
+        const timeNow = new Date();
+
+        let hoursOfDay = timeNow.getHours();
+        let minutes = timeNow.getMinutes();
+        let seconds = timeNow.getSeconds();
+        let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        let today = weekDay[timeNow.getDay()];
+        let months = timeNow.toLocaleString("default", {
+            month: "long"
+        });
+        let year = timeNow.getFullYear();
+        let period = "AM";
+
+        if (hoursOfDay > 12) {
+            hoursOfDay-= 12;
+            period = "PM";
+        }
+
+        if (hoursOfDay === 0) {
+            hoursOfDay = 12;
+            period = "AM";
+        }
+
+        hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        let time = hoursOfDay + ":" + minutes + ":" + seconds + " " + period;
+
+        document.getElementById('Clocken').innerHTML = time ;
+    }
+    displayTimeen();
+
+</script>
+
+
+
+
+
+
+<!--=============== Header section Start ========================-->
+@include('front.include.header');
+<!--=============== Header section End ========================-->
+
+
+
+
+
+<!--=======================
+                        Menu-section-Start
+                    ==========================-->
+@include('front.include.menusection')
+<!--=======================
+                        Menu-section-End
+                    ==========================-->
+
+
+
+@include('front.include.shironam')
+
+<!--============Scroll 05 End==============-->
+
+@yield('body')
+
+<!--=======================
+                            footer-area start
+                        ==========================-->
+@include('front.include.footer')
+
+
+
+<!--=======================
+                            footer-area-End
+                        ==========================-->
+
+@include('front.include.footerscrollbar')
+
+@include('front.include.js')
+</body>
+
+
+</html>
+
+
+
+

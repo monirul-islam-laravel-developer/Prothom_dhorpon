@@ -1,0 +1,9 @@
+<script src="{{asset('/')}}front/frontend/assets/js/jquery-3.5.1.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/bootstrap.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/stellarnav.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/owl.carousel.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/jquery-ui.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/lazyload.min.js"></script>
+<script src="{{asset('/')}}front/frontend/assets/js/main.js"></script>

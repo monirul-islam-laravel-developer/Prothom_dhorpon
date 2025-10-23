@@ -27,7 +27,7 @@ class UpazilaController extends Controller
     public function create()
     {
         $this->subsubcategories=SubsubCategory::orderBy('id','asc')->get();
-        $this->divisions = SubCategory::whereBetween('id', [9, 16])->orderBy('id', 'asc')->get();
+        $this->divisions = SubCategory::whereBetween('id',[9, 16])->orderBy('id', 'asc')->get();
         return view('admin.upazila.create',[
             'divisions'=>$this->divisions,
             'subsubcategories'=>$this->subsubcategories

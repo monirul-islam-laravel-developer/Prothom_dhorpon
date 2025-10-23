@@ -1,4 +1,4 @@
-@extends('master.admin.master');
+@extends('master.admin.master')
 @section('title')
     All Category
 @endsection
@@ -32,9 +32,9 @@
                                     <td data-field="id">{{$loop->iteration}}</td>
                                     <td data-field="age">{{$category->name}}</td>
                                     <td data-field="gender">{{$category->description}}</td>
-{{--                                                                    <td data-field="image">--}}
-{{--                                                                        <img src="{{$category->image}}" height="60" width="100">--}}
-{{--                                                                    </td>--}}
+                                    {{--                                                                    <td data-field="image">--}}
+                                    {{--                                                                        <img src="{{$category->image}}" height="60" width="100">--}}
+                                    {{--                                                                    </td>--}}
 
                                     <td style="width: 100px">
                                         @if($category->status==1)
@@ -66,4 +66,5 @@
         </div>
     </div>
 @endsection
+
 

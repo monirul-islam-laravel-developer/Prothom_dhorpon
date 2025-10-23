@@ -10,9 +10,9 @@ class Upazila extends Model
     {
         return $this->belongsTo(SubCategory::class,'sub_categories_id');
     }
-    public function subsubcategory()
+    public function sub_subCategory()
     {
-        return $this->belongsTo(SubsubCategory::class,'subsub_categories_id');
+        return $this->hasMany(SubsubCategory::class,'subsub_categories_id');
     }
 
 }
