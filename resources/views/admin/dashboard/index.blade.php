@@ -1,6 +1,6 @@
 @extends('master.admin.master')
 @section('title')
-    Home||Dashboard
+    Dashboard
 @endsection
 @section('body')
     <div class="main-container container-fluid">
