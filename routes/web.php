@@ -48,9 +48,4 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('posts/get-subsubcategories/{subcategory_id}', [PostController::class, 'getSubSubCategories']);
     Route::get('posts/get-upzelas/{subsub_category_id}', [PostController::class, 'getUpzelas']);
     Route::get('/posts/search-reporters', [PostController::class, 'searchReporters'])->name('post.searchReporters');
-
-
-
-
-
 });

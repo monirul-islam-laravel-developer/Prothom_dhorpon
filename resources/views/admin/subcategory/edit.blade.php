@@ -9,7 +9,7 @@
                 <h4 class="card-title">Category Edit Form</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('subcategory.update',$subcategory->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('subcategory.update', ['id' => $subcategory->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
@@ -24,7 +24,7 @@
                             </option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}"
-                                    {{ 'category_id', $subcategory->category_id ? 'selected' : '' }}>
+                                    {{ 'category_id' == $subcategory->category_id ? 'selected' : '' }}>
                                     {{ $category->name }}
                                 </option>
                             @endforeach
