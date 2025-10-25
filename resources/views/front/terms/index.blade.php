@@ -1,6 +1,6 @@
 @extends('master.front.master')
 @section('title')
-    প্রাইভেসি এবং পলিসি
+    শর্তাবলী ও নিয়মাবলী
 @endsection
 @section('body')
 

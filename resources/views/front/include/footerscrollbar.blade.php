@@ -4,6 +4,13 @@
     </div>
 
     <div class="footer-scrool-2">
-        <a href="#"><marquee direction="left" scrollamount="5px" onmouseover="this.stop()" onmouseout="this.start()"><i class="lar la-dot-circle"></i> পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে ।  পরীক্ষামূলক সম্প্রচার চলছে । </marquee></a>
+        <marquee direction="left" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+            <i class="lar la-dot-circle"></i>
+            @foreach($scrollbars5 as $scrollbar)
+                <a href="#">
+                    {{ $scrollbar->title }}।
+                </a>
+            @endforeach
+        </marquee>
     </div>
 </div>

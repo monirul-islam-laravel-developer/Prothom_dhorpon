@@ -23,24 +23,31 @@ class Post extends Model
                 mkdir(public_path(self::$directory), 0777, true);
             }
 
-            // Intervention Image Manager শুরু করো
-            $manager = new ImageManager(new Driver());
-            $img = $manager->read(self::$image->getRealPath());
-
+            $extension = strtolower(self::$image->getClientOriginalExtension());
             $path = public_path(self::$directory . self::$imageName);
 
-            // প্রাথমিকভাবে কোয়ালিটি সেট করো
-            $quality = 90;
+            // যদি ইমেজ compress করা সম্ভব হয় (JPG, PNG, WEBP)
+            if (in_array($extension, ['jpg', 'jpeg', 'png', 'webp'])) {
+                try {
+                    $manager = new ImageManager(new Driver());
+                    $img = $manager->read(self::$image->getRealPath());
 
-            // ইমেজ সেভ করো যতক্ষণ না সাইজ ১MB এর নিচে আসে
-            do {
-                $img->save($path, $quality);
-                $size = filesize($path) / 1024 / 1024; // MB
-                $quality -= 5; // কোয়ালিটি কমাও
-            } while ($size > 1 && $quality > 10);
+                    $quality = 90;
+                    do {
+                        $img->save($path, $quality);
+                        $size = filesize($path) / 1024 / 1024; // MB
+                        $quality -= 5;
+                    } while ($size > 1 && $quality > 10);
+                } catch (\Exception $e) {
+                    // fallback: just move the file
+                    self::$image->move(public_path(self::$directory), self::$imageName);
+                }
+            } else {
+                // অন্য ফাইল টাইপ যেমন GIF, SVG ইত্যাদি সরাসরি সেভ করো
+                self::$image->move(public_path(self::$directory), self::$imageName);
+            }
 
             self::$imageUrl = self::$directory . self::$imageName;
-
             return self::$imageUrl;
         }
 
@@ -57,7 +64,7 @@ class Post extends Model
             'reporter_id'        => 'nullable|integer|exists:reporters,id',
             'title'              => 'required|string|max:255',
             'description'        => 'nullable|string',
-            'image'              => 'nullable|image|mimes:jpg,jpeg,png',
+            'image'              => 'nullable|image',
             'image_caption'      => 'nullable|string|max:255',
             'slider_news'        => 'nullable|boolean',
             'seo_tag'            => 'nullable|string|max:255',

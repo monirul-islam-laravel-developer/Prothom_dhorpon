@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="mobileLogo">
-                    <a href="https://themebazar.xyz/laraflash"> <img src="{{asset($webLogo->mobile_logo)}}" alt="LaraFlash"></a>
+                    <a href="{{route('home')}}"> <img src="{{asset($webLogo->mobile_logo)}}" alt="LaraFlash"></a>
                 </div>
                 <h1 class="stellarnav">
                     <ul>
-                        <li class="current-item"><a href="https://themebazar.xyz/laraflash"> <i class="las la-home"></i> </a></li>
+                        <li class="current-item"><a href="{{route('home')}}"> <i class="las la-home"></i> </a></li>
 
 
 
@@ -16,15 +16,15 @@
 
                         @foreach($categories8 as $category)
                             <li>
-                                <a href="">
+                                <a href="{{ route('category-news', [$category->id, $category->slug]) }}">
                                     {{ $category->name }}
                                 </a>
 
-                                @if($category->subcategories->count() > 0)
+                            @if($category->subcategories->count() > 0)
                                     <ul>
                                         @foreach($category->subcategories as $subcategory)
                                             <li>
-                                                <a href="{{ url('news/subcategory/' . $subcategory->slug) }}">
+                                                <a href="{{ route('sub-category-news', [$subcategory->id, $subcategory->slug]) }}">
                                                     {{ $subcategory->name }}
                                                 </a>
                                             </li>
@@ -39,7 +39,7 @@
 
                             <ul>
                                 @foreach($categories_all as $single_category)
-                                <li><a href="news/category/jobs.html" >{{$single_category->name}}</a>
+                                <li><a href="{{ route('category-news', [$single_category->id, $single_category->slug]) }}" >{{$single_category->name}}</a>
 
 
                                 </li>

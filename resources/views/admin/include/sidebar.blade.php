@@ -24,46 +24,104 @@
                 </li>
 
                 <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M21.5,21h-19C2.223877,21,2,21.223877,2,21.5S2.223877,22,2.5,22h19c0.276123,0,0.5-0.223877,0.5-0.5S21.776123,21,21.5,21z M4.5,18.0888672h5c0.1326294,0,0.2597656-0.0527344,0.3534546-0.1465454l10-10c0.000061,0,0.0001221-0.000061,0.0001831-0.0001221c0.1951294-0.1952515,0.1950684-0.5117188-0.0001831-0.7068481l-5-5c0-0.000061-0.000061-0.0001221-0.0001221-0.0001221c-0.1951904-0.1951904-0.5117188-0.1951294-0.7068481,0.0001221l-10,10C4.0526733,12.3291016,4,12.4562378,4,12.5888672v5c0,0.0001831,0,0.0003662,0,0.0005493C4.0001831,17.8654175,4.223999,18.0890503,4.5,18.0888672z M14.5,3.2958984l4.2930298,4.2929688l-2.121582,2.121582l-4.2926025-4.293396L14.5,3.2958984z M5,12.7958984l6.671814-6.671814l4.2926025,4.293396l-6.6713867,6.6713867H5V12.7958984z"/></svg>
-                        <span class="side-menu__label">Web Basic</span><i class="angle fa fa-angle-right"></i>
-                    </a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Forms</a></li>
-                        <li><a href="{{route('category.index')}}" class="slide-item">All Category</a></li>
-                        <li><a href="{{route('subcategory.index')}}" class="slide-item">All Sub Category</a></li>
-                        <li><a href="{{route('subsubcategory.index')}}" class="slide-item">All District</a></li>
-                        <li><a href="{{route('upazila.index')}}" class="slide-item">All Upazila</a></li>
-                        <li><a href="{{route('reporter.index')}}" class="slide-item">All Reporter</a></li>
-                        <li><a href="{{route('editoral.index')}}" class="slide-item">Editoral Info</a></li>
-                        <li><a href="{{route('logo.index')}}" class="slide-item">Logo</a></li>
-                        <li><a href="{{route('slider.index')}}" class="slide-item">Slider</a></li>
-                        <li><a href="{{route('webextra.index')}}" class="slide-item">Web Extra</a></li>
-                        <li><a href="{{route('video.index')}}" class="slide-item">All Video</a></li>
-                        <li><a href="{{route('ads.index')}}" class="slide-item">Ads Management</a></li>
-                        <li><a href="{{route('notice.index')}}" class="slide-item">Notice</a></li>
-                        <li><a href="{{route('post.index')}}" class="slide-item">Post</a></li>
-
-                    </ul>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M19,2H9C7.3438721,2.0018311,6.0018311,3.3438721,6,5v1H5C3.3438721,6.0018311,2.0018311,7.3438721,2,9v10c0.0018311,1.6561279,1.3438721,2.9981689,3,3h10c1.6561279-0.0018311,2.9981689-1.3438721,3-3v-1h1c1.6561279-0.0018311,2.9981689-1.3438721,3-3V5C21.9981689,3.3438721,20.6561279,2.0018311,19,2z M17,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2H5c-1.1040039-0.0014038-1.9985962-0.8959961-2-2v-8h14V19z M17,10H3V9c0.0014038-1.1040039,0.8959961-1.9985962,2-2h10c1.1040039,0.0014038,1.9985962,0.8959961,2,2V10z M21,15c-0.0014038,1.1040039-0.8959961,1.9985962-2,2h-1V9c-0.0008545-0.7719116-0.3010864-1.4684448-0.7803345-2H21V15z M21,6H7V5c0.0014038-1.1040039,0.8959961-1.9985962,2-2h10c1.1040039,0.0014038,1.9985962,0.8959961,2,2V6z"/></svg>
-                        <span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
-                    <ul class="slide-menu">
-                        <li class="side-menu-label1"><a href="javascript:void(0)">Tables</a></li>
-                        <li><a href="tables.html" class="slide-item">Default Table</a></li>
-                        <li><a href="datatable.html" class="slide-item">Data Tables</a></li>
-                        <li><a href="table-editable.html" class="slide-item">Editable Tables</a></li>
-                    </ul>
-                </li>
-                <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="{{route('post.index')}}" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M21.6,2.7c0-0.2-0.2-0.3-0.4-0.4c-3.8-1-7.9,0.3-10.4,3.3L9.5,7.1L6.8,6.4C5.7,6,4.6,6.5,4.1,7.5L2,11.2c0,0,0,0.1-0.1,0.1c-0.1,0.3,0.1,0.5,0.4,0.6l3.4,0.7c-0.3,0.9-0.6,1.8-0.7,2.7c0,0.2,0,0.3,0.1,0.4l3,2.9c0.1,0.1,0.2,0.1,0.4,0.1c0,0,0,0,0,0c0.9-0.1,1.9-0.3,2.8-0.6l0.7,3.3c0,0.2,0.3,0.4,0.5,0.4c0.1,0,0.2,0,0.2-0.1l3.7-2.1c0.9-0.5,1.3-1.6,1.1-2.6l-0.7-2.9l1.4-1.3C21.3,10.5,22.6,6.5,21.6,2.7z M3.2,11.1L4.9,8c0.3-0.6,0.9-0.8,1.5-0.6l2.3,0.6L7.7,9.2c-0.6,0.8-1.2,1.6-1.6,2.5L3.2,11.1z M16,19l-3.1,1.8l-0.6-2.9c0.9-0.4,1.7-1,2.5-1.6l1.3-1.2l0.6,2.3C16.7,18,16.5,18.7,16,19z M17.6,12.3l-3.5,3.2c-1.5,1.3-3.4,2.1-5.4,2.3l-2.6-2.6c0.3-2,1.1-3.9,2.4-5.4L10.1,8c0,0,0.1-0.1,0.1-0.1l1.4-1.6c2.2-2.6,5.8-3.8,9.1-3.1C21.4,6.6,20.3,10.1,17.6,12.3z M16.4,5.6c-1.1,0-1.9,0.9-1.9,1.9s0.9,1.9,1.9,1.9c1.1,0,1.9-0.9,1.9-1.9C18.3,6.5,17.5,5.6,16.4,5.6z M16.4,8.5c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.4,0.9,0.9C17.3,8.1,16.9,8.5,16.4,8.5z"/></svg>
+                    <a class="side-menu__item {{ request()->routeIs('post.index') ? 'active' : '' }}"
+                       href="{{ route('post.index') }}">
+                        <i class="las la-newspaper side-menu__icon"></i>
                         <span class="side-menu__label">Post</span>
-                        <span class="badge badge-sm bg-secondary badge-hide">new</span>
                     </a>
                 </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('video.index') ? 'active' : '' }}"
+                       href="{{ route('video.index') }}">
+                        <i class="las la-video side-menu__icon"></i>
+                        <span class="side-menu__label">Video</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('reporter.index') ? 'active' : '' }}"
+                       href="{{ route('reporter.index') }}">
+                        <i class="las la-user-tie side-menu__icon"></i>
+                        <span class="side-menu__label">Reporter</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('slider.index') ? 'active' : '' }}"
+                       href="{{ route('slider.index') }}">
+                        <i class="las la-images side-menu__icon"></i>
+                        <span class="side-menu__label">Slider</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('ads.index') ? 'active' : '' }}"
+                       href="{{ route('ads.index') }}">
+                        <i class="las la-ad side-menu__icon"></i>
+                        <span class="side-menu__label">Ads</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('category.index') ? 'active' : '' }}"
+                       href="{{ route('category.index') }}">
+                        <i class="las la-list-ul side-menu__icon"></i>
+                        <span class="side-menu__label">Category</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('subcategory.index') ? 'active' : '' }}"
+                       href="{{ route('subcategory.index') }}">
+                        <i class="las la-list-alt side-menu__icon"></i>
+                        <span class="side-menu__label">Subcategory</span>
+                    </a>
+                </li>
+
+
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('subsubcategory.index') ? 'active' : '' }}"
+                       href="{{ route('subsubcategory.index') }}">
+                        <i class="las la-map-marked-alt side-menu__icon"></i>
+                        <span class="side-menu__label">District</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('upazila.index') ? 'active' : '' }}"
+                       href="{{ route('upazila.index') }}">
+                        <i class="las la-map side-menu__icon"></i>
+                        <span class="side-menu__label">Upazila</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('editoral.index') ? 'active' : '' }}"
+                       href="{{ route('editoral.index') }}">
+                        <i class="las la-edit side-menu__icon"></i>
+                        <span class="side-menu__label">Editorial</span>
+                    </a>
+                </li>
+
+
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('logo.index') ? 'active' : '' }}"
+                       data-bs-toggle="slide"
+                       href="{{ route('logo.index') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm0 2v14h16V5H4zm4 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-2 9l3.5-4.5 2.5 3 3.5-4.5 4.5 6H6z"/>
+                        </svg>
+                        <span class="side-menu__label">Logo</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('notice.index') ? 'active' : '' }}"
+                       href="{{ route('notice.index') }}">
+                        <i class="las la-bullhorn side-menu__icon"></i>
+                        <span class="side-menu__label">Notice</span>
+                    </a>
+                </li>
+                <li class="slide">
+                    <a class="side-menu__item {{ request()->routeIs('webextra.index') ? 'active' : '' }}"
+                       href="{{ route('webextra.index') }}">
+                        <i class="las la-cogs side-menu__icon"></i>
+                        <span class="side-menu__label">Web Extra</span>
+                    </a>
+                </li>
+
                 <li class="slide">
                     <a class="side-menu__item" data-bs-toggle="slide" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><path d="M21.5,21H20V4.5C20,4.223877,19.776123,4,19.5,4S19,4.223877,19,4.5V21h-3v-8.5c0-0.276123-0.223877-0.5-0.5-0.5S15,12.223877,15,12.5V21h-3V8.5C12,8.223877,11.776123,8,11.5,8S11,8.223877,11,8.5V21H8v-4.5C8,16.223877,7.776123,16,7.5,16S7,16.223877,7,16.5V21H3V2.5C3,2.223877,2.776123,2,2.5,2S2,2.223877,2,2.5v19.0005493C2.0001831,21.7765503,2.223999,22.0001831,2.5,22h19c0.276123,0,0.5-0.223877,0.5-0.5S21.776123,21,21.5,21z"/></svg>

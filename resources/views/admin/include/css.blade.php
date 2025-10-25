@@ -4,6 +4,8 @@
 <!-- STYLE CSS -->
 <link href="{{asset('/')}}admin/assets/css/style.css" rel="stylesheet" />
 <link href="{{asset('/')}}admin/assets/css/skin-modes.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+
 
 
 
