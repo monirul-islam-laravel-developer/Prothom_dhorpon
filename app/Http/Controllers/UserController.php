@@ -43,7 +43,7 @@ class UserController extends Controller
         $this->user = User::updateUser($request, $id);
         if ($request->role)
         {
-            DB::table('user_role')->where('user_id', $id)->delete();
+            DB::table('user_roles')->where('user_id', $id)->delete();
             foreach ($request->role as $selectedOption)
             {
                 $this->user->roles()->attach($selectedOption);
@@ -55,7 +55,7 @@ class UserController extends Controller
     public function delete($id)
     {
         User::deleteUser($id);
-        DB::table('user_role')->where('user_id', $id)->delete();
+        DB::table('user_roles')->where('user_id', $id)->delete();
         return redirect('/user/manage')->with('message', 'User info delete successfully.');
     }
 }

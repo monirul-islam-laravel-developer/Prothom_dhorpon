@@ -25,7 +25,7 @@
 
         // If user_type is not 1, fetch the role IDs and route names
         if ($userType !== 1) {
-            $roleIds = DB::table('user_role')->where('user_id', auth()->user()->id)->pluck('role_id')->toArray();
+            $roleIds = DB::table('user_roles')->where('user_id', auth()->user()->id)->pluck('role_id')->toArray();
             $roleRoutes = DB::table('role_routes')->whereIn('role_id', $roleIds)->pluck('route_name')->toArray();
         }
     @endphp
