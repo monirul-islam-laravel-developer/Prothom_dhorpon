@@ -19,7 +19,7 @@
 
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="136.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbcb42b1065.jpg" alt="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’" title="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’"></a>
+                                        <a href="136.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbcb42b1065.jpg" alt="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’" title="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’"></a>
 
                                         <h6 class="sec-small-cat">
                                             <a href="#"> ৩ বছর আগে
@@ -40,7 +40,7 @@
 
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="135.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
+                                        <a href="135.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
 
                                         <h6 class="sec-small-cat">
                                             <a href="#"> ৩ বছর আগে
@@ -61,7 +61,7 @@
 
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="134.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
+                                        <a href="134.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
 
                                         <h6 class="sec-small-cat">
                                             <a href="#"> ৩ বছর আগে
@@ -82,7 +82,7 @@
 
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="133.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc67cb9310.jpg" alt="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে" title="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে"></a>
+                                        <a href="133.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc67cb9310.jpg" alt="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে" title="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে"></a>
 
                                         <h6 class="sec-small-cat">
                                             <a href="#"> ৩ বছর আগে
@@ -103,7 +103,7 @@
 
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="4.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab8fa4a308.jpg" alt="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ" title="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ"></a>
+                                        <a href="4.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab8fa4a308.jpg" alt="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ" title="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ"></a>
 
                                         <h6 class="sec-small-cat">
                                             <a href="#"> ৩ বছর আগে
@@ -137,7 +137,7 @@
                                         <div class="sec-one-wrpp">
                                             <div class="secOne-news">
                                                 <div class="secOne-sub-image">
-                                                    <a href="135.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
+                                                    <a href="135.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
 
                                                     <a href="135.html" class="video-icon1"><i class="la la-play"></i></a>
 
@@ -161,7 +161,7 @@
                                         <div class="sec-one-wrpp">
                                             <div class="secOne-news">
                                                 <div class="secOne-sub-image">
-                                                    <a href="102.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>
+                                                    <a href="102.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>
 
 
 
@@ -201,7 +201,7 @@
 
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="79.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6459bd9c.jpg" alt="সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন" title="সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন"></a>
+                                    <a href="79.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6459bd9c.jpg" alt="সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন" title="সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন"></a>
 
                                     <div class="sec-small-cat1">
                                         <a href="#"> ৩ বছর আগে
@@ -219,7 +219,7 @@
 
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="61.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb1f0065d1.jpg" alt="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার" title="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার"></a>
+                                    <a href="61.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb1f0065d1.jpg" alt="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার" title="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার"></a>
 
                                     <div class="sec-small-cat1">
                                         <a href="#"> ৩ বছর আগে
@@ -237,7 +237,7 @@
 
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="48.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf12566b4.jpg" alt="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের" title="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের"></a>
+                                    <a href="48.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf12566b4.jpg" alt="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের" title="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের"></a>
 
                                     <div class="sec-small-cat1">
                                         <a href="#"> ৩ বছর আগে
@@ -255,7 +255,7 @@
 
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="24.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdf0ae6dd.jpg" alt="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি" title="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি"></a>
+                                    <a href="24.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdf0ae6dd.jpg" alt="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি" title="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি"></a>
 
                                     <div class="sec-small-cat1">
                                         <a href="#"> ৩ বছর আগে
@@ -273,7 +273,7 @@
 
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="18.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc6b2f642.jpg" alt="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের" title="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের"></a>
+                                    <a href="18.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc6b2f642.jpg" alt="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের" title="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের"></a>
 
                                     <div class="sec-small-cat1">
                                         <a href="#"> ৩ বছর আগে
@@ -304,7 +304,7 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="44.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae082146d.jpg" alt="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর" title="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর"></a>
+                                            <a href="44.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae082146d.jpg" alt="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর" title="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর"></a>
 
 
 
@@ -326,7 +326,7 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="41.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbace78ef67.jpg" alt="পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ" title="পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ"></a>
+                                            <a href="41.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbace78ef67.jpg" alt="পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ" title="পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ"></a>
 
 
 
@@ -348,7 +348,7 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="39.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada6e82e4b.jpg" alt="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা" title="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা"></a>
+                                            <a href="39.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada6e82e4b.jpg" alt="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা" title="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা"></a>
 
 
 
@@ -370,7 +370,7 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="38.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada001ff80.jpg" alt="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী" title="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী"></a>
+                                            <a href="38.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada001ff80.jpg" alt="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী" title="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী"></a>
 
 
 
@@ -392,7 +392,7 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="32.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac0b42cc78.jpg" alt="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও " title="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও "></a>
+                                            <a href="32.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac0b42cc78.jpg" alt="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও " title="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও "></a>
 
 
 
@@ -414,7 +414,7 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="31.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babfd1eac94.jpg" alt="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’" title="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’"></a>
+                                            <a href="31.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babfd1eac94.jpg" alt="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’" title="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’"></a>
 
 
 
@@ -633,234 +633,17 @@
                         <div class="tab-pane active show  fade" id="recent" role="tabpanel"     aria-labelledby="recent">
                             <div class="news-titletab">
 
-
-
-
-
+                                @foreach($popularNews20 as $popularnews20_single)
                                 <div class="tab-image tab-border">
-                                    <a href="137.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
+                                    <a href="137.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($popularnews20_single->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$popularnews20_single->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
 
-                                    <h4 class="tab_hadding"><a href="137.html"> ৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ </a></h4>
+                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$popularnews20_single->id,$popularnews20_single->slug])}}">{{$popularnews20_single->title}}</a></h4>
 
                                 </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="136.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbcb42b1065.jpg" alt="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’" title="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="136.html"> এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’ </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="135.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
-
-                                    <a href="#" class="video-icon3">  <a href="135.html" class="tab-icon"><i class="la la-play"></i></a>  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="135.html"> শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="134.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="134.html"> সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর... </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="133.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc67cb9310.jpg" alt="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে" title="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="133.html"> সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="132.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc492b2e27.jpg" alt="রিহ্যাব ফেয়ারে পদ্মা ব্যাংকের বিশেষ গৃহঋণ সেবা" title="রিহ্যাব ফেয়ারে পদ্মা ব্যাংকের বিশেষ গৃহঋণ সেবা"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="132.html"> রিহ্যাব ফেয়ারে পদ্মা ব্যাংকের বিশেষ গৃহঋণ সেবা </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="131.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc4508c1fc.jpg" alt="সিলেট স্ট্রাইকার্সের সাথে এক্স-সিরামিকস" title="সিলেট স্ট্রাইকার্সের সাথে এক্স-সিরামিকস"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="131.html"> সিলেট স্ট্রাইকার্সের সাথে এক্স-সিরামিকস </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="130.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc423de7a7.jpg" alt="দেশব্যাপী পালিত হলো টোটাল ফিটনেস ডে" title="দেশব্যাপী পালিত হলো টোটাল ফিটনেস ডে"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="130.html"> দেশব্যাপী পালিত হলো টোটাল ফিটনেস ডে </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="129.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc3f221d50.jpg" alt="সৃষ্টিশীল কাজে পৃষ্ঠপোষকতা বাড়াতে হবে: সমাজকল্যাণমন্ত্রী" title="সৃষ্টিশীল কাজে পৃষ্ঠপোষকতা বাড়াতে হবে: সমাজকল্যাণমন্ত্রী"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="129.html"> সৃষ্টিশীল কাজে পৃষ্ঠপোষকতা বাড়াতে হবে: সমাজকল্যাণমন্ত্রী </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="128.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc3c8d149a.jpg" alt="ওটিএ ও আইসিএ অ্যাসোসিয়েশনের কেন্দ্রীয় কার্যনির্বাহী পরিষদের নতুন কমিটি ঘোষণা" title="ওটিএ ও আইসিএ অ্যাসোসিয়েশনের কেন্দ্রীয় কার্যনির্বাহী পরিষদের নতুন কমিটি ঘোষণা"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="128.html"> ওটিএ ও আইসিএ অ্যাসোসিয়েশনের কেন্দ্রীয় কার্যনির্বাহী পরিষদের নতুন কমিটি ঘোষণা </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="127.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc38997946.jpg" alt="ইতালিতে ভুয়া ‘রেসিডেন্স পারমিট’ বানানোর অভিযোগে বাংলাদেশিসহ আটক ৭" title="ইতালিতে ভুয়া ‘রেসিডেন্স পারমিট’ বানানোর অভিযোগে বাংলাদেশিসহ আটক ৭"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="127.html"> ইতালিতে ভুয়া ‘রেসিডেন্স পারমিট’ বানানোর অভিযোগে বাংলাদেশিসহ আটক ৭ </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="126.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc35e0ad29.jpg" alt="আফ্রিকায় মরুভূমি পাড়ি দিতে গিয়ে পিপাসায় মারা গেল ২৭ অভিবাসী " title="আফ্রিকায় মরুভূমি পাড়ি দিতে গিয়ে পিপাসায় মারা গেল ২৭ অভিবাসী "></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="126.html"> আফ্রিকায় মরুভূমি পাড়ি দিতে গিয়ে পিপাসায় মারা গেল ২৭ অভিবাসী  </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="125.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc32e0f816.jpg" alt="বিদেশগামীদের ফিঙ্গারপ্রিন্ট গ্রহণ ও সরবরাহ করছে সিআইডি" title="বিদেশগামীদের ফিঙ্গারপ্রিন্ট গ্রহণ ও সরবরাহ করছে সিআইডি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="125.html"> বিদেশগামীদের ফিঙ্গারপ্রিন্ট গ্রহণ ও সরবরাহ করছে সিআইডি </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="124.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc3038cf7d.jpg" alt="আবুধাবিতে লটারিতে ১০৫ কোটি টাকা জিতলেন বাংলাদেশি গাড়িচালক" title="আবুধাবিতে লটারিতে ১০৫ কোটি টাকা জিতলেন বাংলাদেশি গাড়িচালক"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="124.html"> আবুধাবিতে লটারিতে ১০৫ কোটি টাকা জিতলেন বাংলাদেশি গাড়িচালক </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="123.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc2d70a70d.jpg" alt="সীমা হামিদকে সম্মানসূচক ডক্টরেট ডিগ্রি প্রদান করল ডব্লিউইউএলএম" title="সীমা হামিদকে সম্মানসূচক ডক্টরেট ডিগ্রি প্রদান করল ডব্লিউইউএলএম"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="123.html"> সীমা হামিদকে সম্মানসূচক ডক্টরেট ডিগ্রি প্রদান করল ডব্লিউইউএলএম </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="122.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc26d3a8d5.jpg" alt="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি" title="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="122.html"> সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="121.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc24494ab9.jpg" alt="সূচকের উঠা-নামায় লেনদেন চলছে" title="সূচকের উঠা-নামায় লেনদেন চলছে"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="121.html"> সূচকের উঠা-নামায় লেনদেন চলছে </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="120.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc21684271.jpeg" alt="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি" title="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="120.html"> এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="119.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc1eca8df4.jpg" alt="ইন্টারন্যাশনাল লিজিংয়ের তৃতীয় প্রান্তিক প্রকাশ" title="ইন্টারন্যাশনাল লিজিংয়ের তৃতীয় প্রান্তিক প্রকাশ"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="119.html"> ইন্টারন্যাশনাল লিজিংয়ের তৃতীয় প্রান্তিক প্রকাশ </a></h4>
-
-                                </div>
-
-
-                                <div class="tab-image tab-border">
-                                    <a href="118.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc1bebc9ae.jpg" alt="নগদ লভ্যাংশ পাঠিয়েছে ২ কোম্পানি" title="নগদ লভ্যাংশ পাঠিয়েছে ২ কোম্পানি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="118.html"> নগদ লভ্যাংশ পাঠিয়েছে ২ কোম্পানি </a></h4>
-
-                                </div>
-
-
-
-
-
-
+                                @endforeach
 
 
                             </div>
@@ -871,268 +654,18 @@
                         <div class="tab-pane fade" id="popular" role="tabpanel" aria-labelledby="popular">
                             <div class="news-titletab">
 
-
-
-
-
+                                @foreach($latestnews_20 as $latest1)
                                 <div class="tab-image tab-border">
 
-                                    <a href="117.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0fc9b111.jpg" alt="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ " title="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ "></a>
+                                    <a href="{{route('news-detail',[$latest1->id,$latest1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest1->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
 
-                                    <h4 class="tab_hadding"><a href="117.html"> দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ  </a></h4>
+                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$latest1->id,$latest1->slug])}}">{{$latest1->title}}</a></h4>
 
                                 </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="7.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab9cdcd931.webp" alt="নির্বাচন অবাধ ও সুষ্ঠু হওয়া নিয়ে কোনো লুকোচুরি নেই : পররাষ্ট্রমন্ত্রী (ভিডিও)" title="নির্বাচন অবাধ ও সুষ্ঠু হওয়া নিয়ে কোনো লুকোচুরি নেই : পররাষ্ট্রমন্ত্রী (ভিডিও)"></a>
-
-                                    <a href="#" class="video-icon3">  <a href="7.html" class="tab-icon"><i class="la la-play"></i></a>  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="7.html"> নির্বাচন অবাধ ও সুষ্ঠু হওয়া নিয়ে কোনো লুকোচুরি নেই : পররাষ্ট্রমন্ত্রী (ভিডিও) </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="22.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd7f86185.jpg" alt="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান" title="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="22.html"> যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="64.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb32a92d4d.jpg" alt="যে দোয়া পড়লে শান্ত থাকবে আপনার মন" title="যে দোয়া পড়লে শান্ত থাকবে আপনার মন"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="64.html"> যে দোয়া পড়লে শান্ত থাকবে আপনার মন </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="107.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbea465c94.jpg" alt="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল " title="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল "></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="107.html"> খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল  </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="23.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdb5775a7.jpg" alt="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি" title="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="23.html"> রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="72.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4ce99874.jpg" alt="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)" title="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="72.html"> অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও) </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="135.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
-
-                                    <a href="#" class="video-icon3">  <a href="135.html" class="tab-icon"><i class="la la-play"></i></a>  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="135.html"> শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="99.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbce8993ce.jpg" alt="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ" title="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="99.html"> পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="15.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babba879925.jpg" alt="এবার আদালতে মামলা লড়বে রোবট আইনজীবী, যা বিশ্বে প্রথম " title="এবার আদালতে মামলা লড়বে রোবট আইনজীবী, যা বিশ্বে প্রথম "></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="15.html"> এবার আদালতে মামলা লড়বে রোবট আইনজীবী, যা বিশ্বে প্রথম  </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="71.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4960f1e2.jpg" alt="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)" title="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="71.html"> রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও) </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="54.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb098d7307.jpg" alt="চ্যানেল টুয়েন্টিফোরের প্রতিযোগিতার বিজয়ীদের পুরস্কার বিতরণ" title="চ্যানেল টুয়েন্টিফোরের প্রতিযোগিতার বিজয়ীদের পুরস্কার বিতরণ"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="54.html"> চ্যানেল টুয়েন্টিফোরের প্রতিযোগিতার বিজয়ীদের পুরস্কার বিতরণ </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="29.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf40a2f18.jpg" alt="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ" title="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="29.html"> যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="43.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad999f772.jpg" alt="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু" title="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="43.html"> বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="133.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc67cb9310.jpg" alt="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে" title="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="133.html"> সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="93.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbb69f1f47.jpg" alt="৪ মেডিকেলের পরিচালক পদে বদলি" title="৪ মেডিকেলের পরিচালক পদে বদলি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="93.html"> ৪ মেডিকেলের পরিচালক পদে বদলি </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="65.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb35846828.jpg" alt="দুধ পানের সময় যে দোয়া পড়তে হয়" title="দুধ পানের সময় যে দোয়া পড়তে হয়"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="65.html"> দুধ পানের সময় যে দোয়া পড়তে হয় </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="24.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdf0ae6dd.jpg" alt="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি" title="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="24.html"> ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="34.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac1277d1c4.jpg" alt="টুইটার ব্যবহারকারীদের জন্য বড় দুঃসংবাদ " title="টুইটার ব্যবহারকারীদের জন্য বড় দুঃসংবাদ "></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="34.html"> টুইটার ব্যবহারকারীদের জন্য বড় দুঃসংবাদ  </a></h4>
-
-                                </div>
-
-
-
-                                <div class="tab-image tab-border">
-
-                                    <a href="97.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc526482e.jpg" alt="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও" title="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-
-                                    <h4 class="tab_hadding"><a href="97.html"> জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও </a></h4>
-
-                                </div>
-
+                                @endforeach
 
 
 
@@ -1187,30 +720,7 @@
                                 <li class="nav-item" role="presentation">
                                     <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill" data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1" aria-selected="false">
 
-                                        জাতীয়
-
-                                    </div>
-                                </li>
-
-
-                                <li class="nav-item" role="presentation">
-                                    <div class="nav-link" id="categori-tab2" data-bs-toggle="pill" data-bs-target="#Info-tabs2" role="tab" aria-controls="Info-tabs2" aria-selected="false">
-                                        রাজনীতি
-                                    </div>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <div class="nav-link" id="categori-tab3" data-bs-toggle="pill" data-bs-target="#Info-tabs3" role="tab" aria-controls="Info-tabs3" aria-selected="false">
-
-                                        আন্তর্জাতিক
-
-
-                                    </div>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <div class="nav-link" id="categori-tab4" data-bs-toggle="pill" data-bs-target="#Info-tabs4" role="tab" aria-controls="Info-tabs4" aria-selected="false">
-                                        তথ্যপ্রযুক্তি
+                                        {{$jatiyo->name}}
 
                                     </div>
                                 </li>
@@ -1219,128 +729,26 @@
 
                             </ul>
                         </div>
-
-
-
-
-
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane active show  fade" id="Info-tabs1" role="tabpanel" aria-labelledby="categori-tab1 ">
 
                                 <div class="row">
-
-
+                                    @foreach($jatiyonewses as $jatiyonews)
                                     <div class="themesBazar-4 themesBazar-m2">
                                         <div class="sec-two-wrpp">
                                             <div class="section-two-image">
-                                                <a href="74.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb5339bea8.jpg" alt="রাজকীয় ঢঙে নাতি-নাতনিকে বরণ, ৩০০ কেজি স্বর্ণ দান করবেন আম্বানি" title="রাজকীয় ঢঙে নাতি-নাতনিকে বরণ, ৩০০ কেজি স্বর্ণ দান করবেন আম্বানি"></a>
+                                                <a href="{{route('news-detail',[$jatiyonews->id,$jatiyonews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($jatiyonews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$jatiyonews->title}}"></a>
 
                                                 <a href="#" class="video-icon3">  </a>
                                             </div>
 
                                             <h5 class="sec-two-title">
-                                                <a href="74.html"> রাজকীয় ঢঙে নাতি-নাতনিকে বরণ, ৩০০ কেজি স্বর্ণ দান করবেন আম্বানি  </a>
+                                                <a href="{{route('news-detail',[$jatiyonews->id,$jatiyonews->slug])}}">{{$jatiyonews->title}}</a>
                                             </h5>
                                         </div>
                                     </div>
+                                    @endforeach
 
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="40.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63badad824121.jpg" alt="বাংলাদেশের অর্থনৈতিক প্রবৃদ্ধি অগ্রগতির প্রশংসা করলেন বাইডেন" title="বাংলাদেশের অর্থনৈতিক প্রবৃদ্ধি অগ্রগতির প্রশংসা করলেন বাইডেন"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="40.html"> বাংলাদেশের অর্থনৈতিক প্রবৃদ্ধি অগ্রগতির প্রশংসা করলেন বাইডেন  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="39.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada6e82e4b.jpg" alt="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা" title="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="39.html"> জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="38.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada001ff80.jpg" alt="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী" title="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="38.html"> জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="37.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bad954ae321.jpg" alt="ঘন কুয়াশায় শাহজালাল বিমানবন্দরে ফ্লাইট বন্ধ, সাতটি বিমান গিয়ে নামল কলকাতায়" title="ঘন কুয়াশায় শাহজালাল বিমানবন্দরে ফ্লাইট বন্ধ, সাতটি বিমান গিয়ে নামল কলকাতায়"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="37.html"> ঘন কুয়াশায় শাহজালাল বিমানবন্দরে ফ্লাইট বন্ধ, সাতটি বিমান গিয়ে নামল কলকাতায়  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="5.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab953b2686.jpg" alt="আগামী জাতীয় সংসদ নির্বাচন ইভিএম না ব্যালট, জানালো ইসি" title="আগামী জাতীয় সংসদ নির্বাচন ইভিএম না ব্যালট, জানালো ইসি"></a>
-
-                                                <a href="#" class="video-icon3">  <a href="5.html" class="mediam-icon"><i class="la la-play"></i></a>  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="5.html"> আগামী জাতীয় সংসদ নির্বাচন ইভিএম না ব্যালট, জানালো ইসি  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="4.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab8fa4a308.jpg" alt="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ" title="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="4.html"> গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="3.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab8250346e.jpg" alt="বাংলাদেশের তৈরি পোশাকের বড় বাজার হতে পারে ব্রাজিল : দেশটির রাষ্ট্রদূত" title="বাংলাদেশের তৈরি পোশাকের বড় বাজার হতে পারে ব্রাজিল : দেশটির রাষ্ট্রদূত"></a>
-
-                                                <a href="#" class="video-icon3">  <a href="3.html" class="mediam-icon"><i class="la la-play"></i></a>  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="3.html"> বাংলাদেশের তৈরি পোশাকের বড় বাজার হতে পারে ব্রাজিল : দেশটির রাষ্ট্রদূত  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
 
                                 </div>
 
@@ -1349,284 +757,189 @@
 
 
 
-                            </div>
-                            <div class="tab-pane fade" id="Info-tabs2" role="tabpanel" aria-labelledby="categori-tab2">
+                            </div
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        /* সেকশন ব্যাকগ্রাউন্ড সাদা রাখছি */
+        .section-two {
+            background-color: #ffffff;
+        }
 
+        /* ভেতরের wrapper যদি আলাদা bg দেয় */
+        .secTwo-color {
+            background-color: #ffffff;
+        }
+    </style>
 
-
-                                <div class="row">
-
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="10.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63baba8e61c91.jpg" alt="জনগণের সেবাই আ.লীগের একমাত্র মূলমন্ত্র : প্রধানমন্ত্রী (ভিডিও)" title="জনগণের সেবাই আ.লীগের একমাত্র মূলমন্ত্র : প্রধানমন্ত্রী (ভিডিও)"></a>
-
-                                                <a href="#" class="video-icon3">  <a href="10.html" class="mediam-icon"><i class="la la-play"></i></a>  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="10.html"> জনগণের সেবাই আ.লীগের একমাত্র মূলমন্ত্র : প্রধানমন্ত্রী (ভিডিও)  </a>
-                                            </h5>
-                                        </div>
+    <section class="section-two">
+        <div class="container">
+            <div class="secTwo-color">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="themesBazar_cat6">
+                            <ul class="nav nav-pills" id="categori-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill"
+                                         data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1"
+                                         aria-selected="false">
+                                        {{$rajniti->name}}
                                     </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="9.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63baba537dcdd.jpg" alt="ছাত্রলীগের সেই মঞ্চে পা ভেঙেছেন যুব মহিলা লীগের নেত্রী" title="ছাত্রলীগের সেই মঞ্চে পা ভেঙেছেন যুব মহিলা লীগের নেত্রী"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="9.html"> ছাত্রলীগের সেই মঞ্চে পা ভেঙেছেন যুব মহিলা লীগের নেত্রী  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="8.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63baba172b3f8.jpg" alt="অবস্থান কর্মসূচিতে যে পরিবর্তন এনেছে বিএনপি" title="অবস্থান কর্মসূচিতে যে পরিবর্তন এনেছে বিএনপি"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="8.html"> অবস্থান কর্মসূচিতে যে পরিবর্তন এনেছে বিএনপি  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="7.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab9cdcd931.webp" alt="নির্বাচন অবাধ ও সুষ্ঠু হওয়া নিয়ে কোনো লুকোচুরি নেই : পররাষ্ট্রমন্ত্রী (ভিডিও)" title="নির্বাচন অবাধ ও সুষ্ঠু হওয়া নিয়ে কোনো লুকোচুরি নেই : পররাষ্ট্রমন্ত্রী (ভিডিও)"></a>
-
-                                                <a href="#" class="video-icon3">  <a href="7.html" class="mediam-icon"><i class="la la-play"></i></a>  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="7.html"> নির্বাচন অবাধ ও সুষ্ঠু হওয়া নিয়ে কোনো লুকোচুরি নেই : পররাষ্ট্রমন্ত্রী (ভিডিও)  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="6.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab998b79f9.jpg" alt="দুর্নীতি মামলায় মির্জা আব্বাসকে হাজির করার আদেশ প্রত্যাহার" title="দুর্নীতি মামলায় মির্জা আব্বাসকে হাজির করার আদেশ প্রত্যাহার"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="6.html"> দুর্নীতি মামলায় মির্জা আব্বাসকে হাজির করার আদেশ প্রত্যাহার  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="tab-pane fade" id="Info-tabs3" role="tabpanel" aria-labelledby="categori-tab3">
-
-
-
-                                <div class="row">
-
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="133.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc67cb9310.jpg" alt="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে" title="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="133.html"> সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="15.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babba879925.jpg" alt="এবার আদালতে মামলা লড়বে রোবট আইনজীবী, যা বিশ্বে প্রথম " title="এবার আদালতে মামলা লড়বে রোবট আইনজীবী, যা বিশ্বে প্রথম "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="15.html"> এবার আদালতে মামলা লড়বে রোবট আইনজীবী, যা বিশ্বে প্রথম   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="14.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babb6f66037.jpg" alt="তিউনিসিয়ার উপকূলে অভিবাসীবোঝাই নৌকাডুবি, নিহত ৫ " title="তিউনিসিয়ার উপকূলে অভিবাসীবোঝাই নৌকাডুবি, নিহত ৫ "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="14.html"> তিউনিসিয়ার উপকূলে অভিবাসীবোঝাই নৌকাডুবি, নিহত ৫   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="13.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babb3951d26.jpg" alt="মায়ের মৃত্যুর পর একবারই কাঁদতে পেরেছেন প্রিন্স হ্যারি " title="মায়ের মৃত্যুর পর একবারই কাঁদতে পেরেছেন প্রিন্স হ্যারি "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="13.html"> মায়ের মৃত্যুর পর একবারই কাঁদতে পেরেছেন প্রিন্স হ্যারি   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="12.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babb0e2acb4.jpg" alt="চীনে ভয়াবহ সড়ক দুর্ঘটনায় নিহত ১৭, আহত ২২" title="চীনে ভয়াবহ সড়ক দুর্ঘটনায় নিহত ১৭, আহত ২২"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="12.html"> চীনে ভয়াবহ সড়ক দুর্ঘটনায় নিহত ১৭, আহত ২২  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="11.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babadb17989.jpg" alt="দারিদ্রতার কারণে স্কুল থেকে ঝরে পড়া ছাত্রটি এখন টেক্সাসের বিচারক" title="দারিদ্রতার কারণে স্কুল থেকে ঝরে পড়া ছাত্রটি এখন টেক্সাসের বিচারক"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="11.html"> দারিদ্রতার কারণে স্কুল থেকে ঝরে পড়া ছাত্রটি এখন টেক্সাসের বিচারক  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-                            </div>
-
-                            <div class="tab-pane fade" id="Info-tabs4" role="tabpanel" aria-labelledby="categori-tab4">
-
-
-                                <div class="row">
-
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="36.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac194816f6.jpg" alt="৫ মিনিটের চার্জে কথা বলা যাবে প্রায় ৩ ঘণ্টা" title="৫ মিনিটের চার্জে কথা বলা যাবে প্রায় ৩ ঘণ্টা"></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="36.html"> ৫ মিনিটের চার্জে কথা বলা যাবে প্রায় ৩ ঘণ্টা  </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="35.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac15d2709b.jpg" alt="সুইচ চাপলেই বদলে যাবে গাড়ির রং " title="সুইচ চাপলেই বদলে যাবে গাড়ির রং "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="35.html"> সুইচ চাপলেই বদলে যাবে গাড়ির রং   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="34.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac1277d1c4.jpg" alt="টুইটার ব্যবহারকারীদের জন্য বড় দুঃসংবাদ " title="টুইটার ব্যবহারকারীদের জন্য বড় দুঃসংবাদ "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="34.html"> টুইটার ব্যবহারকারীদের জন্য বড় দুঃসংবাদ   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="33.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac0ecbeabd.jpg" alt="গত ৮ বছরের মধ্যে স্যামসাংয়ের মুনাফায় ধস " title="গত ৮ বছরের মধ্যে স্যামসাংয়ের মুনাফায় ধস "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="33.html"> গত ৮ বছরের মধ্যে স্যামসাংয়ের মুনাফায় ধস   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                    <div class="themesBazar-4 themesBazar-m2">
-                                        <div class="sec-two-wrpp">
-                                            <div class="section-two-image">
-                                                <a href="32.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac0b42cc78.jpg" alt="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও " title="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও "></a>
-
-                                                <a href="#" class="video-icon3">  </a>
-                                            </div>
-
-                                            <h5 class="sec-two-title">
-                                                <a href="32.html"> ৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও   </a>
-                                            </h5>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-
-                            </div>
+                                </li>
+                                <span class="themeBazar6"></span>
+                            </ul>
                         </div>
 
-
-
-
-
-
-
-
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane active show fade" id="Info-tabs1" role="tabpanel"
+                                 aria-labelledby="categori-tab1">
+                                <div class="row">
+                                    @foreach($rajnitinewses as $rajnitinews)
+                                        <div class="themesBazar-4 themesBazar-m2">
+                                            <div class="sec-two-wrpp">
+                                                <div class="section-two-image">
+                                                    <a href="{{ route('news-detail', [$rajnitinews->id, $rajnitinews->slug]) }}">
+                                                        <img class="lazyload" src="{{ asset($webLogo->lazyload_logo) }}"
+                                                             data-src="{{ asset($rajnitinews->image) }}"
+                                                             alt="{{ $rajnitinews->title }}"
+                                                             title="{{ $rajnitinews->title }}">
+                                                    </a>
+                                                    <a href="#" class="video-icon3"></a>
+                                                </div>
+                                                <h5 class="sec-two-title">
+                                                    <a href="{{ route('news-detail', [$rajnitinews->id, $rajnitinews->slug]) }}">
+                                                        {{$rajnitinews->title}}
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
-
-
                 </div>
             </div>
         </div>
     </section>
 
+
+    <section class="section-two">
+        <div class="container">
+            <div class="secTwo-color">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="themesBazar_cat6">
+                            <ul class="nav nav-pills" id="categori-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill" data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1" aria-selected="false">
+
+                                        {{$antorjarrtik->name}}
+
+                                    </div>
+                                </li>
+
+                                <span class="themeBazar6"></span>
+
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane active show  fade" id="Info-tabs1" role="tabpanel" aria-labelledby="categori-tab1 ">
+
+                                <div class="row">
+                                    @foreach($antarjarrtiknewses as $antarjarrtiknews)
+                                        <div class="themesBazar-4 themesBazar-m2">
+                                            <div class="sec-two-wrpp">
+                                                <div class="section-two-image">
+                                                    <a href="{{route('news-detail',[$antarjarrtiknews->id,$antarjarrtiknews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($antarjarrtiknews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$antarjarrtiknews->title}}"></a>
+
+                                                    <a href="#" class="video-icon3">  </a>
+                                                </div>
+
+                                                <h5 class="sec-two-title">
+                                                    <a href="{{route('news-detail',[$antarjarrtiknews->id,$antarjarrtiknews->slug])}}">{{$antarjarrtiknews->title}}</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+
+                                </div>
+
+
+
+
+
+
+                            </div
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section-two">
+        <div class="container">
+            <div class="secTwo-color">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="themesBazar_cat6">
+                            <ul class="nav nav-pills" id="categori-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill" data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1" aria-selected="false">
+
+                                        {{$kheladhula->name}}
+
+                                    </div>
+                                </li>
+
+                                <span class="themeBazar6"></span>
+
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane active show  fade" id="Info-tabs1" role="tabpanel" aria-labelledby="categori-tab1 ">
+
+                                <div class="row">
+                                    @foreach($kheladhulanewses as $kheladhulanews)
+                                        <div class="themesBazar-4 themesBazar-m2">
+                                            <div class="sec-two-wrpp">
+                                                <div class="section-two-image">
+                                                    <a href="{{route('news-detail',[$kheladhulanews->id,$kheladhulanews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($kheladhulanews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$kheladhulanews->title}}"></a>
+
+                                                    <a href="#" class="video-icon3">  </a>
+                                                </div>
+
+                                                <h5 class="sec-two-title">
+                                                    <a href="{{route('news-detail',[$kheladhulanews->id,$kheladhulanews->slug])}}">{{$kheladhulanews->title}}</a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+
+                                </div>
+
+
+
+
+
+
+                            </div
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--=======================
                                            Section-two-End
@@ -1653,7 +966,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8">
                     <h2 class="themesBazar_cat_one">
-                        <span><a href="news/category/bangladesh.html"> সারাদেশ </a></span>
+                        <span><a href="{{route('category-news',[$saradesh->id,$saradesh->slug])}}">{{$saradesh->name}}</a></span>
                         <span2><a href="news/category/bangladesh.html"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h2>
 
@@ -1664,7 +977,7 @@
 
                             <div class="secThree-bg">
                                 <div class="sec-theee-image">
-                                    <a href="134.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
+                                    <a href="134.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -1680,7 +993,7 @@
                                 <div class="themesBazar-2 themesBazar-m2">
                                     <div class="secThree-wrpp">
                                         <div class="sec-theee-image2">
-                                            <a href="48.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf12566b4.jpg" alt="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের" title="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের"></a>
+                                            <a href="48.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf12566b4.jpg" alt="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের" title="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের"></a>
 
                                             <a href="#" class="video-icon3">  </a>
 
@@ -1695,7 +1008,7 @@
                                 <div class="themesBazar-2 themesBazar-m2">
                                     <div class="secThree-wrpp">
                                         <div class="sec-theee-image2">
-                                            <a href="47.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaed978b73.jpg" alt="অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের" title="অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের"></a>
+                                            <a href="47.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaed978b73.jpg" alt="অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের" title="অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের"></a>
 
                                             <a href="#" class="video-icon3">  </a>
 
@@ -1720,7 +1033,7 @@
 
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="46.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae9669437.jpg" alt="চরভদ্রাসনে যুবককে কুপিয়ে জখম" title="চরভদ্রাসনে যুবককে কুপিয়ে জখম"></a>
+                                        <a href="46.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae9669437.jpg" alt="চরভদ্রাসনে যুবককে কুপিয়ে জখম" title="চরভদ্রাসনে যুবককে কুপিয়ে জখম"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -1733,7 +1046,7 @@
 
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="45.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae475b3c6.jpg" alt="সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত" title="সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত"></a>
+                                        <a href="45.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae475b3c6.jpg" alt="সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত" title="সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -1746,7 +1059,7 @@
 
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="44.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae082146d.jpg" alt="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর" title="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর"></a>
+                                        <a href="44.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae082146d.jpg" alt="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর" title="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -1759,7 +1072,7 @@
 
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="43.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad999f772.jpg" alt="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু" title="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু"></a>
+                                        <a href="43.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad999f772.jpg" alt="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু" title="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -1772,7 +1085,7 @@
 
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="42.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad1c599b6.jpg" alt="এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা" title="এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা"></a>
+                                        <a href="42.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad1c599b6.jpg" alt="এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা" title="এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -4362,7 +3675,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="53.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb02253bf5.jpg" alt="চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা" title="চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা"></a>
+                                <a href="53.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb02253bf5.jpg" alt="চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা" title="চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4375,7 +3688,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="52.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaff425fcb.jpg" alt="গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়" title="গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়"></a>
+                                <a href="52.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaff425fcb.jpg" alt="গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়" title="গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4388,7 +3701,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="51.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbafc4f25b9.jpg" alt="চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত" title="চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত"></a>
+                                <a href="51.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbafc4f25b9.jpg" alt="চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত" title="চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4401,7 +3714,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="50.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf9ad4100.jpg" alt="জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা" title="জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা"></a>
+                                <a href="50.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf9ad4100.jpg" alt="জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা" title="জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4414,7 +3727,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="49.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf5691e53.jpg" alt="জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী" title="জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী"></a>
+                                <a href="49.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf5691e53.jpg" alt="জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী" title="জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4479,7 +3792,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="58.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb152d03e0.jpg" alt="লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া" title="লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া"></a>
+                            <a href="58.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb152d03e0.jpg" alt="লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া" title="লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -4491,7 +3804,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="57.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb11ef3664.jpg" alt="উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন" title="উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন"></a>
+                                <a href="57.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb11ef3664.jpg" alt="উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন" title="উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4502,7 +3815,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="56.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb0f0554f8.jpg" alt="প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই" title="প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই"></a>
+                                <a href="56.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb0f0554f8.jpg" alt="প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই" title="প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4513,7 +3826,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="55.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb0c4d6218.jpg" alt="গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন" title="গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন"></a>
+                                <a href="55.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb0c4d6218.jpg" alt="গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন" title="গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4543,7 +3856,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="137.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
+                            <a href="137.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -4555,7 +3868,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="137.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
+                                <a href="137.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4566,7 +3879,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="62.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb21526f8c.jpg" alt="শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন" title="শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন"></a>
+                                <a href="62.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb21526f8c.jpg" alt="শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন" title="শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4577,7 +3890,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="61.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb1f0065d1.jpg" alt="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার" title="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার"></a>
+                                <a href="61.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb1f0065d1.jpg" alt="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার" title="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4608,7 +3921,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="67.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb3bea6415.jpg" alt="কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি " title="কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি "></a>
+                            <a href="67.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb3bea6415.jpg" alt="কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি " title="কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি "></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -4620,7 +3933,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="66.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb37e58c78.jpg" alt="রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত" title="রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত"></a>
+                                <a href="66.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb37e58c78.jpg" alt="রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত" title="রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4631,7 +3944,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="65.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb35846828.jpg" alt="দুধ পানের সময় যে দোয়া পড়তে হয়" title="দুধ পানের সময় যে দোয়া পড়তে হয়"></a>
+                                <a href="65.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb35846828.jpg" alt="দুধ পানের সময় যে দোয়া পড়তে হয়" title="দুধ পানের সময় যে দোয়া পড়তে হয়"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4642,7 +3955,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="64.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb32a92d4d.jpg" alt="যে দোয়া পড়লে শান্ত থাকবে আপনার মন" title="যে দোয়া পড়লে শান্ত থাকবে আপনার মন"></a>
+                                <a href="64.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb32a92d4d.jpg" alt="যে দোয়া পড়লে শান্ত থাকবে আপনার মন" title="যে দোয়া পড়লে শান্ত থাকবে আপনার মন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4706,7 +4019,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="72.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4ce99874.jpg" alt="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)" title="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)"></a>
+                                <a href="72.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4ce99874.jpg" alt="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)" title="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4719,7 +4032,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="71.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4960f1e2.jpg" alt="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)" title="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)"></a>
+                                <a href="71.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4960f1e2.jpg" alt="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)" title="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4732,7 +4045,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="70.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb46815d05.jpg" alt="প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)" title="প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)"></a>
+                                <a href="70.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb46815d05.jpg" alt="প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)" title="প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4745,7 +4058,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="69.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb43a2faab.jpg" alt="এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)" title="এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)"></a>
+                                <a href="69.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb43a2faab.jpg" alt="এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)" title="এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4758,7 +4071,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="68.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb40151cbe.jpg" alt="কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)" title="কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)"></a>
+                                <a href="68.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb40151cbe.jpg" alt="কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)" title="কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4824,7 +4137,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="77.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb5d1c8b70.jpg" alt="বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা " title="বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা "></a>
+                            <a href="77.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb5d1c8b70.jpg" alt="বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা " title="বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা "></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -4836,7 +4149,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="76.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb59e9b94b.jpg" alt="বিশ্বের সবচেয়ে দামি ভেড়া যেখানে " title="বিশ্বের সবচেয়ে দামি ভেড়া যেখানে "></a>
+                                <a href="76.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb59e9b94b.jpg" alt="বিশ্বের সবচেয়ে দামি ভেড়া যেখানে " title="বিশ্বের সবচেয়ে দামি ভেড়া যেখানে "></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4847,7 +4160,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="75.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb56b75c42.jpg" alt="হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে" title="হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে"></a>
+                                <a href="75.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb56b75c42.jpg" alt="হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে" title="হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4858,7 +4171,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="73.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb50b9de34.jpg" alt="ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয় " title="ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয় "></a>
+                                <a href="73.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb50b9de34.jpg" alt="ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয় " title="ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয় "></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4888,7 +4201,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="135.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
+                            <a href="135.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
 
                             <a href="#" class="video-icon3">  <a href="135.html" class="video-icon5"><i class="la la-play"></i></a>  </a>
 
@@ -4900,7 +4213,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="82.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb71026194.jpg" alt="রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন" title="রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন"></a>
+                                <a href="82.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb71026194.jpg" alt="রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন" title="রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4911,7 +4224,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="81.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6bac0c6d.jpg" alt="যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন" title="যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন"></a>
+                                <a href="81.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6bac0c6d.jpg" alt="যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন" title="যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4922,7 +4235,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="80.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6805b95d.jpg" alt="শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?" title="শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?"></a>
+                                <a href="80.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6805b95d.jpg" alt="শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?" title="শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4953,7 +4266,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="87.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb8b468baf.jpg" alt="থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন" title="থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন"></a>
+                            <a href="87.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb8b468baf.jpg" alt="থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন" title="থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -4965,7 +4278,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="86.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb87a14c93.jpg" alt="বিশ্বের যে স্থানে রাত হয় না!" title="বিশ্বের যে স্থানে রাত হয় না!"></a>
+                                <a href="86.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb87a14c93.jpg" alt="বিশ্বের যে স্থানে রাত হয় না!" title="বিশ্বের যে স্থানে রাত হয় না!"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4976,7 +4289,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="85.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb846ce54b.jpg" alt="মহাকাশে বেড়াতে যাবেন?" title="মহাকাশে বেড়াতে যাবেন?"></a>
+                                <a href="85.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb846ce54b.jpg" alt="মহাকাশে বেড়াতে যাবেন?" title="মহাকাশে বেড়াতে যাবেন?"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -4987,7 +4300,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="84.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb815c3e20.jpg" alt="সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন" title="সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন"></a>
+                                <a href="84.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb815c3e20.jpg" alt="সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন" title="সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5050,7 +4363,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="92.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbb04ed0cc.jpg" alt="কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান" title="কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান"></a>
+                                <a href="92.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbb04ed0cc.jpg" alt="কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান" title="কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5063,7 +4376,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="91.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbab557a38.jpg" alt="আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য " title="আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য "></a>
+                                <a href="91.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbab557a38.jpg" alt="আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য " title="আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য "></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5076,7 +4389,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="90.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbba7540dd3.jpg" alt="যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি" title="যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি"></a>
+                                <a href="90.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbba7540dd3.jpg" alt="যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি" title="যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5089,7 +4402,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="89.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbba30b86a8.jpg" alt="খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি" title="খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি"></a>
+                                <a href="89.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbba30b86a8.jpg" alt="খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি" title="খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5102,7 +4415,7 @@
 
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="88.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb9f348dc4.jpg" alt="অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে" title="অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে"></a>
+                                <a href="88.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb9f348dc4.jpg" alt="অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে" title="অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5166,7 +4479,7 @@
 
                         <div class="black-bg">
                             <div class="secSeven-image">
-                                <a href="31.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babfd1eac94.jpg" alt="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’" title="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’"></a>
+                                <a href="31.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babfd1eac94.jpg" alt="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’" title="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5186,7 +4499,7 @@
                             <div class="themesBazar-2 themesBazar-m2">
                                 <div class="secSeven-wrpp ">
                                     <div class="secSeven-image2">
-                                        <a href="30.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf78d1ec9.jpg" alt="অপার রহস্য প্রকাশ করলেন বুবলী!" title="অপার রহস্য প্রকাশ করলেন বুবলী!"></a>
+                                        <a href="30.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf78d1ec9.jpg" alt="অপার রহস্য প্রকাশ করলেন বুবলী!" title="অপার রহস্য প্রকাশ করলেন বুবলী!"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -5201,7 +4514,7 @@
                             <div class="themesBazar-2 themesBazar-m2">
                                 <div class="secSeven-wrpp ">
                                     <div class="secSeven-image2">
-                                        <a href="29.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf40a2f18.jpg" alt="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ" title="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ"></a>
+                                        <a href="29.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf40a2f18.jpg" alt="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ" title="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -5216,7 +4529,7 @@
                             <div class="themesBazar-2 themesBazar-m2">
                                 <div class="secSeven-wrpp ">
                                     <div class="secSeven-image2">
-                                        <a href="28.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babefc928e2.jpg" alt="সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি" title="সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি"></a>
+                                        <a href="28.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babefc928e2.jpg" alt="সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি" title="সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -5231,7 +4544,7 @@
                             <div class="themesBazar-2 themesBazar-m2">
                                 <div class="secSeven-wrpp ">
                                     <div class="secSeven-image2">
-                                        <a href="27.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babeb66e6dd.jpg" alt="কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ" title="কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ"></a>
+                                        <a href="27.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babeb66e6dd.jpg" alt="কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ" title="কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
@@ -5272,7 +4585,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="97.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc526482e.jpg" alt="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও" title="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও"></a>
+                            <a href="97.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc526482e.jpg" alt="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও" title="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5284,7 +4597,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="96.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc11cd5d5.jpg" alt="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক" title="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক"></a>
+                                <a href="96.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc11cd5d5.jpg" alt="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক" title="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5295,7 +4608,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="95.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbdf2f83e.jpg" alt="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)" title="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)"></a>
+                                <a href="95.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbdf2f83e.jpg" alt="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)" title="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5306,7 +4619,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="94.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbb0da336.jpg" alt="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭" title="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭"></a>
+                                <a href="94.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbb0da336.jpg" alt="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭" title="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5336,7 +4649,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="102.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>
+                            <a href="102.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5348,7 +4661,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="101.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd4906458.jpg" alt="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)" title="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)"></a>
+                                <a href="101.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd4906458.jpg" alt="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)" title="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5359,7 +4672,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="100.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd1a11894.jpg" alt="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)" title="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)"></a>
+                                <a href="100.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd1a11894.jpg" alt="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)" title="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5370,7 +4683,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="99.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbce8993ce.jpg" alt="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ" title="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ"></a>
+                                <a href="99.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbce8993ce.jpg" alt="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ" title="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5401,7 +4714,7 @@
 
 
                         <div class="secFive-image">
-                            <a href="107.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbea465c94.jpg" alt="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল " title="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল "></a>
+                            <a href="107.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbea465c94.jpg" alt="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল " title="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল "></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5413,7 +4726,7 @@
 
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="106.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe6875836.jpg" alt="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি" title="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি"></a>
+                                <a href="106.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe6875836.jpg" alt="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি" title="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5424,7 +4737,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="105.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe35642fe.jpg" alt="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে" title="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে"></a>
+                                <a href="105.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe35642fe.jpg" alt="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে" title="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5435,7 +4748,7 @@
                         </div>
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="104.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe07b798a.jpg" alt="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার" title="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার"></a>
+                                <a href="104.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe07b798a.jpg" alt="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার" title="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
@@ -5478,7 +4791,7 @@
                         <div class="themesBazar-3 themesBazar-m2">
                             <div class="secEight-wrpp bg-4">
                                 <div class="secEight-image">
-                                    <a href="23.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdb5775a7.jpg" alt="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি" title="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি"></a>
+                                    <a href="23.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdb5775a7.jpg" alt="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি" title="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5492,7 +4805,7 @@
                         <div class="themesBazar-3 themesBazar-m2">
                             <div class="secEight-wrpp bg-4">
                                 <div class="secEight-image">
-                                    <a href="22.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd7f86185.jpg" alt="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান" title="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান"></a>
+                                    <a href="22.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd7f86185.jpg" alt="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান" title="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5506,7 +4819,7 @@
                         <div class="themesBazar-3 themesBazar-m2">
                             <div class="secEight-wrpp bg-4">
                                 <div class="secEight-image">
-                                    <a href="21.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd3dec05c.jpg" alt="অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর" title="অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর"></a>
+                                    <a href="21.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd3dec05c.jpg" alt="অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর" title="অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5531,7 +4844,7 @@
                         <div class="themesBazar-4 themesBazar-m2">
                             <div class="secEight-wrpp2 bg-4">
                                 <div class="secEight-image2">
-                                    <a href="20.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd0b8ef62.jpg" alt="শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ" title="শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ"></a>
+                                    <a href="20.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd0b8ef62.jpg" alt="শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ" title="শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5545,7 +4858,7 @@
                         <div class="themesBazar-4 themesBazar-m2">
                             <div class="secEight-wrpp2 bg-4">
                                 <div class="secEight-image2">
-                                    <a href="19.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babcb8be11f.JPG" alt="আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব" title="আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব"></a>
+                                    <a href="19.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babcb8be11f.JPG" alt="আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব" title="আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5559,7 +4872,7 @@
                         <div class="themesBazar-4 themesBazar-m2">
                             <div class="secEight-wrpp2 bg-4">
                                 <div class="secEight-image2">
-                                    <a href="18.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc6b2f642.jpg" alt="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের" title="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের"></a>
+                                    <a href="18.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc6b2f642.jpg" alt="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের" title="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5573,7 +4886,7 @@
                         <div class="themesBazar-4 themesBazar-m2">
                             <div class="secEight-wrpp2 bg-4">
                                 <div class="secEight-image2">
-                                    <a href="17.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc2413c1e.jpg" alt="এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার" title="এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার"></a>
+                                    <a href="17.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc2413c1e.jpg" alt="এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার" title="এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
@@ -5654,7 +4967,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="112.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbfd376fa4.jpg" alt="শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী" title="শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী"></a>
+                            <a href="112.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbfd376fa4.jpg" alt="শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী" title="শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5666,7 +4979,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="111.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbfaa7fed4.jpg" alt="এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী" title="এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী"></a>
+                            <a href="111.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbfaa7fed4.jpg" alt="এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী" title="এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5678,7 +4991,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="110.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbf7dc7d3d.jpg" alt="দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে" title="দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে"></a>
+                            <a href="110.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbf7dc7d3d.jpg" alt="দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে" title="দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5702,7 +5015,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="117.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0fc9b111.jpg" alt="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ " title="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ "></a>
+                            <a href="117.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0fc9b111.jpg" alt="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ " title="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ "></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5714,7 +5027,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="116.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0c634ad9.jpg" alt="উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন" title="উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন"></a>
+                            <a href="116.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0c634ad9.jpg" alt="উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন" title="উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5726,7 +5039,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="115.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc08961ebb.jpg" alt="যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’" title="যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’"></a>
+                            <a href="115.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc08961ebb.jpg" alt="যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’" title="যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5750,7 +5063,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="122.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc26d3a8d5.jpg" alt="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি" title="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি"></a>
+                            <a href="122.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc26d3a8d5.jpg" alt="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি" title="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5762,7 +5075,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="121.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc24494ab9.jpg" alt="সূচকের উঠা-নামায় লেনদেন চলছে" title="সূচকের উঠা-নামায় লেনদেন চলছে"></a>
+                            <a href="121.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc24494ab9.jpg" alt="সূচকের উঠা-নামায় লেনদেন চলছে" title="সূচকের উঠা-নামায় লেনদেন চলছে"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5774,7 +5087,7 @@
 
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="120.html"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc21684271.jpeg" alt="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি" title="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি"></a>
+                            <a href="120.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc21684271.jpeg" alt="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি" title="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
@@ -5859,7 +5172,7 @@
                         @foreach($videos5 as $video)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{$video->link}}"> <img class="lazyload" src="{{$webLogo->lazyload_logo}}" data-src="{{asset($video->image)}}"></a>
+                                <a href="{{$video->link}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($video->image)}}"></a>
 
                                 <a href="{{$video->link}}" class="video-icon popup"><i class="las la-video"></i></a>
 
