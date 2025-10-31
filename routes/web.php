@@ -28,8 +28,11 @@ use App\Http\Controllers\FrontSubCategoryNewsController;
 use App\Http\Controllers\FrontNewsDetailController;
 use App\Http\Controllers\PhotoCartController;
 use App\Http\Controllers\PrintController;
+use App\Http\Controllers\LoginController;
 
 require base_path('routes/admin.php');
+
+Route::get('/mypanel', [LoginController::class, 'index'])->name('login');
 
 Route::get('/', [FrontController::class, 'index'])->name('home');
 Route::get('/amader-poribar', [FrontReporterController::class, 'index'])->name('amaderporibar');

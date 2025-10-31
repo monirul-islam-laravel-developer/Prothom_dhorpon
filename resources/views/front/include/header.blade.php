@@ -89,7 +89,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="logo">
-                        <a href="{{route('home')}}"> <img src="{{asset($webLogo->desktop_logo)}}" alt="LaraFlash"></a>
+                        <a href="{{route('home')}}"> <img src="{{asset($webLogo->desktop_logo)}}" style="height: 120px;" alt="LaraFlash"></a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
