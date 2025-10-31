@@ -31,7 +31,18 @@
                                 <tr data-id="1">
                                     <td data-field="id">{{$loop->iteration}}</td>
                                     <td data-field="age">{{$post->title}}</td>
-                                    <td data-field="gender">Url</td>
+                                    <td>
+                                        <div class="copy-wrapper" style="position: relative; display: inline-block;">
+                                            <button class="btn btn-sm btn-outline-primary copy-btn"
+                                                    onclick="copyPostUrl('{{ route('news-detail', [$post->id, $post->slug]) }}', this)"
+                                                    title="Copy Post URL">
+                                                📋 Copy URL
+                                            </button>
+                                            <span class="copy-msg" style="display:none; position:absolute; left:105%; top:50%; transform:translateY(-50%); background:#0d6efd; color:#fff; padding:2px 8px; border-radius:4px; font-size:12px;">
+                            ✅ Copied!
+                        </span>
+                                        </div>
+                                    </td>
                                     <td data-field="image">
                                         <img src="{{asset($post->image)}}" height="60" width="100">
                                     </td>
@@ -65,4 +76,42 @@
             </div>
         </div>
     </div>
+    <!-- ✅ JS Function -->
+    <script>
+        function copyPostUrl(url, button) {
+            navigator.clipboard.writeText(url).then(() => {
+                const msg = button.parentElement.querySelector('.copy-msg');
+                msg.style.display = 'inline';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 1500);
+            }).catch(err => {
+                console.error('Copy failed:', err);
+                alert('❌ Failed to copy!');
+            });
+        }
+    </script>
+
+    <!-- ✅ Optional Styling -->
+    <style>
+        .copy-btn {
+            font-size: 13px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+        .copy-btn:hover {
+            background: #0d6efd;
+            color: #fff;
+        }
+        .copy-msg {
+            animation: fadeInOut 1.5s ease;
+        }
+        @keyframes fadeInOut {
+            0% {opacity: 0;}
+            10% {opacity: 1;}
+            90% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+    </style>
 @endsection

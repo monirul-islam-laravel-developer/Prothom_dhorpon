@@ -15,14 +15,13 @@
                             <div class="themesbazar_led_active owl-carousel">
 
 
-
-
+                                @foreach($leadnewses5 as $leadnews)
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="136.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbcb42b1065.jpg" alt="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’" title="এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’"></a>
+                                        <a href="{{route('news-detail',[$leadnews->id,$leadnews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($leadnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="">{{$leadnews->title}}</a>
 
                                         <h6 class="sec-small-cat">
-                                            <a href="#"> ৩ বছর আগে
+                                            <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
                                             </a>
                                         </h6>
 
@@ -31,94 +30,12 @@
 
 
                                         <h1 class="sec-one-title">
-                                            <a href="136.html"> এক্সিকিউটিভ মোটরস বাংলাদেশে আনলো ‘বিএমডব্লিউ এক্স সেভেন’  </a>
+                                            <a href="{{route('news-detail',[$leadnews->id,$leadnews->slug])}}">{{$leadnews->title}}</a>
                                         </h1>
                                     </div>
                                 </div>
+                                @endforeach
 
-
-
-                                <div class="secOne_newsContent">
-                                    <div class="sec-one-image">
-                                        <a href="135.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
-
-                                        <h6 class="sec-small-cat">
-                                            <a href="#"> ৩ বছর আগে
-                                            </a>
-                                        </h6>
-
-
-                                        <a href="135.html" class="video-icon1"><i class="la la-play"></i></a>
-
-
-                                        <h1 class="sec-one-title">
-                                            <a href="135.html"> শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি  </a>
-                                        </h1>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="secOne_newsContent">
-                                    <div class="sec-one-image">
-                                        <a href="134.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
-
-                                        <h6 class="sec-small-cat">
-                                            <a href="#"> ৩ বছর আগে
-                                            </a>
-                                        </h6>
-
-
-
-
-
-                                        <h1 class="sec-one-title">
-                                            <a href="134.html"> সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর...  </a>
-                                        </h1>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="secOne_newsContent">
-                                    <div class="sec-one-image">
-                                        <a href="133.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc67cb9310.jpg" alt="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে" title="সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে"></a>
-
-                                        <h6 class="sec-small-cat">
-                                            <a href="#"> ৩ বছর আগে
-                                            </a>
-                                        </h6>
-
-
-
-
-
-                                        <h1 class="sec-one-title">
-                                            <a href="133.html"> সৌদিতে মঙ্গলবার পর্যন্ত ঝরবে বৃষ্টি, ক্লাস অনলাইনে  </a>
-                                        </h1>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="secOne_newsContent">
-                                    <div class="sec-one-image">
-                                        <a href="4.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bab8fa4a308.jpg" alt="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ" title="গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ"></a>
-
-                                        <h6 class="sec-small-cat">
-                                            <a href="#"> ৩ বছর আগে
-                                            </a>
-                                        </h6>
-
-
-
-
-
-                                        <h1 class="sec-one-title">
-                                            <a href="4.html"> গ্রাহক পর্যায়ে বিদ্যুতের দাম বাড়ানোর সুপারিশ  </a>
-                                        </h1>
-                                    </div>
-                                </div>
 
 
 
@@ -131,54 +48,30 @@
                             <div class="sec-one-item">
                                 <div class="row">
 
-
-
+                                    @foreach($subleadnews2 as $subleadnews_2)
                                     <div class="themesBazar-2 themesBazar-m2">
                                         <div class="sec-one-wrpp">
                                             <div class="secOne-news">
                                                 <div class="secOne-sub-image">
-                                                    <a href="135.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
-
-                                                    <a href="135.html" class="video-icon1"><i class="la la-play"></i></a>
-
-
-                                                </div>
-                                                <h4 class="secOne-title2">
-                                                    <a href="135.html"> শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি  </a>
-                                                </h4>
-                                            </div>
-
-                                            <h6 class="cat-meta">
-                                                <a href="#"> <i class="lar la-newspaper"></i> ৩ বছর আগে
-                                                </a>
-                                            </h6>
-
-                                        </div>
-                                    </div>
-
-
-                                    <div class="themesBazar-2 themesBazar-m2">
-                                        <div class="sec-one-wrpp">
-                                            <div class="secOne-news">
-                                                <div class="secOne-sub-image">
-                                                    <a href="102.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>
+                                                    <a href="{{route('news-detail',[$subleadnews_2->id,$subleadnews_2->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($subleadnews_2->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$subleadnews_2->title}}"></a>
 
 
 
 
                                                 </div>
                                                 <h4 class="secOne-title2">
-                                                    <a href="102.html"> ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট  </a>
+                                                    <a href="{{route('news-detail',[$subleadnews_2->id,$subleadnews_2->slug])}}">{{$subleadnews_2->title}}</a>
                                                 </h4>
                                             </div>
 
                                             <h6 class="cat-meta">
-                                                <a href="#"> <i class="lar la-newspaper"></i> ৩ বছর আগে
+                                                <a href="#"> <i class="lar la-newspaper"></i>  {{ \Carbon\Carbon::parse($subleadnews_2->created_at)->locale('bn')->diffForHumans() }}
                                                 </a>
                                             </h6>
 
                                         </div>
                                     </div>
+                                    @endforeach
 
 
 
@@ -967,7 +860,7 @@
                 <div class="col-lg-8 col-md-8">
                     <h2 class="themesBazar_cat_one">
                         <span><a href="{{route('category-news',[$saradesh->id,$saradesh->slug])}}">{{$saradesh->name}}</a></span>
-                        <span2><a href="news/category/bangladesh.html"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span2><a href="{{route('category-news',[$saradesh->id,$saradesh->slug])}}"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h2>
 
                     <div class="row">
@@ -977,48 +870,32 @@
 
                             <div class="secThree-bg">
                                 <div class="sec-theee-image">
-                                    <a href="134.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc9d3dd206.jpg" alt="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..." title="সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর..."></a>
-
-                                    <a href="#" class="video-icon3">  </a>
+                                    <a href="{{route('news-detail',[$saradeshnews1->id,$saradeshnews1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($saradeshnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$saradeshnews1->title}}"></a>
 
                                 </div>
                                 <h4 class="secThree-title">
-                                    <a href="134.html"> সীমান্ত থেকে ১৭ ছাগল নিয়ে গেল বিএসএফ, অতঃপর...  </a>
+                                    <a href="{{route('news-detail',[$saradeshnews1->id,$saradeshnews1->slug])}}">{{$saradeshnews1->title}} </a>
                                 </h4>
                             </div>
 
                             <div class="row">
 
-
+                                @foreach($saradeshnews2 as $saradeshnews)
                                 <div class="themesBazar-2 themesBazar-m2">
                                     <div class="secThree-wrpp">
                                         <div class="sec-theee-image2">
-                                            <a href="48.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf12566b4.jpg" alt="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের" title="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের"></a>
+                                            <a href="{{route('news-detail',[$saradeshnews->id,$saradeshnews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($saradeshnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$saradeshnews->title}}"></a>
 
                                             <a href="#" class="video-icon3">  </a>
 
                                         </div>
                                         <h4 class="secThree-title2">
-                                            <a href="48.html"> এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের  </a>
+                                            <a href="{{route('news-detail',[$saradeshnews->id,$saradeshnews->slug])}}">{{$saradeshnews->title}} </a>
                                         </h4>
                                     </div>
 
                                 </div>
-
-                                <div class="themesBazar-2 themesBazar-m2">
-                                    <div class="secThree-wrpp">
-                                        <div class="sec-theee-image2">
-                                            <a href="47.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaed978b73.jpg" alt="অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের" title="অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের"></a>
-
-                                            <a href="#" class="video-icon3">  </a>
-
-                                        </div>
-                                        <h4 class="secThree-title2">
-                                            <a href="47.html"> অ্যাম্বুলেন্স চাপায় প্রাণ গেল ভ্যানচালকের  </a>
-                                        </h4>
-                                    </div>
-
-                                </div>
+                                @endforeach
 
 
 
@@ -1029,72 +906,20 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="bg2">
 
-
-
+                                @foreach($saradeshnews5 as $news5)
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="46.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae9669437.jpg" alt="চরভদ্রাসনে যুবককে কুপিয়ে জখম" title="চরভদ্রাসনে যুবককে কুপিয়ে জখম"></a>
+                                        <a href="{{route('news-detail',[$news5->id,$news5->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($news5->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$news5->title}}"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
 
                                         <h5 class="secOne_smallTitle">
-                                            <a href="46.html"> চরভদ্রাসনে যুবককে কুপিয়ে জখম  </a>
+                                            <a href="{{route('news-detail',[$news5->id,$news5->slug])}}">{{$news5->title}} </a>
                                         </h5>
                                     </div>
                                 </div>
-
-                                <div class="secThree-smallItem">
-                                    <div class="secThree-smallImg">
-                                        <a href="45.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae475b3c6.jpg" alt="সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত" title="সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-
-                                        <h5 class="secOne_smallTitle">
-                                            <a href="45.html"> সাভারের কলমায় লেগুনা-মিনিবাস সংঘর্ষে ৩ জন নিহত  </a>
-                                        </h5>
-                                    </div>
-                                </div>
-
-                                <div class="secThree-smallItem">
-                                    <div class="secThree-smallImg">
-                                        <a href="44.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae082146d.jpg" alt="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর" title="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-
-                                        <h5 class="secOne_smallTitle">
-                                            <a href="44.html"> কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর  </a>
-                                        </h5>
-                                    </div>
-                                </div>
-
-                                <div class="secThree-smallItem">
-                                    <div class="secThree-smallImg">
-                                        <a href="43.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad999f772.jpg" alt="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু" title="বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-
-                                        <h5 class="secOne_smallTitle">
-                                            <a href="43.html"> বড় ভাইয়ের সঙ্গে ঝগড়া করে বিষপানে ছোট ভাইয়ের মৃত্যু  </a>
-                                        </h5>
-                                    </div>
-                                </div>
-
-                                <div class="secThree-smallItem">
-                                    <div class="secThree-smallImg">
-                                        <a href="42.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbad1c599b6.jpg" alt="এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা" title="এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-
-                                        <h5 class="secOne_smallTitle">
-                                            <a href="42.html"> এবার ইলিশ মাছে অভিনব প্রতারণা, অবাক ক্রেতা  </a>
-                                        </h5>
-                                    </div>
-                                </div>
+                                @endforeach
 
 
 
@@ -3664,86 +3489,32 @@
 
 
                     <div class="themesBazar_cat">
-                        <a href="news/category/campus.html"> ক্যাম্পাস </a>
+                        <a href="{{route('category-news',[$krrishi->id,$krrishi->slug])}}">{{$krrishi->name}}</a>
                         <span class="themeBazar"></span>
                     </div>
 
                     <div class="secFour-slider owl-carousel">
 
+                        @foreach($krrishi5 as $krrishi1)
+                            <div class="secFour-wrpp ">
+                                <div class="secFour-image">
+                                    <a href="{{route('news-detail',[$krrishi1->id,$krrishi1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($krrishi1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$krrishi1->title}}"></a>
 
+                                    <a href="#" class="video-icon3">  </a>
 
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="53.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb02253bf5.jpg" alt="চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা" title="চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="53.html"> চবি ছাত্রলীগের সংঘর্ষে ক্যাম্পসে উত্তেজনা  </a>
-                                </h5>
+                                    <h5 class="secFour-title">
+                                        <a href="{{route('news-detail',[$krrishi1->id,$krrishi1->slug])}}">{{$krrishi1->title}} </a>
+                                    </h5>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="52.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaff425fcb.jpg" alt="গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়" title="গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="52.html"> গুচ্ছ পদ্ধতিতে ভর্তি, প্রথম অবস্থানে বেগম রোকেয়া বিশ্ববিদ্যালয়  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="51.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbafc4f25b9.jpg" alt="চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত" title="চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="51.html"> চবিতে ছাত্রলীগের দুই গ্রুপের সংঘর্ষে সহকারী প্রক্টর আহত  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="50.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf9ad4100.jpg" alt="জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা" title="জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="50.html"> জাবিতে ভূতাত্ত্বিক বিজ্ঞান বিভাগের যৌথ গবেষণা  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="49.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf5691e53.jpg" alt="জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী" title="জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="49.html"> জবি বিএনসিসি ক্যাডেট ও ল্যান্স কর্পোরাল পদে পদোন্নতি পেলেন ৩৫ শিক্ষার্থী  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
+                        @endforeach
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
 
@@ -3782,8 +3553,8 @@
 
 
                     <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/media.html"> গণমাধ্যম </a> </span>
-                        <span2><a href="news/category/media.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$gonomadhym->id,$gonomadhym->slug])}}">{{$gonomadhym->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$gonomadhym->id,$gonomadhym->slug])}}">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h1>
 
                     <div class="white-bg">
@@ -3792,49 +3563,28 @@
 
 
                         <div class="secFive-image">
-                            <a href="58.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb152d03e0.jpg" alt="লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া" title="লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া"></a>
+                            <a href="{{route('news-detail',[$gonomaddhonews1->id,$gonomaddhonews1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($gonomaddhonews1->image)}}" alt="ল{{asset($webLogo->lazyload_logo)}}" title="{{$gonomaddhonews1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="58.html"> লুডুতে চ্যাম্পিয়ন তাপসী রাবেয়া  </a>
+                                <a href="{{route('news-detail',[$gonomaddhonews1->id,$gonomaddhonews1->slug])}}">{{$gonomaddhonews1->title}}</a>
                             </div>
                         </div>
-
+                        @foreach($gonomaddhonews3 as $gonomaddhom3)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="57.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb11ef3664.jpg" alt="উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন" title="উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন"></a>
+                                <a href="{{route('news-detail',[$gonomaddhom3->id,$gonomaddhom3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($gonomaddhom3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$gonomaddhom3->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="57.html"> উৎসাহ-উদ্দীপনায় শুরু জাতীয় প্রেস ক্লাবের নির্বাচন  </a>
+                                    <a href="{{route('news-detail',[$gonomaddhom3->id,$gonomaddhom3->slug])}}">{{$gonomaddhom3->title}} </a>
                                 </h5>
                             </div>
                         </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="56.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb0f0554f8.jpg" alt="প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই" title="প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="56.html"> প্রখ্যাত টিভি সাংবাদিক বারবারা ওয়াল্টারস আর নেই  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="55.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb0c4d6218.jpg" alt="গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন" title="গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="55.html"> গত ২০ বছরে প্রায় ১৭শ সাংবাদিক নিহত হয়েছেন  </a>
-                                </h5>
-                            </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -3846,8 +3596,8 @@
 
 
                     <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/jobs.html"> চাকুরী </a> </span>
-                        <span2><a href="news/category/jobs.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$job->id,$job->slug])}}">{{$job->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$job->id,$job->slug])}}">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h1>
 
                     <div class="white-bg">
@@ -3856,49 +3606,29 @@
 
 
                         <div class="secFive-image">
-                            <a href="137.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
+                            <a href="{{route('news-detail',[$job1->id,$job1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($job1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$job1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="137.html"> ৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ  </a>
+                                <a href="{{route('news-detail',[$job1->id,$job1->slug])}}">{{$job1->title}}</a>
                             </div>
                         </div>
 
+                        @foreach($job3 as $job_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="137.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bd9b6a47465.jpg" alt="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ" title="৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ"></a>
+                                <a href="{{route('news-detail',[$job_1->id,$job_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($job_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$job_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="137.html"> ৫ ধরনের ছুটির সুবিধাসহ আর্থিক প্রতিষ্ঠানে চাকরির সুযোগ  </a>
+                                    <a href="{{route('news-detail',[$job_1->id,$job_1->slug])}}">{{$job_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="62.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb21526f8c.jpg" alt="শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন" title="শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="62.html"> শাহজালাল ইসলামী ব্যাংকে চাকরির সুযোগ, থাকছে আকর্ষণীয় বেতন  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="61.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb1f0065d1.jpg" alt="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার" title="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="61.html"> কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার  </a>
-                                </h5>
-                            </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -3911,8 +3641,8 @@
 
 
                     <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/religion.html"> ধর্ম </a> </span>
-                        <span2><a href="news/category/religion.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$dhormo->id,$dhormo->slug])}}">{{$dhormo->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$dhormo->id,$dhormo->slug])}}">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h1>
 
                     <div class="white-bg">
@@ -3921,49 +3651,28 @@
 
 
                         <div class="secFive-image">
-                            <a href="67.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb3bea6415.jpg" alt="কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি " title="কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি "></a>
+                            <a href="{{route('news-detail',[$dhormo1->id,$dhormo1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dhormo1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$dhormo1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
-
                             <div class="secFive-title">
-                                <a href="67.html"> কয়জন বাংলাদেশি হজে যেতে পারবেন, জানা যাবে ৯ জানুয়ারি   </a>
+                                <a href="{{route('news-detail',[$dhormo1->id,$dhormo1->slug])}}">{{$dhormo1->title}}</a>
                             </div>
                         </div>
 
+                        @foreach($dhormo3 as $dhormo_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="66.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb37e58c78.jpg" alt="রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত" title="রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত"></a>
+                                <a href="{{route('news-detail',[$dhormo_1->id,$dhormo_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dhormo_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$dhormo_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="66.html"> রমজানের সম্ভাব্য তারিখ ঘোষণা করল আরব আমিরাত  </a>
+                                    <a href="{{route('news-detail',[$dhormo_1->id,$dhormo_1->slug])}}">{{$dhormo_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="65.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb35846828.jpg" alt="দুধ পানের সময় যে দোয়া পড়তে হয়" title="দুধ পানের সময় যে দোয়া পড়তে হয়"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="65.html"> দুধ পানের সময় যে দোয়া পড়তে হয়  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="64.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb32a92d4d.jpg" alt="যে দোয়া পড়লে শান্ত থাকবে আপনার মন" title="যে দোয়া পড়লে শান্ত থাকবে আপনার মন"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="64.html"> যে দোয়া পড়লে শান্ত থাকবে আপনার মন  </a>
-                                </h5>
-                            </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -4008,79 +3717,25 @@
 
 
                     <div class="themesBazar_cat">
-                        <a href="news/category/agriculture.html"> কৃষি </a>
+                        <a href="{{route('category-news',[$campus->id,$campus->slug])}}">{{$campus->name}}</a>
                         <span class="themeBazar"></span>
                     </div>
 
                     <div class="secFour-slider owl-carousel">
 
+                        @foreach($campusnewses5 as $campusnews)
+                            <div class="secFour-wrpp ">
+                                <div class="secFour-image">
+                                    <a href="{{route('news-detail',[$campusnews->id,$campusnews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($campusnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$campusnews->title}}"></a>
 
+                                    <a href="#" class="video-icon3">  </a>
 
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="72.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4ce99874.jpg" alt="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)" title="অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="72.html"> অনুমোদন পেয়েছে উদ্ভাবিত উচ্চ ফলনশীল নতুন ধানের জাত (ভিডিও)  </a>
-                                </h5>
+                                    <h5 class="secFour-title">
+                                        <a href="{{route('news-detail',[$campusnews->id,$campusnews->slug])}}"> {{$campusnews->title}}</a>
+                                    </h5>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="71.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb4960f1e2.jpg" alt="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)" title="রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="71.html"> রোজেলা চাষে আগ্রহ বেড়েছে কৃষকের (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="70.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb46815d05.jpg" alt="প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)" title="প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="70.html"> প্রথমবারের মতো বেসরকারিভাবে গমের নতুন জাত উদ্ভাবন (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="69.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb43a2faab.jpg" alt="এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)" title="এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="69.html"> এবার বৃষ্টিসহ শৈত্যপ্রবাহের আভাস (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="68.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb40151cbe.jpg" alt="কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)" title="কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="68.html"> কৃষকের স্বার্থে বাজারে থাকা পেটেন্ট বালাইনাশক তুলে নেয়ার দাবি (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-
+                        @endforeach
 
 
                     </div>
@@ -4127,8 +3782,8 @@
 
 
                     <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/feature.html"> ফিচার </a> </span>
-                        <span2><a href="news/category/feature.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$sastho->id,$sastho->slug])}}">{{$sastho->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$sastho->id,$sastho->slug])}}">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h1>
 
                     <div class="white-bg">
@@ -4137,49 +3792,29 @@
 
 
                         <div class="secFive-image">
-                            <a href="77.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb5d1c8b70.jpg" alt="বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা " title="বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা "></a>
+                            <a href="{{route('news-detail',[$sastho1->id,$sastho1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sastho1->image)}}" alt="বি{{asset($webLogo->lazyload_logo)}} " title="{{$sastho1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="77.html"> বিশ্বে প্রথম কৃত্রিম গর্ভের সুবিধা, থাকছে সন্তানের উচ্চতা ও বুদ্ধিমত্তা নির্ধারণের সুবিধা   </a>
+                                <a href="{{route('news-detail',[$sastho1->id,$sastho1->slug])}}">{{$sastho1->title}}</a>
                             </div>
                         </div>
-
+                        @foreach($sastho3 as $sastho_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="76.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb59e9b94b.jpg" alt="বিশ্বের সবচেয়ে দামি ভেড়া যেখানে " title="বিশ্বের সবচেয়ে দামি ভেড়া যেখানে "></a>
+                                <a href="{{route('news-detail',[$sastho_1->id,$sastho_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sastho_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sastho_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="76.html"> বিশ্বের সবচেয়ে দামি ভেড়া যেখানে   </a>
+                                    <a href="{{route('news-detail',[$sastho_1->id,$sastho_1->slug])}}">{{$sastho_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="75.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb56b75c42.jpg" alt="হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে" title="হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে"></a>
+                        @endforeach
 
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="75.html"> হাতির পিঠে চড়ে রাজকীয় বরযাত্রা, কনে এলো পালকিতে  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="73.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb50b9de34.jpg" alt="ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয় " title="ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয় "></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="73.html"> ছোট্ট চড়ুই-স্বর্ণের রিং যেভাবে মা এবং আমাকে কষ্ট দেয়   </a>
-                                </h5>
-                            </div>
-                        </div>
 
 
 
@@ -4191,59 +3826,38 @@
 
 
                     <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/lifestyle.html"> লাইফস্টাইল </a> </span>
-                        <span2><a href="news/category/lifestyle.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$ainadalot->id,$ainadalot->slug])}}">{{$ainadalot->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$ainadalot->id,$ainadalot->slug])}}">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h1>
 
                     <div class="white-bg">
 
 
 
-
                         <div class="secFive-image">
-                            <a href="135.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbca81ecd92.jpg" alt="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি" title="শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি"></a>
+                            <a href="{{route('news-detail',[$ainadalot1->id,$ainadalot1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($ainadalot1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$ainadalot1->title}}"></a>
 
-                            <a href="#" class="video-icon3">  <a href="135.html" class="video-icon5"><i class="la la-play"></i></a>  </a>
+
 
 
                             <div class="secFive-title">
-                                <a href="135.html"> শুরু হয়েছে শীতের মৌসুম, শীতের ফুলে রঙিন প্রকৃতি  </a>
+                                <a href="{{route('news-detail',[$ainadalot1->id,$ainadalot1->slug])}}">{{$ainadalot1->title}}</a>
                             </div>
                         </div>
 
+                        @foreach($ainadalot3 as $ainadalot_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="82.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb71026194.jpg" alt="রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন" title="রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন"></a>
+                                <a href="{{route('news-detail',[$ainadalot_1->id,$ainadalot_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($ainadalot_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$ainadalot_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="82.html"> রান্নায় মরিচের গুঁড়া বেশি পড়ে গেলে যা যা করবেন  </a>
+                                    <a href="{{route('news-detail',[$ainadalot_1->id,$ainadalot_1->slug])}}">{{$ainadalot_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="81.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6bac0c6d.jpg" alt="যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন" title="যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="81.html"> যে কারণে নিয়মিত খালি পেটে পেঁপে খাবেন  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="80.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6805b95d.jpg" alt="শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?" title="শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="80.html"> শীতে কলা খাওয়া কি সর্দি-কাশির জন্য ক্ষতিকর?  </a>
-                                </h5>
-                            </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -4256,8 +3870,8 @@
 
 
                     <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/traveling.html"> ভ্রমণ </a> </span>
-                        <span2><a href="news/category/traveling.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$shikkha->id,$shikkha->slug])}}">{{$shikkha->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$shikkha->id,$shikkha->slug])}}">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </h1>
 
                     <div class="white-bg">
@@ -4266,49 +3880,30 @@
 
 
                         <div class="secFive-image">
-                            <a href="87.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb8b468baf.jpg" alt="থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন" title="থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন"></a>
+                            <a href="{{route('news-detail',[$shikkha1->id,$shikkha1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($shikkha1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$shikkha1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="87.html"> থাইল্যান্ড ভ্রমণে যে ভুল করলেই বিপদে পড়বেন  </a>
+                                <a href="{{route('news-detail',[$shikkha1->id,$shikkha1->slug])}}">{{$shikkha1->title}}</a>
                             </div>
                         </div>
 
+                        @foreach($shikkha3 as $shikkha_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="86.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb87a14c93.jpg" alt="বিশ্বের যে স্থানে রাত হয় না!" title="বিশ্বের যে স্থানে রাত হয় না!"></a>
+                                <a href="{{route('news-detail',[$shikkha_1->id,$shikkha_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($shikkha_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$shikkha_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="86.html"> বিশ্বের যে স্থানে রাত হয় না!  </a>
+                                    <a href="{{route('news-detail',[$shikkha_1->id,$shikkha_1->slug])}}">{{$shikkha_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="85.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb846ce54b.jpg" alt="মহাকাশে বেড়াতে যাবেন?" title="মহাকাশে বেড়াতে যাবেন?"></a>
+                        @endforeach
 
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="85.html"> মহাকাশে বেড়াতে যাবেন?  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="84.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb815c3e20.jpg" alt="সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন" title="সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFive_title2">
-                                    <a href="84.html"> সঙ্গীকে নিয়ে মালদ্বীপ ভ্রমণে যে ভুল করলেই বিপদে পড়বেন  </a>
-                                </h5>
-                            </div>
-                        </div>
 
 
 
@@ -4352,78 +3947,26 @@
 
 
                     <div class="themesBazar_cat">
-                        <a href="news/category/editorial.html"> সম্পাদকীয় </a>
+                        <a href="{{route('category-news',[$sompadokio->id,$sompadokio->slug])}}">{{$sompadokio->name}}</a>
                         <span class="themeBazar"></span>
                     </div>
 
                     <div class="secFour-slider owl-carousel">
 
 
-
-
+                        @foreach($sompadokio5 as $sompadokio_1)
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="92.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbb04ed0cc.jpg" alt="কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান" title="কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান"></a>
+                                <a href="{{route('news-detail',[$sompadokio_1->id,$sompadokio_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sompadokio_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sompadokio_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFour-title">
-                                    <a href="92.html"> কক্সবাজারে বিদেশি ট্যুরিস্টদের জন্য আলাদা জোন হবে: কউক চেয়ারম্যান  </a>
+                                    <a href="{{route('news-detail',[$sompadokio_1->id,$sompadokio_1->slug])}}">{{$sompadokio_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="91.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbab557a38.jpg" alt="আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য " title="আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য "></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="91.html"> আবেদন ফি নিয়ে আন্দোলন করলে গুচ্ছ ছেড়ে দেব: জবি উপাচার্য   </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="90.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbba7540dd3.jpg" alt="যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি" title="যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="90.html"> যেভাবে অ্যামাজনে চাকরি পেলেন খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী মনি  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="89.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbba30b86a8.jpg" alt="খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি" title="খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="89.html"> খালেদা জিয়াকে আবার জেলে নেওয়া হলে আমরা রুখে দাঁড়াব: জবি ছাত্রদল সভাপতি  </a>
-                                </h5>
-                            </div>
-                        </div>
-
-
-                        <div class="secFour-wrpp ">
-                            <div class="secFour-image">
-                                <a href="88.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb9f348dc4.jpg" alt="অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে" title="অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে"></a>
-
-                                <a href="#" class="video-icon3">  </a>
-
-                                <h5 class="secFour-title">
-                                    <a href="88.html"> অদিতির ‘অ-লক্ষুণে’ সামাজিক যোগাযোগ মাধ্যমে জনপ্রিয়তার শীর্ষে  </a>
-                                </h5>
-                            </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -4468,7 +4011,7 @@
     <section class="section-seven">
         <div class="container">
             <h2 class="themesBazar_cat3">
-                <a href="news/category/entertainment.html"> বিনোদন </a>
+                <a href="{{route('category-news',[$binodon->id,$binodon->slug])}}">{{$binodon->name}}</a>
                 <span class="themeBazar3"></span>
             </h2>
             <div class="secSecven-color">
@@ -4479,13 +4022,13 @@
 
                         <div class="black-bg">
                             <div class="secSeven-image">
-                                <a href="31.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babfd1eac94.jpg" alt="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’" title="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’"></a>
+                                <a href="{{route('news-detail',[$binodon1->id,$binodon1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($binodon1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title=" {{$binodon1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                             </div>
                             <h6 class="secSeven-title">
-                                <a href="31.html"> ‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’  </a>
+                                <a href="{{route('news-detail',[$binodon1->id,$binodon1->slug])}}"> {{$binodon1->title}}</a>
                             </h6>
 
                         </div>
@@ -4494,66 +4037,23 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="row">
-
-
+                            @foreach($binodon4 as $binodon_1 )
                             <div class="themesBazar-2 themesBazar-m2">
                                 <div class="secSeven-wrpp ">
                                     <div class="secSeven-image2">
-                                        <a href="30.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf78d1ec9.jpg" alt="অপার রহস্য প্রকাশ করলেন বুবলী!" title="অপার রহস্য প্রকাশ করলেন বুবলী!"></a>
+                                        <a href="{{route('news-detail',[$binodon_1->id,$binodon_1->slug])}}"> <img class="lazyload" src="{{asset($binodon_1->image)}}" data-src="" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$binodon_1->title}}"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
                                         <h5 class="secSeven-title2">
-                                            <a href="30.html"> অপার রহস্য প্রকাশ করলেন বুবলী!  </a>
+                                            <a href="{{route('news-detail',[$binodon_1->id,$binodon_1->slug])}}">{{$binodon_1->title}} </a>
                                         </h5>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
 
 
-                            <div class="themesBazar-2 themesBazar-m2">
-                                <div class="secSeven-wrpp ">
-                                    <div class="secSeven-image2">
-                                        <a href="29.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babf40a2f18.jpg" alt="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ" title="যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-                                        <h5 class="secSeven-title2">
-                                            <a href="29.html"> যে কারণে ঐশিকে নিয়ে স্টেডিয়ামে যাচ্ছেন শুভ  </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="themesBazar-2 themesBazar-m2">
-                                <div class="secSeven-wrpp ">
-                                    <div class="secSeven-image2">
-                                        <a href="28.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babefc928e2.jpg" alt="সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি" title="সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-                                        <h5 class="secSeven-title2">
-                                            <a href="28.html"> সাংসারিক গোলযোগের মাঝে যে কারণে দুবাই যাচ্ছেন রাজ-পরীমণি  </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="themesBazar-2 themesBazar-m2">
-                                <div class="secSeven-wrpp ">
-                                    <div class="secSeven-image2">
-                                        <a href="27.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babeb66e6dd.jpg" alt="কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ" title="কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ"></a>
-
-                                        <a href="#" class="video-icon3">  </a>
-
-                                        <h5 class="secSeven-title2">
-                                            <a href="27.html"> কিয়ারার গালে হঠাৎ বরুণের চুমু, রেগে আগুন সিদ্ধার্থ  </a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
 
 
                         </div>
@@ -4568,207 +4068,207 @@
     <!--=======================
                                            Section-Five-Start
                                      ==========================-->
-    <section class="section-five">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
+{{--    <section class="section-five">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-4 col-md-4">--}}
 
 
-                    <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/health.html"> স্বাস্থ্য </a> </span>
-                        <span2><a href="news/category/health.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
-                    </h1>
+{{--                    <h1 class="themesBazar_cat_one">--}}
+{{--                        <span><a href="news/category/health.html"> স্বাস্থ্য </a> </span>--}}
+{{--                        <span2><a href="news/category/health.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>--}}
+{{--                    </h1>--}}
 
-                    <div class="white-bg">
+{{--                    <div class="white-bg">--}}
 
 
 
 
-                        <div class="secFive-image">
-                            <a href="97.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc526482e.jpg" alt="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও" title="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও"></a>
+{{--                        <div class="secFive-image">--}}
+{{--                            <a href="97.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc526482e.jpg" alt="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও" title="জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও"></a>--}}
 
-                            <a href="#" class="video-icon3">  </a>
+{{--                            <a href="#" class="video-icon3">  </a>--}}
 
 
-                            <div class="secFive-title">
-                                <a href="97.html"> জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও  </a>
-                            </div>
-                        </div>
+{{--                            <div class="secFive-title">--}}
+{{--                                <a href="97.html"> জলবায়ুর পরিবর্তনের সঙ্গে সঙ্গে পরিবর্তন ঘটছে এডিস মশার ধরনেও  </a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="96.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc11cd5d5.jpg" alt="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক" title="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক"></a>
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="96.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbc11cd5d5.jpg" alt="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক" title="তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="96.html"> তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="95.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbdf2f83e.jpg" alt="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)" title="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)"></a>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="96.html"> তীব্র শীতে শিশু ও বয়স্কদের জন্য যে পরামর্শ দিলেন চিকিৎসক  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="95.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbdf2f83e.jpg" alt="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)" title="চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="95.html"> চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="94.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbb0da336.jpg" alt="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭" title="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭"></a>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="95.html"> চিকিৎসা সেবায় বাড়ছে বৈষম্য, গরিবদের চেয়ে ৮ গুণ বেশি খরচ করেন ধনীরা (ভিডিও)  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="94.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbbb0da336.jpg" alt="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭" title="করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="94.html"> করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭  </a>
-                                </h5>
-                            </div>
-                        </div>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="94.html"> করোনায় মৃত্যুহীন দিনে শনাক্ত ১৭  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
 
 
-                    </div>
+{{--                    </div>--}}
 
-                </div>
+{{--                </div>--}}
 
-                <div class="col-lg-4 col-md-4">
+{{--                <div class="col-lg-4 col-md-4">--}}
 
 
-                    <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/court-of-law.html"> আইন আদালত </a> </span>
-                        <span2><a href="news/category/court-of-law.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
-                    </h1>
+{{--                    <h1 class="themesBazar_cat_one">--}}
+{{--                        <span><a href="news/category/court-of-law.html"> আইন আদালত </a> </span>--}}
+{{--                        <span2><a href="news/category/court-of-law.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>--}}
+{{--                    </h1>--}}
 
-                    <div class="white-bg">
+{{--                    <div class="white-bg">--}}
 
 
 
 
-                        <div class="secFive-image">
-                            <a href="102.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>
+{{--                        <div class="secFive-image">--}}
+{{--                            <a href="102.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd881f6a1.jpg" alt="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট" title="ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট"></a>--}}
 
-                            <a href="#" class="video-icon3">  </a>
+{{--                            <a href="#" class="video-icon3">  </a>--}}
 
 
-                            <div class="secFive-title">
-                                <a href="102.html"> ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট  </a>
-                            </div>
-                        </div>
+{{--                            <div class="secFive-title">--}}
+{{--                                <a href="102.html"> ম্যুরালে বঙ্গবন্ধু ও প্রধানমন্ত্রীর সঙ্গে কারও ছবি নয়: হাইকোর্ট  </a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="101.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd4906458.jpg" alt="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)" title="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)"></a>
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="101.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd4906458.jpg" alt="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)" title="আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="101.html"> আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="100.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd1a11894.jpg" alt="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)" title="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)"></a>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="101.html"> আপাতত হাতিরঝিলে কোনো উচ্ছেদ নয়: আপিল বিভাগ (ভিডিও)  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="100.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbd1a11894.jpg" alt="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)" title="ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="100.html"> ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="99.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbce8993ce.jpg" alt="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ" title="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ"></a>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="100.html"> ওয়াসার এমডির ১৪ বাড়ি: দুদকের অগ্রগতি জানতে চাইলেন হাইকোর্ট (ভিডিও)  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="99.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbce8993ce.jpg" alt="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ" title="পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="99.html"> পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ  </a>
-                                </h5>
-                            </div>
-                        </div>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="99.html"> পরীমণির মাদক মামলা স্থগিত থাকবে: আপিল বিভাগ  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
 
 
-                    </div>
+{{--                    </div>--}}
 
-                </div>
+{{--                </div>--}}
 
 
-                <div class="col-lg-4 col-md-4">
+{{--                <div class="col-lg-4 col-md-4">--}}
 
 
-                    <h1 class="themesBazar_cat_one">
-                        <span><a href="news/category/opinion.html"> মতামত </a> </span>
-                        <span2><a href="news/category/opinion.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
-                    </h1>
+{{--                    <h1 class="themesBazar_cat_one">--}}
+{{--                        <span><a href="news/category/opinion.html"> মতামত </a> </span>--}}
+{{--                        <span2><a href="news/category/opinion.html">  আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>--}}
+{{--                    </h1>--}}
 
-                    <div class="white-bg">
+{{--                    <div class="white-bg">--}}
 
 
 
 
-                        <div class="secFive-image">
-                            <a href="107.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbea465c94.jpg" alt="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল " title="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল "></a>
+{{--                        <div class="secFive-image">--}}
+{{--                            <a href="107.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbea465c94.jpg" alt="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল " title="খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল "></a>--}}
 
-                            <a href="#" class="video-icon3">  </a>
+{{--                            <a href="#" class="video-icon3">  </a>--}}
 
 
-                            <div class="secFive-title">
-                                <a href="107.html"> খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল   </a>
-                            </div>
-                        </div>
+{{--                            <div class="secFive-title">--}}
+{{--                                <a href="107.html"> খুলনা বিশ্ববিদ্যালয়: স্বতন্ত্র বৈশিষ্ট্যে সমুজ্জ্বল   </a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="106.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe6875836.jpg" alt="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি" title="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি"></a>
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="106.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe6875836.jpg" alt="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি" title="ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="106.html"> ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="105.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe35642fe.jpg" alt="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে" title="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে"></a>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="106.html"> ইন্টারনেট: ব্যবহার, অপব্যবহার, অতিব্যবহার ও আসক্তি  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="105.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe35642fe.jpg" alt="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে" title="বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="105.html"> বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে  </a>
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="secFive-smallItem">
-                            <div class="secFive-smallImg">
-                                <a href="104.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe07b798a.jpg" alt="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার" title="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার"></a>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="105.html"> বিজয়ের পুরো অর্থ আমাদের বুঝতে হবে  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="secFive-smallItem">--}}
+{{--                            <div class="secFive-smallImg">--}}
+{{--                                <a href="104.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbe07b798a.jpg" alt="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার" title="রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার"></a>--}}
 
-                                <a href="#" class="video-icon3">  </a>
+{{--                                <a href="#" class="video-icon3">  </a>--}}
 
-                                <h5 class="secFive_title2">
-                                    <a href="104.html"> রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার  </a>
-                                </h5>
-                            </div>
-                        </div>
+{{--                                <h5 class="secFive_title2">--}}
+{{--                                    <a href="104.html"> রোহিঙ্গা ঝুঁকিতে পর্যটন শিল্প নগরী কক্সবাজার  </a>--}}
+{{--                                </h5>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
 
 
-                    </div>
+{{--                    </div>--}}
 
-                </div>
+{{--                </div>--}}
 
 
 
-            </div>
-        </div>
-    </section>
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <!--=======================
                                 Section-Eleven-Start
@@ -4780,57 +4280,28 @@
                 <div class="col-lg-9 col-md-9">
 
                     <div class="themesBazar_cat2">
-                        <a href="news/category/sport.html"> খেলাধুলা </a>
+                        <a href="{{route('category-news',[$totthoprojukti->id,$totthoprojukti->slug])}}">{{$totthoprojukti->name}}</a>
                         <span class="themeBazar2"></span>
                     </div>
 
                     <div class="row">
 
 
-
+                        @foreach($totthoprojukti3 as $totthoprojukti_3)
                         <div class="themesBazar-3 themesBazar-m2">
                             <div class="secEight-wrpp bg-4">
                                 <div class="secEight-image">
-                                    <a href="23.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdb5775a7.jpg" alt="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি" title="রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি"></a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_3->id,$totthoprojukti_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($totthoprojukti_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$totthoprojukti_3->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
                                 </div>
                                 <h2 class="secEight-title">
-                                    <a href="23.html"> রেকর্ড পাঁচবার বর্ষসেরা প্লেমেকার অ্যাওয়ার্ড জিতলেন মেসি  </a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_3->id,$totthoprojukti_3->slug])}}"> {{$totthoprojukti_3->title}} </a>
                                 </h2>
                             </div>
                         </div>
-
-                        <div class="themesBazar-3 themesBazar-m2">
-                            <div class="secEight-wrpp bg-4">
-                                <div class="secEight-image">
-                                    <a href="22.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd7f86185.jpg" alt="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান" title="যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-                                </div>
-                                <h2 class="secEight-title">
-                                    <a href="22.html"> যুক্তরাষ্ট্রের কোচ হওয়ার ‘আকর্ষণীয়’ প্রস্তাব ফিরিয়ে দিলেন জিদান  </a>
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div class="themesBazar-3 themesBazar-m2">
-                            <div class="secEight-wrpp bg-4">
-                                <div class="secEight-image">
-                                    <a href="21.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd3dec05c.jpg" alt="অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর" title="অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-                                </div>
-                                <h2 class="secEight-title">
-                                    <a href="21.html"> অবশেষে জানা গেলো, সৌদি আরবে কবে অভিষেক হচ্ছে রোনালদোর  </a>
-                                </h2>
-                            </div>
-                        </div>
-
-
+                        @endforeach
 
 
 
@@ -4839,63 +4310,21 @@
 
                     <div class="row">
 
-
-
+                        @foreach($totthoprojukti4 as $totthoprojukti_4)
                         <div class="themesBazar-4 themesBazar-m2">
                             <div class="secEight-wrpp2 bg-4">
                                 <div class="secEight-image2">
-                                    <a href="20.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babd0b8ef62.jpg" alt="শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ" title="শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ"></a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_4->id,$totthoprojukti_4->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($totthoprojukti_4->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$totthoprojukti_4->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
                                 </div>
                                 <h2 class="secEight-title">
-                                    <a href="20.html"> শেষ ষোলোতে সহজ প্রতিপক্ষ পেল বার্সা, কঠিন চ্যালেঞ্জের সামনে রিয়াল মাদ্রিদ  </a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_4->id,$totthoprojukti_4->slug])}}">{{$totthoprojukti_4->title}}</a>
                                 </h2>
                             </div>
                         </div>
-
-                        <div class="themesBazar-4 themesBazar-m2">
-                            <div class="secEight-wrpp2 bg-4">
-                                <div class="secEight-image2">
-                                    <a href="19.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babcb8be11f.JPG" alt="আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব" title="আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-                                </div>
-                                <h2 class="secEight-title">
-                                    <a href="19.html"> আম্পায়ারের সিদ্ধান্তে ক্ষুব্ধ হয়ে তেড়ে গেলেন সাকিব  </a>
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div class="themesBazar-4 themesBazar-m2">
-                            <div class="secEight-wrpp2 bg-4">
-                                <div class="secEight-image2">
-                                    <a href="18.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc6b2f642.jpg" alt="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের" title="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-                                </div>
-                                <h2 class="secEight-title">
-                                    <a href="18.html"> বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের  </a>
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div class="themesBazar-4 themesBazar-m2">
-                            <div class="secEight-wrpp2 bg-4">
-                                <div class="secEight-image2">
-                                    <a href="17.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc2413c1e.jpg" alt="এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার" title="এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার"></a>
-
-                                    <a href="#" class="video-icon3">  </a>
-
-                                </div>
-                                <h2 class="secEight-title">
-                                    <a href="17.html"> এডিআরএস সিস্টেম কি জানেন না বিপিএলে খেলা ডাচ ক্রিকেটার  </a>
-                                </h2>
-                            </div>
-                        </div>
+                        @endforeach
 
 
 
@@ -4960,46 +4389,23 @@
 
 
                     <div class="themesBazar_cat_one">
-                        <span><a href="news/category/education-%26-culture.html"> শিক্ষা ও সংস্কৃতি </a> </span>
-                        <span2><a href="news/category/education-%26-culture.html"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$motamot->id,$motamot->slug])}}">{{$motamot->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$motamot->id,$motamot->slug])}}"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </div>
-
-
+                    @foreach($motamot3 as $motamot_3)
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="112.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbfd376fa4.jpg" alt="শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী" title="শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী"></a>
+                            <a href="{{route('news-detail',[$motamot_3->id,$motamot_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($motamot_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$motamot_3->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <h5 class="secOne_smallTitle">
-                                <a href="112.html"> শিক্ষক হতে চেয়ে হাইকোর্টে ৮০ প্রতিবন্ধী  </a>
+                                <a href="{{route('news-detail',[$motamot_3->id,$motamot_3->slug])}}">{{$motamot_3->title}}</a>
                             </h5>
                         </div>
                     </div>
+                    @endforeach
 
-                    <div class="secOne-smallItem">
-                        <div class="secOne-smallImg2">
-                            <a href="111.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbfaa7fed4.jpg" alt="এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী" title="এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী"></a>
-
-                            <a href="#" class="video-icon3">  </a>
-
-                            <h5 class="secOne_smallTitle">
-                                <a href="111.html"> এ বছর প্রাথমিকে বৃত্তি পাবে সাড়ে ৮২ হাজার শিক্ষার্থী  </a>
-                            </h5>
-                        </div>
-                    </div>
-
-                    <div class="secOne-smallItem">
-                        <div class="secOne-smallImg2">
-                            <a href="110.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbbf7dc7d3d.jpg" alt="দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে" title="দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে"></a>
-
-                            <a href="#" class="video-icon3">  </a>
-
-                            <h5 class="secOne_smallTitle">
-                                <a href="110.html"> দেশে শিক্ষা ব্যয়ের ৭১ শতাংশই বহন করতে হয় পরিবারকে  </a>
-                            </h5>
-                        </div>
-                    </div>
 
 
                 </div>
@@ -5008,46 +4414,24 @@
 
 
                     <div class="themesBazar_cat_one">
-                        <span><a href="news/category/trade-%26-commerce.html"> ব্যবসা ও বাণিজ্য </a> </span>
-                        <span2><a href="news/category/trade-%26-commerce.html"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$bussiness->id,$bussiness->slug])}}">{{$bussiness->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$bussiness->id,$bussiness->slug])}}"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </div>
 
-
+                    @foreach($bussiness3 as $bussiness_3)
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="117.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0fc9b111.jpg" alt="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ " title="দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ "></a>
+                            <a href="{{route('news-detail',[$bussiness_3->id,$bussiness_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($bussiness_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$bussiness_3->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <h5 class="secOne_smallTitle">
-                                <a href="117.html"> দুই ক্যাটাগরিতে ‘মাস্টারকার্ড এক্সিলেন্স অ্যাওয়ার্ড ২০২২’ পেল নগদ   </a>
+                                <a href="{{route('news-detail',[$bussiness_3->id,$bussiness_3->slug])}}">{{$bussiness_3->title}}</a>
                             </h5>
                         </div>
                     </div>
+                    @endforeach
 
-                    <div class="secOne-smallItem">
-                        <div class="secOne-smallImg2">
-                            <a href="116.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc0c634ad9.jpg" alt="উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন" title="উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন"></a>
-
-                            <a href="#" class="video-icon3">  </a>
-
-                            <h5 class="secOne_smallTitle">
-                                <a href="116.html"> উত্তরণ প্রকল্পের সমাপনী অনুষ্ঠান সম্পন্ন  </a>
-                            </h5>
-                        </div>
-                    </div>
-
-                    <div class="secOne-smallItem">
-                        <div class="secOne-smallImg2">
-                            <a href="115.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc08961ebb.jpg" alt="যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’" title="যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’"></a>
-
-                            <a href="#" class="video-icon3">  </a>
-
-                            <h5 class="secOne_smallTitle">
-                                <a href="115.html"> যুক্তরাজ্যভিত্তিক গ্লোবাল ব্র্যান্ডস ম্যাগাজিন পুরস্কার ২০২২ জিতল ‘নগদ’  </a>
-                            </h5>
-                        </div>
-                    </div>
 
 
                 </div>
@@ -5056,46 +4440,22 @@
 
 
                     <div class="themesBazar_cat_one">
-                        <span><a href="news/category/stock-market.html"> শেয়ার বাজার </a> </span>
-                        <span2><a href="news/category/stock-market.html"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
+                        <span><a href="{{route('category-news',[$sharebazar->id,$sharebazar->slug])}}">{{$sharebazar->name}}</a> </span>
+                        <span2><a href="{{route('category-news',[$sharebazar->id,$sharebazar->slug])}}"> আরো খবর <i class="la la-angle-double-right"></i></a>  </span2>
                     </div>
-
-
+                    @foreach($sharebazar3 as $sharebazer_3)
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="122.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc26d3a8d5.jpg" alt="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি" title="সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি"></a>
+                            <a href="{{route('news-detail',[$sharebazer_3->id,$sharebazer_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sharebazer_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sharebazer_3->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <h5 class="secOne_smallTitle">
-                                <a href="122.html"> সিএসইর শরিয়াহ সূচকে ২ কেম্পানি যুক্ত হলো , বাদ পড়ল ৪টি  </a>
+                                <a href="{{route('news-detail',[$sharebazer_3->id,$sharebazer_3->slug])}}">{{$sharebazer_3->title}}</a>
                             </h5>
                         </div>
                     </div>
-
-                    <div class="secOne-smallItem">
-                        <div class="secOne-smallImg2">
-                            <a href="121.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc24494ab9.jpg" alt="সূচকের উঠা-নামায় লেনদেন চলছে" title="সূচকের উঠা-নামায় লেনদেন চলছে"></a>
-
-                            <a href="#" class="video-icon3">  </a>
-
-                            <h5 class="secOne_smallTitle">
-                                <a href="121.html"> সূচকের উঠা-নামায় লেনদেন চলছে  </a>
-                            </h5>
-                        </div>
-                    </div>
-
-                    <div class="secOne-smallItem">
-                        <div class="secOne-smallImg2">
-                            <a href="120.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbc21684271.jpeg" alt="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি" title="এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি"></a>
-
-                            <a href="#" class="video-icon3">  </a>
-
-                            <h5 class="secOne_smallTitle">
-                                <a href="120.html"> এশিয়াটিক ল্যাবরেটরিজের আইপিওতে আবেদন শুরু ১৬ জানুয়ারি  </a>
-                            </h5>
-                        </div>
-                    </div>
+                    @endforeach
 
 
                 </div>

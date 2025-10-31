@@ -42,7 +42,9 @@
                         <div class="update-time">
 
                             <ul>
-                                <li>  <a href="#"> <img src="{{asset($news->reporter->image)}}" alt="">{{$news->reporter->name}},{{$news->reporter->designation}}</a> </li>
+                                <li>  <a href="#"> <img src="{{asset($news->reporter->image)}}" alt="">{{$news->reporter->name}},{{$news->reporter->designation}}</a>
+                                |<a href="{{route('print-page',$news->id)}}">poto cart</a>
+                                </li>
                             </ul>
 
 
@@ -129,7 +131,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3">
                                 <div class="single-social" style="  background: #3b5998; width: 100%; padding: 10px; text-align: center; ">
-                                    <a href="post/print/74.html" style="color:white;" target="_blank"> প্রিন্ট করুন : <i class="las la-print"></i></a>
+                                    <a href="{{route('photo-cart',$news->id)}}" style="color:white;" target="_blank"> প্রিন্ট করুন : <i class="las la-print"></i></a>
                                 </div>
                             </div>
 

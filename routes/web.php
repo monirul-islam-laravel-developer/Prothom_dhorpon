@@ -26,6 +26,8 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\FrontCategoryNewsController;
 use App\Http\Controllers\FrontSubCategoryNewsController;
 use App\Http\Controllers\FrontNewsDetailController;
+use App\Http\Controllers\PhotoCartController;
+use App\Http\Controllers\PrintController;
 
 require base_path('routes/admin.php');
 
@@ -37,3 +39,5 @@ Route::get('/terms-and-condition', [Terms_and_ConditionController::class, 'index
 Route::get('/category-news/{id}/{slug}', [FrontCategoryNewsController::class, 'index'])->name('category-news');
 Route::get('/sub-category-news/{id}/{slug}', [FrontSubCategoryNewsController::class, 'index'])->name('sub-category-news');
 Route::get('/news-details/{id}/{slug}', [FrontNewsDetailController::class, 'index'])->name('news-detail');
+Route::get('/photo-cart/{id}', [PhotoCartController::class, 'index'])->name('photo-cart');
+Route::get('/print/{id}', [PrintController::class, 'index'])->name('print-page');
