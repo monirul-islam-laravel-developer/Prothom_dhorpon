@@ -6,10 +6,26 @@
     <div class="row">
         <div class="row row-sm">
             <div class="col-lg-12">
+                @php
+        // Fetch the user type of the authenticated user
+        $userType = auth()->user()->user_type;
+
+        // Initialize roleRoutes variable
+        $roleRoutes = [];
+
+        // If user_type is not 1, fetch the role IDs and route names
+        if ($userType !== 1) {
+            $roleIds = DB::table('user_roles')->where('user_id', auth()->user()->id)->pluck('role_id')->toArray();
+            $roleRoutes = DB::table('role_routes')->whereIn('role_id', $roleIds)->pluck('route_name')->toArray();
+        }
+    @endphp
+
                 <div class="card">
                     <div class="card-header border-bottom d-flex justify-content-between align-items-center">
                         <h3 class="card-title mb-0">Post Index</h3>
+                        @if ($userType === 1 || in_array('post.create', $roleRoutes))
                         <a href="{{route('post.create')}}" class="btn btn-primary">Add Post</a>
+                            @endif
                     </div>
                     <!-- Rest of your card body here -->
                 </div>

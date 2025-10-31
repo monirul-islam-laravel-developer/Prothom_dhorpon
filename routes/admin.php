@@ -32,11 +32,45 @@ use App\Http\Controllers\UserController;
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+
     Route::get('/clear-cache', function () {
         Artisan::call('optimize:clear'); // clears cache, route, config, view
         Alert::success('Success', 'Cache cleared successfully!');
         return back();
     })->name('clear.cache');
+
+    Route::get('migrate', function() {
+            $exitCode = Artisan::call('migrate');
+
+            if ($exitCode === 0) {
+                $output = Artisan::output();
+                return response()->json(['status' => 'success', 'message' => $output]);
+            } else {
+                return response()->json(['status' => 'error', 'message' => 'Migration failed'], 500);
+            }
+        })->name('migrate');
+
+        Route::get('migrate-seed', function() {
+            $exitCode = Artisan::call('migrate --seed');
+
+            if ($exitCode === 0) {
+                $output = Artisan::output();
+                return response()->json(['status' => 'success', 'message' => $output]);
+            } else {
+                return response()->json(['status' => 'error', 'message' => 'Migration failed'], 500);
+            }
+        })->name('migrate-seed');
+
+        Route::get('migrate-rollback', function() {
+            $exitCodeRollBack = Artisan::call('migrate:rollback');
+
+            if ($exitCodeRollBack === 0) {
+                $output = Artisan::output();
+                return response()->json(['status' => 'success', 'message' => $output]);
+            } else {
+                return response()->json(['status' => 'error', 'message' => 'Migration failed'], 500);
+            }
+        })->name('migrate-rollback');
 
     Route::middleware(['roles'])->group(function () {
         Route::group(['prefix' => 'role', 'as' => 'role.'], function(){
@@ -65,7 +99,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('slider', SliderController::class);
     Route::resource('subsubcategory', SubsubCategoryController::class);
     Route::resource('upazila', UpazilaController::class);
-    Route::get('/get-districts/{division_id}', [UpazilaController::class, 'getDistricts'])->name('get.districts');
     Route::resource('webextra', WebExtraController::class);
     Route::resource('video', VideoController::class);
     Route::resource('ads', AdsController::class);
@@ -77,3 +110,5 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/posts/search-reporters', [PostController::class, 'searchReporters'])->name('post.searchReporters');
     });
 });
+
+Route::get('/get-districts/{division_id}', [UpazilaController::class, 'getDistricts'])->name('get.districts');

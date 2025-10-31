@@ -93,43 +93,45 @@
 
 
 
+@if ($userType === 1 || in_array('post.index', $roleRoutes))
                 <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('post.index') ? 'active' : '' }}"
+                    <a class="side-menu__item {{ request()->routeIs('post.*') ? 'active' : '' }}"
                        href="{{ route('post.index') }}">
                         <i class="las la-newspaper side-menu__icon"></i>
                         <span class="side-menu__label">Post</span>
                     </a>
                 </li>
+                @endif
                 <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('video.index') ? 'active' : '' }}"
+                    <a class="side-menu__item {{ request()->routeIs('video.*') ? 'active' : '' }}"
                        href="{{ route('video.index') }}">
                         <i class="las la-video side-menu__icon"></i>
                         <span class="side-menu__label">Video</span>
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('reporter.index') ? 'active' : '' }}"
+                    <a class="side-menu__item {{ request()->routeIs('reporter.*') ? 'active' : '' }}"
                        href="{{ route('reporter.index') }}">
                         <i class="las la-user-tie side-menu__icon"></i>
                         <span class="side-menu__label">Reporter</span>
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('slider.index') ? 'active' : '' }}"
+                    <a class="side-menu__item {{ request()->routeIs('slider.*') ? 'active' : '' }}"
                        href="{{ route('slider.index') }}">
                         <i class="las la-images side-menu__icon"></i>
                         <span class="side-menu__label">Slider</span>
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('ads.index') ? 'active' : '' }}"
+                    <a class="side-menu__item {{ request()->routeIs('ads.*') ? 'active' : '' }}"
                        href="{{ route('ads.index') }}">
                         <i class="las la-ad side-menu__icon"></i>
                         <span class="side-menu__label">Ads</span>
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item {{ request()->routeIs('category.index') ? 'active' : '' }}"
+                    <a class="side-menu__item {{ request()->routeIs('category.*') ? 'active' : '' }}"
                        href="{{ route('category.index') }}">
                         <i class="las la-list-ul side-menu__icon"></i>
                         <span class="side-menu__label">Category</span>
