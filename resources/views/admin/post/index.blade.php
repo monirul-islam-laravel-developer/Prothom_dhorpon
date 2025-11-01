@@ -23,7 +23,7 @@
                 <div class="card">
                     <div class="card-header border-bottom d-flex justify-content-between align-items-center">
                         <h3 class="card-title mb-0">Post Index</h3>
-                        @if ($userType === 1 || in_array('post.create', $roleRoutes))
+                        @if ($userType == 1 || in_array('post.create', $roleRoutes))
                         <a href="{{route('post.create')}}" class="btn btn-primary">Add Post</a>
                             @endif
                     </div>
