@@ -16,6 +16,8 @@
     <meta property="og:title" content="@yield('og:title')" />
     <meta property="og:description" content="@yield('og:description')"/>
     <meta property="og:image" content="@yield('og:image')" />
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="@yield('twiter:title')" />

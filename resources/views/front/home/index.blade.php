@@ -10,8 +10,9 @@
     {{ $webLogo->title ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
 
+{{-- 🌐 Open Graph Image --}}
 @section('og:image')
-    {{ asset($webLogo->mobile_logo ?? 'frontend/images/default-og.jpg') }}
+    {{ asset(($webLogo->og_image ?? $webLogo->mobile_logo ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
 @endsection
 
 @section('body')
