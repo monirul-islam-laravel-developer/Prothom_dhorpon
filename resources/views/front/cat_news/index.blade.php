@@ -2,6 +2,17 @@
 @section('title')
 {{$category->description}}
 @endsection
+@section('og:title')
+    {{ $category->name ?? config('app.name') }}
+@endsection
+
+@section('og:description')
+    {{ $category->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
+@endsection
+
+@section('og:image')
+    {{ asset(($webLogo->lazyload_logo ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
+@endsection
 
 @section('body')
 
