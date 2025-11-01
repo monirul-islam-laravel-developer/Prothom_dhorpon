@@ -37,10 +37,10 @@
                     </a>
                 </li>
 
-    {{-- ===========================
+    {{-- ==================
      USER MODULE MENU SECTION
-=========================== --}}
-@if ($userType === 1 || !empty(array_filter(['role.add', 'role.manage', 'user.add', 'user.manage'], fn($route) => in_array($route, $roleRoutes))))
+================== --}}
+@if ($userType == 1 || !empty(array_filter(['role.add', 'role.manage', 'user.add', 'user.manage'], fn($route) => in_array($route, $roleRoutes))))
     <li class="slide">
         <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
             <i class="uil-users-alt side-menu__icon"></i>
@@ -52,7 +52,7 @@
             <li class="side-menu-label1"><a href="javascript:void(0)">User Module</a></li>
 
             {{-- Add Role --}}
-            @if ($userType === 1 || in_array('role.add', $roleRoutes))
+            @if ($userType == 1 || in_array('role.add', $roleRoutes))
                 <li>
                     <a href="{{ route('role.add') }}" class="slide-item {{ request()->routeIs('role.add') ? 'active' : '' }}">
                         Add Role
@@ -61,7 +61,7 @@
             @endif
 
             {{-- Manage Role --}}
-            @if ($userType === 1 || in_array('role.manage', $roleRoutes))
+            @if ($userType == 1 || in_array('role.manage', $roleRoutes))
                 <li>
                     <a href="{{ route('role.manage') }}" class="slide-item {{ request()->routeIs('role.manage') ? 'active' : '' }}">
                         Manage Role
@@ -70,7 +70,7 @@
             @endif
 
             {{-- Add User --}}
-            @if ($userType === 1 || in_array('user.add', $roleRoutes))
+            @if ($userType == 1 || in_array('user.add', $roleRoutes))
                 <li>
                     <a href="{{ route('user.add') }}" class="slide-item {{ request()->routeIs('user.add') ? 'active' : '' }}">
                         Add User
@@ -79,7 +79,7 @@
             @endif
 
             {{-- Manage User --}}
-            @if ($userType === 1 || in_array('user.manage', $roleRoutes))
+            @if ($userType == 1 || in_array('user.manage', $roleRoutes))
                 <li>
                     <a href="{{ route('user.manage') }}" class="slide-item {{ request()->routeIs('user.manage') ? 'active' : '' }}">
                         Manage User
@@ -93,7 +93,7 @@
 
 
 
-@if ($userType === 1 || in_array('post.index', $roleRoutes))
+@if ($userType == 1 || in_array('post.index', $roleRoutes))
                 <li class="slide">
                     <a class="side-menu__item {{ request()->routeIs('post.*') ? 'active' : '' }}"
                        href="{{ route('post.index') }}">
