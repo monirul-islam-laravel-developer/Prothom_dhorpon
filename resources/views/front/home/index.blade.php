@@ -3,11 +3,17 @@
     {{$webLogo->title}}
 @endsection
 @section('og:title')
-    prothomdorpan.com
+    {{ $webLogo->title ?? config('app.name') }}
 @endsection
+
 @section('og:description')
-    {{$webLogo->title}}
+    {{ $webLogo->title ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
+
+@section('og:image')
+    {{ asset($webLogo->mobile_logo ?? 'frontend/images/default-og.jpg') }}
+@endsection
+
 @section('body')
     <!--=======================
                         ThemesBazar-section-one-start
