@@ -13,17 +13,17 @@
     <meta name="keyword" content="জাহাজ, বন্দর, নৌযান, লাইটার জাহাজ, সিমেন্ট, ইস্পাত, শীপ, শিপিং, মাদার ভেসেল, ড্রেজার, ফিশিং ভেসেল, ডিজেল, নদী, সাগর, newspaper, online news, paper">
     <meta name="description" content="বাংলাদেশসহ বিশ্বের সর্বশেষ সংবাদ শিরোনাম, প্রতিবেদন, বিশ্লেষণ, খেলা, বিনোদন, চাকরি, রাজনীতি ও বাণিজ্যের বাংলা নিউজ পড়তে ভিজিট করুন।">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="This Is Facebook Share Title" />
-    <meta property="og:description" content="Popular Online Newspaper of Bangladesh"/>
-    <meta property="og:image" content="{{asset('/')}}front/templateimage/63c291e9cb5c8.jpg" />
+    <meta property="og:title" content="@yield('og:title')" />
+    <meta property="og:description" content="@yield('og:description')"/>
+    <meta property="og:image" content="@yield('og:image')" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="This Is Twitter Share Title" />
-    <meta name="twitter:description" content="Popular Online Newspaper of Bangladesh" />
-    <meta name="twitter:image" content="{{asset('/')}}front/templateimage/63c291efebdb0.jpg" />
+    <meta name="twitter:title" content="@yield('twiter:title')" />
+    <meta name="twitter:description" content="@yield('twiter:description')" />
+    <meta name="twitter:image" content="@yield('twiter:image')" />
     <meta name="brand_name" content="This Is Twitter Share Title" />
-    <meta name="twitter:creator" content="@themesbazar">
-    <meta name="twitter:site" content="@themesbazar">
+    <meta name="twitter:creator" content="@prothomdorpon">
+    <meta name="twitter:site" content="@prothomdorpon">
 
 
     <link rel="icon" href="{{ asset($webLogo->fav_icon_logo) }}" sizes="50x50" type="image/png">

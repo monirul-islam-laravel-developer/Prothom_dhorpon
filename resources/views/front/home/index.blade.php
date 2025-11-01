@@ -2,6 +2,12 @@
 @section('title')
     {{$webLogo->title}}
 @endsection
+@section('og:title')
+    prothomdorpan.com
+@endsection
+@section('og:description')
+    {{$webLogo->title}}
+@endsection
 @section('body')
     <!--=======================
                         ThemesBazar-section-one-start
