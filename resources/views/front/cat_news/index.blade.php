@@ -3,7 +3,7 @@
 {{$category->description}}
 @endsection
 @section('og:title')
-    {{ $category->name ?? config('app.name') }}
+    {{ $category->description ?? config('app.name') }}
 @endsection
 
 @section('og:description')
