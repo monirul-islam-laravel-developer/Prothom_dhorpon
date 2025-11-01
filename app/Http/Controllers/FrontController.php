@@ -16,7 +16,7 @@ class FrontController extends Controller
     $dhormo,$dhormo1,$dhormo3,$krrishi,$krishi5,$sastho,$sastho1,$sastho3,$ainadalot,$ainadalot1,
     $ainadalot3,$shikkha,$shikkha1,$shikkha3,$sompadokio,$sompadokio5,$binodon,$binodon1,$binodon4,
     $totthoprojukti,$totthoprojukti3,$totthoprojukti4,$motamot,$motamot3,$bussiness,$bussiness3,
-    $sharebazar,$sharebazer3,$leadnewses5,$subleadnews2,$fronthome5
+    $sharebazar,$sharebazer3,$leadnewses5,$subleadnews2,$fronthome5,$home5newses,$home6newses
     ;
     public $sliders,$videos5;
     public function index()
@@ -71,6 +71,9 @@ class FrontController extends Controller
         $this->sharebazer3= Post::where('status', 1)->where('category_id',$this->sharebazar->id)->latest()->take(3)->get();
         $this->leadnewses5= Post::where('status', 1)->where('lead_news',1)->latest()->take(5)->get();
         $this->subleadnews2= Post::where('status', 1)->where('sublead_news',1)->latest()->take(2)->get();
+        $this->home5newses = Post::where('status', 1)->latest()->skip(25)->take(5)->get();
+        $this->home6newses = Post::where('status', 1)->latest()->skip(35)->take(6)->get();
+
         $this->sliders = Slider::latest()->take(8)->get();
         $this->videos5=Video::where('status',1)-> orderBy('id','desc')->take(5)->get();
         return view('front.home.index',[
@@ -95,8 +98,9 @@ class FrontController extends Controller
             'totthoprojukti'=>$this->totthoprojukti,'totthoprojukti3'=>$this->totthoprojukti3,'totthoprojukti4'=>$this->totthoprojukti4,
             'motamot'=>$this->motamot,'motamot3'=>$this->motamot3,'bussiness'=>$this->bussiness,'bussiness3'=>$this->bussiness3,
             'sharebazar'=>$this->sharebazar,'sharebazar3'=>$this->sharebazer3,
-            'leadnewses5'=>$this->leadnewses5,'subleadnews2'=>$this->subleadnews2
-
+            'leadnewses5'=>$this->leadnewses5,'subleadnews2'=>$this->subleadnews2,
+            'home5newses'=>$this->home5newses,
+            'home6newses'=>$this->home6newses
         ]);
     }
 }

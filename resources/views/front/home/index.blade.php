@@ -103,96 +103,24 @@
                         </div>
                         <div class="col-lg-5 col-md-5">
 
-
-
+                            @foreach($home5newses as $home5news)
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="79.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb6459bd9c.jpg" alt="সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন" title="সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন"></a>
+                                    <a href="{{route('news-detail',[$home5news->id,$home5news->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($home5news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$home5news->title}}"></a>
 
                                     <div class="sec-small-cat1">
-                                        <a href="#"> ৩ বছর আগে
+                                        <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
                                         </a>
                                     </div>
 
 
 
                                     <h5 class="secOne_smallTitle">
-                                        <a href="79.html"> সুস্থ থাকতে নিশ্বাসের কোন ব্যায়ামগুলো করতে পারেন  </a>
+                                        <a href="{{route('news-detail',[$home5news->id,$home5news->slug])}}">{{$home5news->title}} </a>
                                     </h5>
                                 </div>
                             </div>
-
-
-                            <div class="secOne-smallItem">
-                                <div class="secOne-smallImg">
-                                    <a href="61.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbb1f0065d1.jpg" alt="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার" title="কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার"></a>
-
-                                    <div class="sec-small-cat1">
-                                        <a href="#"> ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-
-
-                                    <h5 class="secOne_smallTitle">
-                                        <a href="61.html"> কর্ণফুলী গ্রুপে চাকরির সুযোগ, বেতন ২২ হাজার  </a>
-                                    </h5>
-                                </div>
-                            </div>
-
-
-                            <div class="secOne-smallItem">
-                                <div class="secOne-smallImg">
-                                    <a href="48.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbaf12566b4.jpg" alt="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের" title="এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের"></a>
-
-                                    <div class="sec-small-cat1">
-                                        <a href="#"> ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-
-
-                                    <h5 class="secOne_smallTitle">
-                                        <a href="48.html"> এই শীতে ভাঙন আতঙ্কে দিন কাটছে তাদের  </a>
-                                    </h5>
-                                </div>
-                            </div>
-
-
-                            <div class="secOne-smallItem">
-                                <div class="secOne-smallImg">
-                                    <a href="24.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babdf0ae6dd.jpg" alt="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি" title="ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি"></a>
-
-                                    <div class="sec-small-cat1">
-                                        <a href="#"> ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-
-
-                                    <h5 class="secOne_smallTitle">
-                                        <a href="24.html"> ঘুম না আসা পর্যন্ত সঙ্গ দিও : মাহিয়া মাহি  </a>
-                                    </h5>
-                                </div>
-                            </div>
-
-
-                            <div class="secOne-smallItem">
-                                <div class="secOne-smallImg">
-                                    <a href="18.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babc6b2f642.jpg" alt="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের" title="বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের"></a>
-
-                                    <div class="sec-small-cat1">
-                                        <a href="#"> ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-
-
-                                    <h5 class="secOne_smallTitle">
-                                        <a href="18.html"> বরিশালের রানের পাহাড় টপকে টানা দ্বিতীয় জয় সিলেটের  </a>
-                                    </h5>
-                                </div>
-                            </div>
+                            @endforeach
 
 
 
@@ -205,139 +133,31 @@
 
                     <div class="sec-one-item2">
                         <div class="row">
-
+                            @foreach($home6newses as $home6news)
                             <div class="themesBazar-3 themesBazar-m2">
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="44.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbae082146d.jpg" alt="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর" title="কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর"></a>
+                                            <a href="{{route('news-detail',[$home6news->id,$home6news->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($home6news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$home6news->title}}"></a>
 
 
 
                                         </div>
                                         <h4 class="secOne-title2">
-                                            <a href="44.html"> কাশিমপুর কারাগারে ধর্ষণ মামলার আসামির ফাঁসি কার্যকর  </a>
+                                            <a href="{{route('news-detail',[$home6news->id,$home6news->slug])}}">{{$home6news->title}}</a>
                                         </h4>
                                     </div>
 
                                     <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  ৩ বছর আগে
+                                        <a href="#"> <i class="lar la-newspaper"></i>  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
                                         </a>
                                     </div>
 
                                 </div>
 
                             </div>
-                            <div class="themesBazar-3 themesBazar-m2">
-                                <div class="sec-one-wrpp2">
-                                    <div class="secOne-news">
-                                        <div class="secOne-image2">
-                                            <a href="41.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bbace78ef67.jpg" alt="পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ" title="পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ"></a>
+                            @endforeach
 
-
-
-                                        </div>
-                                        <h4 class="secOne-title2">
-                                            <a href="41.html"> পদ্মা নদীতে আটকে পড়া শিক্ষার্থী ও শিশুসহ ২৪ জনকে উদ্ধার করেছে নৌপুলিশ  </a>
-                                        </h4>
-                                    </div>
-
-                                    <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="themesBazar-3 themesBazar-m2">
-                                <div class="sec-one-wrpp2">
-                                    <div class="secOne-news">
-                                        <div class="secOne-image2">
-                                            <a href="39.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada6e82e4b.jpg" alt="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা" title="জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা"></a>
-
-
-
-                                        </div>
-                                        <h4 class="secOne-title2">
-                                            <a href="39.html"> জেনে নিন বিশ্ব ইজতেমার জেলাভিত্তিক খিত্তার তালিকা  </a>
-                                        </h4>
-                                    </div>
-
-                                    <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="themesBazar-3 themesBazar-m2">
-                                <div class="sec-one-wrpp2">
-                                    <div class="secOne-news">
-                                        <div class="secOne-image2">
-                                            <a href="38.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bada001ff80.jpg" alt="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী" title="জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী"></a>
-
-
-
-                                        </div>
-                                        <h4 class="secOne-title2">
-                                            <a href="38.html"> জনগণ বিচার করবে ১৪ বছরে আ. লীগ কী দিয়েছে : প্রধানমন্ত্রী  </a>
-                                        </h4>
-                                    </div>
-
-                                    <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="themesBazar-3 themesBazar-m2">
-                                <div class="sec-one-wrpp2">
-                                    <div class="secOne-news">
-                                        <div class="secOne-image2">
-                                            <a href="32.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63bac0b42cc78.jpg" alt="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও " title="৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও "></a>
-
-
-
-                                        </div>
-                                        <h4 class="secOne-title2">
-                                            <a href="32.html"> ৫০ হাজার বছর পর আকাশে উঠবে যে ধূমকেতু, দেখা যাবে খালি চোখেও   </a>
-                                        </h4>
-                                    </div>
-
-                                    <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="themesBazar-3 themesBazar-m2">
-                                <div class="sec-one-wrpp2">
-                                    <div class="secOne-news">
-                                        <div class="secOne-image2">
-                                            <a href="31.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="https://themebazar.xyz/laraflash/public/postimages/63babfd1eac94.jpg" alt="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’" title="‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’"></a>
-
-
-
-                                        </div>
-                                        <h4 class="secOne-title2">
-                                            <a href="31.html"> ‘সিন্দাবাদ-আলাদীনের মতো কাজল রেখাও দর্শকমনে স্থান করে নেবে’  </a>
-                                        </h4>
-                                    </div>
-
-                                    <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  ৩ বছর আগে
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
 
 
