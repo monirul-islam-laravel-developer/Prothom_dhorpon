@@ -10,14 +10,19 @@
 
 
     <title>@yield('title')</title>
-    <meta name="keyword" content="জাহাজ, বন্দর, নৌযান, লাইটার জাহাজ, সিমেন্ট, ইস্পাত, শীপ, শিপিং, মাদার ভেসেল, ড্রেজার, ফিশিং ভেসেল, ডিজেল, নদী, সাগর, newspaper, online news, paper">
+    {{-- 🌐 SEO & Open Graph Meta --}}
+    <meta name="keywords" content="জাহাজ, বন্দর, নৌযান, লাইটার জাহাজ, সিমেন্ট, ইস্পাত, শিপিং, মাদার ভেসেল, ড্রেজার, ফিশিং ভেসেল, ডিজেল, নদী, সাগর, newspaper, online news, paper">
     <meta name="description" content="বাংলাদেশসহ বিশ্বের সর্বশেষ সংবাদ শিরোনাম, প্রতিবেদন, বিশ্লেষণ, খেলা, বিনোদন, চাকরি, রাজনীতি ও বাণিজ্যের বাংলা নিউজ পড়তে ভিজিট করুন।">
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="@yield('og:title')" />
-    <meta property="og:description" content="@yield('og:description')"/>
-    <meta property="og:image" content="@yield('og:image')" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('og:title')">
+    <meta property="og:description" content="@yield('og:description')">
+    <meta property="og:image" content="@yield('og:image')">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="@yield('twiter:title')" />

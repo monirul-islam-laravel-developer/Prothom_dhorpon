@@ -2,17 +2,17 @@
 @section('title')
     {{$webLogo->title}}
 @endsection
+{{-- Blade Section --}}
 @section('og:title')
     {{ $webLogo->title ?? config('app.name') }}
 @endsection
 
 @section('og:description')
-    {{ $webLogo->title ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
+    {{ $webLogo->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
 
-{{-- 🌐 Open Graph Image --}}
 @section('og:image')
-    {{ asset(($webLogo->og_image ?? $webLogo->mobile_logo ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
+    {{ asset(($webLogo->mobile_logo ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
 @endsection
 
 @section('body')
