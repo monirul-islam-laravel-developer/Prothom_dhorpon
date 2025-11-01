@@ -12,7 +12,7 @@
 @endsection
 
 @section('og:image')
-    {{ asset(($webLogo->mobile_logo ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
+    {{ asset(($webLogo->lazyload_logo ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
 @endsection
 
 @section('body')
