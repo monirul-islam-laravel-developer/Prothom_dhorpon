@@ -179,6 +179,7 @@
                     <form  action="{{route('login.store')}}" method="POST"  class="login100-form validate-form">
                         @csrf
 
+                        
 									<span class="login100-form-title">
 										Login
 									</span>
