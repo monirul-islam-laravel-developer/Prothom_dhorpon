@@ -4,15 +4,16 @@
 
         <div class="footer-menu">
             <ul>
+                <li><a href="{{route('amaderporibar')}}" > আমাদের পরিবার </a></li>
+                <li><a href="{{route('latest-news')}}" > সকল নিউজ </a></li>
+                <li><a href="all/video/gallery.html" > ভিডিও গ্যালারী </a></li>
+                <li><a href="" > ফটোগ্যালারী </a></li>
                 <li><a href="{{route('about-us')}}" > আমাদের সম্পর্কে </a></li>
                 <li><a href="{{route('privacy-policy')}}" >গোপনীয়তা নীতি</a></li>
                 <li><a href="{{route('terms-and-condition')}}" >শর্তাবলী ও নিয়মাবলী</a></li>
-                <li><a href="sitemap.xml" > সাইটম্যাপ </a></li>
-                <li><a href="feed" > আরএসএস </a></li>
-                <li><a href="all/video/gallery.html" > ভিডিও গ্যালারী </a></li>
-                <li><a href="" > ফটোগ্যালারী </a></li>
-                <li><a href="{{route('amaderporibar')}}" > আমাদের পরিবার </a></li>
-                <li><a href="{{route('latest-news')}}" > সকল নিউজ </a></li>
+
+
+
 
             </ul>
         </div>
@@ -70,9 +71,6 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
-                            <h3 class="footer-title">
-                                অফিস :
-                            </h3>
                             <div class="footer-content">
                                 @isset($editoral->office)
                                     <p align="left">অফিসঃ-&nbsp;{{ $editoral->office }}।</p>
