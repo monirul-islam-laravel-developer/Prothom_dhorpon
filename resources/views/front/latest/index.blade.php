@@ -37,13 +37,13 @@
                             <div class="custom-col4">
                                 <div class="date-page-wrpp">
                                     <div class="date-image">
-                                        <a href="{{route('news-detail',[$latest_news->id,$latest_news->slug])}}"><img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest_news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest_news->title}}"></a>
+                                        <a href="{{route('news-detail',[$latest_news->id])}}"><img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest_news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest_news->title}}"></a>
 
 
 
                                     </div>
                                     <h4 class="datePage-title">
-                                        <a href="{{route('news-detail',[$latest_news->id,$latest_news->slug])}}">{{$latest_news->title}}</a>
+                                        <a href="{{route('news-detail',[$latest_news->id])}}">{{$latest_news->title}}</a>
                                     </h4>
 
                                     <div class="date-meta">
