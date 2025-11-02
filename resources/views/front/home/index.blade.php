@@ -31,7 +31,7 @@
                                 @foreach($leadnewses5 as $leadnews)
                                 <div class="secOne_newsContent">
                                     <div class="sec-one-image">
-                                        <a href="{{route('news-detail',[$leadnews->id,$leadnews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($leadnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="">{{$leadnews->title}}</a>
+                                        <a href="{{route('news-detail',[$leadnews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($leadnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="">{{$leadnews->title}}</a>
 
                                         <h6 class="sec-small-cat">
                                             <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
@@ -43,7 +43,7 @@
 
 
                                         <h1 class="sec-one-title">
-                                            <a href="{{route('news-detail',[$leadnews->id,$leadnews->slug])}}">{{$leadnews->title}}</a>
+                                            <a href="{{route('news-detail',[$leadnews->id])}}">{{$leadnews->title}}</a>
                                         </h1>
                                     </div>
                                 </div>
@@ -66,14 +66,14 @@
                                         <div class="sec-one-wrpp">
                                             <div class="secOne-news">
                                                 <div class="secOne-sub-image">
-                                                    <a href="{{route('news-detail',[$subleadnews_2->id,$subleadnews_2->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($subleadnews_2->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$subleadnews_2->title}}"></a>
+                                                    <a href="{{route('news-detail',[$subleadnews_2->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($subleadnews_2->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$subleadnews_2->title}}"></a>
 
 
 
 
                                                 </div>
                                                 <h4 class="secOne-title2">
-                                                    <a href="{{route('news-detail',[$subleadnews_2->id,$subleadnews_2->slug])}}">{{$subleadnews_2->title}}</a>
+                                                    <a href="{{route('news-detail',[$subleadnews_2->id])}}">{{$subleadnews_2->title}}</a>
                                                 </h4>
                                             </div>
 
@@ -106,7 +106,7 @@
                             @foreach($home5newses as $home5news)
                             <div class="secOne-smallItem">
                                 <div class="secOne-smallImg">
-                                    <a href="{{route('news-detail',[$home5news->id,$home5news->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($home5news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$home5news->title}}"></a>
+                                    <a href="{{route('news-detail',[$home5news->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($home5news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$home5news->title}}"></a>
 
                                     <div class="sec-small-cat1">
                                         <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
@@ -116,7 +116,7 @@
 
 
                                     <h5 class="secOne_smallTitle">
-                                        <a href="{{route('news-detail',[$home5news->id,$home5news->slug])}}">{{$home5news->title}} </a>
+                                        <a href="{{route('news-detail',[$home5news->id])}}">{{$home5news->title}} </a>
                                     </h5>
                                 </div>
                             </div>
@@ -138,13 +138,15 @@
                                 <div class="sec-one-wrpp2">
                                     <div class="secOne-news">
                                         <div class="secOne-image2">
-                                            <a href="{{route('news-detail',[$home6news->id,$home6news->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($home6news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$home6news->title}}"></a>
+                                            <a href="{{ route('news-detail', [$home6news->id]) }}">
+                                                <img class="lazyload" src="{{ asset($webLogo->lazyload_logo) }}" data-src="{{ asset($home6news->image) }}" alt="{{ $home6news->title }}" title="{{ $home6news->title }}">
+                                            </a>
 
 
 
                                         </div>
                                         <h4 class="secOne-title2">
-                                            <a href="{{route('news-detail',[$home6news->id,$home6news->slug])}}">{{$home6news->title}}</a>
+                                            <a href="{{route('news-detail',[$home6news->id])}}">{{$home6news->title}}</a>
                                         </h4>
                                     </div>
 
@@ -366,7 +368,7 @@
                                     <a href="#" class="video-icon3">  </a>
 
 
-                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$popularnews20_single->id,$popularnews20_single->slug])}}">{{$popularnews20_single->title}}</a></h4>
+                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$popularnews20_single->id])}}">{{$popularnews20_single->title}}</a></h4>
 
                                 </div>
                                 @endforeach
@@ -383,12 +385,12 @@
                                 @foreach($latestnews_20 as $latest1)
                                 <div class="tab-image tab-border">
 
-                                    <a href="{{route('news-detail',[$latest1->id,$latest1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest1->title}}"></a>
+                                    <a href="{{route('news-detail',[$latest1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest1->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
 
-                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$latest1->id,$latest1->slug])}}">{{$latest1->title}}</a></h4>
+                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$latest1->id])}}">{{$latest1->title}}</a></h4>
 
                                 </div>
                                 @endforeach
@@ -463,13 +465,13 @@
                                     <div class="themesBazar-4 themesBazar-m2">
                                         <div class="sec-two-wrpp">
                                             <div class="section-two-image">
-                                                <a href="{{route('news-detail',[$jatiyonews->id,$jatiyonews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($jatiyonews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$jatiyonews->title}}"></a>
+                                                <a href="{{route('news-detail',[$jatiyonews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($jatiyonews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$jatiyonews->title}}"></a>
 
                                                 <a href="#" class="video-icon3">  </a>
                                             </div>
 
                                             <h5 class="sec-two-title">
-                                                <a href="{{route('news-detail',[$jatiyonews->id,$jatiyonews->slug])}}">{{$jatiyonews->title}}</a>
+                                                <a href="{{route('news-detail',[$jatiyonews->id])}}">{{$jatiyonews->title}}</a>
                                             </h5>
                                         </div>
                                     </div>
@@ -483,7 +485,7 @@
 
 
 
-                            </div
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -537,7 +539,7 @@
                                                     <a href="#" class="video-icon3"></a>
                                                 </div>
                                                 <h5 class="sec-two-title">
-                                                    <a href="{{ route('news-detail', [$rajnitinews->id, $rajnitinews->slug]) }}">
+                                                    <a href="{{ route('news-detail', [$rajnitinews->id]) }}">
                                                         {{$rajnitinews->title}}
                                                     </a>
                                                 </h5>
@@ -581,13 +583,13 @@
                                         <div class="themesBazar-4 themesBazar-m2">
                                             <div class="sec-two-wrpp">
                                                 <div class="section-two-image">
-                                                    <a href="{{route('news-detail',[$antarjarrtiknews->id,$antarjarrtiknews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($antarjarrtiknews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$antarjarrtiknews->title}}"></a>
+                                                    <a href="{{route('news-detail',[$antarjarrtiknews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($antarjarrtiknews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$antarjarrtiknews->title}}"></a>
 
                                                     <a href="#" class="video-icon3">  </a>
                                                 </div>
 
                                                 <h5 class="sec-two-title">
-                                                    <a href="{{route('news-detail',[$antarjarrtiknews->id,$antarjarrtiknews->slug])}}">{{$antarjarrtiknews->title}}</a>
+                                                    <a href="{{route('news-detail',[$antarjarrtiknews->id])}}">{{$antarjarrtiknews->title}}</a>
                                                 </h5>
                                             </div>
                                         </div>
@@ -639,13 +641,13 @@
                                         <div class="themesBazar-4 themesBazar-m2">
                                             <div class="sec-two-wrpp">
                                                 <div class="section-two-image">
-                                                    <a href="{{route('news-detail',[$kheladhulanews->id,$kheladhulanews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($kheladhulanews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$kheladhulanews->title}}"></a>
+                                                    <a href="{{route('news-detail',[$kheladhulanews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($kheladhulanews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$kheladhulanews->title}}"></a>
 
                                                     <a href="#" class="video-icon3">  </a>
                                                 </div>
 
                                                 <h5 class="sec-two-title">
-                                                    <a href="{{route('news-detail',[$kheladhulanews->id,$kheladhulanews->slug])}}">{{$kheladhulanews->title}}</a>
+                                                    <a href="{{route('news-detail',[$kheladhulanews->id])}}">{{$kheladhulanews->title}}</a>
                                                 </h5>
                                             </div>
                                         </div>
@@ -659,7 +661,7 @@
 
 
 
-                            </div
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -703,11 +705,11 @@
 
                             <div class="secThree-bg">
                                 <div class="sec-theee-image">
-                                    <a href="{{route('news-detail',[$saradeshnews1->id,$saradeshnews1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($saradeshnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$saradeshnews1->title}}"></a>
+                                    <a href="{{route('news-detail',[$saradeshnews1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($saradeshnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$saradeshnews1->title}}"></a>
 
                                 </div>
                                 <h4 class="secThree-title">
-                                    <a href="{{route('news-detail',[$saradeshnews1->id,$saradeshnews1->slug])}}">{{$saradeshnews1->title}} </a>
+                                    <a href="{{route('news-detail',[$saradeshnews1->id])}}">{{$saradeshnews1->title}} </a>
                                 </h4>
                             </div>
 
@@ -717,13 +719,13 @@
                                 <div class="themesBazar-2 themesBazar-m2">
                                     <div class="secThree-wrpp">
                                         <div class="sec-theee-image2">
-                                            <a href="{{route('news-detail',[$saradeshnews->id,$saradeshnews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($saradeshnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$saradeshnews->title}}"></a>
+                                            <a href="{{route('news-detail',[$saradeshnews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($saradeshnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$saradeshnews->title}}"></a>
 
                                             <a href="#" class="video-icon3">  </a>
 
                                         </div>
                                         <h4 class="secThree-title2">
-                                            <a href="{{route('news-detail',[$saradeshnews->id,$saradeshnews->slug])}}">{{$saradeshnews->title}} </a>
+                                            <a href="{{route('news-detail',[$saradeshnews->id])}}">{{$saradeshnews->title}} </a>
                                         </h4>
                                     </div>
 
@@ -742,13 +744,13 @@
                                 @foreach($saradeshnews5 as $news5)
                                 <div class="secThree-smallItem">
                                     <div class="secThree-smallImg">
-                                        <a href="{{route('news-detail',[$news5->id,$news5->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($news5->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$news5->title}}"></a>
+                                        <a href="{{route('news-detail',[$news5->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($news5->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$news5->title}}"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
 
                                         <h5 class="secOne_smallTitle">
-                                            <a href="{{route('news-detail',[$news5->id,$news5->slug])}}">{{$news5->title}} </a>
+                                            <a href="{{route('news-detail',[$news5->id])}}">{{$news5->title}} </a>
                                         </h5>
                                     </div>
                                 </div>
@@ -3331,12 +3333,12 @@
                         @foreach($krrishi5 as $krrishi1)
                             <div class="secFour-wrpp ">
                                 <div class="secFour-image">
-                                    <a href="{{route('news-detail',[$krrishi1->id,$krrishi1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($krrishi1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$krrishi1->title}}"></a>
+                                    <a href="{{route('news-detail',[$krrishi1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($krrishi1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$krrishi1->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
                                     <h5 class="secFour-title">
-                                        <a href="{{route('news-detail',[$krrishi1->id,$krrishi1->slug])}}">{{$krrishi1->title}} </a>
+                                        <a href="{{route('news-detail',[$krrishi1->id])}}">{{$krrishi1->title}} </a>
                                     </h5>
                                 </div>
                             </div>
@@ -3396,24 +3398,24 @@
 
 
                         <div class="secFive-image">
-                            <a href="{{route('news-detail',[$gonomaddhonews1->id,$gonomaddhonews1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($gonomaddhonews1->image)}}" alt="ল{{asset($webLogo->lazyload_logo)}}" title="{{$gonomaddhonews1->title}}"></a>
+                            <a href="{{route('news-detail',[$gonomaddhonews1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($gonomaddhonews1->image)}}" alt="ল{{asset($webLogo->lazyload_logo)}}" title="{{$gonomaddhonews1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="{{route('news-detail',[$gonomaddhonews1->id,$gonomaddhonews1->slug])}}">{{$gonomaddhonews1->title}}</a>
+                                <a href="{{route('news-detail',[$gonomaddhonews1->id])}}">{{$gonomaddhonews1->title}}</a>
                             </div>
                         </div>
                         @foreach($gonomaddhonews3 as $gonomaddhom3)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{route('news-detail',[$gonomaddhom3->id,$gonomaddhom3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($gonomaddhom3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$gonomaddhom3->title}}"></a>
+                                <a href="{{route('news-detail',[$gonomaddhom3->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($gonomaddhom3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$gonomaddhom3->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="{{route('news-detail',[$gonomaddhom3->id,$gonomaddhom3->slug])}}">{{$gonomaddhom3->title}} </a>
+                                    <a href="{{route('news-detail',[$gonomaddhom3->id])}}">{{$gonomaddhom3->title}} </a>
                                 </h5>
                             </div>
                         </div>
@@ -3439,25 +3441,25 @@
 
 
                         <div class="secFive-image">
-                            <a href="{{route('news-detail',[$job1->id,$job1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($job1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$job1->title}}"></a>
+                            <a href="{{route('news-detail',[$job1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($job1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$job1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="{{route('news-detail',[$job1->id,$job1->slug])}}">{{$job1->title}}</a>
+                                <a href="{{route('news-detail',[$job1->id])}}">{{$job1->title}}</a>
                             </div>
                         </div>
 
                         @foreach($job3 as $job_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{route('news-detail',[$job_1->id,$job_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($job_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$job_1->title}}"></a>
+                                <a href="{{route('news-detail',[$job_1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($job_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$job_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="{{route('news-detail',[$job_1->id,$job_1->slug])}}">{{$job_1->title}}</a>
+                                    <a href="{{route('news-detail',[$job_1->id])}}">{{$job_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
@@ -3484,24 +3486,24 @@
 
 
                         <div class="secFive-image">
-                            <a href="{{route('news-detail',[$dhormo1->id,$dhormo1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dhormo1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$dhormo1->title}}"></a>
+                            <a href="{{route('news-detail',[$dhormo1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dhormo1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$dhormo1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <div class="secFive-title">
-                                <a href="{{route('news-detail',[$dhormo1->id,$dhormo1->slug])}}">{{$dhormo1->title}}</a>
+                                <a href="{{route('news-detail',[$dhormo1->id])}}">{{$dhormo1->title}}</a>
                             </div>
                         </div>
 
                         @foreach($dhormo3 as $dhormo_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{route('news-detail',[$dhormo_1->id,$dhormo_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dhormo_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$dhormo_1->title}}"></a>
+                                <a href="{{route('news-detail',[$dhormo_1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dhormo_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$dhormo_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="{{route('news-detail',[$dhormo_1->id,$dhormo_1->slug])}}">{{$dhormo_1->title}}</a>
+                                    <a href="{{route('news-detail',[$dhormo_1->id])}}">{{$dhormo_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
@@ -3559,12 +3561,12 @@
                         @foreach($campusnewses5 as $campusnews)
                             <div class="secFour-wrpp ">
                                 <div class="secFour-image">
-                                    <a href="{{route('news-detail',[$campusnews->id,$campusnews->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($campusnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$campusnews->title}}"></a>
+                                    <a href="{{route('news-detail',[$campusnews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($campusnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$campusnews->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
                                     <h5 class="secFour-title">
-                                        <a href="{{route('news-detail',[$campusnews->id,$campusnews->slug])}}"> {{$campusnews->title}}</a>
+                                        <a href="{{route('news-detail',[$campusnews->id])}}"> {{$campusnews->title}}</a>
                                     </h5>
                                 </div>
                             </div>
@@ -3625,24 +3627,24 @@
 
 
                         <div class="secFive-image">
-                            <a href="{{route('news-detail',[$sastho1->id,$sastho1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sastho1->image)}}" alt="বি{{asset($webLogo->lazyload_logo)}} " title="{{$sastho1->title}}"></a>
+                            <a href="{{route('news-detail',[$sastho1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sastho1->image)}}" alt="বি{{asset($webLogo->lazyload_logo)}} " title="{{$sastho1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="{{route('news-detail',[$sastho1->id,$sastho1->slug])}}">{{$sastho1->title}}</a>
+                                <a href="{{route('news-detail',[$sastho1->id])}}">{{$sastho1->title}}</a>
                             </div>
                         </div>
                         @foreach($sastho3 as $sastho_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{route('news-detail',[$sastho_1->id,$sastho_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sastho_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sastho_1->title}}"></a>
+                                <a href="{{route('news-detail',[$sastho_1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sastho_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sastho_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="{{route('news-detail',[$sastho_1->id,$sastho_1->slug])}}">{{$sastho_1->title}}</a>
+                                    <a href="{{route('news-detail',[$sastho_1->id])}}">{{$sastho_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
@@ -3668,25 +3670,25 @@
 
 
                         <div class="secFive-image">
-                            <a href="{{route('news-detail',[$ainadalot1->id,$ainadalot1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($ainadalot1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$ainadalot1->title}}"></a>
+                            <a href="{{route('news-detail',[$ainadalot1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($ainadalot1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$ainadalot1->title}}"></a>
 
 
 
 
                             <div class="secFive-title">
-                                <a href="{{route('news-detail',[$ainadalot1->id,$ainadalot1->slug])}}">{{$ainadalot1->title}}</a>
+                                <a href="{{route('news-detail',[$ainadalot1->id])}}">{{$ainadalot1->title}}</a>
                             </div>
                         </div>
 
                         @foreach($ainadalot3 as $ainadalot_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{route('news-detail',[$ainadalot_1->id,$ainadalot_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($ainadalot_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$ainadalot_1->title}}"></a>
+                                <a href="{{route('news-detail',[$ainadalot_1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($ainadalot_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$ainadalot_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="{{route('news-detail',[$ainadalot_1->id,$ainadalot_1->slug])}}">{{$ainadalot_1->title}}</a>
+                                    <a href="{{route('news-detail',[$ainadalot_1->id])}}">{{$ainadalot_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
@@ -3713,25 +3715,25 @@
 
 
                         <div class="secFive-image">
-                            <a href="{{route('news-detail',[$shikkha1->id,$shikkha1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($shikkha1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$shikkha1->title}}"></a>
+                            <a href="{{route('news-detail',[$shikkha1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($shikkha1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$shikkha1->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
 
                             <div class="secFive-title">
-                                <a href="{{route('news-detail',[$shikkha1->id,$shikkha1->slug])}}">{{$shikkha1->title}}</a>
+                                <a href="{{route('news-detail',[$shikkha1->id])}}">{{$shikkha1->title}}</a>
                             </div>
                         </div>
 
                         @foreach($shikkha3 as $shikkha_1)
                         <div class="secFive-smallItem">
                             <div class="secFive-smallImg">
-                                <a href="{{route('news-detail',[$shikkha_1->id,$shikkha_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($shikkha_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$shikkha_1->title}}"></a>
+                                <a href="{{route('news-detail',[$shikkha_1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($shikkha_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$shikkha_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFive_title2">
-                                    <a href="{{route('news-detail',[$shikkha_1->id,$shikkha_1->slug])}}">{{$shikkha_1->title}}</a>
+                                    <a href="{{route('news-detail',[$shikkha_1->id])}}">{{$shikkha_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
@@ -3790,12 +3792,12 @@
                         @foreach($sompadokio5 as $sompadokio_1)
                         <div class="secFour-wrpp ">
                             <div class="secFour-image">
-                                <a href="{{route('news-detail',[$sompadokio_1->id,$sompadokio_1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sompadokio_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sompadokio_1->title}}"></a>
+                                <a href="{{route('news-detail',[$sompadokio_1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sompadokio_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sompadokio_1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                                 <h5 class="secFour-title">
-                                    <a href="{{route('news-detail',[$sompadokio_1->id,$sompadokio_1->slug])}}">{{$sompadokio_1->title}}</a>
+                                    <a href="{{route('news-detail',[$sompadokio_1->id])}}">{{$sompadokio_1->title}}</a>
                                 </h5>
                             </div>
                         </div>
@@ -3855,13 +3857,13 @@
 
                         <div class="black-bg">
                             <div class="secSeven-image">
-                                <a href="{{route('news-detail',[$binodon1->id,$binodon1->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($binodon1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title=" {{$binodon1->title}}"></a>
+                                <a href="{{route('news-detail',[$binodon1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($binodon1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title=" {{$binodon1->title}}"></a>
 
                                 <a href="#" class="video-icon3">  </a>
 
                             </div>
                             <h6 class="secSeven-title">
-                                <a href="{{route('news-detail',[$binodon1->id,$binodon1->slug])}}"> {{$binodon1->title}}</a>
+                                <a href="{{route('news-detail',[$binodon1->id])}}"> {{$binodon1->title}}</a>
                             </h6>
 
                         </div>
@@ -3874,12 +3876,12 @@
                             <div class="themesBazar-2 themesBazar-m2">
                                 <div class="secSeven-wrpp ">
                                     <div class="secSeven-image2">
-                                        <a href="{{route('news-detail',[$binodon_1->id,$binodon_1->slug])}}"> <img class="lazyload" src="{{asset($binodon_1->image)}}" data-src="" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$binodon_1->title}}"></a>
+                                        <a href="{{route('news-detail',[$binodon_1->id])}}"> <img class="lazyload" src="{{asset($binodon_1->image)}}" data-src="" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$binodon_1->title}}"></a>
 
                                         <a href="#" class="video-icon3">  </a>
 
                                         <h5 class="secSeven-title2">
-                                            <a href="{{route('news-detail',[$binodon_1->id,$binodon_1->slug])}}">{{$binodon_1->title}} </a>
+                                            <a href="{{route('news-detail',[$binodon_1->id])}}">{{$binodon_1->title}} </a>
                                         </h5>
                                     </div>
                                 </div>
@@ -4124,13 +4126,13 @@
                         <div class="themesBazar-3 themesBazar-m2">
                             <div class="secEight-wrpp bg-4">
                                 <div class="secEight-image">
-                                    <a href="{{route('news-detail',[$totthoprojukti_3->id,$totthoprojukti_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($totthoprojukti_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$totthoprojukti_3->title}}"></a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_3->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($totthoprojukti_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$totthoprojukti_3->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
                                 </div>
                                 <h2 class="secEight-title">
-                                    <a href="{{route('news-detail',[$totthoprojukti_3->id,$totthoprojukti_3->slug])}}"> {{$totthoprojukti_3->title}} </a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_3->id])}}"> {{$totthoprojukti_3->title}} </a>
                                 </h2>
                             </div>
                         </div>
@@ -4147,13 +4149,13 @@
                         <div class="themesBazar-4 themesBazar-m2">
                             <div class="secEight-wrpp2 bg-4">
                                 <div class="secEight-image2">
-                                    <a href="{{route('news-detail',[$totthoprojukti_4->id,$totthoprojukti_4->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($totthoprojukti_4->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$totthoprojukti_4->title}}"></a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_4->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($totthoprojukti_4->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$totthoprojukti_4->title}}"></a>
 
                                     <a href="#" class="video-icon3">  </a>
 
                                 </div>
                                 <h2 class="secEight-title">
-                                    <a href="{{route('news-detail',[$totthoprojukti_4->id,$totthoprojukti_4->slug])}}">{{$totthoprojukti_4->title}}</a>
+                                    <a href="{{route('news-detail',[$totthoprojukti_4->id])}}">{{$totthoprojukti_4->title}}</a>
                                 </h2>
                             </div>
                         </div>
@@ -4228,12 +4230,12 @@
                     @foreach($motamot3 as $motamot_3)
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="{{route('news-detail',[$motamot_3->id,$motamot_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($motamot_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$motamot_3->title}}"></a>
+                            <a href="{{route('news-detail',[$motamot_3->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($motamot_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$motamot_3->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <h5 class="secOne_smallTitle">
-                                <a href="{{route('news-detail',[$motamot_3->id,$motamot_3->slug])}}">{{$motamot_3->title}}</a>
+                                <a href="{{route('news-detail',[$motamot_3->id])}}">{{$motamot_3->title}}</a>
                             </h5>
                         </div>
                     </div>
@@ -4254,12 +4256,12 @@
                     @foreach($bussiness3 as $bussiness_3)
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="{{route('news-detail',[$bussiness_3->id,$bussiness_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($bussiness_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$bussiness_3->title}}"></a>
+                            <a href="{{route('news-detail',[$bussiness_3->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($bussiness_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$bussiness_3->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <h5 class="secOne_smallTitle">
-                                <a href="{{route('news-detail',[$bussiness_3->id,$bussiness_3->slug])}}">{{$bussiness_3->title}}</a>
+                                <a href="{{route('news-detail',[$bussiness_3->id])}}">{{$bussiness_3->title}}</a>
                             </h5>
                         </div>
                     </div>
@@ -4279,12 +4281,12 @@
                     @foreach($sharebazar3 as $sharebazer_3)
                     <div class="secOne-smallItem">
                         <div class="secOne-smallImg2">
-                            <a href="{{route('news-detail',[$sharebazer_3->id,$sharebazer_3->slug])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sharebazer_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sharebazer_3->title}}"></a>
+                            <a href="{{route('news-detail',[$sharebazer_3->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($sharebazer_3->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$sharebazer_3->title}}"></a>
 
                             <a href="#" class="video-icon3">  </a>
 
                             <h5 class="secOne_smallTitle">
-                                <a href="{{route('news-detail',[$sharebazer_3->id,$sharebazer_3->slug])}}">{{$sharebazer_3->title}}</a>
+                                <a href="{{route('news-detail',[$sharebazer_3->id])}}">{{$sharebazer_3->title}}</a>
                             </h5>
                         </div>
                     </div>

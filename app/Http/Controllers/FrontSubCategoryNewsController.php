@@ -12,7 +12,13 @@ class FrontSubCategoryNewsController extends Controller
     public function index($id)
     {
         $this->subcategory =SubCategory::find($id);
-        $this->subcat_newses = Post::where('status', 1)->where('subcategory_id',$this->subcategory->id)->get();
+        $this->subcat_newses = Post::where('status', 1)
+            ->where('subcategory_id', $this->subcategory->id)
+            ->orderBy('id', 'desc')
+            ->paginate(9); // shows 9 posts per page
+
+
+
         return view('front.sub-cat-news.index',[
             'subcategory'=>$this->subcategory,
             'subcat_newses'=>$this->subcat_newses

@@ -11,7 +11,7 @@
 
 
 
-                        <li><a href="">সর্বশেষ</a>
+                        <li><a href="{{route('latest-news')}}">সর্বশেষ</a>
                         </li>
 
                         @foreach($categories8 as $category)

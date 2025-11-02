@@ -12,8 +12,8 @@ class FrontCategoryNewsController extends Controller
     public function index($id)
     {
         $this->category =Category::find($id);
-        $this->cat_newses = Post::where('status', 1)->where('category_id', $this->category->id)->get();
-
+        $this->cat_newses = Post::where('status', 1)
+            ->where('category_id', $this->category->id)->latest()->paginate(9)->withQueryString();
 
         return view('front.cat_news.index',[
             'category'=>$this->category,

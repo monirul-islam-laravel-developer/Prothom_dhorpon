@@ -12,7 +12,7 @@
                 <li><a href="all/video/gallery.html" > ভিডিও গ্যালারী </a></li>
                 <li><a href="" > ফটোগ্যালারী </a></li>
                 <li><a href="{{route('amaderporibar')}}" > আমাদের পরিবার </a></li>
-                <li><a href="all/latest/news/post.html" > সকল নিউজ </a></li>
+                <li><a href="{{route('latest-news')}}" > সকল নিউজ </a></li>
 
             </ul>
         </div>
@@ -41,6 +41,9 @@
                                 @isset($editoral->editor)
                                     <p align="left">প্রধান সম্পাদকঃ&nbsp;{{ $editoral->editor }}</p>
                                 @endisset
+                                    @isset($editoral->mobile1)
+                                        <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile1 }}</p>
+                                    @endisset
 
                                 @isset($editoral->executive_editor)
                                     <p align="left">নির্বাহী সম্পাদকঃ&nbsp;{{ $editoral->executive_editor }}</p>
@@ -49,6 +52,9 @@
                                 @isset($editoral->multimedia_incharge)
                                     <p align="left">মাল্টিমিডিয়া ইনচার্জঃ&nbsp;{{ $editoral->multimedia_incharge }}</p>
                                 @endisset
+                                    @isset($editoral->mobile2)
+                                        <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile2 }}</p>
+                                    @endisset
 
                                 @isset($editoral->message_editor)
                                     <p align="left">বার্তা সম্পাদকঃ&nbsp;{{ $editoral->message_editor }}</p>
@@ -78,14 +84,6 @@
 
                                 @isset($editoral->email)
                                     <p align="left">ইমেইলঃ-&nbsp;{{ $editoral->email }}</p>
-                                @endisset
-
-                                @isset($editoral->mobile1)
-                                    <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile1 }}</p>
-                                @endisset
-
-                                @isset($editoral->mobile2)
-                                    <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile2 }}</p>
                                 @endisset
 
                             </div>

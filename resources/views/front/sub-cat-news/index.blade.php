@@ -36,7 +36,7 @@
 
                                         </div>
                                         <h4 class="archivePage2-title">
-                                            <a href="{{route('news-detail',[$subcat_news->id,$subcat_news->slug])}}">{{$subcat_news->title}} </a>
+                                            <a href="{{route('news-detail',[$subcat_news->id])}}">{{$subcat_news->title}} </a>
                                         </h4>
 
                                         <div class="archive-meta2">
@@ -53,7 +53,9 @@
                             <div style="text-align: center; margin:20px; display:display: ruby;">  </div>
 
 
-
+                                <div class="d-flex justify-content-center mt-2 mb-2 pt-2 pb-2 border-top">
+                                    {{ $subcat_newses->links('pagination::bootstrap-5') }}
+                                </div>
 
 
                         </div>
@@ -104,7 +106,7 @@
                                         </div>
 
 
-                                        <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$lnews20->id,$lnews20->slug])}}">{{$lnews20->title}}</a>
+                                        <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$lnews20->id])}}">{{$lnews20->title}}</a>
 
                                         </h4>
 
@@ -142,7 +144,7 @@
                                         </div>
 
 
-                                        <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$pnews1->id,$pnews1->slug])}}">{{$pnews1->title}}</a>
+                                        <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$pnews1->id])}}">{{$pnews1->title}}</a>
 
                                         </h4>
 
