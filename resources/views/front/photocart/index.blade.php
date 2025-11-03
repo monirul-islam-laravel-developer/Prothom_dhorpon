@@ -20,11 +20,11 @@
             background-color: #e8f1ee;
             border: 1px solid #c7d8d3;
             border-radius: 10px;
-            margin: 20px auto;
+            margin: 10px auto;
             box-shadow: 0 3px 10px rgba(0,0,0,0.12);
             text-align: center;
             position: relative;
-            padding-bottom: 5px;
+            padding: 5px;
         }
 
         .header {
@@ -39,26 +39,25 @@
 
         .image-section {
             width: 100%;
-            position: relative;
-            overflow: visible;
-            margin-bottom: -25px;
+            overflow: hidden;
+            margin-bottom: -20px;
         }
 
         .image-section img {
-            width: 94%; /* Image takes 94% of card width */
+            width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
-            border-bottom: 2px solid #d8e4e0;
+            border-bottom: 1px solid #d8e4e0;
         }
 
         .brand-logo {
             position: relative;
-            margin: -25px auto 5px;
-            width: 55px;
-            height: 55px;
+            margin: -20px auto 5px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            border: 3px solid #fff;
+            border: 2px solid #fff;
             background-color: #fff;
             box-shadow: 0 2px 6px rgba(0,0,0,0.25);
             overflow: hidden;
@@ -72,20 +71,20 @@
         }
 
         .content {
-            padding: 15px 12px 2px;
+            padding: 8px 10px;
             color: #111;
             line-height: 1.3;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             border-bottom: 2px solid #c40000;
             display: inline-block;
-            margin: 3px auto 5px;
+            margin: 2px auto 4px;
         }
 
         .content::before {
             content: "📰 ";
             color: #b00000;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .highlight {
@@ -93,17 +92,17 @@
             background: linear-gradient(90deg, #c40000, #e63b3b);
             color: white;
             font-weight: bold;
-            margin: 3px auto 5px;
-            padding: 3px 12px;
-            font-size: 14px;
+            margin: 2px auto 4px;
+            padding: 2px 10px;
+            font-size: 13px;
             border-radius: 18px;
         }
 
         .banner-ad {
             width: 100%;
-            height: 55px;
+            height: 40px;
             overflow: hidden;
-            margin-top: 3px;
+            margin-top: 2px;
             border-top: 1px solid #c7d8d3;
             border-bottom: 1px solid #c7d8d3;
             background-color: #fff;
@@ -118,8 +117,8 @@
         .footer {
             background-color: #007a50;
             color: white;
-            font-size: 13px;
-            padding: 3px 10px;
+            font-size: 12px;
+            padding: 2px 8px;
             display: flex;
             justify-content: space-between;
         }
@@ -135,12 +134,12 @@
 
         .download-btn {
             display: block;
-            margin: 8px auto 15px;
+            margin: 8px auto 10px;
             background-color: #c40000;
             color: #fff;
             border: none;
-            padding: 8px 18px;
-            font-size: 15px;
+            padding: 6px 15px;
+            font-size: 14px;
             border-radius: 25px;
             cursor: pointer;
         }
