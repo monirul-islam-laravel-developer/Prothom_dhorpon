@@ -23,8 +23,24 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8">
                     <div class="rachive-info-cats">
-                        <a href="{{route('home')}}"><i class="las la-home"> </i> </a>  <i class="las la-angle-right"></i> {{$category->name}}
+                        <a href="{{route('home')}}"><i class="las la-home"> </i> </a>  <i class="las la-angle-right">
+
+                        </i> {{$category->name}}
                     </div>
+                    @if($category->subcategories->count() > 0)
+                        <div class="subcategory-scroll mt-3">
+                            @foreach($category->subcategories as $subcategory)
+                                <a href="{{route('sub-category-news',[$subcategory->id,$subcategory->slug])}}">
+                                    {{ $subcategory->name }}
+                                </a>
+                            @endforeach
+                        </div>
+                    @endif
+
+
+
+
+
 
                     <div class="archivePage-content2">
                         <div class="row">

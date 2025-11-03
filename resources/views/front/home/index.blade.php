@@ -512,10 +512,12 @@
                         <div class="themesBazar_cat6">
                             <ul class="nav nav-pills" id="categori-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill"
+                                    <div class="nav-link" id="categori-tab1" data-bs-toggle="pill"
                                          data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1"
                                          aria-selected="false">
-                                        {{$rajniti->name}}
+                                        <a href="{{ route('category-news', [$rajniti->id, $rajniti->slug]) }}">
+                                            {{ $rajniti->name }}
+                                        </a>
                                     </div>
                                 </li>
                                 <span class="themeBazar6"></span>

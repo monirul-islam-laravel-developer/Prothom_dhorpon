@@ -1,13 +1,13 @@
 @extends('master.front.master')
 @section('title')
-    {{$subcategory->description}}
+    {{$dristrict->description}}
 @endsection
 @section('og:title')
-    {{ $subcategory->name ?? config('app.name') }}
+    {{ $dristrict->name ?? config('app.name') }}
 @endsection
 
 @section('og:description')
-    {{ $subcategory->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
+    {{ $dristrict->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
 
 @section('og:image')
@@ -22,13 +22,13 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8">
                     <div class="rachive-info-cats">
-                        <a href="{{route('home')}}"><i class="las la-home"> </i> </a>  <i class="las la-angle-right"></i> {{$subcategory->name}}
+                        <a href="{{route('home')}}"><i class="las la-home"> </i> </a>  <i class="las la-angle-right"></i> {{$dristrict->name}}
                     </div>
-                    @if($subcategory->subsubcategories->count() > 0)
+                    @if($dristrict->upazilas->count() > 0)
                         <div class="subcategory-scroll mt-3">
-                            @foreach($subcategory->subsubcategories as $sub_subcategory)
-                                <a href="{{route('district-news2',[$sub_subcategory->id,$sub_subcategory->slug])}}">
-                                    {{ $sub_subcategory->name }}
+                            @foreach($dristrict->upazilas as $upzela)
+                                <a href="{{route('upazila-news',[$upzela->id,$upzela->slug])}}">
+                                    {{ $upzela->name }}
                                 </a>
                             @endforeach
                         </div>
@@ -37,20 +37,20 @@
                     <div class="archivePage-content2">
                         <div class="row">
 
-                            @foreach($subcat_newses as $subcat_news)
+                            @foreach($dristrictnewses as $dristrictnews)
                                 <div class="themesBazar-3 themesBazar-m2">
                                     <div class="archivePage-wrpp2">
                                         <div class="archive2-image">
-                                            <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($subcat_news->image)}}" alt="{{$subcat_news->title}}" title="{{$subcat_news->title}}">
+                                            <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dristrictnews->image)}}" alt="{{$dristrictnews->title}}" title="{{$dristrictnews->title}}">
 
                                         </div>
                                         <h4 class="archivePage2-title">
-                                            <a href="{{route('news-detail',[$subcat_news->id])}}">{{$subcat_news->title}} </a>
+                                            <a href="{{route('news-detail',[$dristrictnews->id])}}">{{$dristrictnews->title}} </a>
                                         </h4>
 
                                         <div class="archive-meta2">
                                             <a href="#"><i class="las la-tags"> </i>
-                                                {{ \Carbon\Carbon::parse($subcat_news->created_at)->locale('bn')->diffForHumans() }}
+                                                {{ \Carbon\Carbon::parse($dristrictnews->created_at)->locale('bn')->diffForHumans() }}
 
                                             </a>
                                         </div>
@@ -62,9 +62,9 @@
                             <div style="text-align: center; margin:20px; display:display: ruby;">  </div>
 
 
-                                <div class="d-flex justify-content-center mt-2 mb-2 pt-2 pb-2 border-top">
-                                    {{ $subcat_newses->links('pagination::bootstrap-5') }}
-                                </div>
+                            <div class="d-flex justify-content-center mt-2 mb-2 pt-2 pb-2 border-top">
+                                {{ $dristrictnewses->links('pagination::bootstrap-5') }}
+                            </div>
 
 
                         </div>
@@ -109,27 +109,27 @@
                                 <div class="archiveTab-sibearNews">
 
                                     @foreach($latestnews_20 as $lnews20)
-                                    <div class="archive-tabWrpp archiveTab-border">
-                                        <div class="archiveTab-image ">
-                                            <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($lnews20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$lnews20->title}}">
+                                        <div class="archive-tabWrpp archiveTab-border">
+                                            <div class="archiveTab-image ">
+                                                <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($lnews20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$lnews20->title}}">
+                                            </div>
+
+
+                                            <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$lnews20->id])}}">{{$lnews20->title}}</a>
+
+                                            </h4>
+
+                                            <div class="archive-conut">
+                                                {{ str_replace(
+                 ['0','1','2','3','4','5','6','7','8','9'],
+                 ['০','১','২','৩','৪','৫','৬','৭','৮','৯'],
+                 $loop->iteration
+             ) }}
+
+                                            </div>
+
+
                                         </div>
-
-
-                                        <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$lnews20->id])}}">{{$lnews20->title}}</a>
-
-                                        </h4>
-
-                                        <div class="archive-conut">
-                                            {{ str_replace(
-             ['0','1','2','3','4','5','6','7','8','9'],
-             ['০','১','২','৩','৪','৫','৬','৭','৮','৯'],
-             $loop->iteration
-         ) }}
-
-                                        </div>
-
-
-                                    </div>
                                     @endforeach
 
 
@@ -147,27 +147,27 @@
                                 <div class="archiveTab-sibearNews">
 
                                     @foreach($popularNews20 as $pnews1)
-                                    <div class="archive-tabWrpp archiveTab-border">
-                                        <div class="archiveTab-image ">
-                                            <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($pnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$pnews1->title}}">
+                                        <div class="archive-tabWrpp archiveTab-border">
+                                            <div class="archiveTab-image ">
+                                                <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($pnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$pnews1->title}}">
+                                            </div>
+
+
+                                            <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$pnews1->id])}}">{{$pnews1->title}}</a>
+
+                                            </h4>
+
+                                            <div class="archive-conut">
+                                                {{ str_replace(
+                 ['0','1','2','3','4','5','6','7','8','9'],
+                 ['০','১','২','৩','৪','৫','৬','৭','৮','৯'],
+                 $loop->iteration
+             ) }}
+
+                                            </div>
+
+
                                         </div>
-
-
-                                        <h4 class="archiveTab_hadding"><a href="{{route('news-detail',[$pnews1->id])}}">{{$pnews1->title}}</a>
-
-                                        </h4>
-
-                                        <div class="archive-conut">
-                                            {{ str_replace(
-             ['0','1','2','3','4','5','6','7','8','9'],
-             ['০','১','২','৩','৪','৫','৬','৭','৮','৯'],
-             $loop->iteration
-         ) }}
-
-                                        </div>
-
-
-                                    </div>
                                     @endforeach
 
 
@@ -194,4 +194,5 @@
         </div>
     </div>
 @endsection
+
 

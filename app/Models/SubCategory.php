@@ -75,7 +75,10 @@ class SubCategory extends Model
 
     public function subsubcategories()
     {
-        return $this->hasMany(SubsubCategory::class);
+        // এখানে foreign key DB অনুযায়ী ঠিক দিতে হবে
+        return $this->hasMany(SubsubCategory::class, 'subcategory_id');
+        // যদি DB column নাম 'sub_category_id' হয়, তাহলে সেই নাম লিখবে
     }
+
 
 }

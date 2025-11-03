@@ -11,8 +11,15 @@ class SubsubCategory extends Model
         return $this->belongsTo(SubCategory::class);
     }
 
-    public function upzelas()
+    public function upazilas()
     {
-        return $this->hasMany(Upzela::class);
+        return $this->hasMany(Upazila::class, 'subsub_categories_id'); // DB column অনুযায়ী foreign key
     }
+
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'dristrict_id');
+    }
+
 }

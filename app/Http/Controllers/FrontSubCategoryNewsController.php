@@ -12,6 +12,7 @@ class FrontSubCategoryNewsController extends Controller
     public function index($id)
     {
         $this->subcategory =SubCategory::find($id);
+
         $this->subcat_newses = Post::where('status', 1)
             ->where('subcategory_id', $this->subcategory->id)
             ->orderBy('id', 'desc')
