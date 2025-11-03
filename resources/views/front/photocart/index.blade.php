@@ -115,7 +115,7 @@
         }
 
         .footer {
-            background-color: #007a50;
+            background-color: #109935;
             color: white;
             font-size: 12px;
             padding: 2px 8px;
