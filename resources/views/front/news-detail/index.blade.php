@@ -214,7 +214,7 @@
 
 
                                             </div>
-                                            <h4 class="relatedTitle2"><a href="{{route('news-detail',[$relatednews1->id,$relatednews1->slug])}}">{{$relatednews1->title}}</a></h4>
+                                            <h4 class="relatedTitle2"><a href="{{route('news-detail',[$relatednews1->id])}}">{{$relatednews1->title}}</a></h4>
 
                                         </div> <!--Related Wrpp End-->
                                     </div>
@@ -250,7 +250,7 @@
 
 
                                             </div>
-                                            <h4 class="leftSitbe-title"><a href="{{route('news-detail',[$latestnews_1->id,$latestnews_1->slug])}}">{{$latestnews_1->title}}</a></h4>
+                                            <h4 class="leftSitbe-title"><a href="{{route('news-detail',[$latestnews_1->id])}}">{{$latestnews_1->title}}</a></h4>
                                         </div>
                                     </div>
                                     @endforeach
@@ -306,7 +306,7 @@
 
 
                                             </div>
-                                            <h4 class="rSitebar-title2"><a href="{{route('news-detail',[$popularnews->id,$popularnews->slug])}}">{{$popularnews->title}}</a></h4>
+                                            <h4 class="rSitebar-title2"><a href="{{route('news-detail',[$popularnews->id])}}">{{$popularnews->title}}</a></h4>
                                         </div> <!--Popular Wpp End-->
 
                                     </div>

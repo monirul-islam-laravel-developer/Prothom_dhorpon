@@ -1,240 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>সংবাদ কার্ড — প্রথম দর্পণ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ফটোকার্ড</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700&display=swap');
 
-        :root {
-            --deep-red:#b70f16;
-            --bg-cream:#f6eaea;
-        }
-
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{
-            background:var(--bg-cream);
-            font-family:'Noto Sans Bengali',sans-serif;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            padding:5px;
-            min-height:100vh;
-            flex-direction:column;
+        body {
+            font-family: 'Noto Serif Bengali', serif;
+            background-color: #f1f4f3;
+            margin: 0;
+            padding: 0;
         }
 
-        .card{
-            width:900px;
-            max-width:96vw;
-            background:#fff;
-            border-radius:10px;
-            overflow:hidden;
-            box-shadow:0 5px 15px rgba(0,0,0,0.15);
-            position:relative;
+        .card {
+            max-width: 520px;
+            background-color: #e8f1ee;
+            border: 1px solid #c7d8d3;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            text-align: center;
+            position: relative;
+            padding-bottom: 5px;
         }
 
-        /* Top: logo + date + website URL */
-        .top{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:4px 8px;
+        .header {
+            background-color: #dbe7e2;
+            padding: 2px 0;
         }
 
-        .site-logo img{
-            height:80px;
-            width:100px;
+        .header img {
+            height: 34px;
+            width: auto;
         }
 
-        .top-right{
-            display:flex;
-            flex-direction:column;
-            align-items:flex-end;
+        .image-section {
+            width: 100%;
+            position: relative;
+            overflow: visible;
+            margin-bottom: -25px;
         }
 
-        .date-top{
-            font-weight:700;
-            font-size:11px;
-            color:#555;
+        .image-section img {
+            width: 94%; /* Image takes 94% of card width */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-bottom: 2px solid #d8e4e0;
         }
 
-        .site-label{
-            font-size:10px;
-            font-weight:700;
-            color:#fff;
-            background:var(--deep-red);
-            padding:2px 6px;
-            border-radius:10px;
-            margin-top:2px;
-            text-align:center;
+        .brand-logo {
+            position: relative;
+            margin: -25px auto 5px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+            overflow: hidden;
+            z-index: 10;
         }
 
-        /* Hero Image */
-        .hero img{
-            width:90%;
-            max-width:800px;
-            height:140px;
-            object-fit:cover;
-            display:block;
-            margin:0 auto;
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* Headline + Button */
-        .headline{
-            text-align:center;
-            padding:4px 8px 6px 8px;
-        }
-        .headline h1{
-            margin:0 0 2px 0;
-            color:var(--deep-red);
-            font-size:18px;
-            line-height:1.1;
-            font-weight:800;
+        .content {
+            padding: 15px 12px 2px;
+            color: #111;
+            line-height: 1.3;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 2px solid #c40000;
+            display: inline-block;
+            margin: 3px auto 5px;
         }
 
-        .btn-wrap{display:flex;justify-content:center;margin-top:4px;}
-        .btn{
-            background:var(--deep-red);
-            color:#fff;
-            padding:4px 12px;
-            border-radius:14px;
-            text-decoration:none;
-            font-weight:700;
-            font-size:12px;
-            box-shadow:0 1px 4px rgba(0,0,0,0.2);
-            transition:background 0.3s, transform 0.2s;
-        }
-        .btn:hover{
-            background:#a10e13;
-            transform:translateY(-1px);
+        .content::before {
+            content: "📰 ";
+            color: #b00000;
+            font-size: 16px;
         }
 
-        /* Social Links */
-        .social-links{
-            display:flex;
-            justify-content:center;
-            gap:2px;
-            padding:4px 0 4px 0;
-            font-size:9px;
-            font-weight:600;
-        }
-        .social-links a{
-            text-decoration:none;
-            color:var(--deep-red);
-            display:flex;
-            align-items:center;
-            gap:2px;
-        }
-        .social-links a img{
-            width:12px;
-            height:12px;
+        .highlight {
+            display: inline-block;
+            background: linear-gradient(90deg, #c40000, #e63b3b);
+            color: white;
+            font-weight: bold;
+            margin: 3px auto 5px;
+            padding: 3px 12px;
+            font-size: 14px;
+            border-radius: 18px;
         }
 
-        /* Banner */
-        .banner-ad{
-            width:100%;
-            display:flex;
-            justify-content:center;
-            background:#f6f6f6;
-            margin-top:4px;
-        }
-        .banner-ad img{
-            width:90%;
-            max-width:800px;
-            height:80px;
-            object-fit:cover;
+        .banner-ad {
+            width: 100%;
+            height: 55px;
+            overflow: hidden;
+            margin-top: 3px;
+            border-top: 1px solid #c7d8d3;
+            border-bottom: 1px solid #c7d8d3;
+            background-color: #fff;
         }
 
-        /* Download Button */
-        .download-btn{
-            margin-top:6px;
-            background: linear-gradient(90deg, #b70f16, #c71a1f);
-            color:#fff;
-            padding:6px 16px;
-            border-radius:20px;
-            cursor:pointer;
-            font-weight:700;
-            font-size:12px;
-            box-shadow:0 3px 6px rgba(0,0,0,0.2);
-            border:none;
-            transition:all 0.3s ease;
-        }
-        .download-btn:hover{
-            transform:translateY(-1px);
-            box-shadow:0 5px 10px rgba(0,0,0,0.25);
+        .banner-ad img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        @media(max-width:700px){
-            .hero img{height:180px;}
-            .headline h1{font-size:16px;}
-            .social-links{gap:3px;}
-            .site-logo img{height:25px;}
-            .banner-ad img{height:60px;}
+        .footer {
+            background-color: #007a50;
+            color: white;
+            font-size: 13px;
+            padding: 3px 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .download-btn {
+            display: block;
+            margin: 8px auto 15px;
+            background-color: #c40000;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            font-size: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: #e63b3b;
         }
     </style>
 </head>
 <body>
-
-<div id="newsCard" class="card">
-    <!-- Top: Logo + Date + Website -->
-    <div class="top">
-        <div class="site-logo">
-            <img src="{{asset($webLogo->desktop_logo)}}" alt="প্রথম দর্পণ লোগো">
+<div id="card-wrapper">
+    <div class="card" id="photo-card">
+        <div class="header">
+            <img src="{{ asset($webLogo->desktop_logo) }}" alt="logo">
         </div>
-        <div class="top-right">
-            <div class="date-top">৩১ অক্টোবর ২০২৫</div>
-            <div class="site-label">prothomdorpan.com</div>
+
+        <div class="image-section">
+            <img src="{{ asset($news->image) }}" alt="news image">
+        </div>
+
+        <div class="brand-logo">
+            <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="brand logo">
+        </div>
+
+        <div class="content">
+            {{ $news->title }}
+        </div>
+
+        <div class="highlight">বিস্তারিত কমেন্টে</div>
+
+        <div class="banner-ad">
+            <img src="{{ asset($ads->head_banner) }}" alt="banner ad">
+        </div>
+
+        <div class="footer">
+            <a href="#">prothomdorpan.com</a>
+            <div class="date">
+                @php
+                    use Carbon\Carbon;
+                    $date = Carbon::parse($news->created_at)->timezone('Asia/Dhaka')->locale('bn');
+                    $formatted = $date->translatedFormat('d F Y');
+                    $english = ['0','1','2','3','4','5','6','7','8','9','AM','PM'];
+                    $bangla  = ['০','১','২','৩','৪','৫','৬','৭','৮','৯','পূর্বাহ্ণ','অপরাহ্ণ'];
+                    echo str_replace($english, $bangla, $formatted);
+                @endphp
+            </div>
         </div>
     </div>
 
-    <!-- News Image -->
-    <div class="hero">
-        <img src="{{asset($news->image)}}" alt="news image">
-    </div>
-
-    <!-- Headline + Button -->
-    <div class="headline">
-        <h1>{{$news->title}}</h1>
-        <div class="btn-wrap">
-            <a class="btn" href="#">বিস্তারিত কমেন্টে</a>
-        </div>
-    </div>
-
-    <!-- Social links -->
-{{--    <div class="social-links">--}}
-{{--        <a href="https://facebook.com/username" target="_blank">--}}
-{{--            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"> @username--}}
-{{--        </a>--}}
-{{--        <a href="https://twitter.com/username" target="_blank">--}}
-{{--            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"> @username--}}
-{{--        </a>--}}
-{{--        <a href="https://instagram.com/username" target="_blank">--}}
-{{--            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"> @username--}}
-{{--        </a>--}}
-{{--    </div>--}}
-
-    <!-- Banner Ad Full Width -->
-    <div class="banner-ad">
-        <img src="{{ isset($ads->head_banner) && $ads->head_banner ? asset($ads->head_banner) : asset('front/templateimage/63ad66eeaa3fc.gif') }}" alt="ব্যানার এড">
-    </div>
+    <button class="download-btn" onclick="downloadCard()">ডাউনলোড করুন</button>
 </div>
 
-<!-- Stylish Download Button -->
-<button class="download-btn" onclick="downloadCard()">Download Card</button>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
-    function downloadCard(){
-        const card = document.getElementById('newsCard');
-        html2canvas(card, {scale:2}).then(canvas => {
-            const link = document.createElement('a');
-            link.download = 'news-card.png';
-            link.href = canvas.toDataURL('image/png');
+    function downloadCard() {
+        const card = document.getElementById("photo-card");
+        html2canvas(card, { scale: 3, useCORS: true }).then(canvas => {
+            const link = document.createElement("a");
+            link.download = "photo-card.png";
+            link.href = canvas.toDataURL("image/png");
             link.click();
         });
     }
 </script>
-
 </body>
 </html>

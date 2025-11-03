@@ -15,7 +15,7 @@
                         <div class="scroll5-right">
                             <marquee direction="left" scrollamount="5px" onmouseover="this.stop()" onmouseout="this.start()">
                                 @foreach($latestnews_10 as $latest_shironam)
-                                <a href="136.html"> <i class="las la-bullseye"></i>{{$latest_shironam->title}}</a>
+                                <a href="{{route('news-detail',$latest_shironam->id)}}"> <i class="las la-bullseye"></i>{{$latest_shironam->title}}</a>
                                 @endforeach
 
 
