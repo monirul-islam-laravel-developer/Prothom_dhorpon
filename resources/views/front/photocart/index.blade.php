@@ -6,7 +6,7 @@
     <title>ফটোকার্ড</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700;900&display=swap');
 
         body {
             font-family: 'Noto Serif Bengali', serif;
@@ -72,19 +72,19 @@
 
         .content {
             padding: 8px 10px;
-            color: #111;
-            line-height: 1.3;
-            font-size: 15px;
-            font-weight: 600;
+            color: #141202;
+            line-height: 1.4;
+            font-size: 24px;   /* 🔥 বড় ফন্ট */
+            font-weight: 900;  /* 🔥 বেশি bold */
             border-bottom: 2px solid #c40000;
             display: inline-block;
-            margin: 2px auto 4px;
+            margin: 4px auto 6px;
         }
 
         .content::before {
             content: "📰 ";
             color: #b00000;
-            font-size: 15px;
+            font-size: 16px;
         }
 
         .highlight {
@@ -92,9 +92,9 @@
             background: linear-gradient(90deg, #c40000, #e63b3b);
             color: white;
             font-weight: bold;
-            margin: 2px auto 4px;
-            padding: 2px 10px;
-            font-size: 13px;
+            margin: 3px auto 5px;
+            padding: 3px 12px;
+            font-size: 14px;
             border-radius: 18px;
         }
 
@@ -102,7 +102,7 @@
             width: 100%;
             height: 40px;
             overflow: hidden;
-            margin-top: 2px;
+            margin-top: 3px;
             border-top: 1px solid #c7d8d3;
             border-bottom: 1px solid #c7d8d3;
             background-color: #fff;
