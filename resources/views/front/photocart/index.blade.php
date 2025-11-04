@@ -37,18 +37,30 @@
             width: auto;
         }
 
+        /* ✅ Auto-fit image (no crop) */
         .image-section {
             width: 100%;
-            overflow: hidden;
+            background-color: #eef4f2; /* হালকা ব্যাকগ্রাউন্ড */
             margin-bottom: -20px;
+            border-bottom: 1px solid #d8e4e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0;
         }
 
         .image-section img {
-            width: 100%;
+            width: 95%;
             height: auto;
+            max-height: 270px; /* খুব বেশি লম্বা না হয় */
+            object-fit: contain;
             display: block;
-            margin: 0 auto;
-            border-bottom: 1px solid #d8e4e0;
+        }
+
+        @media (max-width: 480px) {
+            .image-section img {
+                max-height: 220px;
+            }
         }
 
         .brand-logo {
@@ -74,8 +86,8 @@
             padding: 8px 10px;
             color: #141202;
             line-height: 1.4;
-            font-size: 18px;   /* 🔥 বড় ফন্ট */
-            font-weight: 900;  /* 🔥 বেশি bold */
+            font-size: 18px;
+            font-weight: 900;
             border-bottom: 2px solid #c40000;
             display: inline-block;
             margin: 4px auto 6px;
