@@ -2,6 +2,7 @@
 @section('title')
     {{$news->title}}
 @endsection
+
 @section('og:title')
     {{$news->title ?? config('app.name') }}
 @endsection
@@ -110,6 +111,25 @@
                             </ul>
 
                         </div>
+                        @if(isset($ads->news_head_ads) && $ads->news_head_ads != '')
+                            <div style="margin:0 auto 5px;">
+                                <img
+                                    src="{{ asset($ads->news_head_ads) }}"
+                                    alt="Banner Ad"
+                                    style="object-fit:contain;display:block;margin:0 auto;background:#fff;"
+                                />
+                            </div>
+                        @else
+                            <div style="margin:0 auto 5px;">
+                                <img
+                                    src="{{ asset('front/templateimage/63ad66eeaa3fc.gif') }}"
+                                    alt="Default Banner Ad"
+                                    style="object-fit:contain;display:block;margin:0 auto;background:#fff;"
+                                />
+                            </div>
+                        @endif
+
+
                         <div class="single-image2">
                             <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$news->title}}" width="100%" height="auto">
                             <span style="font-style: italic; color: #333;">{{$news->image_caption}} </span>
@@ -117,6 +137,32 @@
 
 
                         </div>
+                        <!-- শুধু ব্যানার দেখানোর জন্য একটি ডিভ -->
+                        @if(isset($ads->news_pics_under_ads) && $ads->news_pics_under_ads != '')
+                            <div class="banner-wrapper" style="margin:0 auto 5px auto;overflow:hidden;text-align:center;">
+                                <img
+                                    class="banner-img"
+                                    src="{{ asset($ads->news_pics_under_ads) }}"
+                                    width="800"
+                                    height="70"
+                                    alt="Banner Ad"
+                                    style="display:block;margin:0 auto;background:#fff;"
+                                />
+                            </div>
+                        @else
+                            <div class="banner-wrapper">
+                                <img
+                                    class="banner-img"
+                                    src="{{ asset('front/templateimage/63ad66eeaa3fc.gif') }}"
+                                    width="800"
+                                    height="70"
+                                    alt="Default Banner Ad"
+                                />
+                            </div>
+                        @endif
+
+
+
 
                         <div class="single-page-add2">
 
