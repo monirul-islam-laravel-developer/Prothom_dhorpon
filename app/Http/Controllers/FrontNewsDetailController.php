@@ -16,14 +16,14 @@ class FrontNewsDetailController extends Controller
             ->firstOrFail();
 
 //        // 🔹 Session key (প্রতি নিউজের জন্য আলাদা)
-//        $this->news->increment('view_count');
-        $sessionKey = 'news_viewed_' . $id;
-//
-        // যদি session এ না থাকে, তাহলে একবারই view বাড়াবে
-        if (!session()->has($sessionKey)) {
-            $this->news->increment('view_count');
-            session()->put($sessionKey, true);
-        }
+        $this->news->increment('view_count');
+//        $sessionKey = 'news_viewed_' . $id;
+////
+//        // যদি session এ না থাকে, তাহলে একবারই view বাড়াবে
+//        if (!session()->has($sessionKey)) {
+//            $this->news->increment('view_count');
+//            session()->put($sessionKey, true);
+//        }
 
         $this->relatedNews = Post::where('category_id', $this->news->category_id)
             ->where('status', 1)
