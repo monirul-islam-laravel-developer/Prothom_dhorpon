@@ -74,7 +74,7 @@
             padding: 8px 10px;
             color: #141202;
             line-height: 1.4;
-            font-size: 24px;   /* 🔥 বড় ফন্ট */
+            font-size: 18px;   /* 🔥 বড় ফন্ট */
             font-weight: 900;  /* 🔥 বেশি bold */
             border-bottom: 2px solid #c40000;
             display: inline-block;
