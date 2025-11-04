@@ -146,7 +146,7 @@
                                     width="800"
                                     height="70"
                                     alt="Banner Ad"
-                                    style="display:block;margin:0 auto;background:#fff;"
+                                    style="object-fit:contain;display:block;margin:0 auto;background:#fff;"
                                 />
                             </div>
                         @else
