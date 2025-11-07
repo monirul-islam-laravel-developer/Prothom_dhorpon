@@ -186,6 +186,58 @@
 
                                 <div class="addthis_inline_share_toolbox"></div>
                             </div>
+
+
+                            @php
+                                $encodedUrl = urlencode(Request::url());
+                            @endphp
+
+                            <style>
+                                .share-icons {
+                                    margin-bottom: 15px; /* নিচে gap */
+                                }
+                                .share-icons a img {
+                                    width: 38px;
+                                    height: 38px;
+                                    border-radius: 6px;
+                                    object-fit: cover;
+                                    transition: 0.3s;
+                                    margin-right: 6px;
+                                }
+                                .share-icons a img:hover {
+                                    transform: scale(1.12);
+                                    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+                                }
+                            </style>
+
+                            <div class="col-lg-9 col-md-3">
+
+
+                            <div class="share-icons d-flex align-items-center">
+
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedUrl }}" target="_blank">
+                                    <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook">
+                                </a>
+
+                                <a href="https://twitter.com/intent/tweet?url={{ $encodedUrl }}&text={{ urlencode($news->title) }}" target="_blank">
+                                    <img src="https://img.icons8.com/fluency/48/twitter.png" alt="twitter">
+                                </a>
+
+                                <a href="https://www.linkedin.com/shareArticle?url={{ $encodedUrl }}" target="_blank">
+                                    <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin">
+                                </a>
+
+                                <a href="https://wa.me/?text={{ urlencode($news->title) }}%20{{ $encodedUrl }}" target="_blank">
+                                    <img src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp">
+                                </a>
+
+                            </div>
+
+                            </div>
+
+
+
+
                             <div class="col-lg-3 col-md-3">
                                 <div class="single-social" style="  background: #3b5998; width: 100%; padding: 10px; text-align: center; ">
                                     <a href="{{route('photo-cart',$news->id)}}" style="color:white;"> প্রিন্ট করুন : <i class="las la-print"></i></a>
