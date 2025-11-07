@@ -69,8 +69,8 @@
         }
 
         .print_page_header .logo img {
-            height: 80px;       /* fixed height */
-            width: 500px;         /* width auto to maintain aspect ratio */
+            height: 120px;       /* fixed height */
+            width: 400px;         /* width auto to maintain aspect ratio */
             display: inline-block;
         }
 
@@ -103,7 +103,7 @@
         .print_page_content .title {
             font-size: 33px;
             font-weight: 600;
-            color: #B90101;
+            color: #ee142f;
             line-height: 1.3;
             margin-bottom: 10px;
             display: flex;
@@ -179,6 +179,55 @@
         .printPage_btn_area .print_btn i, .printPage_btn_area .Image_btn i {
             margin-right: 6px;
         }
+        .single_meta{
+            margin: 12px 0 18px;
+            padding: 7px 14px;
+            border-radius: 12px;
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+        }
+
+        /* 🌊 হালকা Soft Wave Shape Effect */
+        .single_meta::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(220, 0, 0, 0.08);
+            border-radius: 50%;
+            filter: blur(35px);
+        }
+
+        .single_meta::after {
+            content: "";
+            position: absolute;
+            bottom: -60px;
+            left: -60px;
+            width: 220px;
+            height: 220px;
+            background: rgba(220, 0, 0, 0.06);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .single_meta span{
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            color: #2e2e2e;
+            margin-bottom: 6px;
+        }
+
+        .single_meta i{
+            margin-right: 6px;
+            color: #c80000;
+            font-size: 17px;
+        }
+
         @media print{
             a[href]:after{
                 content:""
@@ -263,13 +312,18 @@
     <div class="print_page_content">
         <h1 class="title">{{$news->title}}</h1>
         <div class="single_meta">
-               <span class="reporter">
-{{--                                             <img src="" width="400">--}}
+    <span class="reporter">
+        <i class="las la-user-edit"></i>
+        {{$news->reporter->name}}, {{$news->reporter->designation}}
+    </span>
 
-                   {{$news->reporter->name}},{{$news->reporter->area}}  ।।            </span>
-            <span class="time"></i> প্রকাশিত: {{$news->created_at->locale('bn')->timezone('Asia/Dhaka')->isoFormat('LLL')}},</span>
-            <br><br><br>
+            <span class="time">
+        <i class="las la-clock"></i>
+        প্রকাশিত: {{$news->created_at->locale('bn')->timezone('Asia/Dhaka')->isoFormat('LLL')}}
+    </span>
         </div>
+
+
 
         <div class="content">
             <div class="thumbnail">
