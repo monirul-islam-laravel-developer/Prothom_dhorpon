@@ -213,25 +213,30 @@
                             <div class="col-lg-9 col-md-3">
 
 
-                            <div class="share-icons d-flex align-items-center">
+                                <div class="share-icons d-flex align-items-center gap-2">
 
-                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedUrl }}" target="_blank">
-                                    <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook">
-                                </a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedUrl }}" target="_blank">
+                                        <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook">
+                                    </a>
 
-                                <a href="https://twitter.com/intent/tweet?url={{ $encodedUrl }}&text={{ urlencode($news->title) }}" target="_blank">
-                                    <img src="https://img.icons8.com/fluency/48/twitter.png" alt="twitter">
-                                </a>
+                                    <a href="https://twitter.com/intent/tweet?url={{ $encodedUrl }}&text={{ urlencode($news->title) }}" target="_blank">
+                                        <img src="https://img.icons8.com/fluency/48/twitter.png" alt="twitter">
+                                    </a>
 
-                                <a href="https://www.linkedin.com/shareArticle?url={{ $encodedUrl }}" target="_blank">
-                                    <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin">
-                                </a>
+                                    <a href="https://www.linkedin.com/shareArticle?url={{ $encodedUrl }}" target="_blank">
+                                        <img src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin">
+                                    </a>
 
-                                <a href="https://wa.me/?text={{ urlencode($news->title) }}%20{{ $encodedUrl }}" target="_blank">
-                                    <img src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp">
-                                </a>
+                                    <a href="https://wa.me/?text={{ urlencode($news->title) }}%20{{ $encodedUrl }}" target="_blank">
+                                        <img src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp">
+                                    </a>
 
-                            </div>
+                                    <a href="fb-messenger://share?link={{ $encodedUrl }}" target="_blank">
+                                        <img src="https://img.icons8.com/fluency/48/facebook-messenger.png" alt="messenger">
+                                    </a>
+
+                                </div>
+
 
                             </div>
 
