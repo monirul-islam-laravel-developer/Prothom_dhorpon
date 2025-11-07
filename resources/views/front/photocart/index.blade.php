@@ -121,7 +121,6 @@
     .banner-ad img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
     }
 
     .footer {
@@ -178,7 +177,7 @@
             {{ $news->title }}
         </div>
 
-        <div class="highlight">বিস্তারিত কমেন্টে</div> 
+        <div class="highlight">বিস্তারিত কমেন্টে</div>
 
         <div class="banner-ad">
             <img src="{{ asset($ads->head_banner) }}" alt="banner ad">
