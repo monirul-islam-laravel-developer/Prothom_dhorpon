@@ -55,13 +55,7 @@
 
                             <ul>
                                 <li>  <a href="#"> <img src="{{asset($news->reporter->image)}}" alt="">{{$news->reporter->name}},{{$news->reporter->designation}}</a>
-                                |<a href="{{route('print-page',$news->id)}}">poto cart</a>
                                 </li>
-                            </ul>
-
-
-                            <ul>
-
                                 <li>
                                     <i class="lar la-clock"></i>
                                     আপলোড সময় :
@@ -82,6 +76,44 @@
                                         echo str_replace($english, $bangla, $formatted);
                                     @endphp
                                 </li>
+                                @php
+                                    function bn_number($number) {
+                                        $en = ['0','1','2','3','4','5','6','7','8','9'];
+                                        $bn = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+                                        return str_replace($en, $bn, $number);
+                                    }
+                                @endphp
+                                <li class="view-count">
+                                    <p>
+                                        <i class="las la-eye"></i>
+                                        {{ bn_number($news->view_count) }} ভিউ
+                                    </p>
+                                </li>
+
+                                <style>
+                                    .view-count p {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 5px;
+                                        background: #f0f0f0;
+                                        padding: 5px 12px;
+                                        border-radius: 12px;
+                                        font-weight: 500;
+                                        color: #333;
+                                        font-size: 14px;
+                                        width: fit-content;
+                                    }
+
+                                    .view-count i {
+                                        color: #ff5722;
+                                    }
+                                </style>
+                            </ul>
+
+
+                            <ul>
+
+
 
 
 {{--                                <li>--}}
@@ -105,7 +137,10 @@
 {{--                                        — কোন আপডেট নেই —--}}
 {{--                                    @endif--}}
 {{--                                </li>--}}
-                               <li><p><i class="las la-eye"></i> {{ $news->view_count }} views</p></li>
+
+
+
+
 
 
                             </ul>

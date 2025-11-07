@@ -259,6 +259,15 @@
             </a>
         </div>
         @php
+            // English → Bangla digit convert function
+            function bn_number($str){
+                return str_replace(
+                    ['0','1','2','3','4','5','6','7','8','9'],
+                    ['০','১','২','৩','৪','৫','৬','৭','৮','৯'],
+                    $str
+                );
+            }
+
             // বাংলা দিন ও মাস
             $banglaDays = ['রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার','শনিবার'];
             $banglaMonths = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','অগাস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
@@ -273,16 +282,18 @@
 
             // বাংলা ঋতু
             $monthNum = date('n');
-            if(in_array($monthNum,[1,2])) { $rit='শীত'; }
-            elseif(in_array($monthNum,[3,4])) { $rit='বসন্ত'; }
-            elseif(in_array($monthNum,[5,6])) { $rit='গ্রীষ্ম'; }
-            elseif(in_array($monthNum,[7,8])) { $rit='বর্ষা'; }
-            elseif(in_array($monthNum,[9,10])) { $rit='শরৎ'; }
-            else { $rit='হেমন্ত'; }
+            if(in_array($monthNum,[1,2])) $rit='শীত';
+            elseif(in_array($monthNum,[3,4])) $rit='বসন্ত';
+            elseif(in_array($monthNum,[5,6])) $rit='গ্রীষ্ম';
+            elseif(in_array($monthNum,[7,8])) $rit='বর্ষা';
+            elseif(in_array($monthNum,[9,10])) $rit='শরৎ';
+            else $rit='হেমন্ত';
 
-            // সময়ের বাংলা টার্ম
+            // বাংলা সময়
+            date_default_timezone_set('Asia/Dhaka');
             $hour = date('H');
             $minute = date('i');
+
             if($hour>=6 && $hour<12){ $period='সকাল'; }
             elseif($hour>=12 && $hour<15){ $period='দুপুর'; }
             elseif($hour>=15 && $hour<18){ $period='বিকেল'; }
@@ -290,9 +301,9 @@
             else{ $period='রাত'; }
 
             $hour12 = $hour % 12;
-            if($hour12==0) $hour12=12;
+            if($hour12==0) $hour12 = 12;
 
-            $currentDate = $day.' '.$month.' '.$year.', '.$period.' '.$hour12.':'.$minute;
+            $currentDate = bn_number($day).' '.$month.' '.bn_number($year).', '.$period.' '.bn_number($hour12).':'.bn_number($minute);
         @endphp
 
         <div class="date_row">
@@ -314,7 +325,7 @@
         <div class="single_meta">
     <span class="reporter">
         <i class="las la-user-edit"></i>
-        {{$news->reporter->name}}, {{$news->reporter->designation}}
+        {{$news->reporter->name}}, {{$news->reporter->designation}}||
     </span>
 
             <span class="time">
