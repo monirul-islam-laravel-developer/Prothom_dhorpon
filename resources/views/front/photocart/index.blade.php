@@ -178,7 +178,7 @@
             {{ $news->title }}
         </div>
 
-        <div class="highlight">বিস্তারিত কমেন্টে</div>
+        <div class="highlight">বিস্তারিত কমেন্টে</div> 
 
         <div class="banner-ad">
             <img src="{{ asset($ads->head_banner) }}" alt="banner ad">
