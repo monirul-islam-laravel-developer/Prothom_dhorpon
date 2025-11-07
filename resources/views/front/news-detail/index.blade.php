@@ -236,13 +236,41 @@
                             </div>
 
 
+                            <style>
+                                .custom-btn{
+                                    width: 100%;
+                                    text-align: center;
+                                    padding: 8px 0;
+                                    font-weight: 600;
+                                    border-radius: 6px;
+                                    color: #fff;
+                                    display:block;
+                                    transition: .3s;
+                                }
+
+                                .print-btn{
+                                    background: #3b5998;
+                                }
+                                .print-btn:hover{
+                                    background: #2c3f73;
+                                }
+
+                                .photo-btn{
+                                    background: #e91e63;
+                                }
+                                .photo-btn:hover{
+                                    background: #b3154c;
+                                }
+                            </style>
 
 
                             <div class="col-lg-3 col-md-3">
-                                <div class="single-social" style="  background: #3b5998; width: 100%; padding: 10px; text-align: center; ">
-                                    <a href="{{route('photo-cart',$news->id)}}" style="color:white;"> প্রিন্ট করুন : <i class="las la-print"></i></a>
+                                <div class="single-social" style="display:flex; gap:10px;">
+                                    <a href="{{route('print-page',$news->id)}}" class="custom-btn print-btn">প্রিন্ট করুন <i class="las la-print"></i></a>
+                                    <a href="{{route('photo-cart',$news->id)}}" class="custom-btn photo-btn">ফটোকার্ড <i class="las la-image"></i></a>
                                 </div>
                             </div>
+
 
                         </div>
 
