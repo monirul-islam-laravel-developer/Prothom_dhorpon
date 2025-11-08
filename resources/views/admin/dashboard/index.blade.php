@@ -123,7 +123,7 @@
                     <div class="card h-100 overflow-hidden">
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div>
-                                <h3 class="mb-2 fw-semibold">{{ \App\Models\SubSubCategory::count() }}</h3>
+                                <h3 class="mb-2 fw-semibold">{{ \App\Models\SubsubCategory::count() }}</h3>
                                 <p class="text-muted fs-13 mb-0">Total District</p>
                             </div>
                             <div class="counter-icon bg-info dash box-shadow-info d-flex align-items-center justify-content-center">
