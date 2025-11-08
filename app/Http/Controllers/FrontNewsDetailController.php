@@ -4,73 +4,46 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Carbon\Carbon; // আগে থেকে যদি না থাকে
+
 
 class FrontNewsDetailController extends Controller
 {
     public $news,$relatedNews;
     public function index($id)
     {
-        // নিউজ খোঁজা
-        $this->news = Post::where('id', $id)
+        // Post fetch
+        $news = Post::where('id', $id)
             ->where('status', 1)
             ->firstOrFail();
 
-//        // 🔹 Session key (প্রতি নিউজের জন্য আলাদা)
-        $this->news->increment('view_count');
-//        $sessionKey = 'news_viewed_' . $id;
-////
-//        // যদি session এ না থাকে, তাহলে একবারই view বাড়াবে
-//        if (!session()->has($sessionKey)) {
-//            $this->news->increment('view_count');
-//            session()->put($sessionKey, true);
-//        }
+        // Increment total view_count
+        $news->increment('view_count');
 
-        $this->relatedNews = Post::where('category_id', $this->news->category_id)
+        // Related news
+        $relatedNews = Post::where('category_id', $news->category_id)
             ->where('status', 1)
             ->where('id', '!=', $id)
             ->latest()
             ->take(6)
             ->get();
 
-        // 🔹 Related News Logic
-//        if (!is_null($this->news->upazela_id)) {
-//            $this->relatedNews = Post::where('upazela_id', $this->news->upazela_id)
-//                ->where('status', 1)
-//                ->where('id', '!=', $id)
-//                ->latest()
-//                ->take(6)
-//                ->get();
-//        } elseif (!is_null($this->news->district_id)) {
-//            $this->relatedNews = Post::where('district_id', $this->news->district_id)
-//                ->where('status', 1)
-//                ->where('id', '!=', $id)
-//                ->latest()
-//                ->take(6)
-//                ->get();
-//        } elseif (!is_null($this->news->subcategory_id)) {
-//            $this->relatedNews = Post::where('subcategory_id', $this->news->subcategory_id)
-//                ->where('status', 1)
-//                ->where('id', '!=', $id)
-//                ->latest()
-//                ->take(6)
-//                ->get();
-//        } elseif (!is_null($this->news->category_id)) {
-//            $this->relatedNews = Post::where('category_id', $this->news->category_id)
-//                ->where('status', 1)
-//                ->where('id', '!=', $id)
-//                ->latest()
-//                ->take(6)
-//                ->get();
-//        } else {
-//            $this->relatedNews = collect();
-//        }
+        // Today's Views using Cache
+        $today = Carbon::now()->toDateString();
+        $cacheKey = "post_{$id}_views_{$today}";
 
-        // 🔹 View এ পাঠানো
-        return view('front.news-detail.index', [
-            'news' => $this->news,
-            'relatedNews' => $this->relatedNews,
-        ]);
+        if (Cache::has($cacheKey)) {
+            Cache::increment($cacheKey);
+        } else {
+            Cache::put($cacheKey, 1, 86400); // 24 hours
+        }
+
+        $todayViews = Cache::get($cacheKey);
+
+        return view('front.news-detail.index', compact('news', 'relatedNews', 'todayViews'));
     }
+
 
 
 }
