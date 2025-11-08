@@ -50,7 +50,7 @@
                                     <td>
                                         <div class="copy-wrapper" style="position: relative; display: inline-block;">
                                             <button class="btn btn-sm btn-outline-primary copy-btn"
-                                                    onclick="copyPostUrl('{{ route('news-detail', [$post->id, $post->slug]) }}', this)"
+                                                    onclick="copyPostUrl('{{ route('news-detail',$post->id) }}', this)"
                                                     title="Copy Post URL">
                                                 📋 Copy URL
                                             </button>
