@@ -33,7 +33,7 @@
                                 <tr data-id="1">
                                     <td data-field="id">{{$loop->iteration}}</td>
                                     <td data-field="age">{{$upazila->subcategory->name}}</td>
-                                    <td data-field="age">{{$upazila->name}}</td>
+                                    <td data-field="age">{{$upazila->district->name}}</td>
                                     <td data-field="age">{{$upazila->name}}</td>
                                     <td style="width: 100px">
                                         @if($upazila->status==1)

@@ -14,5 +14,9 @@ class Upazila extends Model
     {
         return $this->hasMany(SubsubCategory::class,'subsub_categories_id');
     }
+    public function district()
+    {
+        return $this->belongsTo(SubsubCategory::class,'subsub_categories_id');
+    }
 
 }
