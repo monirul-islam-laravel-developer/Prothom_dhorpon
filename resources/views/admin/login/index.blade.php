@@ -1,8 +1,7 @@
 <!doctype html>
-<html lang="en" dir="ltr"> <!-- This "custom-app.blade.php" master page is used only for "custom" page content present in "views/livewire" Ex: login, 404 -->
+<html lang="en" dir="ltr">
 
-<!-- Mirrored from laravel8.spruko.com/noa/login by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2023 13:11:49 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 
     <!-- META DATA -->
@@ -14,10 +13,10 @@
     <meta name="keywords" content="laravel admin template, bootstrap admin template, admin dashboard template, admin dashboard, admin template, admin, bootstrap 5, laravel admin, laravel admin dashboard template, laravel ui template, laravel admin panel, admin panel, laravel admin dashboard, laravel template, admin ui dashboard">
 
     <!-- TITLE -->
-    <title>Noa - Laravel Bootstrap 5 Admin & Dashboard Template</title>
+    <title>Login page</title>
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('/')}}admin/assets/images/brand/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset($webLogo->fav_icon_logo	)}}" />
 
     <!-- BOOTSTRAP CSS -->
     <link id="style" href="{{asset('/')}}admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -170,7 +169,7 @@
         <!-- CONTAINER OPEN -->
         <div class="col col-login mx-auto text-center">
             <a href="index.html" class="text-center">
-                <img src="{{asset('/')}}admin/assets/images/brand/logo.png" class="header-brand-img" alt="">
+                <img src="{{asset($webLogo->desktop_logo)}}" style="height: 100px;" class="header-brand-img" alt="">
             </a>
         </div>
         <div class="container-login100">
@@ -197,31 +196,16 @@
 											<i class="zmdi zmdi-lock" aria-hidden="true"></i>
 										</span>
                         </div>
-                        <div class="text-end pt-1">
-                            <p class="mb-0"><a href="forgot-password.html" class="text-primary ms-1">Forgot Password?</a></p>
-                        </div>
+
                         <div class="container-login100-form-btn">
                             <button type="submit" class="login100-form-btn btn-primary">
                                 Login
                             </button>
                         </div>
-                        <div class="text-center pt-3">
-                            <p class="text-dark mb-0">Not a member?<a href="register.html" class="text-primary ms-1">Create an Account</a></p>
-                        </div>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <div class="d-flex justify-content-center my-3">
-                        <a href="javascript:void(0)" class="social-login  text-center me-4">
-                            <i class="fa fa-google"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="social-login  text-center me-4">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="javascript:void(0)" class="social-login  text-center">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -258,5 +242,4 @@
 </body>
 
 
-<!-- Mirrored from laravel8.spruko.com/noa/login by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2023 13:11:49 GMT -->
 </html>
