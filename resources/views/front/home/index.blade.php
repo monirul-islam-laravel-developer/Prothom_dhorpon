@@ -446,17 +446,15 @@
                         <div class="themesBazar_cat6">
                             <ul class="nav nav-pills" id="categori-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill" data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1" aria-selected="false">
-
+                                    <!-- Click korle specific news category page e jabe -->
+                                    <a href="{{ route('category-news',[$jatiyo->id,$jatiyo->slug]) }}" class="nav-link active">
                                         {{$jatiyo->name}}
-
-                                    </div>
+                                    </a>
                                 </li>
-
                                 <span class="themeBazar6"></span>
-
                             </ul>
                         </div>
+
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane active show  fade" id="Info-tabs1" role="tabpanel" aria-labelledby="categori-tab1 ">
 
@@ -566,17 +564,15 @@
                         <div class="themesBazar_cat6">
                             <ul class="nav nav-pills" id="categori-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill" data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1" aria-selected="false">
-
+                                    <!-- Click korle antorjarrtik category page e jabe -->
+                                    <a href="{{ route('category-news',[$antorjarrtik->id,$antorjarrtik->slug]) }}" class="nav-link active">
                                         {{$antorjarrtik->name}}
-
-                                    </div>
+                                    </a>
                                 </li>
-
                                 <span class="themeBazar6"></span>
-
                             </ul>
                         </div>
+
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane active show  fade" id="Info-tabs1" role="tabpanel" aria-labelledby="categori-tab1 ">
 
@@ -624,17 +620,15 @@
                         <div class="themesBazar_cat6">
                             <ul class="nav nav-pills" id="categori-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <div class="nav-link active" id="categori-tab1" data-bs-toggle="pill" data-bs-target="#Info-tabs1" role="tab" aria-controls="Info-tabs1" aria-selected="false">
-
+                                    <!-- Click korle kheladhula category page e jabe -->
+                                    <a href="{{ route('category-news',[$kheladhula->id,$kheladhula->slug]) }}" class="nav-link active">
                                         {{$kheladhula->name}}
-
-                                    </div>
+                                    </a>
                                 </li>
-
                                 <span class="themeBazar6"></span>
-
                             </ul>
                         </div>
+
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane active show  fade" id="Info-tabs1" role="tabpanel" aria-labelledby="categori-tab1 ">
 
