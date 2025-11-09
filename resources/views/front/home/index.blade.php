@@ -360,18 +360,20 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane active show  fade" id="recent" role="tabpanel"     aria-labelledby="recent">
                             <div class="news-titletab">
+                                @foreach($latestnews_20 as $latest1)
+                                    <div class="tab-image tab-border">
 
-                                @foreach($popularNews20 as $popularnews20_single)
-                                <div class="tab-image tab-border">
-                                    <a href="137.html"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($popularnews20_single->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$popularnews20_single->title}}"></a>
+                                        <a href="{{route('news-detail',[$latest1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest1->title}}"></a>
 
-                                    <a href="#" class="video-icon3">  </a>
+                                        <a href="#" class="video-icon3">  </a>
 
 
-                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$popularnews20_single->id])}}">{{$popularnews20_single->title}}</a></h4>
+                                        <h4 class="tab_hadding"><a href="{{route('news-detail',[$latest1->id])}}">{{$latest1->title}}</a></h4>
 
-                                </div>
+                                    </div>
                                 @endforeach
+
+
 
 
                             </div>
@@ -382,19 +384,18 @@
                         <div class="tab-pane fade" id="popular" role="tabpanel" aria-labelledby="popular">
                             <div class="news-titletab">
 
-                                @foreach($latestnews_20 as $latest1)
-                                <div class="tab-image tab-border">
 
-                                    <a href="{{route('news-detail',[$latest1->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest1->title}}"></a>
+                                @foreach($popularNews20 as $popularnews20_single)
+                                    <div class="tab-image tab-border">
+                                        <a href="{{route('news-detail',[$popularnews20_single->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($popularnews20_single->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$popularnews20_single->title}}"></a>
 
-                                    <a href="#" class="video-icon3">  </a>
+                                        <a href="#" class="video-icon3">  </a>
 
 
-                                    <h4 class="tab_hadding"><a href="{{route('news-detail',[$latest1->id])}}">{{$latest1->title}}</a></h4>
+                                        <h4 class="tab_hadding"><a href="{{route('news-detail',[$popularnews20_single->id])}}">{{$popularnews20_single->title}}</a></h4>
 
-                                </div>
+                                    </div>
                                 @endforeach
-
 
 
                             </div>

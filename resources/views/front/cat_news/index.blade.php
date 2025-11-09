@@ -49,7 +49,13 @@
                             <div class="themesBazar-3 themesBazar-m2">
                                 <div class="archivePage-wrpp2">
                                     <div class="archive2-image">
-                                        <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($cat_news->image)}}" alt="{{$cat_news->title}}" title="{{$cat_news->title}}">
+                                        <a href="{{route('news-detail',[$cat_news->id])}}">
+                                            <img class="lazyload"
+                                                 src="{{asset($webLogo->lazyload_logo)}}"
+                                                 data-src="{{asset($cat_news->image)}}"
+                                                 alt="{{$cat_news->title}}"
+                                                 title="{{$cat_news->title}}">
+                                        </a>
 
                                     </div>
                                     <h4 class="archivePage2-title">
@@ -119,7 +125,8 @@
                                     @foreach($latestnews_20 as $latest20)
                                     <div class="archive-tabWrpp archiveTab-border">
                                         <div class="archiveTab-image ">
-                                            <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest20->title}}">
+                                           <a href="{{route('news-detail',$latest20->id)}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latest20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latest20->title}}">
+                                           </a>
                                         </div>
 
 
@@ -156,7 +163,8 @@
                                     @foreach($popularNews20 as $popular20)
                                     <div class="archive-tabWrpp archiveTab-border">
                                         <div class="archiveTab-image ">
-                                            <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($popular20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$popular20->title}}">
+                                           <a href="{{route('news-detail',[$popular20->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($popular20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$popular20->title}}">
+                                           </a>
                                         </div>
 
 

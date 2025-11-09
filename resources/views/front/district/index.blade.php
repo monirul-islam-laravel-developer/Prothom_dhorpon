@@ -41,8 +41,9 @@
                                 <div class="themesBazar-3 themesBazar-m2">
                                     <div class="archivePage-wrpp2">
                                         <div class="archive2-image">
+                                            <a href="{{route('news-detail',$dristrictnews->id)}}">
                                             <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($dristrictnews->image)}}" alt="{{$dristrictnews->title}}" title="{{$dristrictnews->title}}">
-
+                                            </a>
                                         </div>
                                         <h4 class="archivePage2-title">
                                             <a href="{{route('news-detail',[$dristrictnews->id])}}">{{$dristrictnews->title}} </a>
@@ -111,7 +112,9 @@
                                     @foreach($latestnews_20 as $lnews20)
                                         <div class="archive-tabWrpp archiveTab-border">
                                             <div class="archiveTab-image ">
+                                                <a href="{{route('news-detail',$lnews20->id)}}">
                                                 <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($lnews20->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$lnews20->title}}">
+                                                </a>
                                             </div>
 
 
@@ -149,7 +152,9 @@
                                     @foreach($popularNews20 as $pnews1)
                                         <div class="archive-tabWrpp archiveTab-border">
                                             <div class="archiveTab-image ">
-                                                <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($pnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$pnews1->title}}">
+                                                <a href="{{route('news-detail',$pnews1->id)}}">
+                                                    <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($pnews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$pnews1->title}}">
+                                                </a>
                                             </div>
 
 

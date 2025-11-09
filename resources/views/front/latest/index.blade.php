@@ -1,6 +1,6 @@
 @extends('master.front.master')
 @section('title')
-সর্বশেষ নিউজ
+    সর্বশেষ সংবাদ
 @endsection
 @section('og:title')
     সর্বশেষ নিউজ|{{ $webLogo->title ?? config('app.name') }}
@@ -27,7 +27,7 @@
                     <div class="date-page-content">
 
                         <div class="archive-info-cats">
-                            <a href="{{route('home')}}"><i class="la la-home"> </i> </a>  <i class="la la-chevron-right"></i> All Latest News
+                            <a href="{{route('home')}}"><i class="la la-home"> </i> </a>  <i class="la la-chevron-right"></i> সর্বশেষ সংবাদ
                         </div>
 
                         <div class="row">

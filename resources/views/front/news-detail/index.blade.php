@@ -375,8 +375,9 @@
                                     <div class="themesBazar-3 themesBazar-m2">
                                         <div class="related-news-wrpp2"> <!--Related Wrpp start-->
                                             <div class="relatedImage2">
+                                                <a href="{{route('news-detail',$relatednews1->id)}}">
                                                 <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($relatednews1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$relatednews1->title}}">
-
+                                                </a>
 
 
                                             </div>
@@ -412,8 +413,9 @@
                                     <div class="themesBazar-1 themesBazar-m2">
                                         <div class="single-drack-bg">
                                             <div class="single-left">
+                                                <a href="{{route('news-detail',$latestnews_1->id)}}">
                                                 <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($latestnews_1->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$latestnews_1->title}}">
-
+                                                </a>
 
                                             </div>
                                             <h4 class="leftSitbe-title"><a href="{{route('news-detail',[$latestnews_1->id])}}">{{$latestnews_1->title}}</a></h4>
@@ -467,9 +469,9 @@
                                     <div class="themesBazar-2 themesBazar-m2">
                                         <div class="popular-wrpp"> <!--Popular Wpp Start-->
                                             <div class="rightSitbear-image2">
+                                                <a href="{{route('news-detail',$popularnews->id)}}">
                                                 <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($popularnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$popularnews->title}}">
-
-
+                                                </a>
 
                                             </div>
                                             <h4 class="rSitebar-title2"><a href="{{route('news-detail',[$popularnews->id])}}">{{$popularnews->title}}</a></h4>
