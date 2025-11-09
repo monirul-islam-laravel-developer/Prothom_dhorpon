@@ -6,7 +6,9 @@
 @section('og:title')
     {{$news->title ?? config('app.name') }}
 @endsection
-
+@section('keyword')
+    {{$news->seo_tag}}
+@endsection
 @section('og:description')
     {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection

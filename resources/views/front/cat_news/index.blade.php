@@ -5,6 +5,9 @@
 @section('og:title')
     {{ $category->description ?? config('app.name') }}
 @endsection
+@section('keyword')
+    {{$category->seo_tag}}
+@endsection
 
 @section('og:description')
     {{ $category->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}

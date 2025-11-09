@@ -2,6 +2,9 @@
 @section('title')
     {{$upazela->description}}
 @endsection
+@section('keyword')
+    {{$upazela->seo_tag}}
+@endsection
 @section('og:title')
     {{ $upazela->name ?? config('app.name') }}
 @endsection
