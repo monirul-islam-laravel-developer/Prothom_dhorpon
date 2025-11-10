@@ -448,8 +448,40 @@
                         <div class="single-white">
 
 
+                            <div class="side-ad-box">
+                                @if(!empty($ads->news_box_ads))
+                                    <img src="{{ asset($ads->news_box_ads) }}" alt="Sidebar Ad">
+                                @else
+                                    <img src="{{ asset('front/templateimage/63ad66eeaa3fc.gif') }}" alt="Default Ad">
+                                @endif
+                            </div>
 
+                            <style>
+                                .side-ad-box {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    margin-bottom: 5px;
+                                }
+                                .side-ad-box img {
+                                    width: 100%;
+                                    height:auto; /* Sidebar ad height */
+                                    object-fit: contain;
+                                    background: #fff;
+                                    border-radius: 6px;
+                                    padding: 6px;
+                                    box-shadow: 0 1px 5px rgba(0,0,0,0.18);
+                                }
 
+                                /* Mobile Responsive */
+                                @media (max-width: 767px) {
+                                    .side-ad-box img {
+                                        height: auto;
+                                        padding: 4px;
+                                        box-shadow: none;
+                                    }
+                                }
+                            </style>
                             <div class="popular-cat">
                                 আলোচিত সংবাদ
                             </div>

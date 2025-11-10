@@ -22,9 +22,50 @@
 @endsection
 
 @section('body')
-    <!--=======================
-                        ThemesBazar-section-one-start
-                    ==========================-->
+
+    <style>
+        .ad-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 6px 0;
+        }
+
+        .ad-box img {
+            width: 95%;
+            height: 190px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 4px;
+            padding: 4px;
+            box-shadow: 0 0 4px rgba(0,0,0,0.12);
+        }
+
+        /* Mobile Responsive Fix */
+        @media (max-width: 767px) {
+            .ad-box img {
+                width: 100%;
+                height: auto;  /* Auto so no extra gap */
+                padding: 2px;  /* Less padding in mobile */
+                box-shadow: none; /* Optional: remove shadow on small screens */
+            }
+            .ad-box {
+                margin: 4px 0;
+            }
+        }
+    </style>
+
+    @if(!empty($ads->home_shironam_ads_1))
+        <div class="ad-box">
+            <img src="{{ asset($ads->home_shironam_ads_1) }}" alt="Banner Ad">
+        </div>
+    @else
+        <div class="ad-box">
+            <img src="{{ asset('front/templateimage/63ad66eeaa3fc.gif') }}" alt="Default Banner Ad">
+        </div>
+    @endif
+
+
     <section class="themesBazar_section_one">
         <div class="container">
             <div class="row">
@@ -129,11 +170,6 @@
                             @endforeach
 
 
-
-
-
-
-
                         </div>
                     </div>
 
@@ -180,174 +216,140 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4">
-
-                    <div class="live-item">
-                        <div class="live_title">
-                            <a href="#"> লাইভ টিভি </a>
-                            <div class="themesBazar"></div>
-                        </div>
-                        <div class="popup-wrpp">
-                            <div class="live_image">
-                                <img src="{{asset('/')}}front/frontend/assets/images/livetv.jpg" alt="লাইভ টিভি">
-                                <div data-mfp-src="#mymodal" class="live-icon modal-live" > <i class="las la-play"></i> </div>
-                            </div>
-
-                            <div class="live-popup"> <!-- Quick view Start-->
-                                <div id="mymodal" class="mfp-hide" role="dialog" aria-labelledby="modal-titles" aria-describedby="modal-contents">
-                                    <div id="modal-contents">
-
-
-
-                                        <!-- Load Facebook SDK for JavaScript -->
-                                        <div id="fb-root"></div>
-                                        <script>
-                                            window.fbAsyncInit = function() {
-                                                FB.init({
-                                                    appId      : '{your-app-id}',
-                                                    xfbml      : true,
-                                                    version    : 'v2.5'
-                                                });
-
-                                                // Get Embedded Video Player API Instance
-                                                var my_video_player;
-                                                FB.Event.subscribe('xfbml.ready', function(msg) {
-                                                    if (msg.type === 'video') {
-                                                        my_video_player = msg.instance;
-                                                        my_video_player.unmute();
-                                                    }
-                                                });
-                                            };
-
-                                            (function(d, s, id){
-                                                var js, fjs = d.getElementsByTagName(s)[0];
-                                                if (d.getElementById(id)) {return;}
-                                                js = d.createElement(s); js.id = id;
-                                                js.src = "../../connect.facebook.net/en_US/sdk.js";
-                                                fjs.parentNode.insertBefore(js, fjs);
-                                            }(document, 'script', 'facebook-jssdk'));
-                                        </script>
-
-                                        <!-- Your embedded video player code -->
-                                        <div
-                                            class="fb-video"
-                                            data-href="https://www.facebook.com/somoynews.tv/videos/5741322025915134"
-                                            data-width="auto"
-                                            data-autoplay="true"
-                                            data-allowfullscreen="false"
-                                            data-controls="false"></div>
-
-
-
-
-                                    </div>
-                                </div>
-                            </div>  <!-- Quick View End-->
-                        </div>
-
+                    <div class="archive-title">
+                        ফেসবুকে আমরা
                     </div>
+
+                    <div class="facebook-content">
+
+
+
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/prothomdorpan&amp;tabs=time&amp;width=280&amp;height=120&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=334182264340964"
+                            width="280" height="120" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+
 
 
 
                     <div class="archive-title">
-                        পুরাতন সংবাদ
+
+                        টুইটারে আমরা
+
                     </div>
 
-                    <form action="https://themebazar.xyz/laraflash/news/calender/post" method="get" class="date_content">
-                        <input type="hidden" name="_token" value="npv0BOp6m8gjl8YmLleA8kPNIXTsqhE6TJsDtfst">                        <div class="last-date">
+                    <div class="facebook-content">
 
-                            <select name="day" id="day">
-                                <option value="day"> দিন </option>
-                                <option value="01"> 01 </option>
-                                <option value="02"> 02 </option>
-                                <option value="03"> 03 </option>
-                                <option value="04"> 04 </option>
-                                <option value="05"> 05 </option>
-                                <option value="06"> 06 </option>
-                                <option value="07"> 07 </option>
-                                <option value="08"> 08 </option>
-                                <option value="09"> 09 </option>
-                                <option value="10"> 10 </option>
-                                <option value="11"> 11 </option>
-                                <option value="12"> 12 </option>
-                                <option value="13"> 13 </option>
-                                <option value="14"> 14 </option>
-                                <option value="15"> 15 </option>
-                                <option value="16"> 16 </option>
-                                <option value="17"> 17 </option>
-                                <option value="18"> 18 </option>
-                                <option value="19"> 19 </option>
-                                <option value="20"> 20 </option>
-                                <option value="21"> 21 </option>
-                                <option value="22"> 22 </option>
-                                <option value="23"> 23 </option>
-                                <option value="24"> 24 </option>
-                                <option value="25"> 25 </option>
-                                <option value="26"> 26 </option>
-                                <option value="27"> 27 </option>
-                                <option value="28"> 28 </option>
-                                <option value="29"> 29 </option>
-                                <option value="30"> 30 </option>
-                                <option value="31"> 31 </option>
-                            </select>
+                        <a class="twitter-timeline" data-width="300" data-height="250" data-dnt="true" data-theme="light" href="https://www.twitter.com/themesbazar"> </a> <script async src="../../platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-                        </div>
-
-                        <div class="last-date">
-
-                            <select name="month" id="month">
-
-                                <option value="month"> মাস </option>
-                                <option value="01"> 01 </option>
-                                <option value="02"> 02 </option>
-                                <option value="03"> 03 </option>
-                                <option value="04"> 04 </option>
-                                <option value="05"> 05 </option>
-                                <option value="06"> 06 </option>
-                                <option value="07"> 07 </option>
-                                <option value="08"> 08 </option>
-                                <option value="09"> 09 </option>
-                                <option value="10"> 10 </option>
-                                <option value="11"> 11 </option>
-                                <option value="12"> 12 </option>
-                            </select>
-
-                        </div>
+                    </div>
 
 
 
 
 
-                        <div class="last-date">
+{{--                    <div class="archive-title">--}}
+{{--                        পুরাতন সংবাদ--}}
+{{--                    </div>--}}
 
-                            <select name="year" id="year">
+{{--                    <form action="https://themebazar.xyz/laraflash/news/calender/post" method="get" class="date_content">--}}
+{{--                        <input type="hidden" name="_token" value="npv0BOp6m8gjl8YmLleA8kPNIXTsqhE6TJsDtfst">                        <div class="last-date">--}}
 
-                                <option value="year"> বছর </option>
-                                <option value="2023"> 2023 </option>
-                                <option value="2025"> 2024 </option>
-                                <option value="2026"> 2025 </option>
-                                <option value="2026"> 2026 </option>
-                                <option value="2027"> 2027 </option>
-                                <option value="2028"> 2028 </option>
-                                <option value="2029"> 2029 </option>
-                                <option value="2030"> 2030 </option>
+{{--                            <select name="day" id="day">--}}
+{{--                                <option value="day"> দিন </option>--}}
+{{--                                <option value="01"> 01 </option>--}}
+{{--                                <option value="02"> 02 </option>--}}
+{{--                                <option value="03"> 03 </option>--}}
+{{--                                <option value="04"> 04 </option>--}}
+{{--                                <option value="05"> 05 </option>--}}
+{{--                                <option value="06"> 06 </option>--}}
+{{--                                <option value="07"> 07 </option>--}}
+{{--                                <option value="08"> 08 </option>--}}
+{{--                                <option value="09"> 09 </option>--}}
+{{--                                <option value="10"> 10 </option>--}}
+{{--                                <option value="11"> 11 </option>--}}
+{{--                                <option value="12"> 12 </option>--}}
+{{--                                <option value="13"> 13 </option>--}}
+{{--                                <option value="14"> 14 </option>--}}
+{{--                                <option value="15"> 15 </option>--}}
+{{--                                <option value="16"> 16 </option>--}}
+{{--                                <option value="17"> 17 </option>--}}
+{{--                                <option value="18"> 18 </option>--}}
+{{--                                <option value="19"> 19 </option>--}}
+{{--                                <option value="20"> 20 </option>--}}
+{{--                                <option value="21"> 21 </option>--}}
+{{--                                <option value="22"> 22 </option>--}}
+{{--                                <option value="23"> 23 </option>--}}
+{{--                                <option value="24"> 24 </option>--}}
+{{--                                <option value="25"> 25 </option>--}}
+{{--                                <option value="26"> 26 </option>--}}
+{{--                                <option value="27"> 27 </option>--}}
+{{--                                <option value="28"> 28 </option>--}}
+{{--                                <option value="29"> 29 </option>--}}
+{{--                                <option value="30"> 30 </option>--}}
+{{--                                <option value="31"> 31 </option>--}}
+{{--                            </select>--}}
 
-                            </select>
+{{--                        </div>--}}
 
-                        </div>
+{{--                        <div class="last-date">--}}
+
+{{--                            <select name="month" id="month">--}}
+
+{{--                                <option value="month"> মাস </option>--}}
+{{--                                <option value="01"> 01 </option>--}}
+{{--                                <option value="02"> 02 </option>--}}
+{{--                                <option value="03"> 03 </option>--}}
+{{--                                <option value="04"> 04 </option>--}}
+{{--                                <option value="05"> 05 </option>--}}
+{{--                                <option value="06"> 06 </option>--}}
+{{--                                <option value="07"> 07 </option>--}}
+{{--                                <option value="08"> 08 </option>--}}
+{{--                                <option value="09"> 09 </option>--}}
+{{--                                <option value="10"> 10 </option>--}}
+{{--                                <option value="11"> 11 </option>--}}
+{{--                                <option value="12"> 12 </option>--}}
+{{--                            </select>--}}
+
+{{--                        </div>--}}
 
 
 
-                        <div class="last-date">
-
-                            <input type="submit" value="খুজুন">
-
-                        </div>
 
 
+{{--                        <div class="last-date">--}}
+
+{{--                            <select name="year" id="year">--}}
+
+{{--                                <option value="year"> বছর </option>--}}
+{{--                                <option value="2023"> 2023 </option>--}}
+{{--                                <option value="2025"> 2024 </option>--}}
+{{--                                <option value="2026"> 2025 </option>--}}
+{{--                                <option value="2026"> 2026 </option>--}}
+{{--                                <option value="2027"> 2027 </option>--}}
+{{--                                <option value="2028"> 2028 </option>--}}
+{{--                                <option value="2029"> 2029 </option>--}}
+{{--                                <option value="2030"> 2030 </option>--}}
+
+{{--                            </select>--}}
+
+{{--                        </div>--}}
 
 
 
-                    </form>
+{{--                        <div class="last-date">--}}
+
+{{--                            <input type="submit" value="খুজুন">--}}
+
+{{--                        </div>--}}
+
+
+
+
+
+{{--                    </form>--}}
 
                     <div class="recentPopular">
                         <ul class="nav nav-pills" id="recentPopular-tab" role="tablist">
@@ -415,13 +417,55 @@
 
                     <div class="secOne-Rsitebar">
 
+                        <div class="side-ad-box">
+                            @if(!empty($ads->home_box1_ads))
+                                <img src="{{ asset($ads->home_box1_ads) }}" alt="Sidebar Ad">
+                            @else
+                                <img src="{{ asset('front/templateimage/63ad66eeaa3fc.gif') }}" alt="Default Ad">
+                            @endif
+                        </div>
+
+                        <style>
+                            .side-ad-box {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 5px;
+                            }
+                            .side-ad-box img {
+                                width: 100%;
+                                height:auto; /* Sidebar ad height */
+                                object-fit: contain;
+                                background: #fff;
+                                border-radius: 6px;
+                                padding: 6px;
+                                box-shadow: 0 1px 5px rgba(0,0,0,0.18);
+                            }
+
+                            /* Mobile Responsive */
+                            @media (max-width: 767px) {
+                                .side-ad-box img {
+                                    height: auto;
+                                    padding: 4px;
+                                    box-shadow: none;
+                                }
+                            }
+                        </style>
 
                     </div>
 
 
+
                 </div>
+
+
+
+
+
             </div>
+
     </section>
+
     <!-- Add section start  -->
     <div class="secOne-add">
         <div class="container">
@@ -608,7 +652,7 @@
 
 
 
-                            </div
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -783,6 +827,7 @@
                       @include('front.include.map')
 
 
+
                         <!-- <div class="search-field">
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
@@ -816,122 +861,158 @@
 
 
 
+
                     <script src="public/frontend/assets/js/googlejquery.min.js"></script>
 
-                    <form class="division" action="https://themebazar.xyz/laraflash/all/country/news" method="get">
-                        <input type="hidden" name="_token" value="npv0BOp6m8gjl8YmLleA8kPNIXTsqhE6TJsDtfst">
+{{--                    <form class="division" action="https://themebazar.xyz/laraflash/all/country/news" method="get">--}}
+{{--                        <input type="hidden" name="_token" value="npv0BOp6m8gjl8YmLleA8kPNIXTsqhE6TJsDtfst">--}}
 
 
 
-                        <div class="input-division">
+{{--                        <div class="input-division">--}}
 
-                            <select name="dist_name">
+{{--                            <select name="dist_name">--}}
 
-                                <option selected=""> --বিভাগ-- </option>
+{{--                                <option selected=""> --বিভাগ-- </option>--}}
 
-                                <option value="ঢাকা বিভাগ" required>ঢাকা বিভাগ </option>
-                                <option value="সিলেট বিভাগ" required>সিলেট বিভাগ </option>
-                                <option value="রাজশাহী বিভাগ" required>রাজশাহী বিভাগ </option>
-                                <option value="রংপুর বিভাগ" required>রংপুর বিভাগ </option>
-                                <option value="বরিশাল বিভাগ" required>বরিশাল বিভাগ </option>
-                                <option value="চট্টগ্রাম বিভাগ" required>চট্টগ্রাম বিভাগ </option>
-                                <option value="খুলনা বিভাগ" required>খুলনা বিভাগ </option>
-                                <option value="ময়মনসিংহ বিভাগ" required>ময়মনসিংহ বিভাগ </option>
+{{--                                <option value="ঢাকা বিভাগ" required>ঢাকা বিভাগ </option>--}}
+{{--                                <option value="সিলেট বিভাগ" required>সিলেট বিভাগ </option>--}}
+{{--                                <option value="রাজশাহী বিভাগ" required>রাজশাহী বিভাগ </option>--}}
+{{--                                <option value="রংপুর বিভাগ" required>রংপুর বিভাগ </option>--}}
+{{--                                <option value="বরিশাল বিভাগ" required>বরিশাল বিভাগ </option>--}}
+{{--                                <option value="চট্টগ্রাম বিভাগ" required>চট্টগ্রাম বিভাগ </option>--}}
+{{--                                <option value="খুলনা বিভাগ" required>খুলনা বিভাগ </option>--}}
+{{--                                <option value="ময়মনসিংহ বিভাগ" required>ময়মনসিংহ বিভাগ </option>--}}
 
-                            </select>
+{{--                            </select>--}}
 
-                        </div>
+{{--                        </div>--}}
 
-                        <div class="input-division">
+{{--                        <div class="input-division">--}}
 
-                            <select name="subdist_name" id="subdist_name">
+{{--                            <select name="subdist_name" id="subdist_name">--}}
 
-                                <option selected=""> --জেলা-- </option>
-
-
-                            </select>
-
-                        </div>
+{{--                                <option selected=""> --জেলা-- </option>--}}
 
 
-                        <div class="input-division">
+{{--                            </select>--}}
 
-                            <select name="thana_name" id="thana_name" style="margin-top: 10px">
-
-                                <option selected=""> --উপজেলা-- </option>
+{{--                        </div>--}}
 
 
+{{--                        <div class="input-division">--}}
 
-                            </select>
+{{--                            <select name="thana_name" id="thana_name" style="margin-top: 10px">--}}
 
-                        </div>
+{{--                                <option selected=""> --উপজেলা-- </option>--}}
 
 
 
-                        <div class="input-division">
+{{--                            </select>--}}
 
-                            <input type="submit" value="খুজুন">
-
-                        </div>
-
-                    </form>
+{{--                        </div>--}}
 
 
 
+{{--                        <div class="input-division">--}}
 
-                    <!-- // Get District -->
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                            $('select[name="dist_name"]').on('change', function(){
-                                var dist_name = $(this).val();
-                                if(dist_name) {
-                                    $.ajax({
-                                        url: "https://themebazar.xyz/laraflash/get/district/"+dist_name,
-                                        type:"GET",
-                                        dataType:"json",
-                                        success:function(data) {
-                                            $("#subdist_name").empty();
-                                            $.each(data,function(key,value){
-                                                $("#subdist_name").append('<option value="'+value.subdistrict+'">'+value.subdistrict+'</option>');
-                                            });
+{{--                            <input type="submit" value="খুজুন">--}}
 
-                                        },
+{{--                        </div>--}}
 
-                                    });
-                                } else {
-                                    alert('danger');
-                                }
+{{--                    </form>--}}
 
-                            });
-                        });
-                    </script>
-                    <!-- // Get Thana -->
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                            $('select[name="subdist_name"]').on('change', function(){
-                                var subdist_name = $(this).val();
-                                if(subdist_name) {
-                                    $.ajax({
-                                        url: "https://themebazar.xyz/laraflash/get/thana/"+subdist_name,
-                                        type:"GET",
-                                        dataType:"json",
-                                        success:function(data) {
-                                            $("#thana_name").empty();
-                                            $.each(data,function(key,value){
-                                                $("#thana_name").append('<option value="'+value.thana+'">'+value.thana+'</option>');
-                                            });
 
-                                        },
 
-                                    });
-                                } else {
-                                    alert('danger');
-                                }
 
-                            });
-                        });
-                    </script>
+{{--                    <!-- // Get District -->--}}
+{{--                    <script type="text/javascript">--}}
+{{--                        $(document).ready(function() {--}}
+{{--                            $('select[name="dist_name"]').on('change', function(){--}}
+{{--                                var dist_name = $(this).val();--}}
+{{--                                if(dist_name) {--}}
+{{--                                    $.ajax({--}}
+{{--                                        url: "https://themebazar.xyz/laraflash/get/district/"+dist_name,--}}
+{{--                                        type:"GET",--}}
+{{--                                        dataType:"json",--}}
+{{--                                        success:function(data) {--}}
+{{--                                            $("#subdist_name").empty();--}}
+{{--                                            $.each(data,function(key,value){--}}
+{{--                                                $("#subdist_name").append('<option value="'+value.subdistrict+'">'+value.subdistrict+'</option>');--}}
+{{--                                            });--}}
+
+{{--                                        },--}}
+
+{{--                                    });--}}
+{{--                                } else {--}}
+{{--                                    alert('danger');--}}
+{{--                                }--}}
+
+{{--                            });--}}
+{{--                        });--}}
+{{--                    </script>--}}
+{{--                    <!-- // Get Thana -->--}}
+{{--                    <script type="text/javascript">--}}
+{{--                        $(document).ready(function() {--}}
+{{--                            $('select[name="subdist_name"]').on('change', function(){--}}
+{{--                                var subdist_name = $(this).val();--}}
+{{--                                if(subdist_name) {--}}
+{{--                                    $.ajax({--}}
+{{--                                        url: "https://themebazar.xyz/laraflash/get/thana/"+subdist_name,--}}
+{{--                                        type:"GET",--}}
+{{--                                        dataType:"json",--}}
+{{--                                        success:function(data) {--}}
+{{--                                            $("#thana_name").empty();--}}
+{{--                                            $.each(data,function(key,value){--}}
+{{--                                                $("#thana_name").append('<option value="'+value.thana+'">'+value.thana+'</option>');--}}
+{{--                                            });--}}
+
+{{--                                        },--}}
+
+{{--                                    });--}}
+{{--                                } else {--}}
+{{--                                    alert('danger');--}}
+{{--                                }--}}
+
+{{--                            });--}}
+{{--                        });--}}
+{{--                    </script>--}}
+                    <div class="side-ad-box">
+                        @if(!empty($ads->home_box2_ads))
+                            <img src="{{ asset($ads->home_box2_ads) }}" alt="Sidebar Ad">
+                        @else
+                            <img src="{{ asset('front/templateimage/63ad66eeaa3fc.gif') }}" alt="Default Ad">
+                        @endif
+                    </div>
+
+                    <style>
+                        .side-ad-box {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            margin-bottom: 3px;
+                        }
+                        .side-ad-box img {
+                            width: 100%;
+                            height:auto; /* Sidebar ad height */
+                            object-fit: contain;
+                            background: #fff;
+                            border-radius: 2px;
+                            padding: 2px;
+                            box-shadow: 0 1px 5px rgba(0,0,0,0.18);
+                        }
+
+                        /* Mobile Responsive */
+                        @media (max-width: 767px) {
+                            .side-ad-box img {
+                                height: auto;
+                                padding: 1px;
+                                box-shadow: none;
+                            }
+                        }
+                    </style>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1809,36 +1890,71 @@
 
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-3">
 
+                    <div class="live-item">
+                        <div class="live_title">
+                            <a href="#"> লাইভ</a>
+                            <div class="themesBazar"></div>
+                        </div>
+                        <div class="popup-wrpp">
+                            <div class="live_image">
+                                <img src="{{asset('/')}}front/frontend/assets/images/livetv.jpg" alt="লাইভ টিভি">
+                                <div data-mfp-src="#mymodal" class="live-icon modal-live" > <i class="las la-play"></i> </div>
+                            </div>
 
-                    <div class="archive-title">
-                        ফেসবুকে আমরা
-                    </div>
-
-                    <div class="facebook-content">
-
-
-
-                        <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/prothomdorpan&amp;tabs=time&amp;width=280&amp;height=120&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=334182264340964"
-                            width="280" height="120" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                            allowfullscreen="true"
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-
+                            <div class="live-popup"> <!-- Quick view Start-->
+                                <div id="mymodal" class="mfp-hide" role="dialog" aria-labelledby="modal-titles" aria-describedby="modal-contents">
+                                    <div id="modal-contents">
 
 
 
-                    <div class="archive-title">
+                                        <!-- Load Facebook SDK for JavaScript -->
+                                        <div id="fb-root"></div>
+                                        <script>
+                                            window.fbAsyncInit = function() {
+                                                FB.init({
+                                                    appId      : '{your-app-id}',
+                                                    xfbml      : true,
+                                                    version    : 'v2.5'
+                                                });
 
-                        টুইটারে আমরা
+                                                // Get Embedded Video Player API Instance
+                                                var my_video_player;
+                                                FB.Event.subscribe('xfbml.ready', function(msg) {
+                                                    if (msg.type === 'video') {
+                                                        my_video_player = msg.instance;
+                                                        my_video_player.unmute();
+                                                    }
+                                                });
+                                            };
 
-                    </div>
+                                            (function(d, s, id){
+                                                var js, fjs = d.getElementsByTagName(s)[0];
+                                                if (d.getElementById(id)) {return;}
+                                                js = d.createElement(s); js.id = id;
+                                                js.src = "../../connect.facebook.net/en_US/sdk.js";
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }(document, 'script', 'facebook-jssdk'));
+                                        </script>
 
-                    <div class="facebook-content">
+                                        <!-- Your embedded video player code -->
+                                        <div
+                                            class="fb-video"
+                                            data-href="https://www.facebook.com/somoynews.tv/videos/5741322025915134"
+                                            data-width="auto"
+                                            data-autoplay="true"
+                                            data-allowfullscreen="false"
+                                            data-controls="false"></div>
 
-                        <a class="twitter-timeline" data-width="300" data-height="250" data-dnt="true" data-theme="light" href="https://www.twitter.com/themesbazar"> </a> <script async src="../../platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+                                    </div>
+                                </div>
+                            </div>  <!-- Quick View End-->
+                        </div>
 
                     </div>
 
@@ -1846,6 +1962,7 @@
 
 
                 </div>
+
             </div>
         </div>
     </section>
