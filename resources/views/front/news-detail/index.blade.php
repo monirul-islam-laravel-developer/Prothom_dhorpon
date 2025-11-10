@@ -14,7 +14,7 @@
 @endsection
 
 @section('og:image')
-     $imageBlock
+    {{ asset(($news->image ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
 @endsection
 @section('body')
 
