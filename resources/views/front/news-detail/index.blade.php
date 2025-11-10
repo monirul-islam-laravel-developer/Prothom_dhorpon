@@ -14,8 +14,11 @@
 @endsection
 
 @section('og:image')
-    {{ route('news.ogimage', $news->id) }}
+    <meta property="og:image" content="{{ route('news.ogimage', $news->id) }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 @endsection
+
 @section('body')
 
     <div class="single-page2" >

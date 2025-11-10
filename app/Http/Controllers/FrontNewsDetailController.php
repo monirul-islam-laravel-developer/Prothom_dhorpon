@@ -56,30 +56,40 @@ class FrontNewsDetailController extends Controller
 
         $manager = new ImageManager(['driver' => 'gd']);
 
-        // মূল ছবি
-        $img = $manager->make(public_path($news->image));
+        // Create base canvas 1200x630
+        $canvas = $manager->canvas(1200, 630, '#ffffff');
 
-        // Banner overlay
-        if($ads && $ads->head_banner){
-            $banner = $manager->make(public_path($ads->head_banner))
-                ->resize($img->width(), null, function ($constraint) {
-                    $constraint->aspectRatio();
-                });
-            $img->insert($banner, 'bottom');
-        }
-
-        // Logo overlay
-        if($webLogo && $webLogo->desktop_logo){
-            $logo = $manager->make(public_path($webLogo->desktop_logo))
-                ->resize(100, 100, function ($constraint) {
+        // Main image
+        if ($news->image && file_exists(public_path($news->image))) {
+            $mainImage = $manager->make(public_path($news->image))
+                ->resize(1200, 630, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 });
-            $img->insert($logo, 'top-left', 10, 10);
+            $canvas->insert($mainImage, 'center');
         }
 
-        // Response (no save)
-        return $img->response('jpg');
+        // Banner overlay at bottom
+        if ($ads && $ads->head_banner && file_exists(public_path($ads->head_banner))) {
+            $banner = $manager->make(public_path($ads->head_banner))
+                ->resize(1200, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            $canvas->insert($banner, 'bottom');
+        }
+
+        // Logo overlay at top-left
+        if ($webLogo && $webLogo->desktop_logo && file_exists(public_path($webLogo->desktop_logo))) {
+            $logo = $manager->make(public_path($webLogo->desktop_logo))
+                ->resize(150, 150, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+            $canvas->insert($logo, 'top-left', 20, 20);
+        }
+
+        // Response without saving
+        return $canvas->response('jpg');
     }
 
 
