@@ -6,6 +6,8 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon; // আগে থেকে যদি না থাকে
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 
 class FrontNewsDetailController extends Controller
@@ -48,7 +50,36 @@ class FrontNewsDetailController extends Controller
         $news = Post::where('id', $id)
             ->where('status', 1)
             ->firstOrFail();
-        return view('front.news.image',compact('news'));
+
+        $ads = Ads::first();
+        $webLogo = WebLogo::first();
+
+        $manager = new ImageManager(['driver' => 'gd']);
+
+        // মূল ছবি
+        $img = $manager->make(public_path($news->image));
+
+        // Banner overlay
+        if($ads && $ads->head_banner){
+            $banner = $manager->make(public_path($ads->head_banner))
+                ->resize($img->width(), null, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            $img->insert($banner, 'bottom');
+        }
+
+        // Logo overlay
+        if($webLogo && $webLogo->desktop_logo){
+            $logo = $manager->make(public_path($webLogo->desktop_logo))
+                ->resize(100, 100, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+            $img->insert($logo, 'top-left', 10, 10);
+        }
+
+        // Response (no save)
+        return $img->response('jpg');
     }
 
 
