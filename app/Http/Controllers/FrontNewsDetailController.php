@@ -43,6 +43,13 @@ class FrontNewsDetailController extends Controller
 
         return view('front.news-detail.index', compact('news', 'relatedNews', 'todayViews'));
     }
+    public function image($id)
+    {
+        $news = Post::where('id', $id)
+            ->where('status', 1)
+            ->firstOrFail();
+        return view('front.news.image',compact('news'));
+    }
 
 
 
