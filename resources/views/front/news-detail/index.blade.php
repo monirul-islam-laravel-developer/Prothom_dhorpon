@@ -14,10 +14,9 @@
 @endsection
 
 @section('og:image')
-    <meta property="og:image" content="{{ route('news.ogimage', $news->id) }}" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {{ asset(($news->image ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
 @endsection
+
 
 @section('body')
 
