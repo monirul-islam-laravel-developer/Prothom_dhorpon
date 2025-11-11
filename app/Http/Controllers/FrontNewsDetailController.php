@@ -55,42 +55,33 @@ class FrontNewsDetailController extends Controller
         $mainPath = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
-        $mainImg = imagecreatefromjpeg($mainPath);
-        $mainWidth = imagesx($mainImg);
-        $mainHeight = imagesy($mainImg);
+        // Any image type load
+        $mainImg = $this->loadAnyImage($mainPath);
+        $bannerImg = $this->loadAnyImage($bannerPath);
 
-        // Banner overlay
-        if (file_exists($bannerPath)) {
-            $bannerImg = imagecreatefromjpeg($bannerPath);
-            $bannerOriginalWidth = imagesx($bannerImg);
-            $bannerOriginalHeight = imagesy($bannerImg);
+        if (!$mainImg) abort(404, "Main Image Not Found");
 
-            // Resize Banner keeping Aspect Ratio
-            $newBannerWidth = $mainWidth;
-            $newBannerHeight = intval(($bannerOriginalHeight / $bannerOriginalWidth) * $newBannerWidth);
+        $mainW = imagesx($mainImg);
+        $mainH = imagesy($mainImg);
 
-            $resizedBanner = imagecreatetruecolor($newBannerWidth, $newBannerHeight);
-            imagecopyresampled(
-                $resizedBanner,
-                $bannerImg,
-                0, 0, 0, 0,
-                $newBannerWidth,
-                $newBannerHeight,
-                $bannerOriginalWidth,
-                $bannerOriginalHeight
-            );
+        if ($bannerImg) {
+            $bw = imagesx($bannerImg);
+            $bh = imagesy($bannerImg);
 
-            // Insert banner at bottom
-            imagecopy(
-                $mainImg,
-                $resizedBanner,
-                0,
-                $mainHeight - $newBannerHeight,
-                0,
-                0,
-                $newBannerWidth,
-                $newBannerHeight
-            );
+            // Maintain aspect ratio (no stretch)
+            $newBW = $mainW;
+            $newBH = intval(($bh / $bw) * $newBW);
+
+            $resizedBanner = imagecreatetruecolor($newBW, $newBH);
+
+            // Keep transparency for PNG/GIF
+            imagealphablending($resizedBanner, false);
+            imagesavealpha($resizedBanner, true);
+
+            imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+
+            // Place banner at bottom
+            imagecopy($mainImg, $resizedBanner, 0, $mainH - $newBH, 0, 0, $newBW, $newBH);
 
             imagedestroy($bannerImg);
             imagedestroy($resizedBanner);
@@ -101,6 +92,27 @@ class FrontNewsDetailController extends Controller
         imagedestroy($mainImg);
         exit;
     }
+    private function loadAnyImage($path)
+    {
+        if (!file_exists($path)) return false;
+
+        $info = @getimagesize($path);
+        if (!$info) return false;
+
+        switch ($info['mime']) {
+            case 'image/jpeg':
+                return imagecreatefromjpeg($path);
+            case 'image/png':
+                return imagecreatefrompng($path);
+            case 'image/webp':
+                return imagecreatefromwebp($path);
+            case 'image/gif':
+                return imagecreatefromgif($path);
+            default:
+                return false;
+        }
+    }
+
 
 
 
