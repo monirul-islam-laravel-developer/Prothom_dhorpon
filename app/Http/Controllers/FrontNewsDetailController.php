@@ -51,52 +51,42 @@ class FrontNewsDetailController extends Controller
     {
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
         $ads = Ads::first();
-        $webLogo = Logo::first();
 
         // মূল image path
         $mainPath = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
-        $logoPath = public_path($webLogo->desktop_logo ?? 'default-logo.png');
 
-        // Create main image
+        // মূল image তৈরি
         $mainImg = imagecreatefromjpeg($mainPath);
+        $mainWidth = imagesx($mainImg);
+        $mainHeight = imagesy($mainImg);
 
-        // Overlay banner
+        // Banner overlay
         if (file_exists($bannerPath)) {
             $bannerImg = imagecreatefromjpeg($bannerPath);
-            $bannerWidth = imagesx($mainImg);
-            $bannerHeight = imagesy($bannerImg);
 
-            // Resize banner to main width
+            // Banner height = মূল image height-এর 20%
+            $bannerWidth = $mainWidth;
+            $bannerHeight = intval($mainHeight * 0.2);
+
             $resizedBanner = imagecreatetruecolor($bannerWidth, $bannerHeight);
-            imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $bannerWidth, $bannerHeight, imagesx($bannerImg), imagesy($bannerImg));
+
+            // Preserve transparency for PNG if needed
+            imagecopyresampled(
+                $resizedBanner,
+                $bannerImg,
+                0, 0, 0, 0,
+                $bannerWidth,
+                $bannerHeight,
+                imagesx($bannerImg),
+                imagesy($bannerImg)
+            );
 
             // Insert banner at bottom
-            imagecopy($mainImg, $resizedBanner, 0, imagesy($mainImg)-$bannerHeight, 0, 0, $bannerWidth, $bannerHeight);
+            imagecopy($mainImg, $resizedBanner, 0, $mainHeight - $bannerHeight, 0, 0, $bannerWidth, $bannerHeight);
 
             imagedestroy($bannerImg);
             imagedestroy($resizedBanner);
-        }
-
-        // Overlay logo
-        if (file_exists($logoPath)) {
-            $logoImg = imagecreatefrompng($logoPath);
-            $logoWidth = 100;
-            $logoHeight = 100;
-
-            $resizedLogo = imagecreatetruecolor($logoWidth, $logoHeight);
-            // Preserve transparency
-            imagesavealpha($resizedLogo, true);
-            $transColor = imagecolorallocatealpha($resizedLogo, 0, 0, 0, 127);
-            imagefill($resizedLogo, 0, 0, $transColor);
-
-            imagecopyresampled($resizedLogo, $logoImg, 0, 0, 0, 0, $logoWidth, $logoHeight, imagesx($logoImg), imagesy($logoImg));
-
-            // Insert logo at top-left
-            imagecopy($mainImg, $resizedLogo, 10, 10, 0, 0, $logoWidth, $logoHeight);
-
-            imagedestroy($logoImg);
-            imagedestroy($resizedLogo);
         }
 
         // Output image as JPEG
@@ -107,6 +97,7 @@ class FrontNewsDetailController extends Controller
         imagedestroy($mainImg);
         exit;
     }
+
 
 
 
