@@ -52,11 +52,9 @@ class FrontNewsDetailController extends Controller
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
         $ads = Ads::first();
 
-        // মূল image path
         $mainPath = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
-        // মূল image তৈরি
         $mainImg = imagecreatefromjpeg($mainPath);
         $mainWidth = imagesx($mainImg);
         $mainHeight = imagesy($mainImg);
@@ -64,39 +62,46 @@ class FrontNewsDetailController extends Controller
         // Banner overlay
         if (file_exists($bannerPath)) {
             $bannerImg = imagecreatefromjpeg($bannerPath);
+            $bannerOriginalWidth = imagesx($bannerImg);
+            $bannerOriginalHeight = imagesy($bannerImg);
 
-            // Banner height = মূল image height-এর 20%
-            $bannerWidth = $mainWidth;
-            $bannerHeight = intval($mainHeight * 0.2);
+            // Resize Banner keeping Aspect Ratio
+            $newBannerWidth = $mainWidth;
+            $newBannerHeight = intval(($bannerOriginalHeight / $bannerOriginalWidth) * $newBannerWidth);
 
-            $resizedBanner = imagecreatetruecolor($bannerWidth, $bannerHeight);
-
-            // Preserve transparency for PNG if needed
+            $resizedBanner = imagecreatetruecolor($newBannerWidth, $newBannerHeight);
             imagecopyresampled(
                 $resizedBanner,
                 $bannerImg,
                 0, 0, 0, 0,
-                $bannerWidth,
-                $bannerHeight,
-                imagesx($bannerImg),
-                imagesy($bannerImg)
+                $newBannerWidth,
+                $newBannerHeight,
+                $bannerOriginalWidth,
+                $bannerOriginalHeight
             );
 
             // Insert banner at bottom
-            imagecopy($mainImg, $resizedBanner, 0, $mainHeight - $bannerHeight, 0, 0, $bannerWidth, $bannerHeight);
+            imagecopy(
+                $mainImg,
+                $resizedBanner,
+                0,
+                $mainHeight - $newBannerHeight,
+                0,
+                0,
+                $newBannerWidth,
+                $newBannerHeight
+            );
 
             imagedestroy($bannerImg);
             imagedestroy($resizedBanner);
         }
 
-        // Output image as JPEG
         header('Content-Type: image/jpeg');
         imagejpeg($mainImg, null, 90);
-
-        // Clean up
         imagedestroy($mainImg);
         exit;
     }
+
 
 
 
