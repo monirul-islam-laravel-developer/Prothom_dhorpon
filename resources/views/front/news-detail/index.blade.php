@@ -14,7 +14,7 @@
 @endsection
 
 @section('og:image')
-    {{ asset(($news->image ?? 'frontend/images/og-default.jpg') . '?v=' . time()) }}
+    {{ route('news.ogimage', $news->id) }}
 @endsection
 
 

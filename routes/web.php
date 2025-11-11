@@ -47,8 +47,7 @@ Route::get('/sub-category-news/{id}/{slug}', [FrontSubCategoryNewsController::cl
 Route::get('/district-news/{id}/{slug}', [FrontSubSubCategoryController::class, 'index'])->name('district-news2');
 Route::get('/upazila-news/{id}/{slug}', [FrontUpazelasNewsController::class, 'index'])->name('upazila-news');
 Route::get('/news-details/{id}', [FrontNewsDetailController::class, 'index'])->name('news-detail');
-Route::get('/news-details/{id}/og-image', [FrontNewsDetailController::class, 'ogImage'])->name('news.ogimage');
-
+Route::get('/news-image/{id}', [FrontNewsDetailController::class, 'ogImage'])->name('news.ogimage');
 Route::get('/photo-cart/{id}', [PhotoCartController::class, 'index'])->name('photo-cart');
 Route::get('/print/{id}', [PrintController::class, 'index'])->name('print-page');
 Route::get('/latest-news', [FrontLatestnewsController::class, 'index'])->name('latest-news');
