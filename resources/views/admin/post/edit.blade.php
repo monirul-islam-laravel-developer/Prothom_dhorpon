@@ -183,10 +183,13 @@
 
             // Category -> SubCategory
             $('#categoryName').change(function(){
-                var id = $(this).val();
+                var id = parseInt($(this).val());
                 if(!id) return hideAllBelow('category');
 
-                $.get('{{ url("/posts/get-subcategories") }}/'+id, function(data){
+                // Treat category_id 2 as 9
+                var effective_id = (id === 2) ? 9 : id;
+
+                $.get('{{ url("/posts/get-subcategories") }}/'+effective_id, function(data){
                     if(data.length > 0){
                         $('#subcategoryName').html('<option value="" disabled selected>---Select SubCategory---</option>');
                         $.each(data,function(k,v){
@@ -238,6 +241,7 @@
             });
 
         });
+
     </script>
 
     {{-- Image Preview --}}

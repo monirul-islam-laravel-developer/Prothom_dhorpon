@@ -28,65 +28,97 @@
                 <div class="col-lg-12 col-md-12">
 
 
+                    <style>
+                        /* হেডিং এর নিচে full width hr */
+                        .footer-title {
+                            position: relative;
+                            margin-bottom: 20px;
+                            font-weight: bold;
+                            font-size: 1.3rem;
+                        }
 
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <h3 class="footer-title">
-                                সম্পাদকীয় :
-                            </h3>
+                        .footer-title::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 3px;           /* লাইন এর thickness */
+                            background: #007bff;   /* header line color */
+                            margin-top: 5px;
+                            border-radius: 2px;
+                        }
+
+                        /* Mobile view এ column এর মাঝে line */
+                        @media (max-width: 767px) {
+                            .footer-column:not(:last-child) {
+                                border-bottom: 3px solid #007bff; /* মোটা line এবং color adjust */
+                                padding-bottom: 15px;
+                                margin-bottom: 15px;
+                            }
+                        }
+
+                        /* Desktop view এ column spacing */
+                        .footer-column {
+                            padding-right: 15px;
+                            padding-left: 15px;
+                        }
+
+                        .footer-content p {
+                            margin-bottom: 8px;
+                        }
+                    </style>
+
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <h3 class="footer-title">সম্পাদকীয় :</h3>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-12 footer-column">
                             <div class="footer-content">
-{{--                                @isset($editoral->publisher_and_editor)--}}
-{{--                                    <p align="left">প্রকাশকঃ&nbsp;{{ $editoral->publisher_and_editor }}</p>--}}
-{{--                                @endisset--}}
-
                                 @isset($editoral->editor)
-                                    <p align="left">প্রকাশক ও সম্পাদকঃ&nbsp;{{ $editoral->editor }}</p>
+                                    <p>প্রকাশক ও সম্পাদকঃ {{ $editoral->editor }}</p>
                                 @endisset
-                                    @isset($editoral->mobile1)
-                                        <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile1 }}</p>
-                                    @endisset
-
+                                @isset($editoral->mobile1)
+                                    <p>মোবাইলঃ {{ $editoral->mobile1 }}</p>
+                                @endisset
                                 @isset($editoral->executive_editor)
-                                    <p align="left">নির্বাহী সম্পাদকঃ&nbsp;{{ $editoral->executive_editor }}</p>
+                                    <p>নির্বাহী সম্পাদকঃ {{ $editoral->executive_editor }}</p>
                                 @endisset
-
                                 @isset($editoral->multimedia_incharge)
-                                    <p align="left">মাল্টিমিডিয়া ইনচার্জঃ&nbsp;{{ $editoral->multimedia_incharge }}</p>
+                                    <p>মাল্টিমিডিয়া ইনচার্জঃ {{ $editoral->multimedia_incharge }}</p>
                                 @endisset
-                                    @isset($editoral->mobile2)
-                                        <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile2 }}</p>
-                                    @endisset
-
+                                @isset($editoral->mobile2)
+                                    <p>মোবাইলঃ {{ $editoral->mobile2 }}</p>
+                                @endisset
                                 @isset($editoral->message_editor)
-                                    <p align="left">বার্তা সম্পাদকঃ&nbsp;{{ $editoral->message_editor }}</p>
+                                    <p>বার্তা সম্পাদকঃ {{ $editoral->message_editor }}</p>
                                 @endisset
-
                                 @isset($editoral->legal_advisor)
-                                    <p align="left">আইন বিষয়ক উপদেষ্টাঃ&nbsp;{{ $editoral->legal_advisor }}</p>
+                                    <p>আইন বিষয়ক উপদেষ্টাঃ {{ $editoral->legal_advisor }}</p>
                                 @endisset
-
                                 @isset($editoral->advisor)
-                                    <p align="left">উপদেষ্টাঃ&nbsp;{{ $editoral->advisor }}</p>
+                                    <p>উপদেষ্টাঃ {{ $editoral->advisor }}</p>
                                 @endisset
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
+
+                        <div class="col-lg-6 col-md-6 col-12 footer-column">
                             <div class="footer-content">
                                 @isset($editoral->office)
-                                    <p align="left">অফিসঃ-&nbsp;{{ $editoral->office }}।</p>
+                                    <p>অফিসঃ {{ $editoral->office }}।</p>
                                 @endisset
-
                                 @isset($editoral->office2)
-                                    <p align="left">সিরাজগঞ্জ অফিসঃ-&nbsp;{{ $editoral->office2 }}।</p>
+                                    <p>সিরাজগঞ্জ অফিসঃ {{ $editoral->office2 }}।</p>
                                 @endisset
-
                                 @isset($editoral->email)
-                                    <p align="left">ইমেইলঃ-&nbsp;{{ $editoral->email }}</p>
+                                    <p>ইমেইলঃ {{ $editoral->email }}</p>
                                 @endisset
-
                             </div>
                         </div>
                     </div>
+
+
+
+
 
 
                 </div>
@@ -96,14 +128,45 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-right">
-                            © All rights reserved © প্রথম দর্পণ মাল্টিমিডিয়া
+                            © All rights reserved © ২০২৫ © প্রথম দর্পণ মাল্টিমিডিয়া
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="design-developed">
-                            NewsScript Developed BY  <a href="https://monirulbd.com/" target="_blank" title="ThemesBazar.com">Monirul</a>
+                    <style>
+                        @keyframes rainbow-blink {
+                            0%   { color: #ff0000; }
+                            14%  { color: #ff7f00; }
+                            28%  { color: #ffff00; }
+                            42%  { color: #00ff00; }
+                            57%  { color: #0000ff; }
+                            71%  { color: #4b0082; }
+                            85%  { color: #8f00ff; }
+                            100% { color: #ff0000; }
+                        }
+
+                        .design-developed {
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 16px;
+                            color: #555;
+                            text-align: center;
+                        }
+
+                        .design-developed a {
+                            font-weight: bold;
+                            text-decoration: none;
+                            animation: rainbow-blink 2s linear infinite; /* blink + color change */
+                        }
+                    </style>
+
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="design-developed">
+                                Developed BY <a href="https://monirulbd.com/" target="_blank" title="ThemesBazar.com">Monirul Islam</a>
+                            </div>
                         </div>
                     </div>
+
+
+
                 </div>
             </div>
         </div>

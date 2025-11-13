@@ -143,69 +143,178 @@
 
     {{-- jQuery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    {{-- AJAX Dependent Dropdowns --}}
     <script>
         $(document).ready(function(){
 
-            // Category -> SubCategory
-            $('#categoryName').change(function(){
-                var id = $(this).val();
-                if(!id) return;
+            function loadSubcategories(category_id, selected_subcategory = null) {
+                if(!category_id) return;
 
-                $.get('{{ url("/posts/get-subcategories") }}/'+id, function(data){
+                $.get('{{ url("/posts/get-subcategories") }}/'+category_id, function(data){
                     if(data.length > 0){
                         $('#subcategoryName').html('<option value="" disabled selected>---Select SubCategory---</option>');
                         $.each(data,function(k,v){
-                            $('#subcategoryName').append('<option value="'+v.id+'">'+v.name+'</option>');
+                            var selected = (selected_subcategory == v.id) ? 'selected' : '';
+                            $('#subcategoryName').append('<option value="'+v.id+'" '+selected+'>'+v.name+'</option>');
                         });
                         $('#subcategoryDiv').show();
-                        $('#districtDiv').hide();
-                        $('#upzelaDiv').hide();
                     } else {
                         $('#subcategoryDiv,#districtDiv,#upzelaDiv').hide();
                     }
                 });
-            });
+            }
 
-            // SubCategory -> District
-            $('#subcategoryName').change(function(){
-                var id = $(this).val();
-                if(!id) return;
+            function loadDistricts(subcategory_id, selected_district = null) {
+                if(!subcategory_id) return;
 
-                $.get('{{ url("/posts/get-subsubcategories") }}/'+id, function(data){
+                $.get('{{ url("/posts/get-subsubcategories") }}/'+subcategory_id, function(data){
                     if(data.length > 0){
                         $('#subsubCategoryName').html('<option value="" disabled selected>---Select District---</option>');
                         $.each(data,function(k,v){
-                            $('#subsubCategoryName').append('<option value="'+v.id+'">'+v.name+'</option>');
+                            var selected = (selected_district == v.id) ? 'selected' : '';
+                            $('#subsubCategoryName').append('<option value="'+v.id+'" '+selected+'>'+v.name+'</option>');
                         });
                         $('#districtDiv').show();
-                        $('#upzelaDiv').hide();
                     } else {
                         $('#districtDiv,#upzelaDiv').hide();
                     }
                 });
-            });
+            }
 
-            // District -> Upazila
-            $('#subsubCategoryName').change(function(){
-                var id = $(this).val();
-                if(!id) return;
+            function loadUpzelas(district_id, selected_upazila = null) {
+                if(!district_id) return;
 
-                $.get('{{ url("/posts/get-upzelas") }}/'+id, function(data){
+                $.get('{{ url("/posts/get-upzelas") }}/'+district_id, function(data){
                     if(data.length > 0){
                         $('#upzelaName').html('<option value="" disabled selected>---Select Upazila---</option>');
                         $.each(data,function(k,v){
-                            $('#upzelaName').append('<option value="'+v.id+'">'+v.name+'</option>');
+                            var selected = (selected_upazila == v.id) ? 'selected' : '';
+                            $('#upzelaName').append('<option value="'+v.id+'" '+selected+'>'+v.name+'</option>');
                         });
                         $('#upzelaDiv').show();
                     } else {
                         $('#upzelaDiv').hide();
                     }
                 });
+            }
+
+            // On change events
+            $('#categoryName').change(function(){
+                var category_id = parseInt($(this).val());
+
+                if(!category_id) return;
+
+                // যদি category_id 2 হয়, treat as 9
+                var effective_category = (category_id === 2) ? 9 : category_id;
+
+                loadSubcategories(effective_category);
+                $('#districtDiv,#upzelaDiv').hide();
             });
+
+            $('#subcategoryName').change(function(){
+                var subcategory_id = $(this).val();
+                if(!subcategory_id) return;
+
+                loadDistricts(subcategory_id);
+                $('#upzelaDiv').hide();
+            });
+
+            $('#subsubCategoryName').change(function(){
+                var district_id = $(this).val();
+                if(!district_id) return;
+
+                loadUpzelas(district_id);
+            });
+
+            // Page load old values
+            var old_category = "{{ old('category_id') }}";
+            var old_subcategory = "{{ old('subcategory_id') }}";
+            var old_district = "{{ old('dristrict_id') }}";
+            var old_upazila = "{{ old('upazela_id') }}";
+
+            if(old_category) {
+                var effective_category = (parseInt(old_category) === 2) ? 9 : old_category;
+                loadSubcategories(effective_category, old_subcategory);
+
+                if(old_subcategory) {
+                    loadDistricts(old_subcategory, old_district);
+
+                    if(old_district) {
+                        loadUpzelas(old_district, old_upazila);
+                    }
+                }
+            }
         });
+
+
+
+
+
+
+
     </script>
+
+    {{-- AJAX Dependent Dropdowns --}}
+{{--    <script>--}}
+{{--        $(document).ready(function(){--}}
+
+{{--            // Category -> SubCategory--}}
+{{--            $('#categoryName').change(function(){--}}
+{{--                var id = $(this).val();--}}
+{{--                if(!id) return;--}}
+
+{{--                $.get('{{ url("/posts/get-subcategories") }}/'+id, function(data){--}}
+{{--                    if(data.length > 0){--}}
+{{--                        $('#subcategoryName').html('<option value="" disabled selected>---Select SubCategory---</option>');--}}
+{{--                        $.each(data,function(k,v){--}}
+{{--                            $('#subcategoryName').append('<option value="'+v.id+'">'+v.name+'</option>');--}}
+{{--                        });--}}
+{{--                        $('#subcategoryDiv').show();--}}
+{{--                        $('#districtDiv').hide();--}}
+{{--                        $('#upzelaDiv').hide();--}}
+{{--                    } else {--}}
+{{--                        $('#subcategoryDiv,#districtDiv,#upzelaDiv').hide();--}}
+{{--                    }--}}
+{{--                });--}}
+{{--            });--}}
+
+{{--            // SubCategory -> District--}}
+{{--            $('#subcategoryName').change(function(){--}}
+{{--                var id = $(this).val();--}}
+{{--                if(!id) return;--}}
+
+{{--                $.get('{{ url("/posts/get-subsubcategories") }}/'+id, function(data){--}}
+{{--                    if(data.length > 0){--}}
+{{--                        $('#subsubCategoryName').html('<option value="" disabled selected>---Select District---</option>');--}}
+{{--                        $.each(data,function(k,v){--}}
+{{--                            $('#subsubCategoryName').append('<option value="'+v.id+'">'+v.name+'</option>');--}}
+{{--                        });--}}
+{{--                        $('#districtDiv').show();--}}
+{{--                        $('#upzelaDiv').hide();--}}
+{{--                    } else {--}}
+{{--                        $('#districtDiv,#upzelaDiv').hide();--}}
+{{--                    }--}}
+{{--                });--}}
+{{--            });--}}
+
+{{--            // District -> Upazila--}}
+{{--            $('#subsubCategoryName').change(function(){--}}
+{{--                var id = $(this).val();--}}
+{{--                if(!id) return;--}}
+
+{{--                $.get('{{ url("/posts/get-upzelas") }}/'+id, function(data){--}}
+{{--                    if(data.length > 0){--}}
+{{--                        $('#upzelaName').html('<option value="" disabled selected>---Select Upazila---</option>');--}}
+{{--                        $.each(data,function(k,v){--}}
+{{--                            $('#upzelaName').append('<option value="'+v.id+'">'+v.name+'</option>');--}}
+{{--                        });--}}
+{{--                        $('#upzelaDiv').show();--}}
+{{--                    } else {--}}
+{{--                        $('#upzelaDiv').hide();--}}
+{{--                    }--}}
+{{--                });--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
 
     {{-- Image Preview --}}
     <script>
