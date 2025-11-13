@@ -162,85 +162,108 @@
     <script>
         $(document).ready(function(){
 
-            function hideAllBelow(level) {
+            function hideAllBelow(level){
                 switch(level){
                     case 'category':
-                        $('#subcategoryDiv,#districtDiv,#upzelaDiv').hide();
-                        break;
+                        $('#subcategoryDiv,#districtDiv,#upzelaDiv').hide(); break;
                     case 'subcategory':
-                        $('#districtDiv,#upzelaDiv').hide();
-                        break;
+                        $('#districtDiv,#upzelaDiv').hide(); break;
                     case 'district':
-                        $('#upzelaDiv').hide();
-                        break;
+                        $('#upzelaDiv').hide(); break;
                 }
             }
 
-            // Hide empty divs on page load
-            if($('#subcategoryName option').length <= 1) hideAllBelow('category');
-            if($('#subsubCategoryName option').length <= 1) hideAllBelow('subcategory');
-            if($('#upzelaName option').length <= 1) hideAllBelow('district');
+            function loadSubcategories(category_id, old_subcategory = null){
+                if(!category_id) return hideAllBelow('category');
 
-            // Category -> SubCategory
-            $('#categoryName').change(function(){
-                var id = parseInt($(this).val());
-                if(!id) return hideAllBelow('category');
-
-                // Treat category_id 2 as 9
-                var effective_id = (id === 2) ? 9 : id;
+                var effective_id = (category_id === 2) ? 9 : category_id;
 
                 $.get('{{ url("/posts/get-subcategories") }}/'+effective_id, function(data){
-                    if(data.length > 0){
-                        $('#subcategoryName').html('<option value="" disabled selected>---Select SubCategory---</option>');
-                        $.each(data,function(k,v){
-                            $('#subcategoryName').append('<option value="'+v.id+'">'+v.name+'</option>');
-                        });
-                        $('#subcategoryDiv').show();
-                        hideAllBelow('subcategory');
-                    } else {
-                        hideAllBelow('category');
-                    }
+                    $('#subcategoryName').html('<option value="" disabled selected>---Select SubCategory---</option>');
+                    $.each(data,function(k,v){
+                        // old_subcategory check: যদি category 2 হয়, map old_subcategory
+                        var selected = '';
+                        if(old_subcategory){
+                            if(category_id === 2 && v.id == old_subcategory){
+                                selected = 'selected';
+                            } else if(v.id == old_subcategory){
+                                selected = 'selected';
+                            }
+                        }
+                        $('#subcategoryName').append('<option value="'+v.id+'" '+selected+'>'+v.name+'</option>');
+                    });
+                    if(data.length > 0) $('#subcategoryDiv').show();
+                    hideAllBelow('subcategory');
                 });
+            }
+
+            function loadDistricts(subcategory_id, old_district = null){
+                if(!subcategory_id) return hideAllBelow('subcategory');
+
+                $.get('{{ url("/posts/get-subsubcategories") }}/'+subcategory_id, function(data){
+                    $('#subsubCategoryName').html('<option value="" disabled selected>---Select District---</option>');
+                    $.each(data,function(k,v){
+                        var selected = (old_district && v.id == old_district) ? 'selected' : '';
+                        $('#subsubCategoryName').append('<option value="'+v.id+'" '+selected+'>'+v.name+'</option>');
+                    });
+                    if(data.length > 0) $('#districtDiv').show();
+                    hideAllBelow('district');
+                });
+            }
+
+            function loadUpzelas(district_id, old_upazila = null){
+                if(!district_id) return hideAllBelow('district');
+
+                $.get('{{ url("/posts/get-upzelas") }}/'+district_id, function(data){
+                    $('#upzelaName').html('<option value="" disabled selected>---Select Upazila---</option>');
+                    $.each(data,function(k,v){
+                        var selected = (old_upazila && v.id == old_upazila) ? 'selected' : '';
+                        $('#upzelaName').append('<option value="'+v.id+'" '+selected+'>'+v.name+'</option>');
+                    });
+                    if(data.length > 0) $('#upzelaDiv').show();
+                });
+            }
+
+            // Change events
+            $('#categoryName').change(function(){
+                var category_id = parseInt($(this).val());
+                loadSubcategories(category_id);
             });
 
-            // SubCategory -> District
             $('#subcategoryName').change(function(){
-                var id = $(this).val();
-                if(!id) return hideAllBelow('subcategory');
-
-                $.get('{{ url("/posts/get-subsubcategories") }}/'+id, function(data){
-                    if(data.length > 0){
-                        $('#subsubCategoryName').html('<option value="" disabled selected>---Select District---</option>');
-                        $.each(data,function(k,v){
-                            $('#subsubCategoryName').append('<option value="'+v.id+'">'+v.name+'</option>');
-                        });
-                        $('#districtDiv').show();
-                        hideAllBelow('district');
-                    } else {
-                        hideAllBelow('subcategory');
-                    }
-                });
+                var subcategory_id = parseInt($(this).val());
+                loadDistricts(subcategory_id);
             });
 
-            // District -> Upazila
             $('#subsubCategoryName').change(function(){
-                var id = $(this).val();
-                if(!id) return hideAllBelow('district');
-
-                $.get('{{ url("/posts/get-upzelas") }}/'+id, function(data){
-                    if(data.length > 0){
-                        $('#upzelaName').html('<option value="" disabled selected>---Select Upazila---</option>');
-                        $.each(data,function(k,v){
-                            $('#upzelaName').append('<option value="'+v.id+'">'+v.name+'</option>');
-                        });
-                        $('#upzelaDiv').show();
-                    } else {
-                        hideAllBelow('district');
-                    }
-                });
+                var district_id = parseInt($(this).val());
+                loadUpzelas(district_id);
             });
+
+            // --- old values for edit form ---
+            var old_category = parseInt("{{ old('category_id', isset($post) ? $post->category_id : '') }}");
+            var old_subcategory = parseInt("{{ old('subcategory_id', isset($post) ? $post->subcategory_id : '') }}");
+            var old_district = parseInt("{{ old('dristrict_id', isset($post) ? $post->dristrict_id : '') }}");
+            var old_upazila = parseInt("{{ old('upazela_id', isset($post) ? $post->upazela_id : '') }}");
+
+            if(old_category){
+                loadSubcategories(old_category, old_subcategory);
+
+                if(old_subcategory){
+                    loadDistricts(old_subcategory, old_district);
+
+                    if(old_district){
+                        loadUpzelas(old_district, old_upazila);
+                    }
+                }
+            }
 
         });
+
+
+
+
+
 
     </script>
 
