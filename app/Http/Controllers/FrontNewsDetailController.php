@@ -21,8 +21,10 @@ class FrontNewsDetailController extends Controller
             ->where('status', 1)
             ->firstOrFail();
 
-        // Increment total view_count
-        $news->increment('view_count', 100);
+        $random = range(1, 100);
+        $add = 100 + $random[array_rand($random)];
+        $news->increment('view_count', $add);
+
 
         // Related news
         $relatedNews = Post::where('category_id', $news->category_id)

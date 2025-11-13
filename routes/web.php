@@ -39,6 +39,7 @@ Route::get('/mypanel', [LoginController::class, 'index'])->name('login');
 
 Route::get('/', [FrontController::class, 'index'])->name('home');
 Route::get('/amader-poribar', [FrontReporterController::class, 'index'])->name('amaderporibar');
+Route::get('/reporter-view/{id}/{slug}', [FrontReporterController::class, 'reporter_view'])->name('reporter-view');
 Route::get('/about-us', [FrontAboutUsController::class, 'index'])->name('about-us');
 Route::get('/privacy-policy', [FrontPrivacyController::class, 'index'])->name('privacy-policy');
 Route::get('/terms-and-condition', [Terms_and_ConditionController::class, 'index'])->name('terms-and-condition');

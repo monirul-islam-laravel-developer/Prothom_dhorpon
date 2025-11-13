@@ -344,15 +344,17 @@
                             </h6>
 
                             <div class="author-image">
+                                <a href="{{route('reporter-view',[$news->reporter->id,$news->reporter->slug])}}">
                                 <img src="{{asset($news->reporter->image)}}" alt="{{$news->reporter->name}}">
+                                </a>
                             </div>
 
                             <h1 class="author-name">
-                                <a href="reporter/news/%e0%a6%ae%e0%a7%8b.html">{{$news->reporter->name}}</a>
+                                <a href="{{route('reporter-view',[$news->reporter->id,$news->reporter->slug])}}">{{$news->reporter->name}}</a>
                             </h1>
 
                             <div class="author-title">
-                                <strong><a href="reporter/news/%e0%a6%ae%e0%a7%8b.html"> প্রতিবেদকের সকল নিউজ </a></strong>
+                                <strong><a href="{{route('reporter-view',[$news->reporter->id,$news->reporter->slug])}}"> প্রতিবেদকের সকল নিউজ </a></strong>
                             </div>
 
 

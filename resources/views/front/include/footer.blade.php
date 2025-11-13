@@ -35,12 +35,12 @@
                                 সম্পাদকীয় :
                             </h3>
                             <div class="footer-content">
-                                @isset($editoral->publisher_and_editor)
-                                    <p align="left">প্রকাশকঃ&nbsp;{{ $editoral->publisher_and_editor }}</p>
-                                @endisset
+{{--                                @isset($editoral->publisher_and_editor)--}}
+{{--                                    <p align="left">প্রকাশকঃ&nbsp;{{ $editoral->publisher_and_editor }}</p>--}}
+{{--                                @endisset--}}
 
                                 @isset($editoral->editor)
-                                    <p align="left">প্রধান সম্পাদকঃ&nbsp;{{ $editoral->editor }}</p>
+                                    <p align="left">প্রকাশক ও সম্পাদকঃ&nbsp;{{ $editoral->editor }}</p>
                                 @endisset
                                     @isset($editoral->mobile1)
                                         <p align="left">মোবাইলঃ-&nbsp;{{ $editoral->mobile1 }}</p>
