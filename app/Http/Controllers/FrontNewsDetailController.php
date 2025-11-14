@@ -57,41 +57,56 @@ class FrontNewsDetailController extends Controller
     public function ogImage($id)
     {
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
-        $ads = Ads::first();
+        $ads  = Ads::first();
 
-        $mainPath = public_path($news->image ?? 'default-news.jpg');
+        $mainPath   = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
-        // Any image type load
+        // Load main image
         $mainImg = $this->loadAnyImage($mainPath);
-        $bannerImg = $this->loadAnyImage($bannerPath);
-
         if (!$mainImg) abort(404, "Main Image Not Found");
 
+        // Main image size
         $mainW = imagesx($mainImg);
         $mainH = imagesy($mainImg);
 
+        // Load banner image
+        $bannerImg = $this->loadAnyImage($bannerPath);
+
         if ($bannerImg) {
+
             $bw = imagesx($bannerImg);
             $bh = imagesy($bannerImg);
 
-            // Maintain aspect ratio (no stretch)
-            $newBW = $mainW;
-            $newBH = intval(($bh / $bw) * $newBW);
+            // FINAL banner image variable
+            $bannerFinal = $bannerImg;
+            $newBW = $bw;
+            $newBH = $bh;
 
-            $resizedBanner = imagecreatetruecolor($newBW, $newBH);
+            // If banner wider than main → scale proportionally
+            if ($bw > $mainW) {
 
-            // Keep transparency for PNG/GIF
-            imagealphablending($resizedBanner, false);
-            imagesavealpha($resizedBanner, true);
+                $scale = $mainW / $bw;
+                $newBW = $mainW;
+                $newBH = intval($bh * $scale);
 
-            imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+                $resized = imagecreatetruecolor($newBW, $newBH);
 
-            // Place banner at bottom
-            imagecopy($mainImg, $resizedBanner, 0, $mainH - $newBH, 0, 0, $newBW, $newBH);
+                imagealphablending($resized, false);
+                imagesavealpha($resized, true);
 
-            imagedestroy($bannerImg);
-            imagedestroy($resizedBanner);
+                imagecopyresampled($resized, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+
+                $bannerFinal = $resized;
+            }
+
+            // Center align at bottom
+            $x = intval(($mainW - $newBW) / 2);
+            $y = $mainH - $newBH;
+
+            imagecopy($mainImg, $bannerFinal, $x, $y, 0, 0, $newBW, $newBH);
+
+            imagedestroy($bannerFinal);
         }
 
         header('Content-Type: image/jpeg');
@@ -100,6 +115,8 @@ class FrontNewsDetailController extends Controller
         exit;
     }
 
+
+// Load JPG/PNG/WEBP/GIF safely
     private function loadAnyImage($path)
     {
         if (!file_exists($path)) return false;
@@ -120,17 +137,5 @@ class FrontNewsDetailController extends Controller
                 return false;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
