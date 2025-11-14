@@ -56,16 +56,17 @@ class FrontNewsDetailController extends Controller
 
     public function ogImage($id)
     {
-        $news = Post::findOrFail($id);
+        $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
         $ads = Ads::first();
 
-        $mainPath = public_path('uploads/news/' . ($news->image ?? 'default-news.jpg'));
+        $mainPath = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
+        // Any image type load
         $mainImg = $this->loadAnyImage($mainPath);
         $bannerImg = $this->loadAnyImage($bannerPath);
 
-        if (!$mainImg) abort(404);
+        if (!$mainImg) abort(404, "Main Image Not Found");
 
         $mainW = imagesx($mainImg);
         $mainH = imagesy($mainImg);
@@ -74,43 +75,52 @@ class FrontNewsDetailController extends Controller
             $bw = imagesx($bannerImg);
             $bh = imagesy($bannerImg);
 
+            // Maintain aspect ratio (no stretch)
             $newBW = $mainW;
             $newBH = intval(($bh / $bw) * $newBW);
 
             $resizedBanner = imagecreatetruecolor($newBW, $newBH);
+
+            // Keep transparency for PNG/GIF
             imagealphablending($resizedBanner, false);
             imagesavealpha($resizedBanner, true);
 
             imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+
+            // Place banner at bottom
             imagecopy($mainImg, $resizedBanner, 0, $mainH - $newBH, 0, 0, $newBW, $newBH);
 
             imagedestroy($bannerImg);
             imagedestroy($resizedBanner);
         }
 
-        return response()->stream(function() use ($mainImg) {
-            imagejpeg($mainImg, null, 90);
-            imagedestroy($mainImg);
-        }, 200, [
-            'Content-Type' => 'image/jpeg',
-            'Cache-Control' => 'public, max-age=3600'
-        ]);
+        header('Content-Type: image/jpeg');
+        imagejpeg($mainImg, null, 90);
+        imagedestroy($mainImg);
+        exit;
     }
 
     private function loadAnyImage($path)
     {
         if (!file_exists($path)) return false;
+
         $info = @getimagesize($path);
         if (!$info) return false;
 
         switch ($info['mime']) {
-            case 'image/jpeg': return imagecreatefromjpeg($path);
-            case 'image/png': return imagecreatefrompng($path);
-            case 'image/webp': return imagecreatefromwebp($path);
-            case 'image/gif': return imagecreatefromgif($path);
-            default: return false;
+            case 'image/jpeg':
+                return imagecreatefromjpeg($path);
+            case 'image/png':
+                return imagecreatefrompng($path);
+            case 'image/webp':
+                return imagecreatefromwebp($path);
+            case 'image/gif':
+                return imagecreatefromgif($path);
+            default:
+                return false;
         }
     }
+
 
 
 
