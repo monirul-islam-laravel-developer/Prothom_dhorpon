@@ -62,69 +62,78 @@ class FrontNewsDetailController extends Controller
         $mainPath   = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
+        // Facebook standard OG size
+        $finalW = 1200;
+        $finalH = 628;
+
+        // Create canvas
+        $finalImg = imagecreatetruecolor($finalW, $finalH);
+
+        // White Background
+        $white = imagecolorallocate($finalImg, 255, 255, 255);
+        imagefilledrectangle($finalImg, 0, 0, $finalW, $finalH, $white);
+
+        // Load main image
         $mainImg = $this->loadAnyImage($mainPath);
-        if (!$mainImg) abort(404);
+        if ($mainImg) {
+            $mw = imagesx($mainImg);
+            $mh = imagesy($mainImg);
 
-        $mainW = imagesx($mainImg);
-        $mainH = imagesy($mainImg);
+            // Fit main image into top 70%
+            $targetH = intval($finalH * 0.70);
+            $scale = min($finalW / $mw, $targetH / $mh);
 
+            $newMW = intval($mw * $scale);
+            $newMH = intval($mh * $scale);
+
+            $resizedMain = imagecreatetruecolor($newMW, $newMH);
+            imagecopyresampled($resizedMain, $mainImg, 0, 0, 0, 0, $newMW, $newMH, $mw, $mh);
+
+            $x = intval(($finalW - $newMW) / 2);
+            $y = 0;
+
+            imagecopy($finalImg, $resizedMain, $x, $y, 0, 0, $newMW, $newMH);
+        }
+
+        // Load banner
         $bannerImg = $this->loadAnyImage($bannerPath);
-
         if ($bannerImg) {
 
-            // ORIGINAL banner details
             $bw = imagesx($bannerImg);
             $bh = imagesy($bannerImg);
 
-            // ---- FIX 1: Banner বড় হলে proportionally resize ----
-            if ($bw > $mainW) {
-                $scale = $mainW / $bw;
-                $newBW = $mainW;
-                $newBH = intval($bh * $scale);
-            } else {
-                // ছোট হলে original রাখবো
-                $newBW = $bw;
-                $newBH = $bh;
-            }
+            // Fit banner into bottom 30%
+            $targetBH = intval($finalH * 0.30);
+            $scaleB = min($finalW / $bw, $targetBH / $bh);
 
-            // ---- FIX 2: Always make proper canvas for resized banner ----
-            $bannerFinal = imagecreatetruecolor($newBW, $newBH);
+            $newBW = intval($bw * $scaleB);
+            $newBH = intval($bh * $scaleB);
 
-            // Support PNG transparency
-            imagealphablending($bannerFinal, false);
-            imagesavealpha($bannerFinal, true);
+            $resizedBanner = imagecreatetruecolor($newBW, $newBH);
 
-            // Proper resample
-            imagecopyresampled($bannerFinal, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+            // Transparency enable
+            imagealphablending($resizedBanner, false);
+            imagesavealpha($resizedBanner, true);
 
-            // ---- FIX 3: Create new final canvas (mainH + bannerH) ----
-            $newHeight = $mainH + $newBH;
-            $final = imagecreatetruecolor($mainW, $newHeight);
+            imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
 
-            // White BG
-            $white = imagecolorallocate($final, 255, 255, 255);
-            imagefilledrectangle($final, 0, 0, $mainW, $newHeight, $white);
+            // Bottom centered
+            $bx = intval(($finalW - $newBW) / 2);
+            $by = $finalH - $newBH;
 
-            // Main image on top
-            imagecopy($final, $mainImg, 0, 0, 0, 0, $mainW, $mainH);
-
-            // Banner perfectly centered
-            $x = intval(($mainW - $newBW) / 2);
-            imagecopy($final, $bannerFinal, $x, $mainH, 0, 0, $newBW, $newBH);
-
-            $mainImg = $final;
+            imagecopy($finalImg, $resizedBanner, $bx, $by, 0, 0, $newBW, $newBH);
         }
 
-        header('Content-Type: image/jpeg');
-        imagejpeg($mainImg, null, 90);
-        imagedestroy($mainImg);
+        header("Content-Type: image/jpeg");
+        imagejpeg($finalImg, null, 90);
+
+        imagedestroy($finalImg);
         exit;
     }
 
     private function loadAnyImage($path)
     {
         if (!file_exists($path)) return false;
-
         $info = getimagesize($path);
         if (!$info) return false;
 
@@ -136,6 +145,7 @@ class FrontNewsDetailController extends Controller
             default: return false;
         }
     }
+
 
 
 }
