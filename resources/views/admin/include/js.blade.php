@@ -70,19 +70,7 @@
 <script src="{{asset('/')}}admin/assets/js/table-editable.js"></script>
 
 
-<!-- Summernote JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            height: 250,          // set editor height
-            minHeight: null,      // set minimum height
-            maxHeight: null,      // set maximum height
-            focus: true           // set focus to editable area after initializing
-        });
-    });
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
 <!-- seo tag input add blade JS -->
 <script>
     const input = document.getElementById('tag-input');
@@ -130,6 +118,26 @@
         }
     });
 </script>
+<script>
+    $(document).ready(function() {
+
+        $('#summernote').summernote({
+            dialogsInBody: true,   // modal body-r baire hoyena, conflict kom
+            callbacks: {
+                onImageUploadError: function() {
+                    $('.note-modal').modal('hide'); // error holeo close hobe
+                }
+            }
+        });
+
+        // Force close modal when cross is clicked
+        $(document).on('click', '.note-modal .close, .note-modal .note-btn', function() {
+            $('.note-modal').modal('hide');
+        });
+
+    });
+</script>
+
 <!-- end seo tag input JS -->
 
 
