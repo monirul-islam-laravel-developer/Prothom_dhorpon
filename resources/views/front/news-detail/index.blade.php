@@ -13,11 +13,9 @@
     {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
 
-
-
-
-
-
+@section('og:image')
+        {{ route('news.ogimage', [$news->id]) }}
+@endsection
 
 
 
@@ -215,33 +213,11 @@
 
 
                         </div>
-                        @php
-                            // Public og:image
-                            $ogImage = !empty($news->image)
-                                ? asset('uploads/news/' . $news->image)
-                                : route('news.ogimage', $news->id);
 
-                            // Lazy load Summernote/body images
-                            $bodyContent = preg_replace_callback(
-                                '/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i',
-                                function ($match) {
-                                    $src = $match[1];
-                                    return '<img src="'.$src.'" class="img-fluid" loading="lazy">';
-                                },
-                                $news->description
-                            );
-                        @endphp
+                        <div class="single-content2">
+                            {!! $news->description !!}
+                        </div>
 
-                        {{-- Og:image meta --}}
-                        @section('og:image')
-                            {{ $ogImage }}
-                        @endsection
-
-                        @section('content')
-                            <div class="single-content2">
-                                {!! $bodyContent !!}
-                            </div>
-                            @endsection
 
 
 
