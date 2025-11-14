@@ -57,63 +57,86 @@ class FrontNewsDetailController extends Controller
     public function ogImage($id)
     {
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
-        $ads  = Ads::first();
+        $ads = Ads::first();
 
-        $finalWidth  = 1200;
-        $finalHeight = 630;
+        $mainPath = public_path($news->image ?? 'default-news.jpg');
+        $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
-        // Create final canvas
-        $final = imagecreatetruecolor($finalWidth, $finalHeight);
+        $mainImg = $this->loadAnyImage($mainPath);
+        if (!$mainImg) abort(404, "Main Image Not Found");
 
-        // White background
-        $white = imagecolorallocate($final, 255, 255, 255);
-        imagefill($final, 0, 0, $white);
+        $mainW = imagesx($mainImg);
+        $mainH = imagesy($mainImg);
 
-        // MAIN IMAGE
-        $mainPath = public_path($news->image);
-        $mainImg = @imagecreatefromjpeg($mainPath);
+        if (file_exists($bannerPath)) {
+            $bannerImg = $this->loadAnyImage($bannerPath);
+            if ($bannerImg) {
+                $bw = imagesx($bannerImg);
+                $bh = imagesy($bannerImg);
 
-        // যদি jpg না হয় (png হলে)
-        if (!$mainImg && file_exists($mainPath)) {
-            $mainImg = @imagecreatefrompng($mainPath);
+                // Scale banner width to main image width
+                $newBW = $mainW;
+                $newBH = intval(($bh / $bw) * $newBW);
+
+                $resizedBanner = imagecreatetruecolor($newBW, $newBH);
+
+                // Preserve transparency
+                imagealphablending($resizedBanner, false);
+                imagesavealpha($resizedBanner, true);
+                $transparent = imagecolorallocatealpha($resizedBanner, 0, 0, 0, 127);
+                imagefill($resizedBanner, 0, 0, $transparent);
+
+                imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+
+                // Place banner at bottom
+                imagecopy($mainImg, $resizedBanner, 0, $mainH - $newBH, 0, 0, $newBW, $newBH);
+
+                imagedestroy($bannerImg);
+                imagedestroy($resizedBanner);
+            }
         }
 
-        // BANNER IMAGE
-        $bannerPath = public_path($ads->head_banner);
-        $bannerImg = @imagecreatefromjpeg($bannerPath);
-
-        if (!$bannerImg && file_exists($bannerPath)) {
-            $bannerImg = @imagecreatefrompng($bannerPath);
+        // Output same format as main image
+        $info = getimagesize($mainPath);
+        switch ($info['mime']) {
+            case 'image/png':
+                header('Content-Type: image/png');
+                imagepng($mainImg);
+                break;
+            case 'image/webp':
+                header('Content-Type: image/webp');
+                imagewebp($mainImg);
+                break;
+            default:
+                header('Content-Type: image/jpeg');
+                imagejpeg($mainImg, null, 90);
+                break;
         }
 
-        // Resize main image (top)
-        imagecopyresampled(
-            $final, $mainImg,
-            0, 0, 0, 0,
-            1200, 450,
-            imagesx($mainImg), imagesy($mainImg)
-        );
-
-        // Resize banner (bottom)
-        imagecopyresampled(
-            $final, $bannerImg,
-            0, 450, 0, 0,
-            1200, 180,
-            imagesx($bannerImg), imagesy($bannerImg)
-        );
-
-        // Save final output
-        $save = public_path("og-images/og-$id.jpg");
-        imagejpeg($final, $save, 90);
-
-        // destroy memory
-        imagedestroy($final);
         imagedestroy($mainImg);
-        imagedestroy($bannerImg);
-
-        // Return proper image header
-        return response()->file($save)->header('Content-Type', 'image/jpeg');
+        exit;
     }
+
+    private function loadAnyImage($path)
+    {
+        if (!file_exists($path)) return false;
+        $info = @getimagesize($path);
+        if (!$info) return false;
+
+        switch ($info['mime']) {
+            case 'image/jpeg':
+                return imagecreatefromjpeg($path);
+            case 'image/png':
+                return imagecreatefrompng($path);
+            case 'image/webp':
+                return imagecreatefromwebp($path);
+            case 'image/gif':
+                return imagecreatefromgif($path);
+            default:
+                return false;
+        }
+    }
+
 
 
 
