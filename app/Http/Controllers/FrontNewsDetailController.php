@@ -77,13 +77,13 @@ class FrontNewsDetailController extends Controller
             imagesavealpha($resizedBanner, true);
 
             imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
-
             imagecopy($mainImg, $resizedBanner, 0, $mainH - $newBH, 0, 0, $newBW, $newBH);
 
             imagedestroy($bannerImg);
             imagedestroy($resizedBanner);
         }
 
+        // Laravel-style response → কোনো header() বা exit ব্যবহার হয়নি
         return response()->stream(function () use ($mainImg) {
             imagejpeg($mainImg, null, 90);
             imagedestroy($mainImg);
@@ -92,6 +92,7 @@ class FrontNewsDetailController extends Controller
             'Cache-Control' => 'public, max-age=3600'
         ]);
     }
+
 
     private function loadAnyImage($path)
     {
