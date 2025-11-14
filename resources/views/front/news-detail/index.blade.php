@@ -12,18 +12,26 @@
 @section('og:description')
     {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
+
+
 @php
-    // Check if news body has any <img> tag
-    $hasBodyImage = preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i', $news->description);
+    // Check if body has any <img> tag
+    $hasBodyImage = false;
+
+    // preg_match returns 1 if match found
+    if(preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i', $news->description)) {
+        $hasBodyImage = true;
+    }
 @endphp
 
 @section('og:image')
-    @if($hasBodyImage)
+    @if($hasBodyImage && !empty($news->image))
         {{ asset($news->image) }}
     @else
         {{ route('news.ogimage', $news->id) }}
     @endif
 @endsection
+
 
 
 {{--@section('og:image')--}}
