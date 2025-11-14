@@ -213,8 +213,9 @@
                                 // Body-এর কোনো img tag যদি ভুলবশত og-image route ধরে, সেটাকে ignore করা হবে
                                 $filteredDescription = str_replace('og-image', 'no-og-image', $news->description);
                             @endphp
-
-                            {!! $filteredDescription !!}
+                            <div class="single-content2">
+                                {!! preg_replace('/<img[^>]+src=".*og-image.*"[^>]*>/', '', $news->description) !!}
+                            </div>
                         </div>
 
                         </br>
