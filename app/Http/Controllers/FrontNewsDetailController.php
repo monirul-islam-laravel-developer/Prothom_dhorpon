@@ -83,7 +83,6 @@ class FrontNewsDetailController extends Controller
             imagedestroy($resizedBanner);
         }
 
-        // Laravel-style response → কোনো header() বা exit ব্যবহার হয়নি
         return response()->stream(function () use ($mainImg) {
             imagejpeg($mainImg, null, 90);
             imagedestroy($mainImg);
@@ -93,7 +92,6 @@ class FrontNewsDetailController extends Controller
         ]);
     }
 
-
     private function loadAnyImage($path)
     {
         if (!file_exists($path)) return false;
@@ -101,16 +99,11 @@ class FrontNewsDetailController extends Controller
         if (!$info) return false;
 
         switch ($info['mime']) {
-            case 'image/jpeg':
-                return imagecreatefromjpeg($path);
-            case 'image/png':
-                return imagecreatefrompng($path);
-            case 'image/webp':
-                return imagecreatefromwebp($path);
-            case 'image/gif':
-                return imagecreatefromgif($path);
-            default:
-                return false;
+            case 'image/jpeg': return imagecreatefromjpeg($path);
+            case 'image/png': return imagecreatefrompng($path);
+            case 'image/webp': return imagecreatefromwebp($path);
+            case 'image/gif': return imagecreatefromgif($path);
+            default: return false;
         }
     }
 
