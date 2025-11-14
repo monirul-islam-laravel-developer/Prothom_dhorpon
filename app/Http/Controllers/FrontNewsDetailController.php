@@ -57,11 +57,10 @@ class FrontNewsDetailController extends Controller
         $mainPath = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
-        // Any image type load
         $mainImg = $this->loadAnyImage($mainPath);
         $bannerImg = $this->loadAnyImage($bannerPath);
 
-        if (!$mainImg) abort(404, "Main Image Not Found");
+        if (!$mainImg) abort(404);
 
         $mainW = imagesx($mainImg);
         $mainH = imagesy($mainImg);
@@ -70,34 +69,33 @@ class FrontNewsDetailController extends Controller
             $bw = imagesx($bannerImg);
             $bh = imagesy($bannerImg);
 
-            // Maintain aspect ratio (no stretch)
             $newBW = $mainW;
             $newBH = intval(($bh / $bw) * $newBW);
 
             $resizedBanner = imagecreatetruecolor($newBW, $newBH);
-
-            // Keep transparency for PNG/GIF
             imagealphablending($resizedBanner, false);
             imagesavealpha($resizedBanner, true);
 
             imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
 
-            // Place banner at bottom
             imagecopy($mainImg, $resizedBanner, 0, $mainH - $newBH, 0, 0, $newBW, $newBH);
 
             imagedestroy($bannerImg);
             imagedestroy($resizedBanner);
         }
 
-        header('Content-Type: image/jpeg');
-        imagejpeg($mainImg, null, 90);
-        imagedestroy($mainImg);
-        exit;
+        return response()->stream(function () use ($mainImg) {
+            imagejpeg($mainImg, null, 90);
+            imagedestroy($mainImg);
+        }, 200, [
+            'Content-Type' => 'image/jpeg',
+            'Cache-Control' => 'public, max-age=3600'
+        ]);
     }
+
     private function loadAnyImage($path)
     {
         if (!file_exists($path)) return false;
-
         $info = @getimagesize($path);
         if (!$info) return false;
 
