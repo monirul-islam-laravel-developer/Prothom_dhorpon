@@ -48,7 +48,6 @@ class FrontNewsDetailController extends Controller
 
         return view('front.news-detail.index', compact('news', 'relatedNews', 'todayViews'));
     }
-// app/Http/Controllers/FrontNewsDetailController.php
     public function ogImage($id)
     {
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
