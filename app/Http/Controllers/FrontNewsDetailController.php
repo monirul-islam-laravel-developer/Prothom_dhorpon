@@ -59,92 +59,46 @@ class FrontNewsDetailController extends Controller
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
         $ads  = Ads::first();
 
-        $mainPath   = public_path($news->image ?? 'default-news.jpg');
-        $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
+        // Final OG Image Size (Facebook recommended)
+        $finalWidth  = 1200;
+        $finalHeight = 630;
 
-        // Facebook standard OG size
-        $finalW = 1200;
-        $finalH = 628;
-
-        // Create canvas
-        $finalImg = imagecreatetruecolor($finalW, $finalH);
+        // Create blank final image canvas
+        $final = imagecreatetruecolor($finalWidth, $finalHeight);
 
         // White Background
-        $white = imagecolorallocate($finalImg, 255, 255, 255);
-        imagefilledrectangle($finalImg, 0, 0, $finalW, $finalH, $white);
+        $white = imagecolorallocate($final, 255, 255, 255);
+        imagefill($final, 0, 0, $white);
 
-        // Load main image
-        $mainImg = $this->loadAnyImage($mainPath);
-        if ($mainImg) {
-            $mw = imagesx($mainImg);
-            $mh = imagesy($mainImg);
+        // Load main news image
+        $mainPath = public_path($news->image ?? 'default-news.jpg');
+        $mainImg = imagecreatefromjpeg($mainPath);
 
-            // Fit main image into top 70%
-            $targetH = intval($finalH * 0.70);
-            $scale = min($finalW / $mw, $targetH / $mh);
+        // Load banner ad
+        $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
+        $bannerImg = imagecreatefromjpeg($bannerPath);
 
-            $newMW = intval($mw * $scale);
-            $newMH = intval($mh * $scale);
+        // Resize main image into 1200x450
+        $mainTargetH = 450;
+        $mainTargetW = 1200;
+        imagecopyresampled($final, $mainImg, 0, 0, 0, 0, $mainTargetW, $mainTargetH, imagesx($mainImg), imagesy($mainImg));
 
-            $resizedMain = imagecreatetruecolor($newMW, $newMH);
-            imagecopyresampled($resizedMain, $mainImg, 0, 0, 0, 0, $newMW, $newMH, $mw, $mh);
+        // Resize banner into 1200x180
+        $bannerTargetH = 180;
+        $bannerTargetW = 1200;
+        imagecopyresampled($final, $bannerImg, 0, $mainTargetH, 0, 0, $bannerTargetW, $bannerTargetH, imagesx($bannerImg), imagesy($bannerImg));
 
-            $x = intval(($finalW - $newMW) / 2);
-            $y = 0;
+        // Save final OG image
+        $savePath = public_path("og-images/og-$id.jpg");
+        imagejpeg($final, $savePath, 90);
 
-            imagecopy($finalImg, $resizedMain, $x, $y, 0, 0, $newMW, $newMH);
-        }
+        imagedestroy($final);
+        imagedestroy($mainImg);
+        imagedestroy($bannerImg);
 
-        // Load banner
-        $bannerImg = $this->loadAnyImage($bannerPath);
-        if ($bannerImg) {
-
-            $bw = imagesx($bannerImg);
-            $bh = imagesy($bannerImg);
-
-            // Fit banner into bottom 30%
-            $targetBH = intval($finalH * 0.30);
-            $scaleB = min($finalW / $bw, $targetBH / $bh);
-
-            $newBW = intval($bw * $scaleB);
-            $newBH = intval($bh * $scaleB);
-
-            $resizedBanner = imagecreatetruecolor($newBW, $newBH);
-
-            // Transparency enable
-            imagealphablending($resizedBanner, false);
-            imagesavealpha($resizedBanner, true);
-
-            imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
-
-            // Bottom centered
-            $bx = intval(($finalW - $newBW) / 2);
-            $by = $finalH - $newBH;
-
-            imagecopy($finalImg, $resizedBanner, $bx, $by, 0, 0, $newBW, $newBH);
-        }
-
-        header("Content-Type: image/jpeg");
-        imagejpeg($finalImg, null, 90);
-
-        imagedestroy($finalImg);
-        exit;
+        return response()->file($savePath);
     }
 
-    private function loadAnyImage($path)
-    {
-        if (!file_exists($path)) return false;
-        $info = getimagesize($path);
-        if (!$info) return false;
-
-        switch ($info['mime']) {
-            case 'image/jpeg': return imagecreatefromjpeg($path);
-            case 'image/png':  return imagecreatefrompng($path);
-            case 'image/webp': return imagecreatefromwebp($path);
-            case 'image/gif':  return imagecreatefromgif($path);
-            default: return false;
-        }
-    }
 
 
 
