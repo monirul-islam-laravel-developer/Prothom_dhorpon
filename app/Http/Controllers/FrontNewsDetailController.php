@@ -59,45 +59,62 @@ class FrontNewsDetailController extends Controller
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
         $ads  = Ads::first();
 
-        // Final OG Image Size (Facebook recommended)
         $finalWidth  = 1200;
         $finalHeight = 630;
 
-        // Create blank final image canvas
+        // Create final canvas
         $final = imagecreatetruecolor($finalWidth, $finalHeight);
 
-        // White Background
+        // White background
         $white = imagecolorallocate($final, 255, 255, 255);
         imagefill($final, 0, 0, $white);
 
-        // Load main news image
-        $mainPath = public_path($news->image ?? 'default-news.jpg');
-        $mainImg = imagecreatefromjpeg($mainPath);
+        // MAIN IMAGE
+        $mainPath = public_path($news->image);
+        $mainImg = @imagecreatefromjpeg($mainPath);
 
-        // Load banner ad
-        $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
-        $bannerImg = imagecreatefromjpeg($bannerPath);
+        // যদি jpg না হয় (png হলে)
+        if (!$mainImg && file_exists($mainPath)) {
+            $mainImg = @imagecreatefrompng($mainPath);
+        }
 
-        // Resize main image into 1200x450
-        $mainTargetH = 450;
-        $mainTargetW = 1200;
-        imagecopyresampled($final, $mainImg, 0, 0, 0, 0, $mainTargetW, $mainTargetH, imagesx($mainImg), imagesy($mainImg));
+        // BANNER IMAGE
+        $bannerPath = public_path($ads->head_banner);
+        $bannerImg = @imagecreatefromjpeg($bannerPath);
 
-        // Resize banner into 1200x180
-        $bannerTargetH = 180;
-        $bannerTargetW = 1200;
-        imagecopyresampled($final, $bannerImg, 0, $mainTargetH, 0, 0, $bannerTargetW, $bannerTargetH, imagesx($bannerImg), imagesy($bannerImg));
+        if (!$bannerImg && file_exists($bannerPath)) {
+            $bannerImg = @imagecreatefrompng($bannerPath);
+        }
 
-        // Save final OG image
-        $savePath = public_path("og-images/og-$id.jpg");
-        imagejpeg($final, $savePath, 90);
+        // Resize main image (top)
+        imagecopyresampled(
+            $final, $mainImg,
+            0, 0, 0, 0,
+            1200, 450,
+            imagesx($mainImg), imagesy($mainImg)
+        );
 
+        // Resize banner (bottom)
+        imagecopyresampled(
+            $final, $bannerImg,
+            0, 450, 0, 0,
+            1200, 180,
+            imagesx($bannerImg), imagesy($bannerImg)
+        );
+
+        // Save final output
+        $save = public_path("og-images/og-$id.jpg");
+        imagejpeg($final, $save, 90);
+
+        // destroy memory
         imagedestroy($final);
         imagedestroy($mainImg);
         imagedestroy($bannerImg);
 
-        return response()->file($savePath);
+        // Return proper image header
+        return response()->file($save)->header('Content-Type', 'image/jpeg');
     }
+
 
 
 
