@@ -11,15 +11,18 @@
 @endsection
 @section('og:description')
     {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
-    @php
-        // Declare ogImage variable first
-        $ogImage = !empty($news->image)
-            ? asset('uploads/news/' . $news->image)
-            : route('news.ogimage', $news->id);
-    @endphp
 @endsection
-{{-- Use $ogImage in meta --}}
-@section('og:image', $ogImage)
+@php
+    $ogImage = !empty($news->image)
+        ? asset('uploads/news/' . $news->image)   // public folder image
+        : route('news.ogimage', $news->id);    // controller route fallback
+@endphp
+
+@section('og:image')
+    {{ $ogImage }}
+@endsection
+
+
 
 
 
