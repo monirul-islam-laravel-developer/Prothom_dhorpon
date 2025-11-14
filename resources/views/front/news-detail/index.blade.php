@@ -208,10 +208,20 @@
 
                         </div>
 
-                        <div class="single-content2">
+                        @php
+                            $isOgImage = request()->routeIs('news.ogimage');
+                            $bodyContent = $news->description;
 
-                           {!!$news->description  !!}
+                            if($isOgImage){
+                                // শুধু og:image hit হলে body images block
+                                $bodyContent = preg_replace('/<img[^>]+src="[^"]*"[^>]*>/i', '', $bodyContent);
+                            }
+                        @endphp
+
+                        <div class="single-content2">
+                            {!! $bodyContent !!}
                         </div>
+
 
                         </br>
 {{--                        নিউজটি আপডেট করেছেন : Admin News--}}
