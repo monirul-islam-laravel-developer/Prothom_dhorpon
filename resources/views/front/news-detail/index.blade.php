@@ -209,7 +209,37 @@
                         </div>
 
                         <div class="single-content2">
-                           {!!$news->description  !!}
+                            @php
+                                $filteredBody = preg_replace_callback(
+                                    '/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i',
+                                    function ($match) {
+                                        $src = trim($match[1]);
+
+                                        // ❌ যদি og-image লিংক হয় → সম্পূর্ণ remove
+                                        if (str_contains($src, 'og-image')) {
+                                            return '';
+                                        }
+
+                                        // ❌ যদি base64 হয় → as-is রেখে clean tag বানাবো
+                                        if (str_starts_with($src, 'data:image')) {
+                                            return '<img src="'.$src.'" class="img-fluid" loading="lazy" />';
+                                        }
+
+                                        // ❌ রিলেটিভ URL হলে absolute URL বানানো
+                                        if (!preg_match('/^https?:\/\//i', $src)) {
+                                            $src = url($src);
+                                        }
+
+                                        // ✔ Clean IMG output
+                                        return '<img src="'.$src.'" class="img-fluid" loading="lazy" />';
+                                    },
+                                    $news->body
+                                );
+                            @endphp
+
+                            {!! $filteredBody !!}
+
+                            {!!$news->description  !!}
                         </div>
 
                         </br>
