@@ -62,51 +62,57 @@ class FrontNewsDetailController extends Controller
         $mainPath   = public_path($news->image ?? 'default-news.jpg');
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
-        // Load main image
         $mainImg = $this->loadAnyImage($mainPath);
-        if (!$mainImg) abort(404, "Main Image Not Found");
+        if (!$mainImg) abort(404);
 
-        // Main image size
         $mainW = imagesx($mainImg);
         $mainH = imagesy($mainImg);
 
-        // Load banner image
         $bannerImg = $this->loadAnyImage($bannerPath);
 
         if ($bannerImg) {
 
+            // ORIGINAL banner details
             $bw = imagesx($bannerImg);
             $bh = imagesy($bannerImg);
 
-            // FINAL banner image variable
-            $bannerFinal = $bannerImg;
-            $newBW = $bw;
-            $newBH = $bh;
-
-            // If banner wider than main → scale proportionally
+            // ---- FIX 1: Banner বড় হলে proportionally resize ----
             if ($bw > $mainW) {
-
                 $scale = $mainW / $bw;
                 $newBW = $mainW;
                 $newBH = intval($bh * $scale);
-
-                $resized = imagecreatetruecolor($newBW, $newBH);
-
-                imagealphablending($resized, false);
-                imagesavealpha($resized, true);
-
-                imagecopyresampled($resized, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
-
-                $bannerFinal = $resized;
+            } else {
+                // ছোট হলে original রাখবো
+                $newBW = $bw;
+                $newBH = $bh;
             }
 
-            // Center align at bottom
+            // ---- FIX 2: Always make proper canvas for resized banner ----
+            $bannerFinal = imagecreatetruecolor($newBW, $newBH);
+
+            // Support PNG transparency
+            imagealphablending($bannerFinal, false);
+            imagesavealpha($bannerFinal, true);
+
+            // Proper resample
+            imagecopyresampled($bannerFinal, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
+
+            // ---- FIX 3: Create new final canvas (mainH + bannerH) ----
+            $newHeight = $mainH + $newBH;
+            $final = imagecreatetruecolor($mainW, $newHeight);
+
+            // White BG
+            $white = imagecolorallocate($final, 255, 255, 255);
+            imagefilledrectangle($final, 0, 0, $mainW, $newHeight, $white);
+
+            // Main image on top
+            imagecopy($final, $mainImg, 0, 0, 0, 0, $mainW, $mainH);
+
+            // Banner perfectly centered
             $x = intval(($mainW - $newBW) / 2);
-            $y = $mainH - $newBH;
+            imagecopy($final, $bannerFinal, $x, $mainH, 0, 0, $newBW, $newBH);
 
-            imagecopy($mainImg, $bannerFinal, $x, $y, 0, 0, $newBW, $newBH);
-
-            imagedestroy($bannerFinal);
+            $mainImg = $final;
         }
 
         header('Content-Type: image/jpeg');
@@ -115,27 +121,21 @@ class FrontNewsDetailController extends Controller
         exit;
     }
 
-
-// Load JPG/PNG/WEBP/GIF safely
     private function loadAnyImage($path)
     {
         if (!file_exists($path)) return false;
 
-        $info = @getimagesize($path);
+        $info = getimagesize($path);
         if (!$info) return false;
 
         switch ($info['mime']) {
-            case 'image/jpeg':
-                return imagecreatefromjpeg($path);
-            case 'image/png':
-                return imagecreatefrompng($path);
-            case 'image/webp':
-                return imagecreatefromwebp($path);
-            case 'image/gif':
-                return imagecreatefromgif($path);
-            default:
-                return false;
+            case 'image/jpeg': return imagecreatefromjpeg($path);
+            case 'image/png':  return imagecreatefrompng($path);
+            case 'image/webp': return imagecreatefromwebp($path);
+            case 'image/gif':  return imagecreatefromgif($path);
+            default: return false;
         }
     }
+
 
 }
