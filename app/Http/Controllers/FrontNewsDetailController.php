@@ -48,12 +48,19 @@ class FrontNewsDetailController extends Controller
 
         return view('front.news-detail.index', compact('news', 'relatedNews', 'todayViews'));
     }
-    public function ogImage($id)
+    public function show($id)
     {
         $news = Post::where('id', $id)->where('status', 1)->firstOrFail();
+        return view('news.show', compact('news'));
+    }
+
+// OgImage route
+    public function ogImage($id)
+    {
+        $news = Post::findOrFail($id);
         $ads = Ads::first();
 
-        $mainPath = public_path($news->image ?? 'default-news.jpg');
+        $mainPath = public_path('uploads/news/' . ($news->image ?? 'default-news.jpg'));
         $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
 
         $mainImg = $this->loadAnyImage($mainPath);
@@ -82,7 +89,7 @@ class FrontNewsDetailController extends Controller
             imagedestroy($resizedBanner);
         }
 
-        return response()->stream(function () use ($mainImg) {
+        return response()->stream(function() use ($mainImg) {
             imagejpeg($mainImg, null, 90);
             imagedestroy($mainImg);
         }, 200, [
@@ -105,6 +112,7 @@ class FrontNewsDetailController extends Controller
             default: return false;
         }
     }
+
 
 
 
