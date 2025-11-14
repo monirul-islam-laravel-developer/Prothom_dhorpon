@@ -213,7 +213,7 @@
                             $bodyContent = $news->description;
 
                             if($isOgImage){
-                                // শুধু og:image hit হলে body images block
+                                // শুধু og:image hit হলে all images remove
                                 $bodyContent = preg_replace('/<img[^>]+src="[^"]*"[^>]*>/i', '', $bodyContent);
                             }
                         @endphp
