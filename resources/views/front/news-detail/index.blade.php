@@ -12,21 +12,8 @@
 @section('og:description')
     {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
-
-
-@php
-    // Check if body has any <img> tag
-    $hasBodyImage = false;
-
-    // preg_match returns 1 if match found
-    if(preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i', $news->description)) {
-        $hasBodyImage = true;
-    }
-@endphp
-
-@section('og:image')
-        {{ route('news.ogimage', $news->id) }}
-@endsection
+{{-- Use $ogImage in meta --}}
+@section('og:image', $ogImage)
 
 
 
@@ -225,29 +212,32 @@
 
                         </div>
 
-
                         @php
-                            // Check if the current request is for og:image route
-                            $isOgImage = request()->routeIs('news.ogimage');
+                            // Main image always use for og:image
+                            $ogImage = !empty($news->image)
+                                ? asset('uploads/news/' . $news->image)
+                                : route('news.ogimage', $news->id);
 
-                            // Start with the body content
-                            $bodyContent = $news->description;
-
-                            if($isOgImage){
-                                // Og:image hit হলে body images remove
-                                $bodyContent = preg_replace('/<img[^>]+src="[^"]*"[^>]*>/i', '', $bodyContent);
-                            } else {
-                                // Normal page load → lazy load body images
-                                $bodyContent = preg_replace_callback('/<img[^>]+src="([^"]+)"[^>]*>/i', function($m){
-                                    $src = $m[1];
+                            // Body content lazy load
+                            $bodyContent = preg_replace_callback(
+                                '/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i',
+                                function ($match) {
+                                    $src = $match[1];
                                     return '<img src="'.$src.'" class="img-fluid" loading="lazy">';
-                                }, $bodyContent);
-                            }
+                                },
+                                $news->description
+                            );
                         @endphp
+
+
 
                         <div class="single-content2">
                             {!! $bodyContent !!}
                         </div>
+
+
+
+
 
 
 
