@@ -14,7 +14,7 @@
 @endsection
 
 @section('og:image')
-        {{ route('news.ogimage', [$news->id]) }}
+    {{ route('news.ogimage', $news->id) }}
 @endsection
 
 
@@ -214,9 +214,9 @@
 
                         </div>
 
-                        <div class="single-content2">
-                            {!! $news->description !!}
-                        </div>
+                            <div class="single-content2">
+                                {!! $news->description !!}
+                            </div>
 
 
 

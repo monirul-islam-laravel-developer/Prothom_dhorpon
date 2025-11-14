@@ -54,7 +54,6 @@ class FrontNewsDetailController extends Controller
         return view('news.show', compact('news'));
     }
 
-// OgImage route
     public function ogImage($id)
     {
         $news = Post::findOrFail($id);
@@ -112,6 +111,8 @@ class FrontNewsDetailController extends Controller
             default: return false;
         }
     }
+
+
 
 
 
