@@ -80,7 +80,7 @@ class FrontNewsDetailController extends Controller
 
                 $resizedBanner = imagecreatetruecolor($newBW, $newBH);
 
-                // Preserve transparency
+                // Preserve transparency for PNG/GIF
                 imagealphablending($resizedBanner, false);
                 imagesavealpha($resizedBanner, true);
                 $transparent = imagecolorallocatealpha($resizedBanner, 0, 0, 0, 127);
@@ -96,22 +96,9 @@ class FrontNewsDetailController extends Controller
             }
         }
 
-        // Output same format as main image
-        $info = getimagesize($mainPath);
-        switch ($info['mime']) {
-            case 'image/png':
-                header('Content-Type: image/png');
-                imagepng($mainImg);
-                break;
-            case 'image/webp':
-                header('Content-Type: image/webp');
-                imagewebp($mainImg);
-                break;
-            default:
-                header('Content-Type: image/jpeg');
-                imagejpeg($mainImg, null, 90);
-                break;
-        }
+        // Always return JPEG
+        header('Content-Type: image/jpeg');
+        imagejpeg($mainImg, null, 90);
 
         imagedestroy($mainImg);
         exit;
@@ -136,6 +123,7 @@ class FrontNewsDetailController extends Controller
                 return false;
         }
     }
+
 
 
 
