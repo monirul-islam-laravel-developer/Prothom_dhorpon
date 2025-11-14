@@ -11,6 +11,12 @@
 @endsection
 @section('og:description')
     {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
+    @php
+        // Declare ogImage variable first
+        $ogImage = !empty($news->image)
+            ? asset('uploads/news/' . $news->image)
+            : route('news.ogimage', $news->id);
+    @endphp
 @endsection
 {{-- Use $ogImage in meta --}}
 @section('og:image', $ogImage)
@@ -212,27 +218,8 @@
 
                         </div>
 
-                        @php
-                            // Main image always use for og:image
-                            $ogImage = !empty($news->image)
-                                ? asset('uploads/news/' . $news->image)
-                                : route('news.ogimage', $news->id);
-
-                            // Body content lazy load
-                            $bodyContent = preg_replace_callback(
-                                '/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i',
-                                function ($match) {
-                                    $src = $match[1];
-                                    return '<img src="'.$src.'" class="img-fluid" loading="lazy">';
-                                },
-                                $news->description
-                            );
-                        @endphp
-
-
-
                         <div class="single-content2">
-                            {!! $bodyContent !!}
+                            {!! $news->description !!}
                         </div>
 
 
