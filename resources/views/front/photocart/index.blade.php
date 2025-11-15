@@ -18,13 +18,12 @@
     .card {
         max-width: 520px;
         background: linear-gradient(180deg, #ffffff 0%, #e6f3ef 100%);
-        border: 1px solid #c7d8d3;
-        border-radius: 14px;
-        margin: 15px auto;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        border-radius: 12px;
+        margin: 10px auto;
+        padding: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         text-align: center;
         position: relative;
-        padding: 8px;
     }
 
     .header {
@@ -40,12 +39,12 @@
     .image-section {
         width: 100%;
         background: linear-gradient(180deg, #f0faf7, #d9f0e5);
-        margin-bottom: -20px;
+        margin-bottom: 4px;
         border-bottom: 1px solid #d0e5db;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 8px 0;
+        padding: 4px 0;
         border-radius: 6px;
     }
 
@@ -71,7 +70,7 @@
         border-radius: 50%;
         border: 2px solid #fff;
         background-color: #fff;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.20);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         overflow: hidden;
         z-index: 10;
     }
@@ -83,14 +82,14 @@
     }
 
     .content {
-        padding: 10px 12px;
+        padding: 8px 10px;
         color: #141202;
         line-height: 1.4;
         font-size: 18px;
         font-weight: 900;
         border-bottom: 2px solid #c40000;
         display: inline-block;
-        margin: 10px auto 10px;
+        margin: 4px auto 6px;
     }
 
     .content::before {
@@ -104,18 +103,18 @@
         background: linear-gradient(90deg, #c40000, #e63b3b);
         color: white;
         font-weight: bold;
-        margin: 6px auto 8px;
-        padding: 5px 16px;
-        font-size: 15px;
-        border-radius: 22px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+        margin: 4px auto 6px;
+        padding: 5px 14px;
+        font-size: 14px;
+        border-radius: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .banner-ad {
         width: 100%;
-        height: 42px;
+        height: 40px;
         overflow: hidden;
-        margin-top: 6px;
+        margin-top: 4px;
         border-top: 1px solid #d1e1dc;
         border-bottom: 1px solid #d1e1dc;
         background: #ffffff;
@@ -130,7 +129,7 @@
         background: linear-gradient(90deg, #0fa835, #128a2e);
         color: white;
         font-size: 12px;
-        padding: 4px 10px;
+        padding: 3px 8px;
         display: flex;
         justify-content: space-between;
     }
@@ -146,7 +145,7 @@
 
     .download-btn {
         display: block;
-        margin: 8px auto 10px;
+        margin: 6px auto 10px;
         background-color: #c40000;
         color: #fff;
         border: none;
@@ -159,7 +158,6 @@
     .download-btn:hover {
         background-color: #e63b3b;
     }
-
 </style>
 
 @section('body')
@@ -189,7 +187,6 @@
                     <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
                 </div>
             @endif
-
 
             <div class="footer">
                 <a href="#">prothomdorpan.com</a>
