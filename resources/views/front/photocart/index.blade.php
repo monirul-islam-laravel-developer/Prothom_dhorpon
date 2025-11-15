@@ -1,33 +1,35 @@
 @extends('master.front.master')
-    @section('title')
-        ফটোকার্ড
+@section('title')
+    ফটোকার্ড
 @endsection
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700;900&display=swap');
 
     body {
         font-family: 'Noto Serif Bengali', serif;
-        background-color: #f1f4f3;
+        background: linear-gradient(135deg, #d0f0e0 0%, #f0f9f4 50%, #bdeed2 100%);
         margin: 0;
         padding: 0;
     }
 
     .card {
         max-width: 520px;
-        background-color: #e8f1ee;
+        background: linear-gradient(180deg, #ffffff 0%, #e6f3ef 100%);
         border: 1px solid #c7d8d3;
-        border-radius: 10px;
-        margin: 10px auto;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        border-radius: 14px;
+        margin: 15px auto;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         text-align: center;
         position: relative;
-        padding: 5px;
+        padding: 8px;
     }
 
     .header {
-        background-color: #dbe7e2;
-        padding: 2px 0;
+        background: linear-gradient(90deg, #d9f0e5, #f0faf7);
+        padding: 4px 0;
     }
 
     .header img {
@@ -35,22 +37,22 @@
         width: auto;
     }
 
-    /* ✅ Auto-fit image (no crop) */
     .image-section {
         width: 100%;
-        background-color: #eef4f2; /* হালকা ব্যাকগ্রাউন্ড */
+        background: linear-gradient(180deg, #f0faf7, #d9f0e5);
         margin-bottom: -20px;
-        border-bottom: 1px solid #d8e4e0;
+        border-bottom: 1px solid #d0e5db;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 5px 0;
+        padding: 8px 0;
+        border-radius: 6px;
     }
 
     .image-section img {
         width: 95%;
         height: auto;
-        max-height: 270px; /* খুব বেশি লম্বা না হয় */
+        max-height: 270px;
         object-fit: contain;
         display: block;
     }
@@ -63,13 +65,13 @@
 
     .brand-logo {
         position: relative;
-        margin: -20px auto 5px;
-        width: 50px;
-        height: 50px;
+        margin: -22px auto 6px;
+        width: 52px;
+        height: 52px;
         border-radius: 50%;
         border: 2px solid #fff;
         background-color: #fff;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.20);
         overflow: hidden;
         z-index: 10;
     }
@@ -81,14 +83,14 @@
     }
 
     .content {
-        padding: 8px 10px;
+        padding: 10px 12px;
         color: #141202;
         line-height: 1.4;
         font-size: 18px;
         font-weight: 900;
         border-bottom: 2px solid #c40000;
         display: inline-block;
-        margin: 4px auto 6px;
+        margin: 10px auto 10px;
     }
 
     .content::before {
@@ -102,20 +104,21 @@
         background: linear-gradient(90deg, #c40000, #e63b3b);
         color: white;
         font-weight: bold;
-        margin: 3px auto 5px;
-        padding: 3px 12px;
-        font-size: 14px;
-        border-radius: 18px;
+        margin: 6px auto 8px;
+        padding: 5px 16px;
+        font-size: 15px;
+        border-radius: 22px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.18);
     }
 
     .banner-ad {
         width: 100%;
-        height: 40px;
+        height: 42px;
         overflow: hidden;
-        margin-top: 3px;
-        border-top: 1px solid #c7d8d3;
-        border-bottom: 1px solid #c7d8d3;
-        background-color: #fff;
+        margin-top: 6px;
+        border-top: 1px solid #d1e1dc;
+        border-bottom: 1px solid #d1e1dc;
+        background: #ffffff;
     }
 
     .banner-ad img {
@@ -124,10 +127,10 @@
     }
 
     .footer {
-        background-color: #109935;
+        background: linear-gradient(90deg, #0fa835, #128a2e);
         color: white;
         font-size: 12px;
-        padding: 2px 8px;
+        padding: 4px 10px;
         display: flex;
         justify-content: space-between;
     }
@@ -156,60 +159,66 @@
     .download-btn:hover {
         background-color: #e63b3b;
     }
+
 </style>
+
 @section('body')
 
-<div id="card-wrapper">
-    <div class="card" id="photo-card">
-        <div class="header">
-            <img src="{{ asset($webLogo->desktop_logo) }}" alt="logo">
-        </div>
+    <div id="card-wrapper">
+        <div class="card" id="photo-card">
+            <div class="header">
+                <img src="{{ asset($webLogo->desktop_logo) }}" alt="logo">
+            </div>
 
-        <div class="image-section">
-            <img src="{{ asset($news->image) }}" alt="news image">
-        </div>
+            <div class="image-section">
+                <img src="{{ asset($news->image) }}" alt="news image">
+            </div>
 
-        <div class="brand-logo">
-            <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="brand logo">
-        </div>
+            <div class="brand-logo">
+                <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="brand logo">
+            </div>
 
-        <div class="content">
-            {{ $news->title }}
-        </div>
+            <div class="content">
+                {{ $news->title }}
+            </div>
 
-        <div class="highlight">বিস্তারিত কমেন্টে</div>
+            <div class="highlight">বিস্তারিত কমেন্টে</div>
 
-        <div class="banner-ad">
-            <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
-        </div>
+            @if(!empty($ads->news_pics_under_ads))
+                <div class="banner-ad">
+                    <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
+                </div>
+            @endif
 
-        <div class="footer">
-            <a href="#">prothomdorpan.com</a>
-            <div class="date">
-                @php
-                    use Carbon\Carbon;
-                    $date = Carbon::parse($news->created_at)->timezone('Asia/Dhaka')->locale('bn');
-                    $formatted = $date->translatedFormat('d F Y');
-                    $english = ['0','1','2','3','4','5','6','7','8','9','AM','PM'];
-                    $bangla  = ['০','১','২','৩','৪','৫','৬','৭','৮','৯','পূর্বাহ্ণ','অপরাহ্ণ'];
-                    echo str_replace($english, $bangla, $formatted);
-                @endphp
+
+            <div class="footer">
+                <a href="#">prothomdorpan.com</a>
+                <div class="date">
+                    @php
+                        use Carbon\Carbon;
+                        $date = Carbon::parse($news->created_at)->timezone('Asia/Dhaka')->locale('bn');
+                        $formatted = $date->translatedFormat('d F Y');
+                        $english = ['0','1','2','3','4','5','6','7','৮','৯','AM','PM'];
+                        $bangla  = ['০','১','২','৩','৪','৫','৬','৭','৮','৯','পূর্বাহ্ণ','অপরাহ্ণ'];
+                        echo str_replace($english, $bangla, $formatted);
+                    @endphp
+                </div>
             </div>
         </div>
+
+        <button class="download-btn" onclick="downloadCard()">ডাউনলোড করুন</button>
     </div>
 
-    <button class="download-btn" onclick="downloadCard()">ডাউনলোড করুন</button>
-</div>
+    <script>
+        function downloadCard() {
+            const card = document.getElementById("photo-card");
+            html2canvas(card, { scale: 3, useCORS: true }).then(canvas => {
+                const link = document.createElement("a");
+                link.download = "photo-card.png";
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            });
+        }
+    </script>
 
-<script>
-    function downloadCard() {
-        const card = document.getElementById("photo-card");
-        html2canvas(card, { scale: 3, useCORS: true }).then(canvas => {
-            const link = document.createElement("a");
-            link.download = "photo-card.png";
-            link.href = canvas.toDataURL("image/png");
-            link.click();
-        });
-    }
-</script>
 @endsection
