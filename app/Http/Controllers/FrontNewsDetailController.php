@@ -60,7 +60,7 @@ class FrontNewsDetailController extends Controller
         $ads = Ads::first();
 
         $mainPath = public_path($news->image ?? 'default-news.jpg');
-        $bannerPath = public_path($ads->head_banner ?? 'default-banner.jpg');
+        $bannerPath = public_path($ads->news_pics_under_ads ?? 'default-banner.jpg');
 
         $mainImg = $this->loadAnyImage($mainPath);
         if (!$mainImg) abort(404, "Main Image Not Found");

@@ -10,6 +10,49 @@ use Intervention\Image\Drivers\Gd\Driver;
 class Post extends Model
 { public static $post,$image,$imageName,$directory,$imageUrl;
 
+//    public static function getImageUrl($request)
+//    {
+//        if ($request->hasFile('image')) {
+//
+//            self::$image      = $request->file('image');
+//            self::$imageName  = time() . '.' . self::$image->getClientOriginalExtension();
+//            self::$directory  = 'admin/post/image/';
+//
+//            // ডিরেক্টরি না থাকলে তৈরি করো
+//            if (!file_exists(public_path(self::$directory))) {
+//                mkdir(public_path(self::$directory), 0777, true);
+//            }
+//
+//            $extension = strtolower(self::$image->getClientOriginalExtension());
+//            $path = public_path(self::$directory . self::$imageName);
+//
+//            // যদি ইমেজ compress করা সম্ভব হয় (JPG, PNG, WEBP)
+//            if (in_array($extension, ['jpg', 'jpeg', 'png', 'webp'])) {
+//                try {
+//                    $manager = new ImageManager(new Driver());
+//                    $img = $manager->read(self::$image->getRealPath());
+//
+//                    $quality = 90;
+//                    do {
+//                        $img->save($path, $quality);
+//                        $size = filesize($path) / 1024 / 1024; // MB
+//                        $quality -= 5;
+//                    } while ($size > 1 && $quality > 10);
+//                } catch (\Exception $e) {
+//                    // fallback: just move the file
+//                    self::$image->move(public_path(self::$directory), self::$imageName);
+//                }
+//            } else {
+//                // অন্য ফাইল টাইপ যেমন GIF, SVG ইত্যাদি সরাসরি সেভ করো
+//                self::$image->move(public_path(self::$directory), self::$imageName);
+//            }
+//
+//            self::$imageUrl = self::$directory . self::$imageName;
+//            return self::$imageUrl;
+//        }
+//
+//        return null;
+//    }
     public static function getImageUrl($request)
     {
         if ($request->hasFile('image')) {
@@ -18,32 +61,33 @@ class Post extends Model
             self::$imageName  = time() . '.' . self::$image->getClientOriginalExtension();
             self::$directory  = 'admin/post/image/';
 
-            // ডিরেক্টরি না থাকলে তৈরি করো
             if (!file_exists(public_path(self::$directory))) {
                 mkdir(public_path(self::$directory), 0777, true);
             }
 
-            $extension = strtolower(self::$image->getClientOriginalExtension());
             $path = public_path(self::$directory . self::$imageName);
 
-            // যদি ইমেজ compress করা সম্ভব হয় (JPG, PNG, WEBP)
-            if (in_array($extension, ['jpg', 'jpeg', 'png', 'webp'])) {
-                try {
-                    $manager = new ImageManager(new Driver());
-                    $img = $manager->read(self::$image->getRealPath());
+            try {
+                $manager = new ImageManager(new Driver());
+                $img = $manager->read(self::$image->getRealPath());
 
-                    $quality = 90;
-                    do {
-                        $img->save($path, $quality);
-                        $size = filesize($path) / 1024 / 1024; // MB
-                        $quality -= 5;
-                    } while ($size > 1 && $quality > 10);
-                } catch (\Exception $e) {
-                    // fallback: just move the file
-                    self::$image->move(public_path(self::$directory), self::$imageName);
-                }
-            } else {
-                // অন্য ফাইল টাইপ যেমন GIF, SVG ইত্যাদি সরাসরি সেভ করো
+                // -----------------------------------------------
+                // 🔥 STANDARD OG SIZE = 1200 × 630
+                // cover() = auto center crop + fit
+                // -----------------------------------------------
+                $img = $img->cover(1200, 630);
+
+                // -----------------------------------------------
+                // 🔥 Compress until <1MB
+                // -----------------------------------------------
+                $quality = 90;
+                do {
+                    $img->toJpeg($quality)->save($path);
+                    $size = filesize($path) / 1024 / 1024;
+                    $quality -= 5;
+                } while ($size > 1 && $quality > 10);
+
+            } catch (\Exception $e) {
                 self::$image->move(public_path(self::$directory), self::$imageName);
             }
 
@@ -53,6 +97,9 @@ class Post extends Model
 
         return null;
     }
+
+
+
 
     // 🔹 Store post
     public static function storePost($request)

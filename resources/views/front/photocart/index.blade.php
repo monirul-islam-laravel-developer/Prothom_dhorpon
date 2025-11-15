@@ -180,7 +180,7 @@
         <div class="highlight">বিস্তারিত কমেন্টে</div>
 
         <div class="banner-ad">
-            <img src="{{ asset($ads->head_banner) }}" alt="banner ad">
+            <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
         </div>
 
         <div class="footer">
