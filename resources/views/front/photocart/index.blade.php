@@ -32,7 +32,7 @@
     }
 
     .header img {
-        height: 34px;
+        height: 50px;
         width: auto;
     }
 
