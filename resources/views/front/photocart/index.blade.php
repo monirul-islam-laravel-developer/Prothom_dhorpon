@@ -1,195 +1,186 @@
 @extends('master.front.master')
-@section('title')
-    ফটোকার্ড
-@endsection
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700;900&display=swap');
-
-    body {
-        font-family: 'Noto Serif Bengali', serif;
-        background: linear-gradient(135deg, #d0f0e0 0%, #f0f9f4 50%, #bdeed2 100%);
-        margin: 0;
-        padding: 0;
-    }
-
-    .card {
-        max-width: 520px;
-        background: linear-gradient(180deg, #ffffff 0%, #e6f3ef 100%);
-        border-radius: 12px;
-        margin: 10px auto;
-        padding: 6px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        text-align: center;
-        position: relative;
-    }
-
-    .header {
-        background: linear-gradient(90deg, #d9f0e5, #f0faf7);
-        padding: 4px 0;
-    }
-
-    .header img {
-        height: 50px;
-        width: auto;
-    }
-
-    .image-section {
-        width: 100%;
-        background: linear-gradient(180deg, #f0faf7, #d9f0e5);
-        margin-bottom: 4px;
-        border-bottom: 1px solid #d0e5db;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px 0;
-        border-radius: 6px;
-    }
-
-    .image-section img {
-        width: 95%;
-        height: auto;
-        max-height: 270px;
-        object-fit: contain;
-        display: block;
-    }
-
-    @media (max-width: 480px) {
-        .image-section img {
-            max-height: 220px;
-        }
-    }
-
-    .brand-logo {
-        position: relative;
-        margin: -22px auto 6px;
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        background-color: #fff;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        overflow: hidden;
-        z-index: 10;
-    }
-
-    .brand-logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .content {
-        padding: 8px 10px;
-        color: #141202;
-        line-height: 1.4;
-        font-size: 18px;
-        font-weight: 900;
-        border-bottom: 2px solid #c40000;
-        display: inline-block;
-        margin: 4px auto 6px;
-    }
-
-    .content::before {
-        content: "📰 ";
-        color: #b00000;
-        font-size: 16px;
-    }
-
-    .highlight {
-        display: inline-block;
-        background: linear-gradient(90deg, #c40000, #e63b3b);
-        color: white;
-        font-weight: bold;
-        margin: 4px auto 6px;
-        padding: 5px 14px;
-        font-size: 14px;
-        border-radius: 20px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .banner-ad {
-        width: 100%;
-        height: 40px;
-        overflow: hidden;
-        margin-top: 4px;
-        border-top: 1px solid #d1e1dc;
-        border-bottom: 1px solid #d1e1dc;
-        background: #ffffff;
-    }
-
-    .banner-ad img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .footer {
-        background: linear-gradient(90deg, #0fa835, #128a2e);
-        color: white;
-        font-size: 12px;
-        padding: 3px 8px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
-
-    .download-btn {
-        display: block;
-        margin: 6px auto 10px;
-        background-color: #c40000;
-        color: #fff;
-        border: none;
-        padding: 6px 15px;
-        font-size: 14px;
-        border-radius: 25px;
-        cursor: pointer;
-    }
-
-    .download-btn:hover {
-        background-color: #e63b3b;
-    }
-</style>
+@section('title', 'ফটোকার্ড')
 
 @section('body')
 
-    <div id="card-wrapper">
-        <div class="card" id="photo-card">
-            <div class="header">
-                <img src="{{ asset($webLogo->desktop_logo) }}" alt="logo">
+    <style>
+        .card-container {
+            max-width: 520px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .card-box {
+            background: #fff;
+            border: 2px solid #c41021;
+            overflow: visible;
+            position: relative;
+            padding: 10px 0; /* height কমানোর জন্য padding কমানো */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1;
+        }
+        .red-bottom-svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 27%;
+            height: 27%;
+            z-index: 2;
+        }
+        .logo-area {
+            text-align: left;
+            position: relative;
+            z-index: 2;
+            padding: 0 25px;
+        }
+        .logo-area img {
+            height: 50px;
+            display: block;
+        }
+        .main-photo-box {
+            padding: 0 25px;
+            position: relative;
+            z-index: 2;
+        }
+        .main-photo {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 5px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            max-height: 220px; /* height কমানো */
+            object-fit: cover;
+        }
+        .main-headline {
+            text-align: center;
+            margin-top: 5px;
+            padding: 0 5px;
+            font-size: 24px;
+            font-weight: 700; /* Bold 700 */
+            line-height: 28px;
+            position: relative;
+            z-index: 2;
+        }
+        .main-headline .line-red { color: #FF0000; }
+        .main-headline .line-green { color: #28a745; }
+        .comment-button {
+            display: block;
+            margin: 10px auto 0;
+            padding: 12px 45px;
+            background: #c41021;
+            color: #fff;
+            font-size: 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            align-self: center;
+        }
+        .comment-button:hover { background: #9b0d19; transform: translateY(-2px); }
+        .green-top {
+            width: 50%;
+            height: 70px;
+            background: #28a745;
+            position: absolute;
+            top: 0;
+            right: 0;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+            border-radius: 0 20px 0 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .green-top .date {
+            color: #fff; /* White color */
+            font-weight: 400; /* Bold */
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .green-new {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 7%;
+            height: 50%;
+            background: #28a745;
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+        }
+        .card-box p {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #c41021;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .card-box p::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, #28a745, #c41021);
+            margin: 8px auto 0;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .card-box p:hover { color: #28a745; transform: scale(1.1); }
+        .card-box p:hover::after { width: 100px; background: linear-gradient(90deg, #c41021, #28a745); }
+        .download-button {
+            display: inline-block;
+            padding: 12px 40px;
+            background: linear-gradient(135deg, #28a745, #c41021);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        .download-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #c41021, #28a745);
+        }
+        .banner-ad { width: 100%; margin: 0; position: relative; z-index: 1; overflow: hidden; }
+        .banner-ad img { width: 100%; display: block; border-radius: 0 0 20px 20px; margin: 0; }
+        .brand-logo {
+            position: relative;
+            margin: -22px auto 6px;
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+            z-index: 10;
+        }
+        .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+
+    <div class="card-container" id="card-to-download">
+
+        <div class="card-box">
+
+            <div class="red-bottom-svg">
+                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon points="0,0 0,100 100,100" fill="#c41021"/>
+                </svg>
             </div>
 
-            <div class="image-section">
-                <img src="{{ asset($news->image) }}" alt="news image">
-            </div>
-
-            <div class="brand-logo">
-                <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="brand logo">
-            </div>
-
-            <div class="content">
-                {{ $news->title }}
-            </div>
-
-            <div class="highlight">বিস্তারিত কমেন্টে</div>
-
-            @if(!empty($ads->news_pics_under_ads))
-                <div class="banner-ad">
-                    <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
-                </div>
-            @endif
-
-            <div class="footer">
-                <a href="#">prothomdorpan.com</a>
+            <div class="green-top">
                 <div class="date">
                     @php
                         use Carbon\Carbon;
@@ -201,21 +192,56 @@
                     @endphp
                 </div>
             </div>
+            <div class="green-new"></div>
+
+            <div class="logo-area">
+                <img src="{{ asset($webLogo->desktop_logo) }}">
+            </div>
+
+            <div class="main-photo-box">
+                <img src="{{ asset($news->image) }}" class="main-photo" alt="">
+            </div>
+            <div class="brand-logo">
+                <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="brand logo">
+            </div>
+
+            @php
+                $words = explode(' ', $news->title);
+                $mid = ceil(count($words)/2);
+                $first_half = implode(' ', array_slice($words, 0, $mid));
+                $second_half = implode(' ', array_slice($words, $mid));
+            @endphp
+            <h2 class="main-headline">
+                <span class="line-red">{{ $first_half }}</span><br>
+                <span class="line-green">{{ $second_half }}</span>
+            </h2>
+
+            <button class="comment-button">বিস্তারিত কমেন্ট</button>
+            <p>prothomdorpan.com</p>
         </div>
 
-        <button class="download-btn" onclick="downloadCard()">ডাউনলোড করুন</button>
+        @if(!empty($ads->news_pics_under_ads))
+            <div class="banner-ad">
+                <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
+            </div>
+        @endif
     </div>
 
+    <div style="text-align: center;">
+        <button id="download-card" class="download-button">Download Card</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
-        function downloadCard() {
-            const card = document.getElementById("photo-card");
-            html2canvas(card, { scale: 3, useCORS: true }).then(canvas => {
-                const link = document.createElement("a");
-                link.download = "photo-card.png";
-                link.href = canvas.toDataURL("image/png");
+        document.getElementById('download-card').addEventListener('click', function() {
+            const card = document.getElementById('card-to-download');
+            html2canvas(card, {scale: 3, useCORS: true, allowTaint: true}).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'card.png';
                 link.click();
             });
-        }
+        });
     </script>
 
 @endsection

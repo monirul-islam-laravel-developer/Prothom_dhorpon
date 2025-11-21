@@ -74,9 +74,9 @@ class FrontNewsDetailController extends Controller
                 $bw = imagesx($bannerImg);
                 $bh = imagesy($bannerImg);
 
-                // Scale banner width to main image width
-                $newBW = $mainW;
-                $newBH = intval(($bh / $bw) * $newBW);
+                // Banner height = 15% of main image height
+                $newBH = intval($mainH * 0.15);
+                $newBW = $mainW; // Banner full width
 
                 $resizedBanner = imagecreatetruecolor($newBW, $newBH);
 
@@ -86,6 +86,7 @@ class FrontNewsDetailController extends Controller
                 $transparent = imagecolorallocatealpha($resizedBanner, 0, 0, 0, 127);
                 imagefill($resizedBanner, 0, 0, $transparent);
 
+                // Scale banner to fit full width & 15% height
                 imagecopyresampled($resizedBanner, $bannerImg, 0, 0, 0, 0, $newBW, $newBH, $bw, $bh);
 
                 // Place banner at bottom
