@@ -29,14 +29,18 @@
             z-index: 2;
         }
         .logo-area {
-            text-align: left;
+            text-align: center;
             position: relative;
             z-index: 2;
             padding: 0 25px;
+            transform: translateX(30px); /* 10px ডানে সরবে */
         }
+
         .logo-area img {
-            height: 50px;
+            height: 40px;
             display: block;
+            transform: scale(1.50); /* image 15% বড় হবে */
+            transition: transform 0.3s ease;
         }
         .main-photo-box {
             padding: 0 25px;
@@ -45,9 +49,8 @@
         }
         .main-photo {
             width: 100%;
-            border-radius: 20px;
             margin-top: 5px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+
             max-height: 220px; /* height কমানো */
             object-fit: cover;
         }
@@ -82,7 +85,7 @@
         .comment-button:hover { background: #9b0d19; transform: translateY(-2px); }
         .green-top {
             width: 50%;
-            height: 70px;
+            height: 60px;
             background: #28a745;
             position: absolute;
             top: 0;
