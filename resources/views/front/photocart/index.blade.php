@@ -265,7 +265,7 @@
                 <span class="line-green">{{ $second_half }}</span>
             </h2>
 
-            <button class="comment-button">বিস্তারিত কমেন্ট</button>
+            <button class="comment-button">বিস্তারিত কমেন্টে</button>
             <p>prothomdorpan.com</p>
         </div>
         @if(!empty($ads->news_pics_under_ads))
