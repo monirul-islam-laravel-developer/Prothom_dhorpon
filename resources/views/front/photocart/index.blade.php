@@ -53,7 +53,7 @@
 
         .red-bottom-svg {
             position: absolute;
-            bottom: 0; /* নিচে পুরো লেগে থাকবে */
+            bottom: -5px; /* নিচে পুরো লেগে থাকবে */
             left: 0;
             width: 27%;
             height: 27%;
