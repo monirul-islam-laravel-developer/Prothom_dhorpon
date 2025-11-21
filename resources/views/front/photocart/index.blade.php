@@ -11,8 +11,7 @@
         }
 
         .card-box {
-            background: #fff;
-            border: 2px solid #c41021;
+            background: linear-gradient(to bottom, #ffffff 0%, #fff8f8 100%); /* subtle white to very light red */            border: 2px solid #c41021;
             overflow: visible;
             position: relative;
             padding: 10px 0;
@@ -53,7 +52,7 @@
 
         .red-bottom-svg {
             position: absolute;
-            bottom: -5px; /* নিচে পুরো লেগে থাকবে */
+            bottom: -2px; /* নিচে পুরো লেগে থাকবে */
             left: 0;
             width: 27%;
             height: 27%;
@@ -198,7 +197,7 @@
 
         .banner-ad { width: 100%; margin: 0; position: relative; z-index: 1; overflow: hidden; }
 
-        .banner-ad img { width: 100%; display: block; border-radius: 0 0 20px 20px; margin: 0; }
+        .banner-ad img { width: 100%; display: block;  margin: 0; }
 
         .brand-logo {
             position: relative;
@@ -269,12 +268,12 @@
             <button class="comment-button">বিস্তারিত কমেন্ট</button>
             <p>prothomdorpan.com</p>
         </div>
-
         @if(!empty($ads->news_pics_under_ads))
             <div class="banner-ad">
                 <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
             </div>
         @endif
+
     </div>
 
     <div style="text-align: center;">
