@@ -75,7 +75,7 @@ class FrontNewsDetailController extends Controller
                 $bh = imagesy($bannerImg);
 
                 // Banner height = 15% of main image height
-                $newBH = intval($mainH * 0.15);
+                $newBH = intval($mainH * 0.18);
                 $newBW = $mainW; // Banner full width
 
                 $resizedBanner = imagecreatetruecolor($newBW, $newBH);
