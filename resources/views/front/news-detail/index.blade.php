@@ -96,7 +96,7 @@
                                 <li class="view-count">
                                     <p>
                                         <i class="las la-eye"></i>
-                                        {{ bn_number($news->view_count) }} ভিউ
+                                        {{ bn_number($news->view_count) }} বার পড়া হয়েছে
                                     </p>
                                 </li>
 
