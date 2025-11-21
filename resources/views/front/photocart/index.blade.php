@@ -9,63 +9,105 @@
             margin: 20px auto;
             position: relative;
         }
+
         .card-box {
             background: #fff;
             border: 2px solid #c41021;
             overflow: visible;
             position: relative;
-            padding: 10px 0; /* height কমানোর জন্য padding কমানো */
+            padding: 10px 0;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             z-index: 1;
         }
+
+        .green-top-svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 60px;
+            z-index: 2;
+            overflow: visible;
+        }
+
+        .green-top-svg svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .green-top-svg .date {
+            position: absolute;
+            top: 40%; /* date উপরের দিকে সামঞ্জস্য */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+            text-align: center;
+        }
+
         .red-bottom-svg {
             position: absolute;
-            bottom: 0;
+            bottom: 0; /* নিচে পুরো লেগে থাকবে */
             left: 0;
             width: 27%;
             height: 27%;
             z-index: 2;
         }
+
+        .red-bottom-svg svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
         .logo-area {
             text-align: center;
             position: relative;
             z-index: 2;
             padding: 0 25px;
-            transform: translateX(30px); /* 10px ডানে সরবে */
+            transform: translateX(20px);
         }
 
         .logo-area img {
             height: 40px;
             display: block;
-            transform: scale(1.50); /* image 15% বড় হবে */
+            transform: scale(1.50);
             transition: transform 0.3s ease;
         }
+
         .main-photo-box {
             padding: 0 25px;
             position: relative;
             z-index: 2;
         }
+
         .main-photo {
             width: 100%;
             margin-top: 5px;
-
-            max-height: 220px; /* height কমানো */
+            max-height: 220px;
             object-fit: cover;
         }
+
         .main-headline {
             text-align: center;
             margin-top: 5px;
             padding: 0 5px;
             font-size: 24px;
-            font-weight: 700; /* Bold 700 */
+            font-weight: 700;
             line-height: 28px;
             position: relative;
             z-index: 2;
         }
+
         .main-headline .line-red { color: #FF0000; }
         .main-headline .line-green { color: #28a745; }
+
         .comment-button {
             display: block;
             margin: 10px auto 0;
@@ -82,28 +124,12 @@
             z-index: 2;
             align-self: center;
         }
-        .comment-button:hover { background: #9b0d19; transform: translateY(-2px); }
-        .green-top {
-            width: 50%;
-            height: 60px;
-            background: #28a745;
-            position: absolute;
-            top: 0;
-            right: 0;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
-            border-radius: 0 20px 0 0;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .comment-button:hover {
+            background: #9b0d19;
+            transform: translateY(-2px);
         }
 
-        .green-top .date {
-            color: #fff; /* White color */
-            font-weight: 400; /* Bold */
-            font-size: 20px;
-            font-family: 'Poppins', sans-serif;
-        }
         .green-new {
             position: absolute;
             top: 0;
@@ -113,6 +139,7 @@
             background: #28a745;
             clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
         }
+
         .card-box p {
             text-align: center;
             font-size: 18px;
@@ -125,6 +152,7 @@
             z-index: 2;
             transition: all 0.3s ease;
         }
+
         .card-box p::after {
             content: "";
             display: block;
@@ -135,8 +163,17 @@
             border-radius: 2px;
             transition: all 0.3s ease;
         }
-        .card-box p:hover { color: #28a745; transform: scale(1.1); }
-        .card-box p:hover::after { width: 100px; background: linear-gradient(90deg, #c41021, #28a745); }
+
+        .card-box p:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+
+        .card-box p:hover::after {
+            width: 100px;
+            background: linear-gradient(90deg, #c41021, #28a745);
+        }
+
         .download-button {
             display: inline-block;
             padding: 12px 40px;
@@ -152,13 +189,17 @@
             transition: all 0.3s ease;
             margin-top: 15px;
         }
+
         .download-button:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             background: linear-gradient(135deg, #c41021, #28a745);
         }
+
         .banner-ad { width: 100%; margin: 0; position: relative; z-index: 1; overflow: hidden; }
+
         .banner-ad img { width: 100%; display: block; border-radius: 0 0 20px 20px; margin: 0; }
+
         .brand-logo {
             position: relative;
             margin: -22px auto 6px;
@@ -170,7 +211,9 @@
             overflow: hidden;
             z-index: 10;
         }
+
         .brand-logo img { width: 100%; height: 100%; object-fit: cover; }
+
     </style>
 
     <div class="card-container" id="card-to-download">
@@ -183,7 +226,10 @@
                 </svg>
             </div>
 
-            <div class="green-top">
+            <div class="green-top-svg">
+                <svg width="100%" height="60px" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon points="0,0 100,0 100,100 20,100" fill="#28a745"/>
+                </svg>
                 <div class="date">
                     @php
                         use Carbon\Carbon;
@@ -195,6 +241,7 @@
                     @endphp
                 </div>
             </div>
+
             <div class="green-new"></div>
 
             <div class="logo-area">
