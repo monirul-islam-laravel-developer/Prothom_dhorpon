@@ -342,7 +342,22 @@
 
                         <br><br>
                         <hr>
+                        <!-- Facebook App Comment Button -->
+                        <a href="fb://facewebmodal/f?href={{ $news->fb_post_url }}"
+                           style="
+        padding: 12px 16px;
+        background: #1877F2;
+        color: #fff;
+        border-radius: 8px;
+        font-size: 18px;
+        display: inline-block;
+        font-weight: bold;
+        text-decoration: none;
+   ">
+                            ফেসবুক অ্যাপ থেকে কমেন্ট করুন
+                        </a>
 
+                        <br><br>
                         <!-- Facebook Comments -->
                         <h4>কমেন্ট করুন:</h4>
                         <div class="fb-comments"
@@ -354,7 +369,7 @@
 
 
                         {{--                        <div style="margin-top: 20px; border-bottom: 1px solid #ddd; padding: 8px 0px;"> কমেন্ট বক্স </div>--}}
-                        
+
 
 
 
