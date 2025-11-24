@@ -332,16 +332,16 @@
 
 
                         <!-- Facebook Like/React Button -->
-                        <div class="fb-like"
-                             data-href="{{ url('news-details/'.$news->id) }}"
-                             data-layout="standard"
-                             data-action="like"
-                             data-size="large"
-                             data-share="true">
-                        </div>
+{{--                        <div class="fb-like"--}}
+{{--                             data-href="{{ url('news-details/'.$news->id) }}"--}}
+{{--                             data-layout="standard"--}}
+{{--                             data-action="like"--}}
+{{--                             data-size="large"--}}
+{{--                             data-share="true">--}}
+{{--                        </div>--}}
 
-                        <br><br>
-                        <hr>
+{{--                        <br><br>--}}
+{{--                        <hr>--}}
 
                         <!-- Facebook Comments -->
                         <h4>কমেন্ট করুন:</h4>
@@ -354,7 +354,7 @@
 
 
                         {{--                        <div style="margin-top: 20px; border-bottom: 1px solid #ddd; padding: 8px 0px;"> কমেন্ট বক্স </div>--}}
-                        
+
 
 
 
