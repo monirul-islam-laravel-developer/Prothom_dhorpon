@@ -110,10 +110,11 @@
         </div>
     </section>
     <div class="col-lg-3 col-md-3">
-        <form class="header-search" method="get" action="https://themebazar.xyz/laraflash/news/post/search">
-            <input type="hidden" name="_token" value="npv0BOp6m8gjl8YmLleA8kPNIXTsqhE6TJsDtfst">                        <input type="text" name="search"  placeholder="এখানে লিখুন">
-            <button type="submit" value="খুজুন"> <i class="las la-search"></i> </button>
+        <form class="header-search" method="get" action="{{ route('search-news') }}">
+            <input type="text" name="search" placeholder="এখানে লিখুন">
+            <button type="submit"><i class="las la-search"></i></button>
         </form>
+
 
 
     </div>

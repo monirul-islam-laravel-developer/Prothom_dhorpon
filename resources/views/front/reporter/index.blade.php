@@ -17,8 +17,7 @@
                             use App\Models\Post;
                             $reporter_posts = Post::where('reporter_id', $reporter->id)
                                          ->where('status', 1)
-                                         ->orderBy('id', 'desc')
-                                         ->paginate(16);
+                                         ->orderBy('id', 'desc')->get();
                         @endphp
                         @foreach($reporter_posts as $rpost)
                         <div class="custom-col-6">
@@ -33,7 +32,7 @@
                                         <a href="{{route('news-detail',$rpost->id)}}"> {{$rpost->title}}</a>
                                     </h2>
                                     <div class="author-date">
-                                        <a href="#"> রাজিব আহমেদ </a> <span> <i class="las la-clock"></i> {{ \Carbon\Carbon::parse($rpost->created_at)->locale('bn')->diffForHumans() }}
+                                        <a href="#">{{$rpost->reporter->name}}</a> <span> <i class="las la-clock"></i> {{ \Carbon\Carbon::parse($rpost->created_at)->locale('bn')->bnDiffForHumans() }}
   </span>
                                     </div>
                                 </div>
@@ -108,7 +107,7 @@
                                             <a href="{{route('news-detail',$l20news->id)}}">{{$l20news->title}}</a>
                                         </h4>
                                         <h6 class="authorPopular-date">
-                                            <i class="las la-clock"></i>{{ \Carbon\Carbon::parse($l20news->created_at)->locale('bn')->diffForHumans() }}
+                                            <i class="las la-clock"></i>{{ \Carbon\Carbon::parse($l20news->created_at)->locale('bn')->bnDiffForHumans() }}
                                         </h6>
                                     </div>
 

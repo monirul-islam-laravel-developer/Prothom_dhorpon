@@ -239,7 +239,7 @@
                         use Carbon\Carbon;
                         $date = Carbon::parse($news->created_at)->timezone('Asia/Dhaka')->locale('bn');
                         $formatted = $date->translatedFormat('d F Y');
-                        $english = ['0','1','2','3','4','৫','6','7','8','9','AM','PM'];
+                        $english = ['0','1','2','3','4','5','6','7','8','9','AM','PM'];
                         $bangla  = ['০','১','২','৩','৪','৫','৬','৭','৮','৯','পূর্বাহ্ণ','অপরাহ্ণ'];
                         echo str_replace($english, $bangla, $formatted);
                     @endphp

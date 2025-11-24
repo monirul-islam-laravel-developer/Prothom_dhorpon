@@ -54,7 +54,7 @@
 
                                         <div class="archive-meta2">
                                             <a href="#"><i class="las la-tags"> </i>
-                                                {{ \Carbon\Carbon::parse($upazelasnews->created_at)->locale('bn')->diffForHumans() }}
+                                                {{ \Carbon\Carbon::parse($upazelasnews->created_at)->locale('bn')->bnDiffForHumans() }}
 
                                             </a>
                                         </div>

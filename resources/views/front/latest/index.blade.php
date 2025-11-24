@@ -54,7 +54,7 @@
                                     </h4>
 
                                     <div class="date-meta">
-                                        <a href="#"><i class="las la-tags"> </i>  {{ \Carbon\Carbon::parse($latest_news->created_at)->locale('bn')->diffForHumans() }}
+                                        <a href="#"><i class="las la-tags"> </i>  {{ \Carbon\Carbon::parse($latest_news->created_at)->locale('bn')->bnDiffForHumans() }}
                                         </a>
                                     </div>
 

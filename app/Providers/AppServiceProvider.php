@@ -9,6 +9,7 @@ use App\Models\Logo;
 use App\Models\Notice;
 use App\Models\Post;
 use Illuminate\Support\ServiceProvider;
+use Carbon\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Carbon::setLocale('bn');
+        Carbon::macro('bnDiffForHumans', function () {
+            $diff = $this->diffForHumans();
+            $bnDiff = str_replace(
+                ['0','1','2','3','4','5','6','7','8','9'],
+                ['০','১','২','৩','৪','৫','৬','৭','৮','৯'],
+                $diff
+            );
+            return $bnDiff;
+        });
         // Fetch the latest logo
         $logo = Logo::latest()->first();
 

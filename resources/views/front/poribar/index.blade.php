@@ -12,10 +12,12 @@
                     <div class="themesBazar-4 themesBazar-m2">
                         <div class="team-wrpp">
                             <div class="team-image">
+                                <a href="{{route('reporter-view',[$reporter->id,$reporter->slug])}}">
                                 <img src="{{asset($reporter->image)}}" style="height: 260px;" alt="{{$reporter->name}}">
+                                </a>
                             </div>
                             <h1 class="team-name">
-                                <a href="../../reporter/details/1.html">{{$reporter->name}}</a>
+                                <a href="{{route('reporter-view',[$reporter->id,$reporter->slug])}}">{{$reporter->name}}</a>
                             </h1>
                             <h6 class="team-deg">
                                 {{$reporter->designation}}

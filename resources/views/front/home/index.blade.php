@@ -81,7 +81,7 @@
                                         <a href="{{route('news-detail',[$leadnews->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($leadnews->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="">{{$leadnews->title}}</a>
 
                                         <h6 class="sec-small-cat">
-                                            <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
+                                            <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->bnDiffForHumans() }}
                                             </a>
                                         </h6>
 
@@ -125,7 +125,7 @@
                                             </div>
 
                                             <h6 class="cat-meta">
-                                                <a href="#"> <i class="lar la-newspaper"></i>  {{ \Carbon\Carbon::parse($subleadnews_2->created_at)->locale('bn')->diffForHumans() }}
+                                                <a href="#"> <i class="lar la-newspaper"></i>  {{ \Carbon\Carbon::parse($subleadnews_2->created_at)->locale('bn')->bnDiffForHumans() }}
                                                 </a>
                                             </h6>
 
@@ -156,9 +156,11 @@
                                     <a href="{{route('news-detail',[$home5news->id])}}"> <img class="lazyload" src="{{asset($webLogo->lazyload_logo)}}" data-src="{{asset($home5news->image)}}" alt="{{asset($webLogo->lazyload_logo)}}" title="{{$home5news->title}}"></a>
 
                                     <div class="sec-small-cat1">
-                                        <a href="#">  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
+                                        <a href="#">
+                                            {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->bnDiffForHumans() }}
                                         </a>
                                     </div>
+
 
 
 
@@ -193,7 +195,7 @@
                                     </div>
 
                                     <div class="cat-meta">
-                                        <a href="#"> <i class="lar la-newspaper"></i>  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->diffForHumans() }}
+                                        <a href="#"> <i class="lar la-newspaper"></i>  {{ \Carbon\Carbon::parse($leadnews->created_at)->locale('bn')->bnDiffForHumans() }}
                                         </a>
                                     </div>
 
