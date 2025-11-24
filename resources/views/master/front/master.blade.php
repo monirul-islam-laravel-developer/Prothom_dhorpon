@@ -135,7 +135,7 @@
 
 
 <!--=============== Header section Start ========================-->
-@include('front.include.header');
+@include('front.include.header')
 <!--=============== Header section End ========================-->
 
 
