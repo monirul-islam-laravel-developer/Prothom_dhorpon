@@ -342,35 +342,8 @@
 
                         <br><br>
                         <hr>
-                        <!-- Facebook App Comment Button -->
-                        <a href="#" onclick="openFBApp()"
-                           style="
-        padding: 12px 16px;
-        background: #1877F2;
-        color: #fff;
-        border-radius: 8px;
-        font-size: 18px;
-        display: inline-block;
-        font-weight: bold;
-        text-decoration: none;
-   ">
-                            ফেসবুক অ্যাপ থেকে কমেন্ট করুন
-                        </a>
 
-                        <script>
-                            function openFBApp() {
-                                var fbPostUrl = "{{ $news->fb_post_url }}"; // Facebook Page Post URL
-                                if(fbPostUrl){
-                                    window.location.href = "fb://facewebmodal/f?href=" + fbPostUrl;
-                                } else {
-                                    alert("Facebook Post URL পাওয়া যায়নি।");
-                                }
-                            }
-                        </script>
-
-                        <br><br>
-
-                        <!-- Facebook Web Comments Plugin -->
+                        <!-- Facebook Comments -->
                         <h4>কমেন্ট করুন:</h4>
                         <div class="fb-comments"
                              data-href="{{ url('news-details/'.$news->id) }}"
