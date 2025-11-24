@@ -331,8 +331,29 @@
                         </div>
 
 
+                        <!-- Facebook Like/React Button -->
+                        <div class="fb-like"
+                             data-href="{{ url()->current() }}"
+                             data-layout="standard"
+                             data-action="like"
+                             data-size="large"
+                             data-share="true">
+                        </div>
 
-                        <div style="margin-top: 20px; border-bottom: 1px solid #ddd; padding: 8px 0px;"> কমেন্ট বক্স </div>
+                        <br><br>
+
+                        <hr>
+
+                        <!-- Facebook Comments -->
+                        <h4>কমেন্ট করুন:</h4>
+                        <div class="fb-comments"
+                             data-href="{{ url()->current() }}"
+                             data-width="100%"
+                             data-numposts="8">
+                        </div>
+
+
+{{--                        <div style="margin-top: 20px; border-bottom: 1px solid #ddd; padding: 8px 0px;"> কমেন্ট বক্স </div>--}}
 
                         <div id="fb-root"></div>
                         <script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=334182264340964&autoLogAppEvents=1"></script>
