@@ -118,25 +118,7 @@
         }
     });
 </script>
-<script>
-    $(document).ready(function() {
 
-        $('#summernote').summernote({
-            dialogsInBody: true,   // modal body-r baire hoyena, conflict kom
-            callbacks: {
-                onImageUploadError: function() {
-                    $('.note-modal').modal('hide'); // error holeo close hobe
-                }
-            }
-        });
-
-        // Force close modal when cross is clicked
-        $(document).on('click', '.note-modal .close, .note-modal .note-btn', function() {
-            $('.note-modal').modal('hide');
-        });
-
-    });
-</script>
 
 <!-- end seo tag input JS -->
 

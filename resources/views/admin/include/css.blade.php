@@ -18,87 +18,8 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            height: 250,      // optional default height
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'italic', 'underline', 'clear']],
-                ['fontname', ['fontname']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview']]
-            ]
-        });
-    });
-</script>
-<style>
-    /* 🔵 Tag Input Container */
-    #tag-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding: 6px;
-        min-height: 45px;
-        border: 1px solid #d0d0d0;
-        border-radius: 6px;
-        cursor: text;
-    }
-
-    /* 🔵 Input Area inside tag container */
-    #tag-container input {
-        border: none;
-        outline: none;
-        flex: 1;
-        min-width: 120px;
-        padding: 6px;
-        font-size: 14px;
-    }
-
-    /* 🔵 Single Tag Style */
-    .tag {
-        background: #eaf3ff;
-        color: #0057c2;
-        padding: 4px 10px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        font-weight: 500;
-        border: 1px solid #d0e4ff;
-    }
-
-    /* 🔴 Remove Button */
-    .tag .remove {
-        margin-left: 8px;
-        cursor: pointer;
-        font-weight: bold;
-        color: #c20000;
-    }
-
-    .tag .remove:hover {
-        color: #ff1a1a;
-    }
-
-    /* 🔵 Summernote small style improvement */
-    .note-editor.note-frame {
-        border-radius: 6px !important;
-        border-color: #ccc !important;
-    }
-
-    .note-toolbar {
-        background: #f9f9f9 !important;
-        border-bottom: 1px solid #ccc !important;
-    }
-
-    .note-statusbar {
-        background: #fafafa !important;
-        border-top: 1px solid #ddd !important;
-    }
-</style>
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
 
 
 <style>
