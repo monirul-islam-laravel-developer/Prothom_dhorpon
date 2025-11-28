@@ -10,7 +10,7 @@
     {{$news->seo_tag}}
 @endsection
 @section('og:description')
-    {{ $news->description ?? 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
+    {{ 'সর্বশেষ খবর, বিশ্লেষণ এবং প্রতিবেদন পড়ুন আমাদের পোর্টালে।' }}
 @endsection
 
 @section('og:image')
