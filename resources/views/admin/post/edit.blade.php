@@ -343,5 +343,15 @@
             }
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote({
+                height: 200,                 // editor height
+                placeholder: 'Enter description...',
+                tabsize: 2
+            });
+        });
+    </script>
+
 
 @endsection

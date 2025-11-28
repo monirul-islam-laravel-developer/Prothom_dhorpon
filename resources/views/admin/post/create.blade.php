@@ -344,7 +344,7 @@
             $('#summernote').summernote();
         });
     </script>
-  
+
 
 
 @endsection
