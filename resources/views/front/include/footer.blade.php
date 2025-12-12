@@ -6,8 +6,8 @@
             <ul>
                 <li><a href="{{route('amaderporibar')}}" > আমাদের পরিবার </a></li>
                 <li><a href="{{route('latest-news')}}" > সকল নিউজ </a></li>
-                <li><a href="all/video/gallery.html" > ভিডিও গ্যালারী </a></li>
-                <li><a href="" > ফটোগ্যালারী </a></li>
+                <li><a href="{{route('all-video')}}" > ভিডিও গ্যালারী </a></li>
+                <li><a href="{{route('photo-gallery')}}" > ফটোগ্যালারী </a></li>
                 <li><a href="{{route('about-us')}}" > আমাদের সম্পর্কে </a></li>
                 <li><a href="{{route('privacy-policy')}}" >গোপনীয়তা নীতি</a></li>
                 <li><a href="{{route('terms-and-condition')}}" >শর্তাবলী ও নিয়মাবলী</a></li>
@@ -160,7 +160,7 @@
                     <div class="row">
                         <div class="col-12 d-flex justify-content-center">
                             <div class="design-developed">
-                                Developed BY <a href="https://monirulbd.com/" target="_blank" title="ThemesBazar.com">Monirul Islam</a>
+                                Developed BY <a href="https://monirulbd.com/" target="_blank" title="monirulbd.comf">Monirul Islam</a>
                             </div>
                         </div>
                     </div>
