@@ -85,7 +85,7 @@
             placeholder: 'এখানে লিখুন...',
             toolbar: [
                 ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['fontsize', 'color']],
+                ['font', ['font', 'color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['insert', ['link', 'picture', 'video']],
                 ['view', ['codeview', 'fullscreen']]
