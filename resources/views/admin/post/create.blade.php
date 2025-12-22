@@ -340,10 +340,12 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            $('#summernote').summernote();
+        $('#summernote').summernote({
+            tabsize: 2,
+            height: 300
         });
     </script>
+    <!-- end row -->
 
 
 
