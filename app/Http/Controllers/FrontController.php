@@ -40,10 +40,25 @@ class FrontController extends Controller
         $this->motamot=Category::where('status', 1)->where('id', 21)->first();
         $this->bussiness=Category::where('status', 1)->where('id',16)->first();
         $this->sharebazar=Category::where('status', 1)->where('id',17)->first();
-        $this->jatiyonewses = Post::where('status', 1)->where('category_id', $this->jatiyos->id ?? null)->take(8)->get();
-        $this->rajnitinewses = Post::where('status', 1)->where('category_id', $this->rajniti->id ?? null)->take(8)->get();
-        $this->antarjarrtiknewses=Post::where('status', 1)->where('category_id', $this->antorjarrtik->id ?? null)->take(8)->get();
-        $this->kheladhulanewses=Post::where('status', 1)->where('category_id', $this->kheladhula->id ?? null)->take(8)->get();
+        $this->jatiyonewses = Post::where('status', 1)->where('category_id', $this->jatiyos->id ?? null)->latest()          // created_at desc
+            ->take(8)->get();
+
+        $this->rajnitinewses = Post::where('status', 1)
+            ->where('category_id', $this->rajniti->id ?? null)
+            ->latest()          // created_at DESC
+            ->take(8)
+            ->get();
+
+        $this->antarjarrtiknewses = Post::where('status', 1)
+            ->where('category_id', $this->antorjarrtik->id ?? null)
+            ->latest()          // created_at DESC
+            ->take(8)
+            ->get();
+        $this->kheladhulanewses = Post::where('status', 1)
+            ->where('category_id', $this->kheladhula->id ?? null)
+            ->latest()          // created_at DESC
+            ->take(8)
+            ->get();
         $this->saradeshnews1 = Post::where('status', 1)->where('category_id',$this->saradesh->id)->latest()->first();
         $this->saradeshnews2 = Post::where('status', 1)->where('category_id',$this->saradesh->id)->latest()->skip(1)->take(2)->get();
         $this->saradeshnews5 = Post::where('status', 1)->where('category_id',$this->saradesh->id)->latest()->skip(3)->take(5)->get();
