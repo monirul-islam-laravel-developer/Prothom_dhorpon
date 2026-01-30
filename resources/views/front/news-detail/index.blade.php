@@ -214,9 +214,25 @@
 
                         </div>
 
-                            <div class="single-content2">
-                                {!! $news->description !!}
-                            </div>
+                        <div class="single-content2"
+                             style="
+        font-family:SolaimanLipi,'Noto Serif Bengali',serif;
+        font-size:16px;
+        line-height:1.2;
+        color:#222;
+        text-align:justify;
+        word-wrap:break-word;
+     ">
+                            <style>
+                                .single-content2 img{max-width:100%;height:auto;}
+                                .single-content2 iframe{max-width:100%;}
+                                .single-content2 table{width:100%;border-collapse:collapse;}
+                                .single-content2 td,.single-content2 th{border:1px solid #ddd;padding:8px;}
+                            </style>
+
+                            {!! $news->description !!}
+                        </div>
+
 
 
 
@@ -283,55 +299,6 @@
                                     <a href="fb-messenger://share?link={{ $encodedUrl }}" target="_blank">
                                         <img src="https://img.icons8.com/fluency/48/facebook-messenger.png" alt="messenger">
                                     </a>
-                                    <!-- Copy Button -->
-                                    <button id="copyBtn" style="
-    border:none;
-    background:#f0f0f0;
-    padding:8px 12px;
-    border-radius:6px;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    gap:6px;
-    font-family:sans-serif;
-    position: relative;
-">
-                                        <img src="https://img.icons8.com/ios-glyphs/24/copy.png" alt="copy">
-                                        Copy Link
-                                        <span id="copiedMsg" style="
-        margin-left:8px;
-        font-size:12px;
-        color: green;
-        display:none;
-    ">Copied!</span>
-                                    </button>
-
-                                    <script>
-                                        const copyBtn = document.getElementById('copyBtn');
-                                        const copiedMsg = document.getElementById('copiedMsg');
-
-                                        copyBtn.addEventListener('click', () => {
-                                            const originalLink = "{{ url('news-details/'.$news->id) }}"; // Dynamic URL
-
-                                            navigator.clipboard.writeText(originalLink).then(() => {
-                                                copiedMsg.style.display = 'inline';
-                                                setTimeout(() => {
-                                                    copiedMsg.style.display = 'none';
-                                                }, 1500);
-                                            }).catch(() => {
-                                                copiedMsg.innerText = "Copy failed!";
-                                                copiedMsg.style.display = 'inline';
-                                                setTimeout(() => {
-                                                    copiedMsg.style.display = 'none';
-                                                    copiedMsg.innerText = "Copied!"; // Reset
-                                                }, 1500);
-                                            });
-                                        });
-                                    </script>
-
-
-
-
 
                                 </div>
 

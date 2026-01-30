@@ -33,8 +33,6 @@ use App\Http\Controllers\FrontLatestnewsController;
 use App\Http\Controllers\FrontSubSubCategoryController;
 use App\Http\Controllers\FrontUpazelasNewsController;
 use App\Http\Controllers\SearchController;
-use App\Http\Controllers\FrontPhotogalleryController;
-use App\Http\Controllers\FrontVideoController;
 
 require base_path('routes/admin.php');
 
@@ -55,6 +53,4 @@ Route::get('/news-image/{id}', [FrontNewsDetailController::class, 'ogImage'])->n
 Route::get('/photo-cart/{id}', [PhotoCartController::class, 'index'])->name('photo-cart');
 Route::get('/print/{id}', [PrintController::class, 'index'])->name('print-page');
 Route::get('/latest-news', [FrontLatestnewsController::class, 'index'])->name('latest-news');
-Route::get('/photo-gallery', [FrontPhotogalleryController::class, 'index'])->name('photo-gallery');
-Route::get('/all-video', [FrontVideoController::class, 'index'])->name('all-video');
 Route::get('search', [SearchController::class,'index'])->name('search-news');

@@ -8,11 +8,8 @@
 <link rel="stylesheet" href="{{asset('/')}}front/frontend/assets/css/responsive.css">
 <link rel="stylesheet" href="{{asset('/')}}front/frontend/assets/css/all.css">
 <link rel="stylesheet" href="{{asset('/')}}front/frontend/style.css">
-
 <!-- Summernote CSS -->
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 
 
 <style>
