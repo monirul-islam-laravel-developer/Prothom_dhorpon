@@ -217,35 +217,35 @@
                         <div class="single-content2">
 
                             <style>
-                                /* Base rule – force everything */
+                                /* Base text rule */
                                 .single-content2,
                                 .single-content2 *{
                                     font-family: SolaimanLipi, 'Noto Serif Bengali', serif !important;
                                     font-size: 18px !important;
 
-                                    /* 🔑 Half line gap no matter what */
-                                    line-height: 1.5 !important;
+                                    /* 🔥 light line gap */
+                                    line-height: 1.3 !important;
 
                                     color: #222 !important;
 
-                                    /* full width look */
+                                    /* full width text */
                                     text-align: justify !important;
                                     text-justify: inter-word;
 
-                                    /* prevent crazy spacing */
+                                    /* spacing control */
                                     letter-spacing: 0 !important;
-                                    word-spacing: -0.8px !important;
+                                    word-spacing: -0.6px !important;
 
                                     margin: 0 !important;
                                     padding: 0 !important;
                                 }
 
-                                /* Paragraph spacing = exactly half line */
+                                /* Paragraph = very light gap */
                                 .single-content2 p{
-                                    margin-bottom: 0.75em !important; /* ✔ half-line */
+                                    margin-bottom: 0.35em !important; /* 🔥 never full line */
                                 }
 
-                                /* headings behave like text */
+                                /* Headings behave like normal text */
                                 .single-content2 h1,
                                 .single-content2 h2,
                                 .single-content2 h3,
@@ -253,30 +253,35 @@
                                 .single-content2 h5,
                                 .single-content2 h6{
                                     font-weight: normal !important;
-                                    margin: 0.75em 0 !important;
+                                    margin: 0.35em 0 !important;
                                 }
 
-                                /* mobile fine tuning */
+                                /* Mobile tuning */
                                 @media (max-width: 576px){
                                     .single-content2,
                                     .single-content2 *{
-                                        font-size: 18px !important;
-                                        line-height: 1.55 !important;
-                                        word-spacing: -0.5px !important;
+                                        font-size: 17px !important;
+                                        line-height: 1.35 !important;
+                                        word-spacing: -0.4px !important;
+                                    }
+
+                                    .single-content2 p{
+                                        margin-bottom: 0.3em !important;
                                     }
                                 }
 
-                                /* images */
+                                /* Images */
                                 .single-content2 img{
                                     max-width: 100%;
                                     height: auto;
                                     display: block;
-                                    margin: 0.75em auto !important;
+                                    margin: 0.4em auto !important;
                                 }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
 
 
 
