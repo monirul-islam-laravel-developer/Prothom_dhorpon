@@ -469,6 +469,39 @@
 
 
                     </div>
+                    <div class="col-lg-3 col-md-4">
+
+                        <div class="archive-title">
+                            ফেসবুকে আমরা
+                        </div>
+
+                        <!-- Mobile Only -->
+                        <div class="facebook-content mobile-only" style="position: relative; padding-bottom: 42%; height: 0; overflow: hidden;">
+                            <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/profile.php?id=61584115153421&amp;tabs=time&amp;width=280&amp;height=120&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=334182264340964"
+                                style="position: absolute; top:0; left:0; width:100%; height:100%; border:none; overflow:hidden;"
+                                scrolling="no"
+                                frameborder="0"
+                                allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+
+                    </div>
+
+                    <style>
+                        /* Mobile only */
+                        .mobile-only {
+                            display: none; /* By default hidden */
+                        }
+
+                        @media (max-width: 768px) {
+                            .mobile-only {
+                                display: block; /* Show on mobile */
+                            }
+                        }
+                    </style>
+
 
 
                     <!-- Author End -->
