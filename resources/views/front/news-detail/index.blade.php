@@ -217,46 +217,70 @@
                         <div class="single-content2"
                              style="
         font-family:SolaimanLipi,'Noto Serif Bengali',serif;
-        font-size:26px;
-        line-height:1.05;          /* 🔽 line gap কম */
+        font-size:18px;
+        line-height:1.7;
         color:#222;
         text-align:justify;
-        word-wrap:break-word;
+        all:unset;
      ">
 
                             <style>
-                                /* paragraph gap কম */
-                                .single-content2 p{
-                                    margin:6px 0;          /* 🔽 উপরে নিচে gap কম */
+                                /* সব tag এর size জোর করে 18px */
+                                .single-content2,
+                                .single-content2 *{
+                                    font-family:SolaimanLipi,'Noto Serif Bengali',serif !important;
+                                    font-size:18px !important;
+                                    line-height:1.7 !important;
+                                    color:#222 !important;
+                                    text-align:justify;
                                 }
 
+                                /* paragraph gap normal */
+                                .single-content2 p{
+                                    margin:8px 0;
+                                }
+
+                                /* image normal */
                                 .single-content2 img{
                                     max-width:100%;
                                     height:auto;
-                                    margin:10px auto;      /* image gap কম */
                                     display:block;
+                                    margin:10px auto;
                                 }
 
-                                .single-content2 iframe{
-                                    max-width:100%;
-                                    margin:10px 0;
+                                /* list normal */
+                                .single-content2 ul,
+                                .single-content2 ol{
+                                    margin:8px 0 8px 25px;
                                 }
 
+                                /* table normal */
                                 .single-content2 table{
                                     width:100%;
                                     border-collapse:collapse;
                                     margin:10px 0;
                                 }
-
                                 .single-content2 td,
                                 .single-content2 th{
                                     border:1px solid #ddd;
-                                    padding:6px;           /* cell gap কম */
+                                    padding:6px;
+                                }
+
+                                /* remove extra styles */
+                                .single-content2 h1,
+                                .single-content2 h2,
+                                .single-content2 h3,
+                                .single-content2 h4,
+                                .single-content2 h5,
+                                .single-content2 h6{
+                                    font-weight:normal !important;
+                                    margin:8px 0 !important;
                                 }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
 
 
 
