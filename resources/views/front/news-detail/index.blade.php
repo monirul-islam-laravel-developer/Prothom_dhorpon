@@ -217,60 +217,42 @@
                         <div class="single-content2">
 
                             <style>
-                                /* Base text rule */
                                 .single-content2,
                                 .single-content2 *{
                                     font-family: SolaimanLipi, 'Noto Serif Bengali', serif !important;
                                     font-size: 18px !important;
-
-                                    /* 🔹 Half-line spacing */
                                     line-height: 1.25 !important;
 
-                                    /* 🔹 Word spacing control */
-                                    letter-spacing: 0 !important;
+                                    /* 🔴 remove justify */
+                                    text-align: left !important;
+
+                                    /* 🔴 force single space */
                                     word-spacing: 0 !important;
+                                    letter-spacing: 0 !important;
                                     white-space: normal !important;
 
                                     color: #222 !important;
-                                    text-align: justify !important;
-
                                     margin: 0 !important;
                                     padding: 0 !important;
                                 }
 
-                                /* Paragraph spacing = half line */
+                                /* paragraph half-line gap */
                                 .single-content2 p{
-                                    margin-bottom: 0.6em !important; /* ✔ half-line feel */
+                                    margin-bottom: 0.6em !important;
                                 }
 
-                                /* Headings behave like normal text */
-                                .single-content2 h1,
-                                .single-content2 h2,
-                                .single-content2 h3,
-                                .single-content2 h4,
-                                .single-content2 h5,
-                                .single-content2 h6{
-                                    font-weight: normal !important;
-                                    margin: 0.6em 0 !important;
-                                }
-
-                                /* Images */
+                                /* images safe */
                                 .single-content2 img{
                                     max-width: 100%;
                                     height: auto;
                                     display: block;
                                     margin: 0.6em auto !important;
                                 }
-
-                                /* Lists */
-                                .single-content2 ul,
-                                .single-content2 ol{
-                                    margin: 0.6em 0 0.6em 24px !important;
-                                }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
 
 
 
