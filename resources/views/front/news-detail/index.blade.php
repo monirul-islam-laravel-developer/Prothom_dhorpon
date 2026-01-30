@@ -214,72 +214,40 @@
 
                         </div>
 
-                        <div class="single-content2"
-                             style="
-        font-family:SolaimanLipi,'Noto Serif Bengali',serif;
-        font-size:18px;
-        line-height:1.7;
-        color:#222;
-        text-align:justify;
-        all:unset;
-     ">
+                        <div class="single-content2">
 
                             <style>
-                                /* সব tag এর size জোর করে 18px */
                                 .single-content2,
                                 .single-content2 *{
                                     font-family:SolaimanLipi,'Noto Serif Bengali',serif !important;
                                     font-size:18px !important;
-                                    line-height:1.7 !important;
+                                    line-height:1.55 !important;
                                     color:#222 !important;
-                                    text-align:justify;
+                                    text-align:justify !important;
+
+                                    /* 🔽 পাশের word/letter দূরত্ব কম */
+                                    letter-spacing:-0.2px !important;
+                                    word-spacing:-1px !important;
                                 }
 
-                                /* paragraph gap normal */
+                                /* paragraph gap = single */
                                 .single-content2 p{
-                                    margin:8px 0;
+                                    margin:8px 0 !important;
                                 }
 
-                                /* image normal */
+                                /* image */
                                 .single-content2 img{
                                     max-width:100%;
                                     height:auto;
                                     display:block;
-                                    margin:10px auto;
-                                }
-
-                                /* list normal */
-                                .single-content2 ul,
-                                .single-content2 ol{
-                                    margin:8px 0 8px 25px;
-                                }
-
-                                /* table normal */
-                                .single-content2 table{
-                                    width:100%;
-                                    border-collapse:collapse;
-                                    margin:10px 0;
-                                }
-                                .single-content2 td,
-                                .single-content2 th{
-                                    border:1px solid #ddd;
-                                    padding:6px;
-                                }
-
-                                /* remove extra styles */
-                                .single-content2 h1,
-                                .single-content2 h2,
-                                .single-content2 h3,
-                                .single-content2 h4,
-                                .single-content2 h5,
-                                .single-content2 h6{
-                                    font-weight:normal !important;
-                                    margin:8px 0 !important;
+                                    margin:10px auto !important;
                                 }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
+
 
 
 
