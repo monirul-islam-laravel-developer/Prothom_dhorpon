@@ -217,54 +217,51 @@
                         <div class="single-content2">
 
                             <style>
-                                /* Desktop + Mobile base */
                                 .single-content2,
                                 .single-content2 *{
                                     font-family: SolaimanLipi, 'Noto Serif Bengali', serif !important;
                                     font-size: 18px !important;
                                     color: #222 !important;
 
-                                    /* mobile readable */
+                                    /* 🔥 full width text */
+                                    text-align: justify !important;
+                                    text-justify: inter-word;
+
+                                    /* 🔥 control spacing */
                                     line-height: 1.6 !important;
-
+                                    word-spacing: -1px !important;   /* justify gap control */
                                     letter-spacing: 0 !important;
-                                    word-spacing: normal !important;
-
-                                    text-align: left !important;
 
                                     margin: 0 !important;
                                     padding: 0 !important;
                                 }
 
-                                /* paragraph spacing */
                                 .single-content2 p{
                                     margin-bottom: 12px !important;
                                 }
 
-                                /* images */
-                                .single-content2 img{
-                                    max-width: 100%;
-                                    height: auto;
-                                    display: block;
-                                    margin: 12px auto !important;
-                                }
-
-                                /* 🔽 Mobile fine tuning */
+                                /* mobile tuning */
                                 @media (max-width: 576px){
                                     .single-content2,
                                     .single-content2 *{
-                                        font-size: 16px !important;   /* 🔥 mobile perfect size */
-                                        line-height: 1.7 !important;  /* 🔥 mobile comfortable */
+                                        font-size: 16px !important;
+                                        line-height: 1.7 !important;
+                                        word-spacing: -0.5px !important;
                                     }
+                                }
 
-                                    .single-content2 p{
-                                        margin-bottom: 10px !important;
-                                    }
+                                /* image safe */
+                                .single-content2 img{
+                                    max-width:100%;
+                                    height:auto;
+                                    display:block;
+                                    margin:12px auto !important;
                                 }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
 
 
 
