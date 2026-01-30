@@ -217,17 +217,42 @@
                         <div class="single-content2"
                              style="
         font-family:SolaimanLipi,'Noto Serif Bengali',serif;
-        font-size:22px;
-        line-height:1.2;
+        font-size:26px;
+        line-height:1.05;          /* 🔽 line gap কম */
         color:#222;
         text-align:justify;
         word-wrap:break-word;
      ">
+
                             <style>
-                                .single-content2 img{max-width:100%;height:auto;}
-                                .single-content2 iframe{max-width:100%;}
-                                .single-content2 table{width:100%;border-collapse:collapse;}
-                                .single-content2 td,.single-content2 th{border:1px solid #ddd;padding:8px;}
+                                /* paragraph gap কম */
+                                .single-content2 p{
+                                    margin:6px 0;          /* 🔽 উপরে নিচে gap কম */
+                                }
+
+                                .single-content2 img{
+                                    max-width:100%;
+                                    height:auto;
+                                    margin:10px auto;      /* image gap কম */
+                                    display:block;
+                                }
+
+                                .single-content2 iframe{
+                                    max-width:100%;
+                                    margin:10px 0;
+                                }
+
+                                .single-content2 table{
+                                    width:100%;
+                                    border-collapse:collapse;
+                                    margin:10px 0;
+                                }
+
+                                .single-content2 td,
+                                .single-content2 th{
+                                    border:1px solid #ddd;
+                                    padding:6px;           /* cell gap কম */
+                                }
                             </style>
 
                             {!! $news->description !!}
