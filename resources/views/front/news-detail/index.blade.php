@@ -260,7 +260,7 @@
                                 @media (max-width: 576px){
                                     .single-content2,
                                     .single-content2 *{
-                                        font-size: 16px !important;
+                                        font-size: 18px !important;
                                         line-height: 1.55 !important;
                                         word-spacing: -0.5px !important;
                                     }
