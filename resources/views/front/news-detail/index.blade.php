@@ -217,8 +217,8 @@
                         <div class="single-content2"
                              style="
         font-family:SolaimanLipi,'Noto Serif Bengali',serif;
-        font-size:16px;
-        line-height:1.2;
+        font-size:20px;
+        line-height:1.8;
         color:#222;
         text-align:justify;
         word-wrap:break-word;
