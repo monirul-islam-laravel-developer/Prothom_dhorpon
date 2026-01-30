@@ -217,50 +217,67 @@
                         <div class="single-content2">
 
                             <style>
+                                /* Base rule – force everything */
                                 .single-content2,
                                 .single-content2 *{
                                     font-family: SolaimanLipi, 'Noto Serif Bengali', serif !important;
                                     font-size: 18px !important;
+
+                                    /* 🔑 Half line gap no matter what */
+                                    line-height: 1.5 !important;
+
                                     color: #222 !important;
 
-                                    /* 🔥 full width text */
+                                    /* full width look */
                                     text-align: justify !important;
                                     text-justify: inter-word;
 
-                                    /* 🔥 control spacing */
-                                    line-height: 1.6 !important;
-                                    word-spacing: -1px !important;   /* justify gap control */
+                                    /* prevent crazy spacing */
                                     letter-spacing: 0 !important;
+                                    word-spacing: -0.8px !important;
 
                                     margin: 0 !important;
                                     padding: 0 !important;
                                 }
 
+                                /* Paragraph spacing = exactly half line */
                                 .single-content2 p{
-                                    margin-bottom: 12px !important;
+                                    margin-bottom: 0.75em !important; /* ✔ half-line */
                                 }
 
-                                /* mobile tuning */
+                                /* headings behave like text */
+                                .single-content2 h1,
+                                .single-content2 h2,
+                                .single-content2 h3,
+                                .single-content2 h4,
+                                .single-content2 h5,
+                                .single-content2 h6{
+                                    font-weight: normal !important;
+                                    margin: 0.75em 0 !important;
+                                }
+
+                                /* mobile fine tuning */
                                 @media (max-width: 576px){
                                     .single-content2,
                                     .single-content2 *{
                                         font-size: 16px !important;
-                                        line-height: 1.7 !important;
+                                        line-height: 1.55 !important;
                                         word-spacing: -0.5px !important;
                                     }
                                 }
 
-                                /* image safe */
+                                /* images */
                                 .single-content2 img{
-                                    max-width:100%;
-                                    height:auto;
-                                    display:block;
-                                    margin:12px auto !important;
+                                    max-width: 100%;
+                                    height: auto;
+                                    display: block;
+                                    margin: 0.75em auto !important;
                                 }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
 
 
 
