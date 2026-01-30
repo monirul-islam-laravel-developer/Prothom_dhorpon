@@ -217,41 +217,56 @@
                         <div class="single-content2">
 
                             <style>
+                                /* Desktop + Mobile base */
                                 .single-content2,
                                 .single-content2 *{
                                     font-family: SolaimanLipi, 'Noto Serif Bengali', serif !important;
                                     font-size: 18px !important;
-                                    line-height: 1.25 !important;
+                                    color: #222 !important;
 
-                                    /* 🔴 remove justify */
+                                    /* mobile readable */
+                                    line-height: 1.6 !important;
+
+                                    letter-spacing: 0 !important;
+                                    word-spacing: normal !important;
+
                                     text-align: left !important;
 
-                                    /* 🔴 force single space */
-                                    word-spacing: 0 !important;
-                                    letter-spacing: 0 !important;
-                                    white-space: normal !important;
-
-                                    color: #222 !important;
                                     margin: 0 !important;
                                     padding: 0 !important;
                                 }
 
-                                /* paragraph half-line gap */
+                                /* paragraph spacing */
                                 .single-content2 p{
-                                    margin-bottom: 0.6em !important;
+                                    margin-bottom: 12px !important;
                                 }
 
-                                /* images safe */
+                                /* images */
                                 .single-content2 img{
                                     max-width: 100%;
                                     height: auto;
                                     display: block;
-                                    margin: 0.6em auto !important;
+                                    margin: 12px auto !important;
+                                }
+
+                                /* 🔽 Mobile fine tuning */
+                                @media (max-width: 576px){
+                                    .single-content2,
+                                    .single-content2 *{
+                                        font-size: 16px !important;   /* 🔥 mobile perfect size */
+                                        line-height: 1.7 !important;  /* 🔥 mobile comfortable */
+                                    }
+
+                                    .single-content2 p{
+                                        margin-bottom: 10px !important;
+                                    }
                                 }
                             </style>
 
                             {!! $news->description !!}
                         </div>
+
+
 
 
 
