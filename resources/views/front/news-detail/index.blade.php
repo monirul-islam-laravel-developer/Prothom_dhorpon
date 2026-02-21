@@ -399,6 +399,7 @@
                                 <div class="single-social" style="display:flex; gap:10px;">
                                     <a href="{{route('print-page',$news->id)}}" class="custom-btn print-btn">প্রিন্ট করুন <i class="las la-print"></i></a>
                                     <a href="{{route('photo-cart',$news->id)}}" class="custom-btn photo-btn">ফটোকার্ড <i class="las la-image"></i></a>
+                                    <a href="{{route('photo-cart_2',$news->id)}}" class="custom-btn photo-btn">ফটোকার্ড২ <i class="las la-image"></i></a>
 {{--                                    <a href="{{route('news-image',$news->id)}}" class="custom-btn photo-btn">image <i class="las la-image"></i></a>--}}
                                 </div>
                             </div>

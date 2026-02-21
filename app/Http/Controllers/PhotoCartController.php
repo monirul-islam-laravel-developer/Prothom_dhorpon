@@ -13,4 +13,9 @@ class PhotoCartController extends Controller
         $this->news=Post::find($id);
         return view('front.photocart.index',['news'=>$this->news]);
     }
+    public function index_2($id)
+    {
+        $this->news=Post::find($id);
+        return view('front.photocart.index2',['news'=>$this->news]);
+    }
 }

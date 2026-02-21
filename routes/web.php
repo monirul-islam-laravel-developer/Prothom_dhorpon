@@ -51,6 +51,7 @@ Route::get('/upazila-news/{id}/{slug}', [FrontUpazelasNewsController::class, 'in
 Route::get('/news-details/{id}', [FrontNewsDetailController::class, 'index'])->name('news-detail');
 Route::get('/news-image/{id}', [FrontNewsDetailController::class, 'ogImage'])->name('news.ogimage');
 Route::get('/photo-cart/{id}', [PhotoCartController::class, 'index'])->name('photo-cart');
+Route::get('/photo-cart_2/{id}', [PhotoCartController::class, 'index_2'])->name('photo-cart_2');
 Route::get('/print/{id}', [PrintController::class, 'index'])->name('print-page');
 Route::get('/latest-news', [FrontLatestnewsController::class, 'index'])->name('latest-news');
 Route::get('search', [SearchController::class,'index'])->name('search-news');
