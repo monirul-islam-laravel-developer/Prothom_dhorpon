@@ -823,6 +823,16 @@
 
 @include('admin.include.js')
 
+<!-- INTERNAL DATA-TABLES JS-->
+<script src="{{asset('/')}}admin/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+<script src="{{asset('/')}}admin/assets/plugins/datatable/js/dataTables.bootstrap5.js"></script>
+<script src="{{asset('/')}}admin/assets/plugins/datatable/dataTables.responsive.min.js"></script>
+<!-- TABLE EDITS JS-->
+<script src="{{asset('/')}}admin/assets/plugins/jQuery-table-edits/table-edits.min.js"></script>
+<script src="{{asset('/')}}admin/assets/plugins/jQuery-table-edits/table-edits.js"></script>
+
+<!-- INTERNAL DATATABLES JS -->
+<script src="{{asset('/')}}admin/assets/js/table-editable.js"></script>
 
 </body>
 

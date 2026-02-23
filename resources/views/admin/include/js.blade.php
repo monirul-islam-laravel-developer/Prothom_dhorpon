@@ -25,11 +25,6 @@
 <!-- CHART-CIRCLE JS-->
 <script src="{{asset('/')}}admin/assets/plugins/circle-progress/circle-progress.min.js"></script>
 
-<!-- INTERNAL DATA-TABLES JS-->
-<script src="{{asset('/')}}admin/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-<script src="{{asset('/')}}admin/assets/plugins/datatable/js/dataTables.bootstrap5.js"></script>
-<script src="{{asset('/')}}admin/assets/plugins/datatable/dataTables.responsive.min.js"></script>
-
 <!-- INDEX JS -->
 <script src="{{asset('/')}}admin/assets/js/index1.js"></script>
 <script src="{{asset('/')}}admin/assets/js/index.js"></script>
@@ -62,25 +57,19 @@
 <script src="{{asset('/')}}admin/assets/plugins/datatable/responsive.bootstrap5.min.js"></script>
 
 
-<!-- TABLE EDITS JS-->
-<script src="{{asset('/')}}admin/assets/plugins/jQuery-table-edits/table-edits.min.js"></script>
-<script src="{{asset('/')}}admin/assets/plugins/jQuery-table-edits/table-edits.js"></script>
 
-<!-- INTERNAL DATATABLES JS -->
-<script src="{{asset('/')}}admin/assets/js/table-editable.js"></script>
 <!-- jQuery -->
-<<<<<<< HEAD
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap 4 JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-=======
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> parent of 1e35d60 (final)
+
 
 <!-- Summernote JS -->
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>

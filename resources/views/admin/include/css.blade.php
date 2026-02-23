@@ -16,7 +16,7 @@
 <link href="{{asset('/')}}admin/assets/switcher/css/switcher.css" rel="stylesheet">
 <link href="{{asset('/')}}admin/assets/switcher/demo.css" rel="stylesheet">
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 
 <style>
