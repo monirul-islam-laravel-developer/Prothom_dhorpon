@@ -832,7 +832,7 @@
 <script src="{{asset('/')}}admin/assets/plugins/jQuery-table-edits/table-edits.js"></script>
 
 <!-- INTERNAL DATATABLES JS -->
-<script src="{{asset('/')}}admin/assets/js/table-editable.js"></script>
+<script src="{{asset('/')}}admin/assets/js/table-editable.js"></script> 
 
 </body>
 
