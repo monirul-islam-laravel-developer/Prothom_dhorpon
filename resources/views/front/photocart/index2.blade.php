@@ -9,7 +9,7 @@
         font-family: Arial, sans-serif;
     }
 
-    /* Main Card (আগের মতোই) */
+    /* Main Card */
     .news-card{
         width: 520px;
         margin: 40px auto;
@@ -38,6 +38,7 @@
         overflow: hidden;
         z-index: 10;
     }
+
     .brand-logo img{
         width: 100%;
         height: 100%;
@@ -62,6 +63,7 @@
         width: 100%;
         overflow: hidden;
     }
+
     .banner-ad img{
         width: 100%;
         display: block;
@@ -117,7 +119,7 @@
         </div>
 
         <div class="brand-logo">
-            <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="brand logo">
+            <img src="{{ asset($webLogo->fav_icon_logo) }}" alt="Brand Logo">
         </div>
 
         <div class="news-content">
@@ -132,23 +134,19 @@
         @endphp
 
         @if(isset($news->category_id) && in_array($news->category_id, $headBannerCategories) && !empty($ads->head_banner))
-
             <div class="banner-ad">
-                <img src="{{ asset($ads->head_banner) }}" alt="head banner">
+                <img src="{{ asset($ads->head_banner) }}">
             </div>
 
         @elseif(isset($news->category_id) && in_array($news->category_id, $newsHeadAdsCategories) && !empty($ads->news_head_ads))
-
             <div class="banner-ad">
-                <img src="{{ asset($ads->news_head_ads) }}" alt="head banner">
+                <img src="{{ asset($ads->news_head_ads) }}">
             </div>
 
         @elseif(!empty($ads->news_pics_under_ads))
-
             <div class="banner-ad">
-                <img src="{{ asset($ads->news_pics_under_ads) }}" alt="banner ad">
+                <img src="{{ asset($ads->news_pics_under_ads) }}">
             </div>
-
         @endif
 
         <div class="news-footer">
@@ -187,21 +185,48 @@
 
     <script>
         document.getElementById('downloadBtn').addEventListener('click', function () {
+
             const card = document.getElementById('card');
 
+            // Render card with high scale for sharpness
             html2canvas(card, {
-                scale: 3,              // HD Quality
+                scale: 3,              // HD quality
                 useCORS: true,
                 allowTaint: true,
-                backgroundColor: null,
-                windowWidth: card.scrollWidth,
-                windowHeight: card.scrollHeight
+                backgroundColor: null
             }).then(canvas => {
+
+                // Create final canvas of 1050px width, proportional height
+                const finalWidth = 1050;
+                const finalHeight = canvas.height * (finalWidth / canvas.width);
+
+                const finalCanvas = document.createElement('canvas');
+                finalCanvas.width = finalWidth;
+                finalCanvas.height = finalHeight;
+
+                const ctx = finalCanvas.getContext('2d');
+
+                // Optional: fill background with card gradient color
+                ctx.fillStyle = '#8b0000';
+                ctx.fillRect(0, 0, finalWidth, finalHeight);
+
+                // Draw scaled card
+                ctx.drawImage(canvas, 0, 0, finalWidth, finalHeight);
+
+                // Draw border proportional
+                const borderWidth = 8; // original border for 1050px width
+                ctx.lineWidth = borderWidth;
+                ctx.strokeStyle = '#7a0000';
+                ctx.strokeRect(0, 0, finalWidth, finalHeight);
+
+                // Download
                 const link = document.createElement('a');
                 link.download = '{{ Str::slug($news->title) }}.png';
-                link.href = canvas.toDataURL('image/png', 1.0);
+                link.href = finalCanvas.toDataURL('image/png', 1.0);
                 link.click();
+
             });
+
         });
     </script>
 
