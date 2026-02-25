@@ -11,7 +11,7 @@
 
     /* Main Card */
     .news-card{
-        width: 520px; /* fixed for same look on PC & Mobile */
+        width: 520px; /* Fixed width for consistent download */
         margin: 40px auto;
         background: linear-gradient(to bottom, #8b0000, #3b0000);
         border: 4px solid #7a0000;
@@ -48,17 +48,13 @@
     .news-content{
         padding: 12px 20px;
         text-align: center;
-        width: 100%;
     }
     .main-title{
         font-size: 22px;
         line-height: 1.2;
         font-weight: bold;
         margin: 0;
-        word-wrap: break-word;
         word-break: break-word;
-        display: block;
-        width: 100%;
     }
 
     /* Banner Ad */
@@ -79,6 +75,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 14px;
+        flex-wrap: nowrap; /* prevent breaking */
     }
     .comment-cta{
         background: #FFA500;
@@ -89,6 +86,7 @@
         font-weight: bold;
         white-space: nowrap;
         box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        text-align: center;
     }
 
     /* Download Button */
@@ -104,12 +102,13 @@
         display: block;
     }
 
+    /* Mobile preview (just for viewing, download fixed) */
     @media(max-width:768px){
         .news-card{
-            width: 520px; /* fixed width on mobile too */
+            width: 95%; /* Mobile preview responsive */
         }
         .news-footer{
-            flex-wrap: nowrap; /* prevent footer wrap on mobile */
+            flex-wrap: nowrap;
             justify-content: space-between;
         }
     }
@@ -186,13 +185,16 @@
 
             const card = document.getElementById('card');
 
+            // Temporarily fix width for download
+            const originalWidth = card.style.width;
+            card.style.width = '520px'; // fixed download width
+
             html2canvas(card, {
                 scale: 3,
                 useCORS: true,
                 allowTaint: true,
                 backgroundColor: null,
-                windowWidth: card.scrollWidth,
-                windowHeight: card.scrollHeight
+                width: 520 // force capture width
             }).then(canvas => {
 
                 const finalWidth = 1050;
@@ -203,24 +205,25 @@
                 finalCanvas.height = finalHeight;
 
                 const ctx = finalCanvas.getContext('2d');
-
                 ctx.fillStyle = '#8b0000';
-                ctx.fillRect(0, 0, finalWidth, finalHeight);
+                ctx.fillRect(0,0,finalWidth,finalHeight);
 
-                ctx.drawImage(canvas, 0, 0, finalWidth, finalHeight);
+                ctx.drawImage(canvas,0,0,finalWidth,finalHeight);
 
                 const borderWidth = 8;
                 ctx.lineWidth = borderWidth;
                 ctx.strokeStyle = '#7a0000';
-                ctx.strokeRect(0, 0, finalWidth, finalHeight);
+                ctx.strokeRect(0,0,finalWidth,finalHeight);
 
                 const link = document.createElement('a');
                 link.download = '{{ Str::slug($news->title) }}.png';
                 link.href = finalCanvas.toDataURL('image/png', 1.0);
                 link.click();
 
-            });
+                // Restore original width
+                card.style.width = originalWidth;
 
+            });
         });
     </script>
 
