@@ -11,7 +11,7 @@
 
     /* Main Card */
     .news-card{
-        width: 520px;
+        width: 520px; /* fixed for same look on PC & Mobile */
         margin: 40px auto;
         background: linear-gradient(to bottom, #8b0000, #3b0000);
         border: 4px solid #7a0000;
@@ -55,7 +55,7 @@
         line-height: 1.2;
         font-weight: bold;
         margin: 0;
-        word-wrap: break-word;  /* text will wrap if too long */
+        word-wrap: break-word;
         word-break: break-word;
         display: block;
         width: 100%;
@@ -80,7 +80,6 @@
         align-items: center;
         font-size: 14px;
     }
-
     .comment-cta{
         background: #FFA500;
         color: #fff;
@@ -107,12 +106,11 @@
 
     @media(max-width:768px){
         .news-card{
-            width: 95%;
+            width: 520px; /* fixed width on mobile too */
         }
         .news-footer{
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 4px;
+            flex-wrap: nowrap; /* prevent footer wrap on mobile */
+            justify-content: space-between;
         }
     }
 </style>
@@ -192,7 +190,9 @@
                 scale: 3,
                 useCORS: true,
                 allowTaint: true,
-                backgroundColor: null
+                backgroundColor: null,
+                windowWidth: card.scrollWidth,
+                windowHeight: card.scrollHeight
             }).then(canvas => {
 
                 const finalWidth = 1050;
