@@ -28,7 +28,7 @@
     /* Brand Logo */
     .brand-logo{
         position: relative;
-        margin: -16px auto 4px;
+        margin: -26px auto 4px;
         width: 52px;
         height: 52px;
         border-radius: 50%;
@@ -38,7 +38,6 @@
         overflow: hidden;
         z-index: 10;
     }
-
     .brand-logo img{
         width: 100%;
         height: 100%;
@@ -49,13 +48,17 @@
     .news-content{
         padding: 12px 20px;
         text-align: center;
+        width: 100%;
     }
-
     .main-title{
         font-size: 22px;
         line-height: 1.2;
         font-weight: bold;
         margin: 0;
+        word-wrap: break-word;  /* text will wrap if too long */
+        word-break: break-word;
+        display: block;
+        width: 100%;
     }
 
     /* Banner Ad */
@@ -63,13 +66,12 @@
         width: 100%;
         overflow: hidden;
     }
-
     .banner-ad img{
         width: 100%;
         display: block;
     }
 
-    /* Footer */
+    /* Footer - single row */
     .news-footer{
         background: #8b0000;
         padding: 10px 16px;
@@ -107,6 +109,11 @@
         .news-card{
             width: 95%;
         }
+        .news-footer{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+        }
     }
 </style>
 
@@ -137,12 +144,10 @@
             <div class="banner-ad">
                 <img src="{{ asset($ads->head_banner) }}">
             </div>
-
         @elseif(isset($news->category_id) && in_array($news->category_id, $newsHeadAdsCategories) && !empty($ads->news_head_ads))
             <div class="banner-ad">
                 <img src="{{ asset($ads->news_head_ads) }}">
             </div>
-
         @elseif(!empty($ads->news_pics_under_ads))
             <div class="banner-ad">
                 <img src="{{ asset($ads->news_pics_under_ads) }}">
@@ -153,16 +158,12 @@
             <div>
                 @php
                     use Carbon\Carbon;
-
                     $date = Carbon::parse($news->created_at)
                                 ->timezone('Asia/Dhaka')
                                 ->locale('bn');
-
                     $formatted = $date->translatedFormat('d F Y');
-
                     $english = ['0','1','2','3','4','5','6','7','8','9'];
                     $bangla  = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
-
                     echo str_replace($english, $bangla, $formatted);
                 @endphp
             </div>
@@ -180,7 +181,6 @@
 
     <button id="downloadBtn">Download HD</button>
 
-    <!-- html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <script>
@@ -188,15 +188,13 @@
 
             const card = document.getElementById('card');
 
-            // Render card with high scale for sharpness
             html2canvas(card, {
-                scale: 3,              // HD quality
+                scale: 3,
                 useCORS: true,
                 allowTaint: true,
                 backgroundColor: null
             }).then(canvas => {
 
-                // Create final canvas of 1050px width, proportional height
                 const finalWidth = 1050;
                 const finalHeight = canvas.height * (finalWidth / canvas.width);
 
@@ -206,20 +204,16 @@
 
                 const ctx = finalCanvas.getContext('2d');
 
-                // Optional: fill background with card gradient color
                 ctx.fillStyle = '#8b0000';
                 ctx.fillRect(0, 0, finalWidth, finalHeight);
 
-                // Draw scaled card
                 ctx.drawImage(canvas, 0, 0, finalWidth, finalHeight);
 
-                // Draw border proportional
-                const borderWidth = 8; // original border for 1050px width
+                const borderWidth = 8;
                 ctx.lineWidth = borderWidth;
                 ctx.strokeStyle = '#7a0000';
                 ctx.strokeRect(0, 0, finalWidth, finalHeight);
 
-                // Download
                 const link = document.createElement('a');
                 link.download = '{{ Str::slug($news->title) }}.png';
                 link.href = finalCanvas.toDataURL('image/png', 1.0);
